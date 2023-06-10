@@ -1,7 +1,7 @@
 conditions:
   misionActiva3: "tag marcaMisionActiva3"
   misionCompletada3: "tag marcaMisionCompletada3" 
-  bloqueProteccionColocado: "variable %math.calc:ph.protectionstones_currentplayer_num_of_owned_regions*1% [^0][0-9]{1,2}"
+  bloqueProteccionColocado: "variable %math.calc:ph.protectionstones_currentplayer_num_of_owned_regions*1% ((10)|[1-9])"
 
 ####################################################################################################
 
