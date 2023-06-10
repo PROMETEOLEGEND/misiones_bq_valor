@@ -1,7 +1,7 @@
 conditions:
   misionActiva15: "tag marcaMisionActiva15"
   misionCompletada15: "tag marcaMisionCompletada15"
-  misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily*1% ((10)|[1-9])"
+  misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily*1% [1-5]"
 
 ####################################################################################################
 
