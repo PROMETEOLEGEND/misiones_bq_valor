@@ -1,8 +1,8 @@
 conditions:
   misionActiva15: "tag marcaMisionActiva15"
   misionCompletada15: "tag marcaMisionCompletada15"
-  # misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-0% 0"
-  misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-0% [^0][0-9]{1,2}"
+  misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-ph.battlepass_completed_quests_daily% 0"
+  # misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-0% [^0][0-9]{1,2}"
 
 ####################################################################################################
 
