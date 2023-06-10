@@ -61,7 +61,7 @@ menus:
       botonMisionDisponible2:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_01.misionCompletada1,!Misiones_Principiante-Mision_02.misionActiva2"
+        conditions: "Misiones_Principiante-Mision_01.misionCompletada1,!Misiones_Principiante-Mision_02.misionActiva2,!Misiones_Principiante-Mision_02.misionCompletada2"
         close: true
         text:
         - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
@@ -106,7 +106,7 @@ menus:
       botonMisionDisponible3:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_02.misionCompletada2,!Misiones_Principiante-Mision_03.misionActiva3"
+        conditions: "Misiones_Principiante-Mision_02.misionCompletada2,!Misiones_Principiante-Mision_03.misionActiva3,!Misiones_Principiante-Mision_03.misionCompletada3"
         close: true
         text:
         - "&6&l[Misión 3]: &eColoca un bloque de protección"
@@ -157,7 +157,7 @@ menus:
       botonMisionDisponible4:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_03.misionCompletada3,!Misiones_Principiante-Mision_04.misionActiva4"
+        conditions: "Misiones_Principiante-Mision_03.misionCompletada3,!Misiones_Principiante-Mision_04.misionActiva4,!Misiones_Principiante-Mision_04.misionCompletada4"
         close: true
         text:
         - "&6&l[Misión 4]: &eNo hay lugar como el hogar"
@@ -202,7 +202,7 @@ menus:
       botonMisionDisponible5:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_04.misionCompletada4,!Misiones_Principiante-Mision_05.misionActiva5"
+        conditions: "Misiones_Principiante-Mision_04.misionCompletada4,!Misiones_Principiante-Mision_05.misionActiva5,!Misiones_Principiante-Mision_05.misionCompletada5"
         close: true
         text:
         - "&6&l[Misión 5]: &eFabricación improvisada"
@@ -244,7 +244,7 @@ menus:
       botonMisionDisponible6:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_05.misionCompletada5,!Misiones_Principiante-Mision_06.misionActiva6"
+        conditions: "Misiones_Principiante-Mision_05.misionCompletada5,!Misiones_Principiante-Mision_06.misionActiva,!Misiones_Principiante-Mision_06.misionCompletada6"
         close: true
         text:
         - "&6&l[Misión 6]: &eAprendiz de minería"
@@ -286,7 +286,7 @@ menus:
       botonMisionDisponible7:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_06.misionCompletada6,!Misiones_Principiante-Mision_07.misionActiva7"
+        conditions: "Misiones_Principiante-Mision_06.misionCompletada6,!Misiones_Principiante-Mision_07.misionActiva7,!Misiones_Principiante-Mision_07.misionCompletada7"
         close: true
         text:
         - "&6&l[Misión 7]: &eAprendiz de leñador"
@@ -328,7 +328,7 @@ menus:
       botonMisionDisponible8:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_07.misionCompletada7,!Misiones_Principiante-Mision_08.misionActiva8"
+        conditions: "Misiones_Principiante-Mision_07.misionCompletada7,!Misiones_Principiante-Mision_08.misionActiva8,!Misiones_Principiante-Mision_08.misionCompletada8"
         close: true
         text:
         - "&6&l[Misión 8]: &e¡La cosa está que arde!"
@@ -370,7 +370,7 @@ menus:
       botonMisionDisponible9:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_08.misionCompletada8,!Misiones_Principiante-Mision_09.misionActiva9"
+        conditions: "Misiones_Principiante-Mision_08.misionCompletada8,!Misiones_Principiante-Mision_09.misionActiva9,!Misiones_Principiante-Mision_09.misionCompletada9"
         close: true
         text:
         - "&6&l[Misión 9]: &eMejora de almacenamiento"
@@ -412,7 +412,7 @@ menus:
       botonMisionDisponible10:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_09.misionCompletada9,!Misiones_Principiante-Mision_10.misionActiva10"
+        conditions: "Misiones_Principiante-Mision_09.misionCompletada9,!Misiones_Principiante-Mision_10.misionActiva10,!Misiones_Principiante-Mision_10.misionCompletada10"
         close: true
         text:
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
@@ -454,7 +454,7 @@ menus:
       botonMisionDisponible11:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_10.misionCompletada10,!Misiones_Principiante-Mision_11.misionActiva11"
+        conditions: "Misiones_Principiante-Mision_10.misionCompletada10,!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_11.misionCompletada11"
         close: true
         text:
         - "&6&l[Misión 11]: &eUna misión pegajosa"
@@ -496,7 +496,7 @@ menus:
       botonMisionDisponible12:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_11.misionCompletada11,!Misiones_Principiante-Mision_12.misionActiva12"
+        conditions: "Misiones_Principiante-Mision_11.misionCompletada11,!Misiones_Principiante-Mision_12.misionActiva12,!Misiones_Principiante-Mision_12.misionCompletada12"
         close: true
         text:
         - "&6&l[Misión 12]: &eUn nuevo nivel"
@@ -538,7 +538,7 @@ menus:
       botonMisionDisponible13:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_12.misionCompletada12,!Misiones_Principiante-Mision_13.misionActiva13"
+        conditions: "Misiones_Principiante-Mision_12.misionCompletada12,!Misiones_Principiante-Mision_13.misionActiva13,!Misiones_Principiante-Mision_13.misionCompletada13"
         close: true
         text:
         - "&6&l[Misión 13]: &eObteniendo prestigio"
@@ -580,7 +580,7 @@ menus:
       botonMisionDisponible14:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_13.misionCompletada13,!Misiones_Principiante-Mision_14.misionActiva14"
+        conditions: "Misiones_Principiante-Mision_13.misionCompletada13,!Misiones_Principiante-Mision_14.misionActiva14,!Misiones_Principiante-Mision_14.misionCompletada14"
         close: true
         text:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
@@ -622,7 +622,7 @@ menus:
       botonMisionDisponible15:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_14.misionCompletada14,!Misiones_Principiante-Mision_15.misionActiva15"
+        conditions: "Misiones_Principiante-Mision_14.misionCompletada14,!Misiones_Principiante-Mision_15.misionActiva15,!Misiones_Principiante-Mision_15.misionCompletada15"
         close: true
         text:
         - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
@@ -664,7 +664,7 @@ menus:
       botonMisionDisponible16:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_15.misionCompletada15,!Misiones_Principiante-Mision_16.misionActiva16"
+        conditions: "Misiones_Principiante-Mision_15.misionCompletada15,!Misiones_Principiante-Mision_16.misionActiva16,!Misiones_Principiante-Mision_16.misionCompletada16"
         close: true
         text:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
@@ -706,7 +706,7 @@ menus:
       botonMisionDisponible17:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_16.misionCompletada16,!Misiones_Principiante-Mision_17.misionActiva17"
+        conditions: "Misiones_Principiante-Mision_16.misionCompletada16,!Misiones_Principiante-Mision_17.misionActiva17,!Misiones_Principiante-Mision_17.misionCompletada17"
         close: true
         text:
         - "&6&l[Misión 17]: &eEn busca de mejor armamento"
@@ -748,7 +748,7 @@ menus:
       botonMisionDisponible18:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_17.misionCompletada17,!Misiones_Principiante-Mision_18.misionActiva18"
+        conditions: "Misiones_Principiante-Mision_17.misionCompletada17,!Misiones_Principiante-Mision_18.misionActiva18,!Misiones_Principiante-Mision_18.misionCompletada18"
         close: true
         text:
         - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
@@ -790,7 +790,7 @@ menus:
       botonMisionDisponible19:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_18.misionCompletada18,!Misiones_Principiante-Mision_19.misionActiva19"
+        conditions: "Misiones_Principiante-Mision_18.misionCompletada18,!Misiones_Principiante-Mision_19.misionActiva19,!Misiones_Principiante-Mision_19.misionCompletada19"
         close: true
         text:
         - "&6&l[Misión 19]: &eUn pollo temerario"
@@ -832,7 +832,7 @@ menus:
       botonMisionDisponible20:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_19.misionCompletada19,!Misiones_Principiante-Mision_20.misionActiva20"
+        conditions: "Misiones_Principiante-Mision_19.misionCompletada19,!Misiones_Principiante-Mision_20.misionActiva20,!Misiones_Principiante-Mision_20.misionCompletada20"
         close: true
         text:
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
