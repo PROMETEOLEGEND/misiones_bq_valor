@@ -1,6 +1,8 @@
 conditions:
   misionActiva15: "tag marcaMisionActiva15"
   misionCompletada15: "tag marcaMisionCompletada15"
+  # misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-0% 0"
+  misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-0% [^0][0-9]{1,2}"
 
 ####################################################################################################
 
@@ -22,4 +24,7 @@ events:
 ####################################################################################################
 
 objectives:
-  objVerPaseBatalla: "command /pase events:completarMision15"
+  objVerPaseBatalla: "delay 5 ticks interval:5 conditions:misionDiariaPaseBatallaCompletada events:completarMision15"
+
+# objectives:
+#   objVerPaseBatalla: "command /pase events:completarMision15"
