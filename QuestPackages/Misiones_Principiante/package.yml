@@ -68,7 +68,7 @@ menus:
         - "&r "
         - "&aObjetivo:"
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -83,7 +83,7 @@ menus:
         - "&r "
         - "&aObjetivo:"
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para localizar el Portal"
         click:
@@ -97,7 +97,7 @@ menus:
         - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
         - "&r "
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
       botonMisionBloqueada2:
         item: "botonMisionBloqueada"
         amount: 1
