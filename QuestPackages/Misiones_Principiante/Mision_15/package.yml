@@ -11,7 +11,8 @@ events:
   agregarMarcaMisionActiva15: "tag add marcaMisionActiva15"
   iniciarObjetivoMision15: "objective start objVerPaseBatalla"
   
-  mensajeAyudaMision15: "notify \n&6&lMisión 15:\n&r El comando &b/pase&r te permite visualizar el menú del &bPase de Batalla&r. Conforme vayas completando misiones del Pase de Batalla irás obteniendo puntos, y por cada 150 puntos que obtengas podrás reclamar recompensas.\n&r"
+  mensajeAyudaMision15: "notify &Variable value: %math.calc:ph.battlepass_completed_quests_daily-0%"
+  # mensajeAyudaMision15: "notify \n&6&lMisión 15:\n&r El comando &b/pase&r te permite visualizar el menú del &bPase de Batalla&r. Conforme vayas completando misiones del Pase de Batalla irás obteniendo puntos, y por cada 150 puntos que obtengas podrás reclamar recompensas.\n&r"
   
   completarMision15: "folder eliminarMarcaMisionActiva15,agregarMarcaMisionCompletada15,notificacionMisionCompletada15,recompensaMision15,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva15: "tag delete marcaMisionActiva15"
