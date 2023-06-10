@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva3: "tag add marcaMisionActiva3"
   iniciarObjetivoMision3: "objective start objColocarBloqueProteccion"
   
-  mensajeAyudaMision3: "notify \n&6&lMisión 3:\n&r La Tienda de Protecciones está ubicada en las cercanías del &b/spawn&r, allí puedes comprar un nuevo Bloque de Protección por &a50 Rupias &rsi perdiste el que tenías.\n &c&oNota: Es importante que busques rápido un lugar donde colocar la protección ya que dentro de esta no aparecen enemigos."
+  mensajeAyudaMision3: "notify \n&6&lMisión 3:\n&r La Tienda de Protecciones está ubicada en las cercanías del &b/spawn&r, allí puedes comprar un nuevo Bloque de Protección por &a50 Rupias &rsi perdiste el que tenías.\n&r \n &c&oNota: Es importante que busques rápido un lugar donde colocar la protección ya que dentro de esta no aparecen enemigos.\n&r "
   
   completarMision3: "folder eliminarMarcaMisionActiva3,agregarMarcaMisionCompletada3,notificacionMisionCompletada3,recompensaMision3,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva3: "tag delete marcaMisionActiva3"
