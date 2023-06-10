@@ -1,7 +1,6 @@
 conditions:
   misionActiva15: "tag marcaMisionActiva15"
   misionCompletada15: "tag marcaMisionCompletada15"
-  # misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily-ph.battlepass_completed_quests_daily% 0"
   misionDiariaPaseBatallaCompletada: "variable %math.calc:ph.battlepass_completed_quests_daily*1% [1-5]"
 
 ####################################################################################################
@@ -9,10 +8,9 @@ conditions:
 events:
   iniciarMision15: "folder agregarMarcaMisionActiva15,iniciarObjetivoMision15"
   agregarMarcaMisionActiva15: "tag add marcaMisionActiva15"
-  iniciarObjetivoMision15: "objective start objVerPaseBatalla"
+  iniciarObjetivoMision15: "objective start objCompletarMisionDiariaPaseBatalla"
   
-  mensajeAyudaMision15: "notify &Variable value: %math.calc:ph.battlepass_completed_quests_daily-0%"
-  # mensajeAyudaMision15: "notify \n&6&lMisión 15:\n&r El comando &b/pase&r te permite visualizar el menú del &bPase de Batalla&r. Conforme vayas completando misiones del Pase de Batalla irás obteniendo puntos, y por cada 150 puntos que obtengas podrás reclamar recompensas.\n&r"
+  mensajeAyudaMision15: "notify \n&6&lMisión 15:\n&r El comando &b/pase&r te permite visualizar el menú del &bPase de Batalla&r. Conforme vayas completando misiones del Pase de Batalla irás obteniendo puntos, y por cada 150 puntos que obtengas podrás reclamar recompensas.\n&r"
   
   completarMision15: "folder eliminarMarcaMisionActiva15,agregarMarcaMisionCompletada15,notificacionMisionCompletada15,recompensaMision15,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva15: "tag delete marcaMisionActiva15"
@@ -25,7 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objVerPaseBatalla: "delay 5 ticks interval:5 conditions:misionDiariaPaseBatallaCompletada events:completarMision15"
-
-# objectives:
-#   objVerPaseBatalla: "command /pase events:completarMision15"
+  objCompletarMisionDiariaPaseBatalla: "delay 5 ticks interval:5 conditions:misionDiariaPaseBatallaCompletada events:completarMision15"
