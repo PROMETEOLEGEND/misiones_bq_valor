@@ -244,7 +244,7 @@ menus:
       botonMisionDisponible6:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_05.misionCompletada5,!Misiones_Principiante-Mision_06.misionActiva,!Misiones_Principiante-Mision_06.misionCompletada6"
+        conditions: "Misiones_Principiante-Mision_05.misionCompletada5,!Misiones_Principiante-Mision_06.misionActiva6,!Misiones_Principiante-Mision_06.misionCompletada6"
         close: true
         text:
         - "&6&l[Misión 6]: &eAprendiz de minería"
