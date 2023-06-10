@@ -1,0 +1,153 @@
+conversations:
+  ReyValor:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡Bienvenido, %player%! ¿Estás en busca de alguna misión?"
+        pointer: "buscarMision,nada"
+        conditions: "!misionInfoRecibidaBufoBufo"
+      ofrecerMision:
+        text: "Tengo una misión algo &apegajosa &rpara ti, aventurero. ¿Crees estar listo para aceptarla?"
+        pointer: "pedirInfoMision"
+      infoMision:
+        text: "Permíteme explicarte... Hace un tiempo le encargué a uno de los magos de la Corte Real que hechizara una Corona para darle brillo, pero mientras este limpiaba la Corona en las aguas del estanque del patio del Palacio una de las ranas se la arrebató rápidamente de un lengüetazo y huyó con ella... Poco tiempo después esa rana se autoproclamó como &aRey de las Ranas&r, o &aRey Bufo-Bufo&r."
+        pointer: "quererSaberMasAlRespecto"
+      masInfoMision:
+        text: "Entre algunos de los tantos efectos que tuvo el hechizo en esa Rana, se destacan un crecimiento descomunal en tamaño y peso, así como aumento de la fuerza de esta."
+        pointer: "preguntaMision"
+      masInfoMision2:
+        text: "Al decir &apegajosa&r me refería a su... lengua. Ha causado un montón de problemas incluso llegando a tragarse dotaciones de armamento enteras, lo que provoca más gastos en equipamiento para la Guardia Real."
+        pointer: "entenderMision"
+      encomendarMision:
+        text: "La misión que quiero encargarte es que derrotes a esa &aRana&r, ya que pareces capaz de hacerlo. ¿Estás dispuesto a aceptarla?"
+        pointer: "aceptarMision,rechazarMision,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaBufoBufo"
+        conditions: "!misionInfoRecibidaBufoBufo"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaBufoBufo"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"
+      adios:
+        text: "Me llena de orgullo que hables así de mi palacio, aún si no es la primera vez que me dicen algo así. Si llegas a cambiar de opinión y estás dispuesto a aceptar una misión te recompensaré si la completas exitosamente."
+      adios2:
+        text: "Entiendo tu preocupación, aventurero. Estaré esperando por si cambias de opinión y estás dispuesto a aceptar la misión. Te recompensaré si la completas exitosamente"
+      misionAceptada:
+        text: "¡Me alegra que hayas decidido aceptar la misión, aventurero! Te recompensaré si la completas exitosamente."
+        events: "aceptarMisionBufoBufo"
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "aceptarMision,rechazarMision,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaBufoBufo,!misionAceptadaBufoBufo"
+      saludo3:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has completado la misión?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaBufoBufo"
+      misionCompletada:
+        text: "¡Sabía que serías capaz de hacerlo, aventurero! Te entregaré tu debida recompensa ahora mismo, si me lo permites."
+        pointer: "agradecerElogio"
+      misionCompletada2:
+        text: "El que tiene que agradecer soy yo, y por ello te entregaré tu recompensa ahora mismo."
+        events: "completarMision11"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+        events: "eventoayuda"
+
+    player_options:
+      buscarMision:
+        text: "Si, Su Majestad."
+        pointer: "ofrecerMision"
+      pedirInfoMision:
+        text: "¿Podría saber que se refiere con pegajosa, Su Majestad?"
+        pointer: "infoMision"
+      quererSaberMasAlRespecto:
+        text: "Vaya historia tan interesante, Su Majestad. ¿Podría contarme más al respecto? ¿Hay algo más que deba saber acerca de esa rana?"
+        pointer: "masInfoMision"
+      preguntaMision:
+        text: "Sigo sin entender a que se refiere con pegajosa, Su Majestad."
+        pointer: "masInfoMision2"
+      entenderMision:
+        text: "Ahora lo entiendo..."
+        pointer: "encomendarMision,preguntarInfoMision"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      aceptarMision:
+        text: "Puede contar conmigo, Su Majestad."
+        pointer: "misionAceptada"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "adios2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la historia, Su Majestad?"
+        condition: "misionInfoRecibidaBufoBufo,!mazmorraCompletadaBufoBufo"
+        pointer: "repetirInfoMision"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "infoMision"
+      misionCompletadaSi:
+        text: "Si, Su Majestad."
+        condition: "mazmorraCompletadaBufoBufo"
+        pointer: "misionCompletada"
+      agradecerElogio:
+        text: "Gracias, Su Majestad."
+        pointer: "misionCompletada2"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        condition: "!mazmorraCompletadaBufoBufo"
+        pointer: "misionAunNoCompletada"
+      nada:
+        text: "No, solo estaba extasiado por el esplendor de este Palacio."
+        pointer: "adios"
+
+#####################################################################        
+
+conditions:
+  misionActiva11: "tag marcaMisionActiva11"
+  misionInfoRecibidaBufoBufo: "tag marcaInfoRecibidaBufoBufo"
+  misionAceptadaBufoBufo: "tag marcaMisionAceptadaBufoBufo"
+  mazmorraCompletadaBufoBufo: "tag marcaMazmorraCompletadaBufoBufo"
+  misionCompletada11: "tag marcaMisionCompletada11"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraBufoBufo: "finishdungeon bufobufo events:mazmorraCompletarBufoBufo"
+
+#####################################################################        
+
+events:
+  iniciarMision11: "tag add marcaMisionActiva11"
+  
+  mensajeAyudaMision11: "folder mensajeAyudaMision11_1,mensajeAyudaMision11_2,mensajeAyudaMision11_3"
+  mensajeAyudaMision11_1: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionAceptadaBufoBufo"
+  mensajeAyudaMision11_2: "notify \n&6&lMisión 11:\n&r El cristal de la mazmorra del &aRey Bufo-Bufo &rse encuentra en una pequeña sala que está justo detrás del estanque del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!mazmorraCompletadaBufoBufo"
+  mensajeAyudaMision11_3: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionCompletada11"
+  
+  agregarMarcaInfoRecibidaBufoBufo: "tag add marcaInfoRecibidaBufoBufo"
+  
+  aceptarMisionBufoBufo: "folder agregarMarcaMisionAceptadaBufoBufo,permisoMazmorraBufoBufo,iniciarObjetivoCompletarMazmorraBufoBufo,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaBufoBufo: "tag add marcaMisionAceptadaBufoBufo"
+  permisoMazmorraBufoBufo: "command lp user %player% permission set mazmorra.bufobufo"
+  iniciarObjetivoCompletarMazmorraBufoBufo: "objective start completarMazmorraBufoBufo"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarBufoBufo: "folder agregarMarcaMazmorraCompletadaBufoBufo,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaBufoBufo: "tag add marcaMazmorraCompletadaBufoBufo"
+  
+  completarMision11: "folder eliminarMarcasMisionActiva11,agregarMarcaMisionCompletada11,notificacionMisionCompletada11,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva11: "folder eliminarMarcaMisionActiva11,eliminarMarcaMisionInfoRecibidaBufoBufo,eliminarMarcaMisionAceptadaBufoBufo,eliminarMarcaMazmorraCompletadaBufoBufo"
+  eliminarMarcaMisionActiva11: "tag delete marcaMisionActiva11"
+  eliminarMarcaMisionInfoRecibidaBufoBufo: "tag delete marcaInfoRecibidaBufoBufo"
+  eliminarMarcaMisionAceptadaBufoBufo: "tag delete marcaMisionAceptadaBufoBufo"
+  eliminarMarcaMazmorraCompletadaBufoBufo: "tag delete marcaMazmorraCompletadaBufoBufo"
+  agregarMarcaMisionCompletada11: "tag add marcaMisionCompletada11"
+  notificacionMisionCompletada11: "notify &7----------------------------------------\n&6&l¡Misión 11 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 1000"
+  recompensaExpClase: "mmoclassexperience 300"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 300 exp de clase."

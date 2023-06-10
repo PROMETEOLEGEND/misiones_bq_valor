@@ -1,0 +1,102 @@
+conversations:
+  GranjeroValor:
+    quester: "&6&lGranjero"
+    first: "saludo"
+    NPC_options:
+      saludo:
+        text: "¡Hola aventurero! ¿Qué te trae por aquí?"
+        pointer: "respuestaSaludo,respuestaSaludo2,respuestaSaludo3"
+      infoMascotas:
+        text: "En esta ciudad no hay mercenarios, pero estás en el lugar correcto en caso que estés buscando una &bmascota&r."
+        pointer: "preguntarInfoMascotas"
+      infoMascotas2:
+        text: "Si, las &bmascotas &rson criaturas que pueden servirte de acompañante. Tienen diferentes funciones dependiendo de su tipo, por ejemplo mascotas de &bmontura &ro &bcombate&r."
+        pointer: "preguntarInfoMascotas2"
+      infoMascotas3:
+        text: "En el &bMundo de Valor&r hay algunas tiendas o comerciantes que te pueden vender mascotas, y en algunos biomas del &bMundo de Exploración&r puedes encontrar mascotas en estado salvaje a las cuales podrás &bdomar&r."
+        pointer: "preguntarInfoMascotas3"
+      infoMascotas4:
+        text: "Hay una &benciclopedia de mascotas &rque puedes visualizar usando &b/mascotaswiki &rpor si quieres ver más a detalle las funciones que tiene cada &bmascota&r."
+        pointer: "agradecerInfoMascotas"
+      ofrecerMascotaHada:
+        text: "Es un placer, aventurero.\n \nTengo una pequeña &bhada &rque podría servirte de acompanante, ¿Te gustaría tenerla?."
+        pointer: "aceptarMascotaHada"
+      darMascotaHada:
+        text: "Vale, espero que cuides bien de esta pequeña &bhada&r. Puedes invocarla cuando quieras usando &b/mascotas&r."
+        events: "recompensaMascotaHada"
+      infoChocobos:
+        text: "Ah, te refieres a los Chocobos. ¿Te molan, verdad?"
+        pointer: "preguntarInfoChocobos"
+      infoChocobos2:
+        text: "Si, vaya que lo son. Puedes comprar uno en esta tienda si quieres, hay un montón de colores diferentes para escoger."
+        pointer: "preguntarInfoChocobos2"
+      infoChocobos3:
+        text: "Yo no, solo los crío. El vendedor está dentro de la tienda."
+        pointer: "agradecerInfoChocobos"
+      adios:
+        text: "¡Te deseo suerte en tu viaje!"
+      adios2:
+        text: "Es un placer, aventurero."
+    
+    player_options:
+      respuestaSaludo:
+        text: "Soy nuevo en la ciudad y estoy buscando un acompañante."
+        pointer: "infoMascotas"
+      respuestaSaludo2:
+        text: "Estaba viendo los polluelos de colores que están los establos."
+        pointer: "infoChocobos"
+      respuestaSaludo3:
+        text: "Solo estaba explorando la ciudad."
+        pointer: "adios"
+      preguntarInfoMascotas:
+        text: "¿Mascotas?"
+        pointer: "infoMascotas2"
+      preguntarInfoMascotas2:
+        text: "¿Dónde puedo conseguir a una de esas criaturas?"
+        pointer: "infoMascotas3"
+      preguntarInfoMascotas3:
+        text: "Interesante, cuéntame más acerca de esas criaturas."
+        pointer: "infoMascotas4"
+      agradecerInfoMascotas:
+        text: "Te agradezco la información."
+        pointer: "ofrecerMascotaHada"
+      aceptarMascotaHada:
+        text: "¡Claro!"
+        pointer: "darMascotaHada"
+      preguntarInfoChocobos:
+        text: "Si, se ven muy tiernos..."
+        pointer: "infoChocobos2"
+      preguntarInfoChocobos2:
+        text: "¿Los vendes?"
+        pointer: "infoChocobos3"
+      agradecerInfoChocobos:
+        text: "Gracias por la información, lo pensaré."
+        pointer: "adios2"
+
+conditions:
+  misionActiva16: "tag marcaMisionActiva16"
+  misionCompletada16: "tag marcaMisionCompletada16"
+  mascotaHadaReclamada: "permission mcpets.hada"
+
+####################################################################################################
+
+events:
+  iniciarMision16: "folder agregarMarcaMisionActiva16,iniciarObjetivoMision16"
+  agregarMarcaMisionActiva16: "tag add marcaMisionActiva16"
+  iniciarObjetivoMision16: "objective start objReclamarMascotaHada"
+  
+  mensajeAyudaMision16: "notify \n&6&lMisión 16:\n&r La &bTienda de mascotas de Valor esta ubicada en la zona oeste del &b/spawn &rtras un puente que se encuentra pasando el camino entre la &bTienda de Mejoras &ry la &bTienda de Arcos&r.\n&r"
+  
+  recompensaMascotaHada: "command lp user %player% permission set mcpets.hada"
+  
+  completarMision16: "folder eliminarMarcaMisionActiva16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva16: "tag delete marcaMisionActiva16"
+  agregarMarcaMisionCompletada16: "tag add marcaMisionCompletada16"
+  notificacionMisionCompletada16: "notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaExpClase: "mmoclassexperience 150"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objReclamarMascotaHada: "delay 5 ticks interval:5 conditions:mascotaHadaReclamada events:completarMision16"

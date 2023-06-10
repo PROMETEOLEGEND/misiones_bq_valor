@@ -1,0 +1,60 @@
+1. Hablar con el Paladin, para reclamar el kit inicial. (Hecho)
+2. Viajar al Mundo de Exploración. (Hecho)
+3. Colocar una Piedra de Protección. (Hecho)
+4. Usar /sethome. (Hecho)
+5. Fabrica una mesa de trabajo. (Hecho)
+6. Mina 20 de piedra. (Hecho)
+7. Tala 20 de madera. (Hecho)
+8. Fabrica un horno. (Hecho)
+9. Fabrica 8 cofres. (Hecho)
+10. Hablar con el Vikingo, para obtener una Runa del Hogar. (Hecho)
+11. Hablar con el Rey y hacer la mazmorra de Bufo-Bufo. (Hecho)
+12. Sube al nivel 2 de clase. (Hecho)
+13. Sube al nivel 2 de prestigio. (Hecho)
+14. Usa /prestigio y reclama la recompensa de nivel 2 de prestigio. (Hecho)
+15. Usa /pase. (Hecho)
+16. Visita la tienda de mascotas y reclama la mascota del hada. (Hecho)
+17. Visita la Armeria. (Hecho)
+18. Visita el banco. (Hecho)
+19. Hablar con el Rey y hacer la mazmorra del Hipogrifo. (Hecho)
+20. Sube al nivel 3 de clase. (Hecho)
+21. Usa /habilidades. (En pruebas)
+22. Encuentra y pica 10 menas de diamante. (En pruebas)
+23. Fabrica una espada de diamante.
+24. Fabrica una forja.
+25. Añade a tu espada de diamante un recipiente de gema de nivel I.
+26. Añade una gema a tu espada.
+27. Fabrica una mesa de herrería.
+28. Sube a nivel 2 la profesion leñador.
+29. Visita la mina cueva de edar.
+30. Sube a nivel 2 la profesion de mineria.
+31. Supera la mazmorra de Kobold.
+32. Fabrica un pico de diamante.
+33. Sube a nivel 5 de clase.
+34. Gasta un punto de atributo.
+35. Encuentra Amatista
+36. Fabrica Esencia de amatista.
+37. Fabrica una armadura de amatista.
+38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin.
+39. Amplia tu casa: coloca x bloques.
+40. Sube a nivel 6 de prestigio.
+41. Sube a nivel 5 de granjero.
+42. Usa una pocion de potenciador de xp.
+43. Supera la mazmorra del Minotauro.
+44. Fabrica una espada de amatista con un espacio para gema.
+45. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II.
+46. Coloca una gema nivel II a tu espada de amatista.
+47. Sube a nivel 7 de clase.
+48. Mejora una habilidad.
+49. Encuentra un bulbo.
+50. Visita al granjero que vende bulbos.
+51. Sube a nivel 10 de clase.
+52. Encuentra Rubi.
+53. Encuentra Zafiro.
+54. Fabrica una espada de rubi o zafiro.
+55. Gasta un Punto de atributo.
+56. Fabrica un caldero para mascotas.
+57. Fabrica pienso de mascotas.
+58. Tamea una mascota.
+59. Supera la mazmorra de Medusa.
+60. Visita la ciudad de Crafburgo.

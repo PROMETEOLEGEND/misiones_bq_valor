@@ -1,0 +1,25 @@
+conditions:
+  misionActiva18: "tag marcaMisionActiva18"
+  misionCompletada18: "tag marcaMisionCompletada18"
+
+####################################################################################################
+
+events:
+  iniciarMision18: "folder agregarMarcaMisionActiva18,iniciarObjetivoMision18"
+  agregarMarcaMisionActiva18: "tag add marcaMisionActiva18"
+  iniciarObjetivoMision18: "objective start objVisitarBancoValor"
+  
+  mensajeAyudaMision18: "notify \n&6&lMisión 18:\n&r El &bBanco de Valor &rse encuentra en la plaza de la zona este de la ciudad. En el banco puedes depositar y retirar dinero&r.\n&r"
+  
+  completarMision18: "folder eliminarMarcaMisionActiva18,agregarMarcaMisionCompletada18,notificacionMisionCompletada18,recompensaMision18,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva18: "tag delete marcaMisionActiva18"
+  agregarMarcaMisionCompletada18: "tag add marcaMisionCompletada18"
+  notificacionMisionCompletada18: "notify &7----------------------------------------\n&6&l¡Misión 18 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision18: "command eco give %player% 150"
+  recompensaExpClase: "mmoclassexperience 100"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objVisitarBancoValor: "location 1153;62;431;Zona1 5 events:completarMision18"

@@ -1,0 +1,100 @@
+menus:
+  menuMisiones:
+    height: 6
+    title: "§f§f⠜"
+    command: "/misionesprueba"
+    conditions: "permisoGlobalBetonQuest"
+    slots:
+      10: "botonMisionDisponiblePrueba01,botonMisionActivaPrueba01,botonMisionCompletadaPrueba01"
+      11: "botonMisionDisponiblePrueba02,botonMisionActivaPrueba02,botonMisionCompletadaPrueba02,botonMisionBloqueadaPrueba02"
+    items:
+      botonMisionDisponiblePrueba01:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "!Misiones_Prueba-Mision_01.misionActivaPrueba01"
+        close: true
+        text:
+        - "&6&l[Misión de Prueba 1]: &eNuevos trucos"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/habilidades &7&opara ver las habilidades que puedes utilizar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Prueba-Mision_01.mensajeAyudaMisionPrueba01,Misiones_Prueba-Mision_01.iniciarMisionPrueba01" 
+      botonMisionActivaPrueba01:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Prueba-Mision_01.misionActivaPrueba01,!Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
+        close: true
+        text:
+        - "&6&l[Misión de Prueba 1]: &eNuevos trucos"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/habilidades &7&opara ver las habilidades que puedes utilizar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Prueba-Mision_01.mensajeAyudaMisionPrueba01" 
+      botonMisionCompletadaPrueba01:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión de Prueba 1]: &eNuevos trucos"
+        - "&r "
+        - "&7&oPica &r&o10 menas de Diamante&7&o."
+#####################################################################
+      botonMisionDisponiblePrueba02:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Prueba-Mision_01.misionCompletadaPrueba01,!Misiones_Prueba-Mision_02.misionActivaPrueba02"
+        close: true
+        text:
+        - "&6&l[Misión de Prueba 2]: &eEn busca de diamantes"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oPica &r&o10 menas de Diamante&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Prueba-Mision_02.mensajeAyudaMisionPrueba02,Misiones_Prueba-Mision_02.iniciarMisionPrueba02" 
+      botonMisionActivaPrueba02:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Prueba-Mision_02.misionActivaPrueba02,!Misiones_Prueba-Mision_02.misionCompletadaPrueba02"
+        close: true
+        text:
+        - "&6&l[Misión de Prueba 2]: &eEn busca de diamantes"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oPica &r&o10 menas de Diamante&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Prueba-Mision_02.mensajeAyudaMisionPrueba02" 
+      botonMisionCompletadaPrueba02:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Prueba-Mision_02.misionCompletadaPrueba02"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión de Prueba 2]: &eEn busca de diamantes"
+        - "&r "
+        - "&7&oPica &r&o10 menas de Diamante&7&o."
+      botonMisionBloqueadaPrueba02:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
+
+#####################################################################
+
+conditions:
+  permisoGlobalBetonQuest: "permission betonquest.*"
+
+#####################################################################
+items:
+  botonMisionActiva: "INK_SAC custom-model-data:1461"
+  botonMisionCompletada: "INK_SAC custom-model-data:1458"
+  botonMisionBloqueada: "INK_SAC custom-model-data:1460 name:&c¡Misión_no_disponible! lore:&r_;&7Supera_la_misión_anterior."

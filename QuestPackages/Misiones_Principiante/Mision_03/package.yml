@@ -1,0 +1,25 @@
+conditions:
+  misionActiva3: "tag marcaMisionActiva3"
+  misionCompletada3: "tag marcaMisionCompletada3"
+
+####################################################################################################
+
+events:
+  iniciarMision3: "folder agregarMarcaMisionActiva3,iniciarObjetivoMision3"
+  agregarMarcaMisionActiva3: "tag add marcaMisionActiva3"
+  iniciarObjetivoMision3: "objective start objColocarBloqueProteccion"
+  
+  mensajeAyudaMision3: "notify \n&6&lMisión 3:\n&r La Tienda de Protecciones está ubicada justo a la derecha del inicio del camino de salida del &b/spawn&r, allí puedes comprar un nuevo Bloque de Protección por &a50 Rupias &rsi perdiste el que tenías.\n&r"
+  
+  completarMision3: "folder eliminarMarcaMisionActiva3,agregarMarcaMisionCompletada3,notificacionMisionCompletada3,recompensaMision3,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva3: "tag delete marcaMisionActiva3"
+  agregarMarcaMisionCompletada3: "tag add marcaMisionCompletada3"
+  notificacionMisionCompletada3: "notify &7----------------------------------------\n&6&l¡Misión 3 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision3: "command eco give %player% 100"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objColocarBloqueProteccion: "block IRON_ORE 1 events:completarMision3"

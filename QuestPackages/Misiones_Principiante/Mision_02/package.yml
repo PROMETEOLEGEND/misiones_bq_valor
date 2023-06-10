@@ -1,0 +1,25 @@
+conditions:
+  misionActiva2: "tag marcaMisionActiva2"
+  misionCompletada2: "tag marcaMisionCompletada2"
+
+####################################################################################################
+
+events:
+  iniciarMision2: "folder agregarMarcaMisionActiva2,iniciarObjetivoMision2"
+  agregarMarcaMisionActiva2: "tag add marcaMisionActiva2"
+  iniciarObjetivoMision2: "objective start objViajarMundoExploracion"
+  
+  mensajeAyudaMision2: "notify \n&6&lMisión 2:\n&r Para ir al Mundo de Exploración usa el portal que hay en la plaza principal del &b/spawn &ro usa &b/warp exploracion&r.\n&r"
+  
+  completarMision2: "folder eliminarMarcaMisionActiva2,agregarMarcaMisionCompletada2,notificacionMisionCompletada2,recompensaMision2,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva2: "tag delete marcaMisionActiva2"
+  agregarMarcaMisionCompletada2: "tag add marcaMisionCompletada2"
+  notificacionMisionCompletada2: "notify &7----------------------------------------\n&6&l¡Misión 2 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision2: "command mi give COMIDA COMIDA_6 %player% 5"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objViajarMundoExploracion: "location -953;70;1479;world 20 events:completarMision2"

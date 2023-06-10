@@ -1,0 +1,30 @@
+conditions:
+  misionActiva9: "tag marcaMisionActiva9"
+  misionCompletada9: "tag marcaMisionCompletada9"
+
+####################################################################################################
+
+events:
+  iniciarMision9: "folder agregarMarcaMisionActiva9,iniciarObjetivoMision9"
+  agregarMarcaMisionActiva9: "tag add marcaMisionActiva9"
+  iniciarObjetivoMision9: "objective start objFabricarCofres"
+  
+  mensajeAyudaMision9: "notify \n&6&lMisión 9:\n&r Para fabricar un &bCofre &rnecesitarás 8 bloques de cualquier madera, los cuales puedes obtener del tronco de cualquier árbol.\n&r"
+  
+  completarMision9: "folder recompensaMision9,agregarMarcaMisionCompletada9,notificacionMisionCompletada9,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva9: "tag delete marcaMisionActiva9"
+  agregarMarcaMisionCompletada9: "tag add marcaMisionCompletada9"
+  notificacionMisionCompletada9: "notify &7----------------------------------------\n&6&l¡Misión 9 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision9: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objFabricarCofres: "craft cofre 8 events:completarMision9 notify:1"
+
+####################################################################################################
+
+items:
+  cofre: "CHEST"

@@ -1,0 +1,25 @@
+conditions:
+  misionActiva17: "tag marcaMisionActiva17"
+  misionCompletada17: "tag marcaMisionCompletada17"
+
+####################################################################################################
+
+events:
+  iniciarMision17: "folder agregarMarcaMisionActiva17,iniciarObjetivoMision17"
+  agregarMarcaMisionActiva17: "tag add marcaMisionActiva17"
+  iniciarObjetivoMision17: "objective start objVisitarArmeriaValor"
+  
+  mensajeAyudaMision17: "notify \n&6&lMisión 17:\n&r La &bArmería de Valor &rse encuentra al lado izquierdo del camino de salida del &b/spawn &r, frente a la &bTienda de Armaduras&r.\n&r"
+  
+  completarMision17: "folder eliminarMarcaMisionActiva17,agregarMarcaMisionCompletada17,notificacionMisionCompletada17,recompensaMision17,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva17: "tag delete marcaMisionActiva17"
+  agregarMarcaMisionCompletada17: "tag add marcaMisionCompletada17"
+  notificacionMisionCompletada17: "notify &7----------------------------------------\n&6&l¡Misión 17 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision17: "command eco give %player% 150"
+  recompensaExpClase: "mmoclassexperience 100"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objVisitarArmeriaValor: "location 1075;52;427;Zona1 5 events:completarMision17"

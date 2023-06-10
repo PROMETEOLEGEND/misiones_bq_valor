@@ -1,0 +1,6 @@
+events:
+  conversaciongranjero: "folder abrirmenugranjeromascotas,empezarconversaciongranjero"
+  
+  abrirmenugranjeromascotas: "command dm open mascotas_info %player% conditions:!Misiones_Principiante-Mision_16.misionActiva16"
+  
+  empezarconversaciongranjero: "conversation Misiones_Principiante-Mision_16.GranjeroValor conditions:Misiones_Principiante-Mision_16.misionActiva16"

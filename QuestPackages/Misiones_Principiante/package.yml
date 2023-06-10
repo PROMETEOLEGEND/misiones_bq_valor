@@ -1,0 +1,875 @@
+menus:
+  menuMisiones:
+    height: 6
+    title: "§f§f⠜"
+    # open_conditions: "misionTutorialCompletada"
+    # open_events: "sonidoAbrirMenu"
+    # close_events: "sonidoCerrarMenu"
+    # bind: "objetoMision"
+    command: "/misiones"
+    slots:
+      10: "botonMisionDisponible1,botonMisionCompletada1"
+      11: "botonMisionDisponible2,botonMisionActiva2,botonMisionCompletada2,botonMisionBloqueada2"
+      12: "botonMisionDisponible3,botonMisionActiva3,botonMisionCompletada3,botonMisionBloqueada3"
+      13: "botonMisionDisponible4,botonMisionActiva4,botonMisionCompletada4,botonMisionBloqueada4"
+      14: "botonMisionDisponible5,botonMisionActiva5,botonMisionCompletada5,botonMisionBloqueada5"
+      15: "botonMisionDisponible6,botonMisionActiva6,botonMisionCompletada6,botonMisionBloqueada6"
+      16: "botonMisionDisponible7,botonMisionActiva7,botonMisionCompletada7,botonMisionBloqueada7"
+      19: "botonMisionDisponible8,botonMisionActiva8,botonMisionCompletada8,botonMisionBloqueada8"
+      20: "botonMisionDisponible9,botonMisionActiva9,botonMisionCompletada9,botonMisionBloqueada9"
+      21: "botonMisionDisponible10,botonMisionActiva10,botonMisionCompletada10,botonMisionBloqueada10"
+      22: "botonMisionDisponible11,botonMisionActiva11,botonMisionCompletada11,botonMisionBloqueada11"
+      23: "botonMisionDisponible12,botonMisionActiva12,botonMisionCompletada12,botonMisionBloqueada12"
+      24: "botonMisionDisponible13,botonMisionActiva13,botonMisionCompletada13,botonMisionBloqueada13"
+      25: "botonMisionDisponible14,botonMisionActiva14,botonMisionCompletada14,botonMisionBloqueada14"
+      28: "botonMisionDisponible15,botonMisionActiva15,botonMisionCompletada15,botonMisionBloqueada15"
+      29: "botonMisionDisponible16,botonMisionActiva16,botonMisionCompletada16,botonMisionBloqueada16"
+      30: "botonMisionDisponible17,botonMisionActiva17,botonMisionCompletada17,botonMisionBloqueada17"
+      31: "botonMisionDisponible18,botonMisionActiva18,botonMisionCompletada18,botonMisionBloqueada18"
+      32: "botonMisionDisponible19,botonMisionActiva19,botonMisionCompletada19,botonMisionBloqueada19"
+      33: "botonMisionDisponible20,botonMisionActiva20,botonMisionCompletada20,botonMisionBloqueada20"
+    items:
+      botonMisionDisponible1:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_01.misionCompletada1"
+        close: true
+        text:
+        - "&6&l[Misión 1]: &eVisita el Castillo de Valor"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe al Palacio de Valor a hablar con el Paladin."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar al NPC"
+        click:
+          left: "Misiones_Principiante-Mision_01.mensajeAyudaMisionPaladin" 
+          # left: "give_xp,msg_give_xp" 
+          # shiftLeft: "give_xp,take_xp" 
+          # right: "take_xp,msg_take_xp" 
+          # shiftRight: "take_xp,msg_take_xp" 
+          # middleMouse: "msg_beautifull_text" 
+      botonMisionCompletada1:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_01.misionCompletada1"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 1]: &eVisita el Castillo de Valor"
+        - "&r "
+        - "&7&oVe al Castillo de Valor a hablar con el Paladin."
+#####################################################################
+      botonMisionDisponible2:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_01.misionCompletada1,!Misiones_Principiante-Mision_02.misionActiva2"
+        close: true
+        text:
+        - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe al mundo de exploración, para ello usa el portal"
+        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_02.mensajeAyudaMision2,Misiones_Principiante-Mision_02.iniciarMision2" 
+      botonMisionActiva2:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_02.misionActiva2"
+        close: true
+        text:
+        - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe al mundo de exploración, para ello usa el portal"
+        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar el Portal"
+        click:
+          left: "Misiones_Principiante-Mision_02.mensajeAyudaMision2" 
+      botonMisionCompletada2:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_02.misionCompletada2"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
+        - "&r "
+        - "&7&oVe al mundo de exploración, para ello usa el portal"
+        - "&7&odel spawn o usa &r/warp exploracion&7&o."
+      botonMisionBloqueada2:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_01.misionCompletada1"
+#####################################################################
+      botonMisionDisponible3:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_02.misionCompletada2,!Misiones_Principiante-Mision_03.misionActiva3"
+        close: true
+        text:
+        - "&6&l[Misión 3]: &eColoca un bloque de protección"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oColoca un bloque de protección en algún lugar del mundo de exploración,"
+        - "&7&opara ello usa el bloque obtenido del Tutorial o compra uno nuevo si es"
+        - "&7&oque perdiste el que tenías."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_03.mensajeAyudaMision3,Misiones_Principiante-Mision_03.iniciarMision3" 
+      botonMisionActiva3:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_03.misionActiva3"
+        close: true
+        text:
+        - "&6&l[Misión 3]: &eColoca un bloque de protección"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oColoca un bloque de protección en algún lugar del mundo de exploración,"
+        - "&7&opara ello usa el bloque obtenido del Tutorial o compra uno nuevo si es"
+        - "&7&oque perdiste el que tenías."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar la Tienda de Protecciones."
+        click:
+          left: "Misiones_Principiante-Mision_03.mensajeAyudaMision3" 
+      botonMisionCompletada3:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_03.misionCompletada3"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 3]: &eColoca un bloque de protección"
+        - "&r "
+        - "&7&oColoca un bloque de protección en algún lugar del mundo de exploración,"
+        - "&7&opara ello usa el bloque obtenido del Tutorial o compra uno nuevo si es"
+        - "&7&oque perdiste el que tenías."
+      botonMisionBloqueada3:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_02.misionCompletada2"
+#####################################################################
+      botonMisionDisponible4:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_03.misionCompletada3,!Misiones_Principiante-Mision_04.misionActiva4"
+        close: true
+        text:
+        - "&6&l[Misión 4]: &eNo hay lugar como el hogar"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oEstablece un hogar en algún lugar del mundo de exploración,"
+        - "&7&ocomo por ejemplo una Protección."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_04.mensajeAyudaMision4,Misiones_Principiante-Mision_04.iniciarMision4" 
+      botonMisionActiva4:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_04.misionActiva4"
+        close: true
+        text:
+        - "&6&l[Misión 4]: &eNo hay lugar como el hogar"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oEstablece un hogar en algún lugar del mundo de exploración,"
+        - "&7&ocomo por ejemplo una Protección."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_04.mensajeAyudaMision4" 
+      botonMisionCompletada4:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_04.misionCompletada4"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 4]: &eNo hay lugar como el hogar"
+        - "&r "
+        - "&7&oEstablece un hogar en algún lugar del mundo de exploración,"
+        - "&7&ocomo por ejemplo una Protección."
+      botonMisionBloqueada4:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_03.misionCompletada3"
+#####################################################################
+      botonMisionDisponible5:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_04.misionCompletada4,!Misiones_Principiante-Mision_05.misionActiva5"
+        close: true
+        text:
+        - "&6&l[Misión 5]: &eFabricación improvisada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_05.mensajeAyudaMision5,Misiones_Principiante-Mision_05.iniciarMision5" 
+      botonMisionActiva5:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_05.misionActiva5"
+        close: true
+        text:
+        - "&6&l[Misión 5]: &eFabricación improvisada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_05.mensajeAyudaMision5" 
+      botonMisionCompletada5:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_05.misionCompletada5"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 5]: &eFabricación improvisada"
+        - "&r "
+        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+      botonMisionBloqueada5:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_04.misionCompletada4"
+#####################################################################
+      botonMisionDisponible6:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_05.misionCompletada5,!Misiones_Principiante-Mision_06.misionActiva6"
+        close: true
+        text:
+        - "&6&l[Misión 6]: &eAprendiz de minería"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_06.mensajeAyudaMision6,Misiones_Principiante-Mision_06.iniciarMision6" 
+      botonMisionActiva6:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_06.misionActiva6"
+        close: true
+        text:
+        - "&6&l[Misión 6]: &eAprendiz de minería"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_06.mensajeAyudaMision6" 
+      botonMisionCompletada6:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_06.misionCompletada6"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 6]: &eAprendiz de minería"
+        - "&r "
+        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+      botonMisionBloqueada6:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_05.misionCompletada5"
+#####################################################################
+      botonMisionDisponible7:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_06.misionCompletada6,!Misiones_Principiante-Mision_07.misionActiva7"
+        close: true
+        text:
+        - "&6&l[Misión 7]: &eAprendiz de leñador"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_07.mensajeAyudaMision7,Misiones_Principiante-Mision_07.iniciarMision7" 
+      botonMisionActiva7:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_07.misionActiva7"
+        close: true
+        text:
+        - "&6&l[Misión 7]: &eAprendiz de leñador"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_07.mensajeAyudaMision7" 
+      botonMisionCompletada7:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_07.misionCompletada7"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 7]: &eAprendiz de leñador"
+        - "&r "
+        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+      botonMisionBloqueada7:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_06.misionCompletada6"
+#####################################################################
+      botonMisionDisponible8:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_07.misionCompletada7,!Misiones_Principiante-Mision_08.misionActiva8"
+        close: true
+        text:
+        - "&6&l[Misión 8]: &e¡La cosa está que arde!"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &r&oHorno&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_08.mensajeAyudaMision8,Misiones_Principiante-Mision_08.iniciarMision8" 
+      botonMisionActiva8:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_08.misionActiva8"
+        close: true
+        text:
+        - "&6&l[Misión 8]: &e¡La cosa está que arde!"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &r&oHorno&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_08.mensajeAyudaMision8" 
+      botonMisionCompletada8:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_08.misionCompletada8"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 8]: &e¡La cosa está que arde!"
+        - "&r "
+        - "&7&oFabrica un &r&oHorno&7&o."
+      botonMisionBloqueada8:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_07.misionCompletada7"
+#####################################################################
+      botonMisionDisponible9:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_08.misionCompletada8,!Misiones_Principiante-Mision_09.misionActiva9"
+        close: true
+        text:
+        - "&6&l[Misión 9]: &eMejora de almacenamiento"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &r&o8 Cofres&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_09.mensajeAyudaMision9" 
+      botonMisionActiva9:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_09.misionActiva9,!Misiones_Principiante-Mision_09.misionCompletada9"
+        close: true
+        text:
+        - "&6&l[Misión 9]: &eMejora de almacenamiento"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &r&o8 Cofres&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_09.mensajeAyudaMision9" 
+      botonMisionCompletada9:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_09.misionCompletada9"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 9]: &eMejora de almacenamiento"
+        - "&r "
+        - "&7&oFabrica &r&o8 Cofres&7&o."
+      botonMisionBloqueada9:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_08.misionCompletada8"
+#####################################################################
+      botonMisionDisponible10:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_09.misionCompletada9,!Misiones_Principiante-Mision_10.misionActiva10"
+        close: true
+        text:
+        - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_10.mensajeAyudaMision10,Misiones_Principiante-Mision_10.iniciarMision10" 
+      botonMisionActiva10:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_10.misionActiva10"
+        close: true
+        text:
+        - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_10.mensajeAyudaMision10" 
+      botonMisionCompletada10:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_10.misionCompletada10"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
+        - "&r "
+        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+      botonMisionBloqueada10:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_09.misionCompletada9"
+#####################################################################
+      botonMisionDisponible11:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_10.misionCompletada10,!Misiones_Principiante-Mision_11.misionActiva11"
+        close: true
+        text:
+        - "&6&l[Misión 11]: &eUna misión pegajosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_11.mensajeAyudaMision11,Misiones_Principiante-Mision_11.iniciarMision11" 
+      botonMisionActiva11:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_11.misionActiva11"
+        close: true
+        text:
+        - "&6&l[Misión 11]: &eUna misión pegajosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_11.mensajeAyudaMision11" 
+      botonMisionCompletada11:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_11.misionCompletada11"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 11]: &eUna misión pegajosa"
+        - "&r "
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+      botonMisionBloqueada11:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_10.misionCompletada10"
+#####################################################################
+      botonMisionDisponible12:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_11.misionCompletada11,!Misiones_Principiante-Mision_12.misionActiva12"
+        close: true
+        text:
+        - "&6&l[Misión 12]: &eUn nuevo nivel"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de clase."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_12.mensajeAyudaMision12,Misiones_Principiante-Mision_12.iniciarMision12" 
+      botonMisionActiva12:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_12.misionActiva12"
+        close: true
+        text:
+        - "&6&l[Misión 12]: &eUn nuevo nivel"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de clase."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_12.mensajeAyudaMision12" 
+      botonMisionCompletada12:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_12.misionCompletada12"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 12]: &eUn nuevo nivel"
+        - "&r "
+        - "&7&oSube al nivel 2 de clase."
+      botonMisionBloqueada12:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_11.misionCompletada11"
+#####################################################################
+      botonMisionDisponible13:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_12.misionCompletada12,!Misiones_Principiante-Mision_13.misionActiva13"
+        close: true
+        text:
+        - "&6&l[Misión 13]: &eObteniendo prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_13.mensajeAyudaMision13,Misiones_Principiante-Mision_13.iniciarMision13" 
+      botonMisionActiva13:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_13.misionActiva13"
+        close: true
+        text:
+        - "&6&l[Misión 13]: &eObteniendo prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_13.mensajeAyudaMision13" 
+      botonMisionCompletada13:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_13.misionCompletada13"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 13]: &eObteniendo prestigio"
+        - "&r "
+        - "&7&oSube al nivel 2 de Prestigio."
+      botonMisionBloqueada13:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_12.misionCompletada12"
+#####################################################################
+      botonMisionDisponible14:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_13.misionCompletada13,!Misiones_Principiante-Mision_14.misionActiva14"
+        close: true
+        text:
+        - "&6&l[Misión 14]: &eRecompensa inesperada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_14.mensajeAyudaMision14,Misiones_Principiante-Mision_14.iniciarMision14" 
+      botonMisionActiva14:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_14.misionActiva14"
+        close: true
+        text:
+        - "&6&l[Misión 14]: &eRecompensa inesperada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_14.mensajeAyudaMision14" 
+      botonMisionCompletada14:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_14.misionCompletada14"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 14]: &eRecompensa inesperada"
+        - "&r "
+        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+      botonMisionBloqueada14:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_13.misionCompletada13"
+#####################################################################
+      botonMisionDisponible15:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_14.misionCompletada14,!Misiones_Principiante-Mision_15.misionActiva15"
+        close: true
+        text:
+        - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_15.mensajeAyudaMision15,Misiones_Principiante-Mision_15.iniciarMision15" 
+      botonMisionActiva15:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_15.misionActiva15"
+        close: true
+        text:
+        - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_15.mensajeAyudaMision15" 
+      botonMisionCompletada15:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_15.misionCompletada15"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
+        - "&r "
+        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o."
+      botonMisionBloqueada15:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_14.misionCompletada14"
+#####################################################################
+      botonMisionDisponible16:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_15.misionCompletada15,!Misiones_Principiante-Mision_16.misionActiva16"
+        close: true
+        text:
+        - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_16.mensajeAyudaMision16,Misiones_Principiante-Mision_16.iniciarMision16" 
+      botonMisionActiva16:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_16.misionActiva16"
+        close: true
+        text:
+        - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_16.mensajeAyudaMision16" 
+      botonMisionCompletada16:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_16.misionCompletada16"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
+        - "&r "
+        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+      botonMisionBloqueada16:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_15.misionCompletada15"
+#####################################################################
+      botonMisionDisponible17:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_16.misionCompletada16,!Misiones_Principiante-Mision_17.misionActiva17"
+        close: true
+        text:
+        - "&6&l[Misión 17]: &eEn busca de mejor armamento"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_17.mensajeAyudaMision17,Misiones_Principiante-Mision_17.iniciarMision17" 
+      botonMisionActiva17:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_17.misionActiva17"
+        close: true
+        text:
+        - "&6&l[Misión 17]: &eEn busca de mejor armamento"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_17.mensajeAyudaMision17" 
+      botonMisionCompletada17:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_17.misionCompletada17"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 17]: &eEn busca de mejor armamento"
+        - "&r "
+        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+      botonMisionBloqueada17:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_16.misionCompletada16"
+#####################################################################
+      botonMisionDisponible18:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_17.misionCompletada17,!Misiones_Principiante-Mision_18.misionActiva18"
+        close: true
+        text:
+        - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita el &r&oBanco de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_18.mensajeAyudaMision18,Misiones_Principiante-Mision_18.iniciarMision18" 
+      botonMisionActiva18:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_18.misionActiva18"
+        close: true
+        text:
+        - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita el &r&oBanco de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_18.mensajeAyudaMision18" 
+      botonMisionCompletada18:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_18.misionCompletada18"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
+        - "&r "
+        - "&7&oVisita el &r&oBanco de Valor&7&o."
+      botonMisionBloqueada18:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_17.misionCompletada17"
+#####################################################################
+      botonMisionDisponible19:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_18.misionCompletada18,!Misiones_Principiante-Mision_19.misionActiva19"
+        close: true
+        text:
+        - "&6&l[Misión 19]: &eUn pollo temerario"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita al &r&oRey de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_19.mensajeAyudaMision19,Misiones_Principiante-Mision_19.iniciarMision19" 
+      botonMisionActiva19:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_19.misionActiva19"
+        close: true
+        text:
+        - "&6&l[Misión 19]: &eUn pollo temerario"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita al &r&oRey de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_19.mensajeAyudaMision19" 
+      botonMisionCompletada19:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_19.misionCompletada19"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 19]: &eUn pollo temerario"
+        - "&r "
+        - "&7&oVisita al &r&oRey de Valor&7&o."
+      botonMisionBloqueada19:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_18.misionCompletada18"
+#####################################################################
+      botonMisionDisponible20:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_19.misionCompletada19,!Misiones_Principiante-Mision_20.misionActiva20"
+        close: true
+        text:
+        - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 3 de clase."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_20.mensajeAyudaMision20,Misiones_Principiante-Mision_20.iniciarMision20" 
+      botonMisionActiva20:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_20.misionActiva20"
+        close: true
+        text:
+        - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 3 de clase."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_20.mensajeAyudaMision20" 
+      botonMisionCompletada20:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_20.misionCompletada20"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
+        - "&r "
+        - "&7&oSube al nivel 3 de clase."
+      botonMisionBloqueada20:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_19.misionCompletada19"
+
+#####################################################################
+items:
+  botonMisionActiva: "INK_SAC custom-model-data:1461"
+  botonMisionCompletada: "INK_SAC custom-model-data:1458"
+  botonMisionBloqueada: "INK_SAC custom-model-data:1460 name:&c¡Misión_no_disponible! lore:&r_;&7Supera_la_misión_anterior."

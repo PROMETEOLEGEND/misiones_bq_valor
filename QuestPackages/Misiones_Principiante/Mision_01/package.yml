@@ -1,0 +1,71 @@
+conversations: # Conversaciones
+  Paladin: # ID de la conversación
+    quester: "&e&lPaladin" # Nombre del NPC al conversar
+    first: "saludo" # ID de la primera opción de conversación que usará el NPC
+    NPC_options: # Opciones de conversación que usará el NPC
+      saludo: # ID de la opción de conversación
+        text: "¿En qué puedo servirte?\n\n&7&oUsa la tecla &r&oAdelante (W) &7&oo &r&oAtrás (S) &7&opara moverte entre opciones, y la tecla &r&oSaltar (ESPACIO) &7&opara seleccionar una opción" # Texto de la opción de conversación
+        pointer: "pedirAyuda,nada" # Siguiente(s) opción(es)
+        conditions: "!misionCompletada1" # Condición(es) de la opción de conversación
+      ayuda:
+        text: "¡Claro! Dime que necesitas."
+        pointer: "reclamarKitInicial,pedirAsistencia,nada"
+      asistencia:
+        text: "Si tienes dudas acerca de que hacer, puedes ver la &b/ayuda &ro preguntarle a alguien más experimentado.\n\n¿Necesitas algo más?"
+        pointer: "decirSi,decirNo"
+      kitInicial:
+        text: "¿Necesitas un kit inicial?"
+        pointer: "kitInicialSi,kitInicialNo"
+      kitInicialDisponible:
+        text: "Tengo algo de equipamiento básico para ofrecerte, espero que te sea útil."
+        events: "completarMision1"
+      adios:
+        text: "¡Me alegra oír eso, espero verte de vuelta por aquí pronto!"
+
+    player_options:
+      pedirAyuda:
+        text: "¿Podrías echarme una mano?."
+        pointer: "ayuda"
+      reclamarKitInicial:
+        text: "Quiero un Kit Inicial."
+        pointer: "kitInicial"
+      pedirAsistencia:
+        text: "Tengo algunas dudas..."
+        pointer: "asistencia"
+      kitInicialSi:
+        text: "Si, me gustaría obtener un kit inicial."
+        pointer: "kitInicialDisponible"
+      kitInicialNo:
+        text: "No, estoy bien."
+        pointer: "saludo"
+      decirSi:
+        text: "Si, por favor."
+        pointer: "saludo"
+      decirNo:
+        text: "No, estoy bien."
+        pointer: "adios"
+      nada:
+        text: "De momento estoy bien, no te preocupes."
+        pointer: "adios"
+
+#####################################################################        
+
+conditions:
+  misionCompletada1: "tag marcaMisionCompletada1"
+
+#####################################################################        
+ 
+events:
+  mensajeAyudaMisionPaladin: "notify \n&6&lMisión 1:\n &rEl &ePaladin &rse encuentra en el Salón del Trono del Castillo de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  
+  completarMision1: "folder agregarMarcaMisionCompletada1,notificacionMisionCompletada1,darKitInicial,enfriamientoKitInicial,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  agregarMarcaMisionCompletada1: "tag add marcaMisionCompletada1"
+  notificacionMisionCompletada1: "notify &7----------------------------------------\n&6&l¡Misión 1 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darKitInicial: "command kit inicial %player%"
+  enfriamientoKitInicial: "command lp user %player% permission settemp kit_inicial.cooldown true 24h"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+  
+  conversacionPaladin: "if misionCompletada1 menuKitInicial else empezarConversacionPaladin"
+  empezarConversacionPaladin: "conversation Paladin"
+  menuKitInicial: "command dm open kit_inicial %player%"

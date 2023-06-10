@@ -1,0 +1,77 @@
+conversations:
+  Vikingo:
+    quester: "&b&lVikingo"
+    first: "saludo"
+    NPC_options:
+      saludo:
+        text: "¿Qué buscas?"
+        pointer: "buscarInformacion,nada"
+      preguntaNombreObjeto:
+        text: "¿Cuál es el nombre de ese misterioso objeto que dices?."
+        pointer: "mencionarRunaHogar,noRecuerdaNombreObjeto"
+      infoRunaHogar:
+        text: "Ah, así que te refieres a una &bRuna del Hogar&r. Es un objeto místico que otorga a su portador el poder de teletransportarse a su hogar, pero tiene una cantidad limitada de usos."
+        pointer: "quererSaberMasAlRespecto"
+      masInfoRunaHogar:
+        text: "Hay tres variantes de &bRuna del Hogar&r, se diferencian por su cantidad de usos antes de desaparecer. La &bRuna del Hogar&r se mantendrá en tu inventario incluso si caes derrotado y reapareces."
+        pointer: "pedirRunaHogar"
+      regalarRunaHogar:
+        text: "Si, tengo una &bRuna del Hogar&r que puede servirte para iniciar. Puedes ver como fabricar Runas del Hogar en el libro de recetas de una Mesa de trabajo."
+        pointer: "agradecer"
+        events: "completarMision10"
+      adios:
+        text: "Vale, hasta luego."
+      adios2:
+        text: "En ese caso tendrás que venir de nuevo cuando lo recuerdes."
+      adios3:
+        text: "En caso que tengas alguna otra duda acerca de &bRunas del Hogar&r no dudes en venir.\n\n¡Hasta luego!"
+
+    player_options:
+      buscarInformacion:
+        text: "Busco información acerca de un misterioso objeto..."
+        pointer: "preguntaNombreObjeto"
+      mencionarRunaHogar:
+        text: "Creo que el objeto se llama... Runa del Hogar."
+        pointer: "infoRunaHogar"
+      noRecuerdaNombreObjeto:
+        text: "En este momento no recuerdo el nombre del objeto..."
+        pointer: "adios2"
+      quererSaberMasAlRespecto:
+        text: "Quiero saber más al respecto, si es posible."
+        pointer: "masInfoRunaHogar"
+      pedirRunaHogar:
+        text: "¿Tienes algúna Runa de sobra por allí?"
+        pointer: "regalarRunaHogar"
+      agradecer:
+        text: "Te agradezco mucho la información."
+        pointer: "adios3"
+      nada:
+        text: "De momento no busco nada, solo estaba viendo por allí."
+        pointer: "adios"
+
+#####################################################################        
+
+conditions:
+  misionActiva10: "tag marcaMisionActiva10"
+  misionCompletada10: "tag marcaMisionCompletada10"
+
+#####################################################################        
+ 
+events:
+  iniciarMision10: "tag add marcaMisionActiva10"
+  
+  mensajeAyudaMision10: "notify \n&6&lMisión 10:\n&r El &bVikingo &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  
+  completarMision10: "folder eliminarMarcaMisionActiva10,agregarMarcaMisionCompletada10,notificacionMisionCompletada10,darRunaHogar,enfriamientoRunaHogar,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva10: "tag delete marcaMisionActiva10"
+  agregarMarcaMisionCompletada10: "tag add marcaMisionCompletada10"
+  notificacionMisionCompletada10: "notify &7----------------------------------------\n&6&l¡Misión 10 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRunaHogar: "command mi give CONSUMABLE RUNA_HOGAR %player% 1"
+  enfriamientoRunaHogar: "command lp user %player% permission set runa_hogar.recibida true"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+  
+  conversacionVikingo: "folder notificacionMisionNoDisponible10,empezarConversacionVikingo,menuRunaHogar"
+  notificacionMisionNoDisponible10: "notify &Necesitas haber iniciado la misión de principiante 10 para poder interactuar con este NPC. condition:!misionCompletada10"
+  empezarConversacionVikingo: "conversation Vikingo condition:misionActiva10"
+  menuRunaHogar: "command dm open runa_hogar_ayuda %player% condition:misionCompletada10"

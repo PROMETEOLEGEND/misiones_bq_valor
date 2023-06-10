@@ -1,0 +1,26 @@
+conditions:
+  misionActiva14: "tag marcaMisionActiva14"
+  misionCompletada14: "tag marcaMisionCompletada14"
+  recompensaNivel2PrestigioReclamada: "permission rankup.prestigio_nivel_2"
+
+####################################################################################################
+
+events:
+  iniciarMision14: "folder agregarMarcaMisionActiva14,iniciarObjetivoMision14"
+  agregarMarcaMisionActiva14: "tag add marcaMisionActiva14"
+  iniciarObjetivoMision14: "objective start objReclamarRecompensaNivel2Prestigio"
+  
+  mensajeAyudaMision14: "notify \n&6&lMisión 14:\n&r El comando &b/prestigio &rte permitirá obtener recompensas a medida que vayas subiendo tu nivel de Prestigio.\n&r"
+  
+  completarMision14: "folder eliminarMarcaMisionActiva14,agregarMarcaMisionCompletada14,notificacionMisionCompletada14,recompensaMision14,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva14: "tag delete marcaMisionActiva14"
+  agregarMarcaMisionCompletada14: "tag add marcaMisionCompletada14"
+  notificacionMisionCompletada14: "notify &7----------------------------------------\n&6&l¡Misión 14 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision14: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 100"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objReclamarRecompensaNivel2Prestigio: "delay 5 ticks interval:5 conditions:recompensaNivel2PrestigioReclamada events:completarMision14"

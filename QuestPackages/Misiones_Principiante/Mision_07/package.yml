@@ -1,0 +1,25 @@
+conditions:
+  misionActiva7: "tag marcaMisionActiva7"
+  misionCompletada7: "tag marcaMisionCompletada7"
+
+####################################################################################################
+
+events:
+  iniciarMision7: "folder agregarMarcaMisionActiva7,iniciarObjetivoMision7"
+  agregarMarcaMisionActiva7: "tag add marcaMisionActiva7"
+  iniciarObjetivoMision7: "objective start objTalarMadera"
+  
+  mensajeAyudaMision7: "notify \n&6&lMisión 7:\n&r Debes talar &b20 Troncos de cualquier tipo de árbol&r, para ello necesitarás fabricar un Hacha de cualquier madera o mineral que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  completarMision7: "folder eliminarMarcaMisionActiva7,agregarMarcaMisionCompletada7,notificacionMisionCompletada7,recompensaMision7,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva7: "tag delete marcaMisionActiva7"
+  agregarMarcaMisionCompletada7: "tag add marcaMisionCompletada7"
+  notificacionMisionCompletada7: "notify &7----------------------------------------\n&6&l¡Misión 7 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision7: "command eco give %player% 100"
+  recompensaExpClase: "mmoprofessionexperience woodcutting 100"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de leñador."
+
+####################################################################################################
+
+objectives:
+  objTalarMadera: "block .*_LOG -20 events:completarMision7 notify:5"

@@ -1,0 +1,153 @@
+conversations:
+  ReyValor2:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡%player%! ¡Qué alegría verte de vuelta por aquí, fuiste de gran ayuda la última vez! ¿Podría darte un nuevo encargo?"
+        pointer: "buscarMision,nada"
+        conditions: "!misionInfoRecibidaHipogrifo"
+      ofrecerMision:
+        text: "Tengo una misión &eemplumada &rpara ti, aventurero. ¿Crees estar listo para aceptarla?"
+        pointer: "pedirInfoMision"
+      infoMision:
+        text: "Permíteme explicarte... En el reino de Valor hay fantásticas criaturas mitológicas, una de ellas es conocida como el Hipogrifo, una bestia alada de proporciones descomunales."
+        pointer: "quererSaberMasAlRespecto"
+      masInfoMision:
+        text: "Si, algunos de los guerreros más poderosos del reino surcan los cielos sobre ellos."
+        pointer: "preguntaMision"
+      masInfoMision2:
+        text: "¡Por supuesto! Pero aún queda mucho para eso... No seas impaciente %player%... Debes mejorar mucho tus habilidades antes de poder domar a semejante bestia."
+        pointer: "entenderMision"
+      encomendarMision:
+        text: "Bueno... Dejémonos de tanta palabreria. La misión que queria encomendarte es concerniente a uno de estos Hipogrifos que esta causando gran revuelo entre mis súbditos, no quiere ser domada y se dedica a ir creando torbellinos que van arrasando con todo a su paso."
+        pointer: "aceptarMision,rechazarMision,pedirRepeticionInfoMision"
+        conditions: "!misionInfoRecibidaHipogrifo"
+        events: "agregarMarcaInfoRecibidaHipogrifo"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaHipogrifo"
+      adios:
+        text: "Es normal, ¡han sido muchas aventuras por el momento! Pero no caigas en la vagancia pues te llevara a la ruina."
+      adios2:
+        text: "Entiendo tu preocupación, aventurero. Estaré esperando por si cambias de opinión y estás dispuesto a aceptar la misión. Te recompensaré si la completas exitosamente"
+      misionAceptada:
+        text: "¡Me alegra que hayas decidido aceptar la misión, aventurero! Te recompensaré si la completas exitosamente."
+        events: "aceptarMisionHipogrifo"
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "aceptarMision,rechazarMision,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaHipogrifo,!misionAceptadaHipogrifo"
+      saludo3:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has completado la misión?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaHipogrifo"
+      misionCompletada:
+        text: "¡Sabía que serías capaz de hacerlo, aventurero! Te entregaré tu debida recompensa ahora mismo, si me lo permites."
+        pointer: "agradecerElogio"
+      misionCompletada2:
+        text: "El que tiene que agradecer soy yo, y por ello te entregaré tu recompensa ahora mismo."
+        events: "completarMision19"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+        events: "mensajeayuda"
+
+    player_options:
+      buscarMision:
+        text: "Si, Su Majestad."
+        pointer: "ofrecerMision"
+      pedirInfoMision:
+        text: "Me intriga saber a que se refiere con emplumada, Su Majestad."
+        pointer: "infoMision"
+      quererSaberMasAlRespecto:
+        text: "¡Oh! Seria increíble poder montar sobre una de ellas."
+        pointer: "masInfoMision"
+      preguntaMision:
+        text: "¿Podré tener un Hipogrifo yo también?"
+        pointer: "masInfoMision2"
+      entenderMision:
+        text: "Entiendo..."
+        pointer: "encomendarMision,preguntarInfoMision"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      aceptarMision:
+        text: "Puede contar conmigo, Su Majestad."
+        pointer: "misionAceptada"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "adios2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la historia, Su Majestad?"
+        condition: "misionInfoRecibidaHipogrifo,!mazmorraCompletadaHipogrifo"
+        pointer: "repetirInfoMision"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "infoMision"
+      misionCompletadaSi:
+        text: "Si, Su Majestad."
+        condition: "mazmorraCompletadaHipogrifo"
+        pointer: "misionCompletada"
+      agradecerElogio:
+        text: "Gracias, Su Majestad."
+        pointer: "misionCompletada2"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        condition: "!mazmorraCompletadaHipogrifo"
+        pointer: "misionAunNoCompletada"
+      nada:
+        text: "No, por el momento necesito un descanso."
+        pointer: "adios"
+
+#####################################################################        
+
+conditions:
+  misionActiva19: "tag marcaMisionActiva19"
+  misionInfoRecibidaHipogrifo: "tag marcaInfoRecibidaHipogrifo"
+  misionAceptadaHipogrifo: "tag marcaMisionAceptadaHipogrifo"
+  mazmorraCompletadaHipogrifo: "tag marcaMazmorraCompletadaHipogrifo"
+  misionCompletada19: "tag marcaMisionCompletada19"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraHipogrifo: "finishdungeon hipogrifo events:mazmorraCompletarHipogrifo"
+
+#####################################################################        
+
+events:
+  iniciarMision19: "tag add marcaMisionActiva19"
+  
+  mensajeAyudaMision19: "folder mensajeAyudaMision19_1,mensajeAyudaMision19_2,mensajeAyudaMision19_3"
+  mensajeAyudaMision19_1: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionAceptadaHipogrifo"
+  mensajeAyudaMision19_2: "notify \n&6&lMisión 19:\n&r El cristal de la mazmorra del &eHipogrifo &rse encuentra en una pequeña sala que está justo a la izquierda del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!mazmorraCompletadaHipogrifo"
+  mensajeAyudaMision19_3: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionCompletada19"
+  
+  agregarMarcaInfoRecibidaHipogrifo: "tag add marcaInfoRecibidaHipogrifo"
+  
+  aceptarMisionHipogrifo: "folder agregarMarcaMisionAceptadaHipogrifo,permisoMazmorraHipogrifo,iniciarObjetivoCompletarMazmorraHipogrifo,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaHipogrifo: "tag add marcaMisionAceptadaHipogrifo"
+  permisoMazmorraHipogrifo: "command lp user %player% permission set mazmorra.hipogrifo"
+  iniciarObjetivoCompletarMazmorraHipogrifo: "objective start completarMazmorraHipogrifo"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7----------------------------------------"
+  
+  mensajeayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarHipogrifo: "folder agregarMarcaMazmorraCompletadaHipogrifo,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaHipogrifo: "tag add marcaMazmorraCompletadaHipogrifo"
+  
+  completarMision19: "folder eliminarMarcasMisionActiva19,agregarMarcaMisionCompletada19,notificacionMisionCompletada19,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva19: "folder eliminarMarcaMisionActiva19,eliminarMarcaMisionInfoRecibidaHipogrifo,eliminarMarcaMisionAceptadaHipogrifo,eliminarMarcaMazmorraCompletadaHipogrifo"
+  eliminarMarcaMisionActiva19: "tag delete marcaMisionActiva19"
+  eliminarMarcaMisionInfoRecibidaHipogrifo: "tag delete marcaInfoRecibidaHipogrifo"
+  eliminarMarcaMisionAceptadaHipogrifo: "tag delete marcaMisionAceptadaHipogrifo"
+  eliminarMarcaMazmorraCompletadaHipogrifo: "tag delete marcaMazmorraCompletadaHipogrifo"
+  agregarMarcaMisionCompletada19: "tag add marcaMisionCompletada19"
+  notificacionMisionCompletada19: "notify &7----------------------------------------\n&6&l¡Misión 19 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 2000"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

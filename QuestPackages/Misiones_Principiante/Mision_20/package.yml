@@ -1,0 +1,26 @@
+conditions:
+  misionActiva20: "tag marcaMisionActiva20"
+  misionCompletada20: "tag marcaMisionCompletada20"
+  llegarNivel3Clase: "mmoclass * 3"
+
+####################################################################################################
+
+events:
+  iniciarMision20: "folder agregarMarcaMisionActiva20,iniciarObjetivoMision20"
+  agregarMarcaMisionActiva20: "tag add marcaMisionActiva20"
+  iniciarObjetivoMision20: "objective start objSubirNivel3Clase"
+  
+  mensajeAyudaMision20: "notify \n&6&lMisión 20:\n&r Conforme vayas derrotando enemigos o subiendo de nivel tus profesiones irás obteniendo experiencia para subir de nivel. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision20: "folder eliminarMarcaMisionActiva20,agregarMarcaMisionCompletada20,notificacionMisionCompletada20,recompensaMision20,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva20: "tag delete marcaMisionActiva20"
+  agregarMarcaMisionCompletada20: "tag add marcaMisionCompletada20"
+  notificacionMisionCompletada20: "notify &7----------------------------------------\n&6&l¡Misión 20 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision20: "command eco give %player% 200"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objSubirNivel3Clase: "delay 5 ticks interval:5 conditions:llegarNivel3Clase events:completarMision20"

@@ -1,0 +1,25 @@
+conditions:
+  misionActiva4: "tag marcaMisionActiva4"
+  misionCompletada4: "tag marcaMisionCompletada4"
+
+####################################################################################################
+
+events:
+  iniciarMision4: "folder agregarMarcaMisionActiva4,iniciarObjetivoMision4"
+  agregarMarcaMisionActiva4: "tag add marcaMisionActiva4"
+  iniciarObjetivoMision4: "objective start objEstablecerHogar"
+  
+  mensajeAyudaMision4: "notify \n&6&lMisión 4:\n&r Para establecer un hogar usa el comando &b/sethome&r en el lugar que desees.\n Al definir un hogar podrás visitarlo rápidamente usando una &bRuna del Hogar&r.\n&r"
+  
+  completarMision4: "folder eliminarMarcaMisionActiva4,agregarMarcaMisionCompletada4,notificacionMisionCompletada4,recompensaMision4,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva4: "tag delete marcaMisionActiva4"
+  agregarMarcaMisionCompletada4: "tag add marcaMisionCompletada4"
+  notificacionMisionCompletada4: "notify &7----------------------------------------\n&6&l¡Misión 4 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision4: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objEstablecerHogar: "command /sethome events:completarMision4"

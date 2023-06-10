@@ -1,0 +1,30 @@
+conditions:
+  misionActiva8: "tag marcaMisionActiva8"
+  misionCompletada8: "tag marcaMisionCompletada8"
+
+####################################################################################################
+
+events:
+  iniciarMision8: "folder agregarMarcaMisionActiva8,iniciarObjetivoMision8"
+  agregarMarcaMisionActiva8: "tag add marcaMisionActiva8"
+  iniciarObjetivoMision8: "objective start objFabricarHorno"
+  
+  mensajeAyudaMision8: "notify \n&6&lMisión 8:\n&r Para fabricar un &bHorno &rnecesitarás 8 bloques de roca, los cuales puedes obtener minando piedra.\n&r"
+  
+  completarMision8: "folder eliminarMarcaMisionActiva8,agregarMarcaMisionCompletada8,notificacionMisionCompletada8,recompensaMision8,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva8: "tag delete marcaMisionActiva8"
+  agregarMarcaMisionCompletada8: "tag add marcaMisionCompletada8"
+  notificacionMisionCompletada8: "notify &7----------------------------------------\n&6&l¡Misión 8 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision8: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objFabricarHorno: "craft horno 1 events:completarMision8"
+  
+####################################################################################################
+
+items:
+  horno: "FURNACE"

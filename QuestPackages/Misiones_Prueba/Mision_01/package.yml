@@ -1,0 +1,25 @@
+conditions:
+  misionActivaPrueba01: "tag marcaMisionActivaPrueba01"
+  misionCompletadaPrueba01: "tag marcaMisionCompletadaPrueba01"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMisionPrueba01: "notify \n&6&lMisión de Prueba 1:\n&r El comando &b/habilidades &rte muestra un menú en el cual puedes equipar, mejorar y obtener información acerca de las habilidades de tu clase.\n&r"
+  
+  iniciarMisionPrueba01: "folder agregarMarcaMisionActivaPrueba01,iniciarObjetivoMisionPrueba01"
+  agregarMarcaMisionActivaPrueba01: "tag add marcaMisionActivaPrueba01"
+  iniciarObjetivoMisionPrueba01: "objective start objUsarComandoHabilidades"
+  
+  completarMisionPrueba01: "folder recompensaMisionPrueba01,agregarMarcaMisionCompletadaPrueba01,notificacionMisionCompletadaPrueba01,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  recompensaMisionPrueba01: "command eco give %player% 150"
+  recompensaExpClase: "mmoclassexperience 250"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 250 exp de clase."
+  agregarMarcaMisionCompletadaPrueba01: "tag add marcaMisionCompletadaPrueba01"
+  notificacionMisionCompletadaPrueba01: "notify &7----------------------------------------\n&6&l¡Misión de Prueba 1 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objUsarComandoHabilidades: "command /habilidades events:completarMisionPrueba01"
+  
