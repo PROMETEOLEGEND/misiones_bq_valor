@@ -1,7 +1,7 @@
 conditions:
   misionActiva3: "tag marcaMisionActiva3"
   misionCompletada3: "tag marcaMisionCompletada3" 
-  bloqueProteccionColocado: "variable %math.calc:ph.protectionstones_currentplayer_num_of_owned_regions*1% ((1[0-9])|[1-9])"
+  bloqueProteccionNoColocado: "variable %math.calc:ph.protectionstones_currentplayer_num_of_owned_regions*1% 0"
 
 ####################################################################################################
 
@@ -23,7 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objColocarBloqueProteccion: "delay 5 ticks interval:5 conditions:bloqueProteccionColocado events:completarMision3"
-
-# objectives:
-#   objColocarBloqueProteccion: "block IRON_ORE 1 events:completarMision3"
+  objColocarBloqueProteccion: "delay 5 ticks interval:5 conditions:!bloqueProteccionNoColocado events:completarMision3"
