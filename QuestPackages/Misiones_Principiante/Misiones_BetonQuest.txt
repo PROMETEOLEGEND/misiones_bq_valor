@@ -18,8 +18,8 @@
 18. Visita el banco. (Hecho)
 19. Hablar con el Rey y hacer la mazmorra del Hipogrifo. (Hecho)
 20. Sube al nivel 3 de clase. (Hecho)
-21. Usa /habilidades. (En pruebas)
-22. Encuentra y pica 10 menas de diamante. (En pruebas)
+21. Usa /habilidades. (Hecho)
+22. Encuentra y pica 10 menas de diamante. (Hecho)
 23. Fabrica una espada de diamante.
 24. Fabrica una forja.
 25. Añade a tu espada de diamante un recipiente de gema de nivel I.

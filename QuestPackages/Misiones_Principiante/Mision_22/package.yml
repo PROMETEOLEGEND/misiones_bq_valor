@@ -1,0 +1,25 @@
+conditions:
+  misionActiva22: "tag marcaMisionActiva22"
+  misionCompletada22: "tag marcaMisionCompletada22"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision22: "notify \n&6&lMisión 22:&r Debes minar &b20 menas de Diamante&r, para ello necesitarás un &bPico &rInicial, de Hierro o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  iniciarMision22: "folder agregarMarcaMisionActiva22,iniciarObjetivoMision22"
+  agregarMarcaMisionActiva22: "tag add marcaMisionActiva22"
+  iniciarObjetivoMision22: "objective start objPicarMenasDiamante"
+  
+  completarMision21: "folder eliminarMarcaMisionActiva22,agregarMarcaMisionCompletada22,notificacionMisionCompletada22,recompensaMision22,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva21: "tag delete marcaMisionActiva22"
+  recompensaMision22: "command eco give %player% 200"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+  agregarMarcaMisionCompletada22: "tag add marcaMisionCompletada22"
+  notificacionMisionCompletada22: "notify &7----------------------------------------\n&6&l¡Misión 22 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objPicarMenasDiamante: "block .*DIAMOND_ORE -10 events:completarMision22"
