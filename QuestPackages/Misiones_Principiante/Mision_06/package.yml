@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva6: "tag add marcaMisionActiva6"
   iniciarObjetivoMision6: "objective start objMinarPiedra"
   
-  mensajeAyudaMision6: "notify \n&6&lMisión 6:\n&r Debes minar &b20 bloques de Piedra&r, para ello necesitarás fabricar un Pico de cualquier madera o mineral que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  mensajeAyudaMision6: "notify \n&6&lMisión 6:\n&r Debes minar &b20 bloques de Piedra&r, para ello necesitarás fabricar un &bPico &rde cualquier madera o mineral que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
   
   completarMision6: "folder eliminarMarcaMisionActiva6,agregarMarcaMisionCompletada6,notificacionMisionCompletada6,recompensaMision6,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva6: "tag delete marcaMisionActiva6"

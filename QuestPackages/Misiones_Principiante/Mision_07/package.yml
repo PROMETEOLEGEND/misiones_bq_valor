@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva7: "tag add marcaMisionActiva7"
   iniciarObjetivoMision7: "objective start objTalarMadera"
   
-  mensajeAyudaMision7: "notify \n&6&lMisión 7:\n&r Debes talar &b20 Troncos de cualquier tipo de árbol&r, para ello necesitarás fabricar un Hacha de cualquier madera o mineral que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  mensajeAyudaMision7: "notify \n&6&lMisión 7:\n&r Debes talar &b20 Troncos &rde cualquier tipo de árbol, para ello necesitarás fabricar un &bHacha &rde cualquier madera o mineral que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
   
   completarMision7: "folder eliminarMarcaMisionActiva7,agregarMarcaMisionCompletada7,notificacionMisionCompletada7,recompensaMision7,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva7: "tag delete marcaMisionActiva7"

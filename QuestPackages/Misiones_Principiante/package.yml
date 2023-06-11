@@ -68,7 +68,7 @@ menus:
         - "&r "
         - "&aObjetivo:"
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
+        - "&7&odel spawn o usa &f&o/warp exploracion&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -83,7 +83,7 @@ menus:
         - "&r "
         - "&aObjetivo:"
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
+        - "&7&odel spawn o usa &f&o/warp exploracion&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para localizar el Portal"
         click:
@@ -97,7 +97,7 @@ menus:
         - "&6&l[Misión 2]: &eVisita el Mundo de Exploración"
         - "&r "
         - "&7&oVe al mundo de exploración, para ello usa el portal"
-        - "&7&odel spawn o usa &r&o/warp exploracion&7&o."
+        - "&7&odel spawn o usa &f&o/warp exploracion&7&o."
       botonMisionBloqueada2:
         item: "botonMisionBloqueada"
         amount: 1
@@ -208,7 +208,7 @@ menus:
         - "&6&l[Misión 5]: &eFabricación improvisada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+        - "&7&oFabrica una &f&oMesa de trabajo&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -222,7 +222,7 @@ menus:
         - "&6&l[Misión 5]: &eFabricación improvisada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+        - "&7&oFabrica una &f&oMesa de trabajo&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -235,7 +235,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 5]: &eFabricación improvisada"
         - "&r "
-        - "&7&oFabrica una &r&oMesa de trabajo&7&o."
+        - "&7&oFabrica una &f&oMesa de trabajo&7&o."
       botonMisionBloqueada5:
         item: "botonMisionBloqueada"
         amount: 1
@@ -250,7 +250,7 @@ menus:
         - "&6&l[Misión 6]: &eAprendiz de minería"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+        - "&7&oMina &f&o20 bloques de Piedra&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -264,7 +264,7 @@ menus:
         - "&6&l[Misión 6]: &eAprendiz de minería"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+        - "&7&oMina &f&o20 bloques de Piedra&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -277,7 +277,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 6]: &eAprendiz de minería"
         - "&r "
-        - "&7&oMina &r&o20 bloques de Piedra&7&o."
+        - "&7&oMina &f&o20 bloques de Piedra&7&o."
       botonMisionBloqueada6:
         item: "botonMisionBloqueada"
         amount: 1
@@ -292,7 +292,7 @@ menus:
         - "&6&l[Misión 7]: &eAprendiz de leñador"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+        - "&7&oTala &f&o20 Troncos &7&ode cualquier tipo de árbol."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -306,7 +306,7 @@ menus:
         - "&6&l[Misión 7]: &eAprendiz de leñador"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+        - "&7&oTala &f&o20 Troncos &7&ode cualquier tipo de árbol."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -319,7 +319,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 7]: &eAprendiz de leñador"
         - "&r "
-        - "&7&oTala &r&o20 Troncos de cualquier tipo de árbol&7&o."
+        - "&7&oTala &f&o20 Troncos &7&ode cualquier tipo de árbol."
       botonMisionBloqueada7:
         item: "botonMisionBloqueada"
         amount: 1
@@ -334,7 +334,7 @@ menus:
         - "&6&l[Misión 8]: &e¡La cosa está que arde!"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica un &r&oHorno&7&o."
+        - "&7&oFabrica un &f&oHorno&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -348,7 +348,7 @@ menus:
         - "&6&l[Misión 8]: &e¡La cosa está que arde!"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica un &r&oHorno&7&o."
+        - "&7&oFabrica un &f&oHorno&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -361,7 +361,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 8]: &e¡La cosa está que arde!"
         - "&r "
-        - "&7&oFabrica un &r&oHorno&7&o."
+        - "&7&oFabrica un &f&oHorno&7&o."
       botonMisionBloqueada8:
         item: "botonMisionBloqueada"
         amount: 1
@@ -376,7 +376,7 @@ menus:
         - "&6&l[Misión 9]: &eMejora de almacenamiento"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &r&o8 Cofres&7&o."
+        - "&7&oFabrica &f&o8 Cofres&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -390,7 +390,7 @@ menus:
         - "&6&l[Misión 9]: &eMejora de almacenamiento"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &r&o8 Cofres&7&o."
+        - "&7&oFabrica &f&o8 Cofres&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -403,7 +403,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 9]: &eMejora de almacenamiento"
         - "&r "
-        - "&7&oFabrica &r&o8 Cofres&7&o."
+        - "&7&oFabrica &f&o8 Cofres&7&o."
       botonMisionBloqueada9:
         item: "botonMisionBloqueada"
         amount: 1
@@ -418,7 +418,7 @@ menus:
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -432,7 +432,7 @@ menus:
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -445,7 +445,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
-        - "&7&oPara volver a tu casa necesitas una &r&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
       botonMisionBloqueada10:
         item: "botonMisionBloqueada"
         amount: 1
@@ -586,7 +586,7 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -600,7 +600,7 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -613,7 +613,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
-        - "&7&oUsa &r&o/prestigio &7&oy reclama la recompensa del &r&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
       botonMisionBloqueada14:
         item: "botonMisionBloqueada"
         amount: 1
@@ -628,7 +628,7 @@ menus:
         - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o"
+        - "&7&oUsa &f&o/pase &7&opara abrir el menú del &f&oPase de Batalla&7&o"
         - "&7&oy completa alguna de las misiones diarias del pase."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
@@ -643,7 +643,7 @@ menus:
         - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o"
+        - "&7&oUsa &f&o/pase &7&opara abrir el menú del &f&oPase de Batalla&7&o"
         - "&7&oy completa alguna de las misiones diarias del pase."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
@@ -657,7 +657,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 15]: &eRecompensa inesperada, parte 2"
         - "&r "
-        - "&7&oUsa &r&o/pase &7&opara abrir el menú del &r&oPase de Batalla&7&o"
+        - "&7&oUsa &f&o/pase &7&opara abrir el menú del &f&oPase de Batalla&7&o"
         - "&7&oy completa alguna de las misiones diarias del pase."
       botonMisionBloqueada15:
         item: "botonMisionBloqueada"
@@ -673,7 +673,7 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -687,7 +687,7 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -700,7 +700,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
-        - "&7&oHabla con el Granjero que está en la &r&oTienda de mascotas de Valor &7&opara obtener una mascota &r&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
       botonMisionBloqueada16:
         item: "botonMisionBloqueada"
         amount: 1
@@ -715,7 +715,7 @@ menus:
         - "&6&l[Misión 17]: &eEn busca de mejor armamento"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+        - "&7&oVisita la &f&oArmeria de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -729,7 +729,7 @@ menus:
         - "&6&l[Misión 17]: &eEn busca de mejor armamento"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+        - "&7&oVisita la &f&oArmeria de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -742,7 +742,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 17]: &eEn busca de mejor armamento"
         - "&r "
-        - "&7&oVisita la &r&oArmeria de Valor&7&o."
+        - "&7&oVisita la &f&oArmeria de Valor&7&o."
       botonMisionBloqueada17:
         item: "botonMisionBloqueada"
         amount: 1
@@ -757,7 +757,7 @@ menus:
         - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita el &r&oBanco de Valor&7&o."
+        - "&7&oVisita el &f&oBanco de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -771,7 +771,7 @@ menus:
         - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita el &r&oBanco de Valor&7&o."
+        - "&7&oVisita el &f&oBanco de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -784,7 +784,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 18]: &eUn lugar seguro para tus Rupias"
         - "&r "
-        - "&7&oVisita el &r&oBanco de Valor&7&o."
+        - "&7&oVisita el &f&oBanco de Valor&7&o."
       botonMisionBloqueada18:
         item: "botonMisionBloqueada"
         amount: 1
@@ -799,7 +799,7 @@ menus:
         - "&6&l[Misión 19]: &eUn pollo temerario"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita al &r&oRey de Valor&7&o."
+        - "&7&oVisita al &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -813,7 +813,7 @@ menus:
         - "&6&l[Misión 19]: &eUn pollo temerario"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita al &r&oRey de Valor&7&o."
+        - "&7&oVisita al &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -826,7 +826,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 19]: &eUn pollo temerario"
         - "&r "
-        - "&7&oVisita al &r&oRey de Valor&7&o."
+        - "&7&oVisita al &f&oRey de Valor&7&o."
       botonMisionBloqueada19:
         item: "botonMisionBloqueada"
         amount: 1
