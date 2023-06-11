@@ -921,7 +921,7 @@ menus:
       botonMisionDisponible22:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_21.misionCompletadaPrincipiante21,!Misiones_Principiante-Mision_22.misionActiva22"
+        conditions: "Misiones_Principiante-Mision_21.misionCompletada21,!Misiones_Principiante-Mision_22.misionActiva22"
         close: true
         text:
         - "&6&l[Misión 22]: &eEn busca de diamantes"
