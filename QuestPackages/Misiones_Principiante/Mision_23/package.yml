@@ -11,7 +11,50 @@ menus:
       10: "botonMisionDisponible21,botonMisionActiva21,botonMisionCompletada21,botonMisionBloqueada21"
       11: "botonMisionDisponible22,botonMisionActiva22,botonMisionCompletada22,botonMisionBloqueada22"
     items:
+####################################################
 #####################################################################
+      botonMisionDisponible21:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_20.misionCompletada20,!Misiones_Principiante-Mision_21.misionActiva21,!Misiones_Principiante-Mision_21.misionCompletada21"
+        close: true
+        text:
+        - "&6&l[Misión 21]: &eNuevos trucos"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &f&o/habilidades &7&opara ver las habilidades que puedes utilizar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_21.mensajeAyudaMision21,Misiones_Principiante-Mision_21.iniciarMision21" 
+      botonMisionActiva21:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_21.misionActiva21"
+        close: true
+        text:
+        - "&6&l[Misión 21]: &eNuevos trucos"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oUsa &f&o/habilidades &7&opara ver las habilidades que puedes utilizar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_21.mensajeAyudaMision21" 
+      botonMisionCompletada21:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_21.misionCompletada21"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 21]: &eNuevos trucos"
+        - "&r "
+        - "&7&oUsa &f&o/habilidades &7&opara ver las habilidades que puedes utilizar."
+      botonMisionBloqueada21:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_20.misionCompletada20"
+
       botonMisionDisponible22:
         item: "botonMisionActiva"
         amount: 1
