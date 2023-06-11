@@ -12,7 +12,7 @@ events:
   iniciarObjetivoMision21: "objective start objUsarComandoHabilidades"
   
   completarMision21: "folder eliminarMarcaMisionActiva21,agregarMarcaMisionCompletada21,notificacionMisionCompletada21,recompensaMision21,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcaMisionActiva21: "tag delete marcaMisionActiva21"  
+  eliminarMarcaMisionActiva21: "tag delete marcaMisionActiva21"
   agregarMarcaMisionCompletada21: "tag add marcaMisionCompletada21"
   notificacionMisionCompletada21: "notify &7----------------------------------------\n&6&l¡Misión 21 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision21: "command eco give %player% 150"
