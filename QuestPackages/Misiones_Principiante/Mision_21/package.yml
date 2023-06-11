@@ -1,0 +1,25 @@
+conditions:
+  misionActiva21: "tag marcaMisionActiva21"
+  misionCompletada21: "tag marcaMisionCompletada21"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision21: "notify \n&6&lMisión 21:\n&r El comando &b/habilidades &rte muestra un menú en el cual puedes equipar, mejorar y obtener información acerca de las habilidades de tu clase.\n&r"
+  
+  iniciarMision21: "folder agregarMarcaMisionActiva21,iniciarObjetivoMision21"
+  agregarMarcaMisionActiva21: "tag add marcaMisionActiva21"
+  iniciarObjetivoMision21: "objective start objUsarComandoHabilidades"
+  
+  completarMision21: "folder eliminarMarcaMisionActiva21,agregarMarcaMisionCompletada21,notificacionMisionCompletada21,recompensaMision21,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva21: "tag delete marcaMisionActiva21"  
+  agregarMarcaMisionCompletada21: "tag add marcaMisionCompletada21"
+  notificacionMisionCompletada21: "notify &7----------------------------------------\n&6&l¡Misión 21 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision21: "command eco give %player% 150"
+  recompensaExpClase: "mmoclassexperience 250"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 250 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objUsarComandoHabilidades: "command /habilidades events:completarMision21"
