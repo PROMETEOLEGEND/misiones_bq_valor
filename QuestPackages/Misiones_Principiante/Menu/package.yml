@@ -958,7 +958,7 @@ menus:
       botonMisionBloqueada22:
         item: "botonMisionBloqueada"
         amount: 1
-        conditions: "!Misiones_Principiante-Mision_21.misionCompletadaPrincipiante21"
+        conditions: "!Misiones_Principiante-Mision_21.misionCompletada21"
 
 #####################################################################
 items:
