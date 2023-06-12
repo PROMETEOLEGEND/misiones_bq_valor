@@ -1,0 +1,30 @@
+conditions:
+  misionActiva23: "tag marcaMisionActiva23"
+  misionCompletada23: "tag marcaMisionCompletada23"
+
+####################################################################################################
+
+events:
+  iniciarMision23: "folder agregarMarcaMisionActiva23,iniciarObjetivoMision23"
+  agregarMarcaMisionActiva23: "tag add marcaMisionActiva23"
+  iniciarObjetivoMision23: "objective start objespadaDiamante"
+  
+  mensajeAyudaMision23: "notify \n&6&lMisión 23:\n&r Para fabricar una &bEspada de Diamante &rnecesitarás 2 diamantes y un palo.\n&r"
+  
+  completarMision23: "folder eliminarMarcaMisionActiva23,agregarMarcaMisionCompletada23,notificacionMisionCompletada23,recompensaMision23,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva23: "tag delete marcaMisionActiva23"
+  agregarMarcaMisionCompletada23: "tag add marcaMisionCompletada23"
+  notificacionMisionCompletada23: "notify &7----------------------------------------\n&6&l¡Misión 23 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision23: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 150"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objespadaDiamante: "craft espadaDiamante 1 events:completarMision23"
+  
+####################################################################################################
+
+items:
+  espadaDiamante: "DIAMOND_SWORD"
