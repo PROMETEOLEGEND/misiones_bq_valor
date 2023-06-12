@@ -20,7 +20,7 @@ menus:
       #   close: true
       #   text:
       #   - "&7[&aClic&7] para ir al menú principal."
-      #   click: abrirMenuPrincipal
+      #   click: "abrirMenuPrincipal"
       botonPaginaSiguiente:
         item: "paginaSiguiente"
         amount: 1
