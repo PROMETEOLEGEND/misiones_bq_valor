@@ -24,7 +24,8 @@ conversations:
         pointer: "jugador2"
       npcdespedida:
         text: "¡Hasta luego, valiente aventurero! Que tus picadas sean certeras y tus descubrimientos sean grandiosos."
-        events: "darAccesoMina,quitarObjBrujula,objBrujula2,notificacionNuevoMensajeAyuda,eventoIrAMina"
+        # events: "darAccesoMina,quitarObjBrujula,objBrujula2,notificacionNuevoMensajeAyuda,eventoIrAMina"
+        events: "darAccesoMina,notificacionNuevoMensajeAyuda,eventoIrAMina,objBrujula2"
       adios:
         text: "Una lástima, vuelve cuando encuentres la motivación suficiente."
       
@@ -64,14 +65,17 @@ events:
   iniciarMision29: "tag add marcaMisionActiva29"
   
   # mensajeAyudaMision29: "notify \n&6&lMisión 29:\n&r El &bMinero &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
-  mensajeAyudaMision29: "folder activarBrujula,establecerObjBrujula,notificacionBrujula"
-  establecerObjBrujula: "compasstrack 1095;17;702;Zona1"
+  mensajeAyudaMision29: "folder establecerObjBrujula,notificacionBrujula"
+  establecerObjBrujula: "compass add objetivo1"
   notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&4&l !! &r).\n&r"
-  activarBrujula: "command calebcompass show %player%"
-  ocultarBrujula: "command calebcompass hide %player%"
-  quitarObjBrujula: "clearcompass"
-  objBrujula2: "compasstrack 1154;37;714;Zona1"
-  completarMision29: "folder eliminarMarcaMisionActiva29,quitarObjBrujula,ocultarBrujula,agregarMarcaMisionCompletada29,notificacionMisionCompletada29,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  # activarBrujula: "command calebcompass show %player%"
+  # ocultarBrujula: "command calebcompass hide %player%"
+  quitarObjBrujula: "folder quitarObj1,quitarObj2"
+  quitarObj1: "compass del objetivo1"
+  quitarObj2: "compass del objetivo2"
+  objBrujula2: "compass add objetivo2"
+  # completarMision29: "folder eliminarMarcaMisionActiva29,quitarObjBrujula,ocultarBrujula,agregarMarcaMisionCompletada29,notificacionMisionCompletada29,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision29: "folder eliminarMarcaMisionActiva29,quitarObjBrujula,agregarMarcaMisionCompletada29,notificacionMisionCompletada29,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva29: "tag delete marcaMisionActiva29"
   agregarMarcaMisionCompletada29: "tag add marcaMisionCompletada29"
   notificacionMisionCompletada29: "notify &7----------------------------------------\n&6&l¡Misión 29 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
@@ -81,7 +85,21 @@ events:
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
   eventoIrAMina: "objective start localizacionMina"
   notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
-
+  compasset: "compass set objetivo1"
 objectives:
-  localizacionMina: "location 1154;37;714;Zona1 5 events:completarMision29"
-  
+  localizacionMina: "location 1154;37;714;Zona1 15 events:completarMision29"
+
+compass:
+  objetivo1:
+    name:
+      es: Minero
+    location: 1095;18;702;Zona1
+    item: compas
+  objetivo2:
+    name:
+      es: Mina
+    location: 1154;37;714;Zona1
+    item: compas    
+
+items:
+  compas: "COMPASS"
