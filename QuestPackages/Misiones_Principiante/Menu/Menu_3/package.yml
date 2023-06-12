@@ -1,0 +1,38 @@
+menus:
+  menuMisiones:
+    height: 6
+    title: "§f§f⠜"
+    slots:
+      47: "botonPaginaAnterior"
+      # 49: "botonVolverMenuPrincipal"
+    items:
+      botonPaginaAnterior:
+        item: "paginaAnterior"
+        amount: 1
+        close: true
+        text:
+        - "&7[&aClic&7] para ir a la página anterior."
+      click: "abrirPaginaAnterior" 
+      # botonVolverMenuPrincipal:
+      #   item: "paginaAnterior"
+      #   amount: 1
+      #   close: true
+      #   text:
+      #   - "&7[&aClic&7] para ir al menú principal."
+      #   click: abrirMenuPrincipal
+
+
+#####################################################################
+
+events:
+  abrirPaginaAnterior: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones"
+  # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"
+
+#####################################################################
+
+items:
+  botonMisionActiva: "INK_SAC custom-model-data:1461"
+  botonMisionCompletada: "INK_SAC custom-model-data:1458"
+  botonMisionBloqueada: "INK_SAC custom-model-data:1460 name:&c¡Misión_no_disponible! lore:&r_;&7Supera_la_misión_anterior."
+  paginaAnterior: "PAPER custom-model-data:1802"
+  # volverMenuPrincipal: "PAPER custom-model-data:1807"

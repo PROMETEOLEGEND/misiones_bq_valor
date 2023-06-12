@@ -36,6 +36,8 @@ menus:
       41: "botonMisionDisponible26,botonMisionActiva26,botonMisionCompletada26,botonMisionBloqueada26"
       42: "botonMisionDisponible27,botonMisionActiva27,botonMisionCompletada27,botonMisionBloqueada27"
       43: "botonMisionDisponible28,botonMisionActiva28,botonMisionCompletada28,botonMisionBloqueada28"
+      # 49: "botonVolverMenuPrincipal"
+      51: "botonPaginaSiguiente"
     items:
       botonMisionDisponible1:
         item: "botonMisionActiva"
@@ -1220,6 +1222,26 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_27.misionCompletada27"
+      # botonVolverMenuPrincipal:
+      #   item: "paginaAnterior"
+      #   amount: 1
+      #   close: true
+      #   text:
+      #   - "&7[&aClic&7] para ir al menú principal."
+      #   click: abrirMenuPrincipal
+      botonPaginaSiguiente:
+        item: "paginaSiguiente"
+        amount: 1
+        close: true
+        text:
+        - "&7[&aClic&7] para ir a la página siguiente."
+        click: "abrirPaginaSiguiente"
+
+#####################################################################
+
+events:
+  # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"
+  abrirPaginaSiguiente: "menu open Misiones_Principiante-Menu-Menu2.menuMisiones"
 
 #####################################################################
 
@@ -1227,3 +1249,5 @@ items:
   botonMisionActiva: "INK_SAC custom-model-data:1461"
   botonMisionCompletada: "INK_SAC custom-model-data:1458"
   botonMisionBloqueada: "INK_SAC custom-model-data:1460 name:&c¡Misión_no_disponible! lore:&r_;&7Supera_la_misión_anterior."
+  # volverMenuPrincipal: "PAPER custom-model-data:1807"
+  paginaSiguiente: "PAPER custom-model-data:1803"
