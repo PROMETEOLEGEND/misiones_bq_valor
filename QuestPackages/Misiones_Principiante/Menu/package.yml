@@ -1139,7 +1139,7 @@ menus:
       botonMisionDisponible27:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_26.misionCompletada26,!Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
+        conditions: "Misiones_Principiante-Mision_27.misionCompletada27,!Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
         close: true
         text:
         - "&6&l[Misión 27]: &eUn herrero de renombre"
@@ -1178,6 +1178,50 @@ menus:
         amount: 1
         conditions: "!Misiones_Principiante-Mision_26.misionCompletada26"
 #####################################################################
+      botonMisionDisponible28:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_26.misionCompletada26,!Misiones_Principiante-Mision_28.misionActiva28,!Misiones_Principiante-Mision_28.misionCompletada28"
+        close: true
+        text:
+        - "&6&l[Misión 28]: &eLeñador aficionado"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de Leñador."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_28.mensajeAyudaMision28,Misiones_Principiante-Mision_28.iniciarMision28" 
+      botonMisionActiva28:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_28.misionActiva28,!Misiones_Principiante-Mision_28.misionCompletada28"
+        close: true
+        text:
+        - "&6&l[Misión 28]: &eLeñador aficionado"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al nivel 2 de Leñador."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_28.mensajeAyudaMision28" 
+      botonMisionCompletada28:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_28.misionCompletada28"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 28]: &eLeñador aficionado"
+        - "&r "
+        - "&7&oSube al nivel 2 de Leñador."
+      botonMisionBloqueada28:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_27.misionCompletada27"
+
+#####################################################################
+
 items:
   botonMisionActiva: "INK_SAC custom-model-data:1461"
   botonMisionCompletada: "INK_SAC custom-model-data:1458"

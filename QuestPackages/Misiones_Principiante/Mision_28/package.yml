@@ -1,0 +1,26 @@
+conditions:
+  misionActiva28: "tag marcaMisionActiva28"
+  misionCompletada28: "tag marcaMisionCompletada28"
+  nivel2Talador: "mmoprofession woodcutting 2"
+
+####################################################################################################
+
+events:
+  iniciarMision28: "folder agregarMarcaMisionActiva28,iniciarObjetivoMision28"
+  agregarMarcaMisionActiva28: "tag add marcaMisionActiva28"
+  iniciarObjetivoMision28: "objective start objLlegarNivel2Talador"
+  
+  mensajeAyudaMision28: "notify \n&6&lMisión 28:\n&r Conforme vayas talando árboles irás obteniendo experiencia para subir de nivel de Leñador.\n&r"
+  
+  completarMision28: "folder eliminarMarcaMisionActiva28,agregarMarcaMisionCompletada28,notificacionMisionCompletada28,recompensaMision28,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva28: "tag delete marcaMisionActiva28"
+  agregarMarcaMisionCompletada28: "tag add marcaMisionCompletada28"
+  notificacionMisionCompletada28: "notify &7----------------------------------------\n&6&l¡Misión 28 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision28: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 250"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objLlegarNivel2Talador: "delay 5 ticks interval:5 conditions:nivel2Talador events:completarMision28"
