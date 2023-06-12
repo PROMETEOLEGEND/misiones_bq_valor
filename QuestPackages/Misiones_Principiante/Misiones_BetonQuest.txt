@@ -22,7 +22,7 @@
 22. Encuentra y pica 10 menas de diamante. (Hecho)
 23. Fabrica una espada de diamante. (Hecho)
 24. Fabrica una forja. (Hecho)
-25. Sube al nivel 3 de prestigio.
+25. Sube al nivel 3 de prestigio. (Hecho)
 26. Añade una gema a tu espada.
 27. Fabrica una mesa de herrería.
 28. Sube a nivel 2 la profesion leñador.
