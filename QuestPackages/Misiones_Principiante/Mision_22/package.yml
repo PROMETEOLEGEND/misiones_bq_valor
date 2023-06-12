@@ -22,4 +22,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objPicarMenasDiamante: "block .*DIAMOND_ORE -10 events:completarMision22"
+  objPicarMenasDiamante: "block .*DIAMOND_ORE -10 events:completarMision22 notify:2"
