@@ -32,6 +32,7 @@ menus:
       37: "botonMisionDisponible22,botonMisionActiva22,botonMisionCompletada22,botonMisionBloqueada22"
       38: "botonMisionDisponible23,botonMisionActiva23,botonMisionCompletada23,botonMisionBloqueada23"
       39: "botonMisionDisponible24,botonMisionActiva24,botonMisionCompletada24,botonMisionBloqueada24"
+      40: "botonMisionDisponible25,botonMisionActiva25,botonMisionCompletada25,botonMisionBloqueada25"
     items:
       botonMisionDisponible1:
         item: "botonMisionActiva"
@@ -1048,6 +1049,48 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_23.misionCompletada23"
+#####################################################################
+      botonMisionDisponible25:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_24.misionCompletada24,!Misiones_Principiante-Mision_25.misionActiva25,!Misiones_Principiante-Mision_25.misionCompletada25"
+        close: true
+        text:
+        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_25.mensajeAyudaMision25,Misiones_Principiante-Mision_25.iniciarMision25" 
+      botonMisionActiva25:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_25.misionActiva25,!Misiones_Principiante-Mision_25.misionCompletada25"
+        close: true
+        text:
+        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_25.mensajeAyudaMision25" 
+      botonMisionCompletada25:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_25.misionCompletada25"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&r "
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+      botonMisionBloqueada25:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_24.misionCompletada24"
 #####################################################################
 items:
   botonMisionActiva: "INK_SAC custom-model-data:1461"
