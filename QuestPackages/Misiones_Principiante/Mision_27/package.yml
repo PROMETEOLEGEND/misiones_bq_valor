@@ -7,7 +7,7 @@ conditions:
 events:
   iniciarMision27: "folder agregarMarcaMisionActiva27,iniciarObjetivoMision27"
   agregarMarcaMisionActiva27: "tag add marcaMisionActiva27"
-  iniciarObjetivoMision27: "objective start objFabricarMesaTrabajo"
+  iniciarObjetivoMision27: "objective start objFabricarMesaHerreria"
   
   mensajeAyudaMision27: "notify \n&6&lMisión 27:\n&r Para fabricar una &bMesa de herreria &rnecesitarás 4 bloques de cualquier madera y 2 lingotes de hierro, los cuales puedes obtener del tronco de cualquier árbol y cocinando menas de hierro respectivamente.\n&r"
   
@@ -15,7 +15,7 @@ events:
   eliminarMarcaMisionActiva27: "tag delete marcaMisionActiva27"
   agregarMarcaMisionCompletada27: "tag add marcaMisionCompletada27"
   notificacionMisionCompletada27: "notify &7----------------------------------------\n&6&l¡Misión 27 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
-  recompensaMision27: "command eco give %player% 500"
+  recompensaMision27: "command eco give %player% 2700"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
 
