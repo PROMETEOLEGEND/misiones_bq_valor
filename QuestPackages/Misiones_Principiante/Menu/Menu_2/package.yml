@@ -13,7 +13,7 @@ menus:
         close: true
         text:
         - "&7[&aClic&7] para ir a la página anterior."
-      click: "abrirPaginaAnterior" 
+        click: "abrirPaginaAnterior" 
       # botonVolverMenuPrincipal:
       #   item: "paginaAnterior"
       #   amount: 1
