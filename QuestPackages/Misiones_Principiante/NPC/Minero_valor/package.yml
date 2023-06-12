@@ -1,0 +1,6 @@
+events:
+  eventoMinero: "folder menuMinero,empezarConversacionMinero"
+  
+  menuMinero: "command dm open minero %player% conditions:!Misiones_Principiante-Mision_29.misionActiva29"
+  
+  empezarConversacionMinero: "conversation Misiones_Principiante-Mision_29.MineroValor conditions:Misiones_Principiante-Mision_29.misionActiva29"
