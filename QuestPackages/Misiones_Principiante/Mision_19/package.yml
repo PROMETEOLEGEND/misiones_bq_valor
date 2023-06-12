@@ -123,9 +123,9 @@ events:
   iniciarMision19: "tag add marcaMisionActiva19"
   
   mensajeAyudaMision19: "folder mensajeAyudaMision19_1,mensajeAyudaMision19_2,mensajeAyudaMision19_3"
-  mensajeAyudaMision19_1: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionAceptadaHipogrifo"
-  mensajeAyudaMision19_2: "notify \n&6&lMisión 19:\n&r El cristal de la mazmorra del &eHipogrifo &rse encuentra en una pequeña sala que está justo a la izquierda del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!mazmorraCompletadaHipogrifo"
-  mensajeAyudaMision19_3: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionCompletada19"
+  mensajeAyudaMision19_1: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaHipogrifo"
+  mensajeAyudaMision19_2: "notify \n&6&lMisión 19:\n&r El cristal de la mazmorra del &eHipogrifo &rse encuentra en una pequeña sala que está justo a la izquierda del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaHipogrifo,!mazmorraCompletadaHipogrifo"
+  mensajeAyudaMision19_3: "notify \n&6&lMisión 19:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaHipogrifo,mazmorraCompletadaHipogrifo"
   
   agregarMarcaInfoRecibidaHipogrifo: "tag add marcaInfoRecibidaHipogrifo"
   
