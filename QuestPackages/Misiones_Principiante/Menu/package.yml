@@ -677,7 +677,8 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
+        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -691,7 +692,8 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
+        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -704,7 +706,8 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de mascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
+        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
       botonMisionBloqueada16:
         item: "botonMisionBloqueada"
         amount: 1
