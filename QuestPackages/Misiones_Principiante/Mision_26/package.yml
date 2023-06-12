@@ -1,0 +1,25 @@
+conditions:
+  misionActiva26: "tag marcaMisionActiva26"
+  misionCompletada26: "tag marcaMisionCompletada26"
+
+####################################################################################################
+
+events:
+  iniciarMision26: "folder agregarMarcaMisionActiva26,iniciarObjetivoMision26"
+  agregarMarcaMisionActiva26: "tag add marcaMisionActiva26"
+  iniciarObjetivoMision26: "objective start objColocarGema"
+  
+  mensajeAyudaMision26: "notify \n&6&lMisión 26:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadisticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una Gema de Crítico de nivel I a tu Espada Inicial.\n&r"
+  
+  completarMision26: "folder eliminarMarcaMisionActiva26,agregarMarcaMisionCompletada26,notificacionMisionCompletada26,recompensaMision26,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva26: "tag delete marcaMisionActiva26"
+  agregarMarcaMisionCompletada26: "tag add marcaMisionCompletada26"
+  notificacionMisionCompletada26: "notify &7----------------------------------------\n&6&l¡Misión 26 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision26: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objColocarGema: "mmoitemapplygem ESPADA_GEMA ESPADA_INICIAL GEMA_CRITICO_1 events:completarMision26"
