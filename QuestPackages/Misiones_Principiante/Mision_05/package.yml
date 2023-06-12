@@ -1,30 +1,30 @@
 conditions:
-  misionActiva27: "tag marcaMisionActiva27"
-  misionCompletada27: "tag marcaMisionCompletada27"
+  misionActiva5: "tag marcaMisionActiva5"
+  misionCompletada5: "tag marcaMisionCompletada5"
 
 ####################################################################################################
 
 events:
-  iniciarMision27: "folder agregarMarcaMisionActiva27,iniciarObjetivoMision27"
-  agregarMarcaMisionActiva27: "tag add marcaMisionActiva27"
-  iniciarObjetivoMision27: "objective start objFabricarMesaTrabajo"
+  iniciarMision5: "folder agregarMarcaMisionActiva5,iniciarObjetivoMision5"
+  agregarMarcaMisionActiva5: "tag add marcaMisionActiva5"
+  iniciarObjetivoMision5: "objective start objFabricarMesaTrabajo"
   
-  mensajeAyudaMision27: "notify \n&6&lMisión 27:\n&r Para fabricar una &bMesa de herreria &rnecesitarás 4 bloques de cualquier madera y 2 lingotes de hierro, los cuales puedes obtener del tronco de cualquier árbol y cocinando menas de hierro respectivamente.\n&r"
+  mensajeAyudaMision5: "notify \n&6&lMisión 5:\n&r Para fabricar una &bMesa de trabajo &rnecesitarás 4 bloques de cualquier madera, los cuales puedes obtener del tronco de cualquier árbol.\n&r"
   
-  completarMision27: "folder eliminarMarcaMisionActiva27,agregarMarcaMisionCompletada27,notificacionMisionCompletada27,recompensaMision27,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcaMisionActiva27: "tag delete marcaMisionActiva27"
-  agregarMarcaMisionCompletada27: "tag add marcaMisionCompletada27"
-  notificacionMisionCompletada27: "notify &7----------------------------------------\n&6&l¡Misión 27 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
-  recompensaMision27: "command eco give %player% 500"
-  recompensaExpClase: "mmoclassexperience 100"
-  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+  completarMision5: "folder eliminarMarcaMisionActiva5,agregarMarcaMisionCompletada5,notificacionMisionCompletada5,recompensaMision5,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva5: "tag delete marcaMisionActiva5"
+  agregarMarcaMisionCompletada5: "tag add marcaMisionCompletada5"
+  notificacionMisionCompletada5: "notify &7----------------------------------------\n&6&l¡Misión 5 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision5: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
 
 ####################################################################################################
 
 objectives:
-  objFabricarMesaHerreria: "craft mesaHerreria 1 events:completarMision27"
+  objFabricarMesaTrabajo: "craft mesaTrabajo 1 events:completarMision5"
   
 ####################################################################################################
 
 items:
-  mesaHerreria: "SMITHING_TABLE"
+  mesaTrabajo: "CRAFTING_TABLE"
