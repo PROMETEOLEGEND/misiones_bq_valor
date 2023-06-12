@@ -1,0 +1,6 @@
+events:
+  eventoForja: "folder menuForja,completarMisionForja"
+  
+  menuForja: "command swb %player%"
+  
+  completarMisionForja: "if Misiones_Principiante-Mision_24.misionActiva24 Misiones_Principiante-Mision_24.completarMision24 else menuForja"

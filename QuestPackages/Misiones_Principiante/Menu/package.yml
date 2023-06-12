@@ -926,7 +926,7 @@ menus:
       botonMisionDisponible22:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_21.misionCompletada21,!Misiones_Principiante-Mision_22.misionActiva22"
+        conditions: "Misiones_Principiante-Mision_21.misionCompletada21,!Misiones_Principiante-Mision_22.misionActiva22,!Misiones_Principiante-Mision_22.misionCompletada22"
         close: true
         text:
         - "&6&l[Misión 22]: &eEn busca de diamantes"
@@ -968,7 +968,7 @@ menus:
       botonMisionDisponible23:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_22.misionCompletada22,!Misiones_Principiante-Mision_23.misionActiva23"
+        conditions: "Misiones_Principiante-Mision_22.misionCompletada22,!Misiones_Principiante-Mision_23.misionActiva23,!Misiones_Principiante-Mision_23.misionCompletada23"
         close: true
         text:
         - "&6&l[Misión 23]: &eForjando armamento"
@@ -1010,13 +1010,13 @@ menus:
       botonMisionDisponible24:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_23.misionCompletada23,!Misiones_Principiante-Mision_24.misionActiva24"
+        conditions: "Misiones_Principiante-Mision_23.misionCompletada23,!Misiones_Principiante-Mision_24.misionActiva24,!Misiones_Principiante-Mision_24.misionCompletada24"
         close: true
         text:
         - "&6&l[Misión 24]: &eUn buen herrero necesita una Forja"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&ouna forja&7&o."
+        - "&7&oFabrica y usa &f&ouna forja&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1030,7 +1030,7 @@ menus:
         - "&6&l[Misión 24]: &eUn buen herrero necesita una Forja"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&ouna forja&7&o."
+        - "&7&oFabrica y usa &f&ouna forja&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -1043,7 +1043,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 24]: &eUn buen herrero necesita una Forja"
         - "&r "
-        - "&7&oFabrica &f&ouna forja&7&o."
+        - "&7&oFabrica y usa &f&ouna forja&7&o."
       botonMisionBloqueada24:
         item: "botonMisionBloqueada"
         amount: 1

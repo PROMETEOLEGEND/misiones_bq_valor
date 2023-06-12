@@ -5,11 +5,10 @@ conditions:
 ####################################################################################################
 
 events:
-  iniciarMision24: "folder agregarMarcaMisionActiva24,iniciarObjetivoMision24"
+  iniciarMision24: "folder agregarMarcaMisionActiva24"
   agregarMarcaMisionActiva24: "tag add marcaMisionActiva24"
-  iniciarObjetivoMision24: "objective start objforja"
   
-  mensajeAyudaMision24: "notify \n&6&lMisión 24:\n&r Para fabricar una &bForja &rnecesitarás 7 ladrillos de roca profunda, 1 horno y una hoguera. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
+  mensajeAyudaMision24: "notify \n&6&lMisión 24:\n&r Para fabricar una &bForja &rnecesitarás 7 ladrillos de pizarra profunda, 1 horno y una hoguera. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
   
   completarMision24: "folder eliminarMarcaMisionActiva24,agregarMarcaMisionCompletada24,notificacionMisionCompletada24,recompensaMision24,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva24: "tag delete marcaMisionActiva24"
@@ -19,9 +18,4 @@ events:
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
 
-####################################################################################################
-
-objectives:
-  objforja: "mmoitemcraft CONSUMABLE FORJA events:completarMision24"
-  
 ####################################################################################################
