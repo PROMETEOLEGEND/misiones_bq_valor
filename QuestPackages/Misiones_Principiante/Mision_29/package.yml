@@ -1,0 +1,87 @@
+conversations:
+  MineroValor:
+    quester: "&b&lMinero"
+    first: "saludo"
+    NPC_options:
+      saludo:
+        text: "¡Saludos, aventurero! Veo que estás en busca de emociones subterráneas. ¿Estás interesado en explorar una cueva llena de valiosos minerales?"
+        pointer: "buscarInformacion,nada"
+      preguntaNombreObjeto:
+        text: "Esta cueva en particular está repleta de minerales valiosos. Podrás encontrar carbón e hierro. Además esta cueva tiene un poder antiguo que hace que los minerales surjan de las profundidades de la tierra con suma rapidez, por lo que podrás picarlos cada poco tiempo."
+        pointer: "mencionarMinero"
+      infoMinero:
+        text: "Si tienes tu propio pico, estarás listo para enfrentar los desafíos y aprovechar al máximo los minerales. Sin embargo, si no tienes uno, puedo ofrecerte uno de mis picos de repuesto para que puedas comenzar tu aventura."
+        pointer: "sipico,nopico"
+      npcsipico:
+        text: "¡Eso es genial! Con tu pico, estarás bien equipado para enfrentar los desafíos y aprovechar al máximo los minerales de la cueva."
+        pointer: "contestacionJugador"
+      npcnopico:
+        text: "Por supuesto, aquí tienes un pico de calidad. Espero que te ayude a extraer todos los tesoros ocultos en la cueva."
+        pointer: "contestacionJugador"
+        events: "darPico"
+      npc2:
+        text: "Veo la determinación en tu mirada, para acceder a la cueva debes subir las escaleras que hay justo a la derecha."
+        pointer: "jugador2"
+      npcdespedida:
+        text: "¡Hasta luego, valiente aventurero! Que tus picadas sean certeras y tus descubrimientos sean grandiosos."
+        events: "darAccesoMina,quitarObjBrujula,objBrujula2,notificacionNuevoMensajeAyuda,eventoIrAMina"
+      adios:
+        text: "Una lástima, vuelve cuando encuentres la motivación suficiente."
+      
+
+    player_options:
+      buscarInformacion:
+        text: "¡Hola! Sí, estoy buscando una nueva aventura. ¿Qué puedes decirme sobre esta cueva?"
+        pointer: "preguntaNombreObjeto"
+      mencionarMinero:
+        text: "Suena emocionante. ¿Qué necesito para aprovechar al máximo la cueva?"
+        pointer: "infoMinero"
+      sipico:
+        text: "¡Suena emocionante! Estoy listo para explorar la cueva y buscar esos minerales. Tengo mi propio pico, así que estoy preparado."
+        pointer: "npcsipico"
+      nopico:
+        text: "¡Eso sería genial! No tengo un pico en este momento, ¿me podrías prestar uno?"
+        pointer: "npcnopico"
+      jugador2:
+        text: "Entiendo..."
+        pointer: "npcdespedida"
+      contestacionJugador:
+        text: "¡Muchas gracias! Estoy ansioso por ver lo que me espera allí abajo."
+        pointer: "npc2"
+      nada:
+        text: "No, he tenido suficientes aventuras por el momento..."
+        pointer: "adios"
+
+#####################################################################        
+
+conditions:
+  misionActiva29: "tag marcaMisionActiva29"
+  misionCompletada29: "tag marcaMisionCompletada29"
+
+#####################################################################        
+ 
+events:
+  iniciarMision29: "tag add marcaMisionActiva29"
+  
+  # mensajeAyudaMision29: "notify \n&6&lMisión 29:\n&r El &bMinero &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  mensajeAyudaMision29: "folder activarBrujula,establecerObjBrujula,notificacionBrujula"
+  establecerObjBrujula: "compasstrack 1095;17;702;Zona1"
+  notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&4&l !! &r).\n&r"
+  activarBrujula: "command calebcompass show %player%"
+  ocultarBrujula: "command calebcompass hide %player%"
+  quitarObjBrujula: "clearcompass"
+  objBrujula2: "compasstrack 1154;37;714;Zona1"
+  completarMision29: "folder eliminarMarcaMisionActiva29,quitarObjBrujula,ocultarBrujula,agregarMarcaMisionCompletada29,notificacionMisionCompletada29,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva29: "tag delete marcaMisionActiva29"
+  agregarMarcaMisionCompletada29: "tag add marcaMisionCompletada29"
+  notificacionMisionCompletada29: "notify &7----------------------------------------\n&6&l¡Misión 29 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darPico: "command give %player% IRON_PICKAXE 1"
+  darAccesoMina: "command lp user %player% permission set group.mina1"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+  eventoIrAMina: "objective start localizacionMina"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+
+objectives:
+  localizacionMina: "location 1154;37;714;Zona1 5 events:completarMision29"
+  

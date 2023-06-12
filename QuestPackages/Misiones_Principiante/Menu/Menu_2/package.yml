@@ -6,6 +6,7 @@ menus:
       47: "botonPaginaAnterior"
       # 49: "botonVolverMenuPrincipal"
       51: "botonPaginaSiguiente"
+      10: "botonMisionDisponible29,botonMisionActiva29,botonMisionCompletada29,botonMisionBloqueada29"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -28,7 +29,51 @@ menus:
         text:
         - "&7[&aClic&7] para ir a la página siguiente."
         click: "abrirPaginaSiguiente"
-
+#####################################################################
+      botonMisionDisponible29:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_28.misionCompletada28,!Misiones_Principiante-Mision_29.misionActiva29,!Misiones_Principiante-Mision_29.misionCompletada29"
+        close: true
+        text:
+        - "&6&l[Misión 29]: &eUna cueva Misteriosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHabla con el Jefe de los Mineros junto a"
+        - "&7&ola cueva de Edar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_29.mensajeAyudaMision29,Misiones_Principiante-Mision_29.iniciarMision29" 
+      botonMisionActiva29:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_29.misionActiva29"
+        close: true
+        text:
+        - "&6&l[Misión 29]: &eUna cueva Misteriosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHabla con el Jefe de los Mineros junto a"
+        - "&7&ola cueva de Edar."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar la Tienda de Protecciones."
+        click:
+          left: "Misiones_Principiante-Mision_29.mensajeAyudaMision29" 
+      botonMisionCompletada29:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_29.misionCompletada29"
+        text:
+        - "&29¡Misión completada!"
+        - "&6&l[Misión 29]: &eUna cueva Misteriosa"
+        - "&r "
+        - "&7&oHabla con el Jefe de los Mineros junto a"
+        - "&7&ola cueva de Edar."
+      botonMisionBloqueada29:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_28.misionCompletada28"
 
 #####################################################################
 
