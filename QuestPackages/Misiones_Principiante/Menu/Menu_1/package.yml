@@ -1228,7 +1228,7 @@ menus:
       #   close: true
       #   text:
       #   - "&7[&aClic&7] para ir al menú principal."
-      #   click: abrirMenuPrincipal
+      #   click: "abrirMenuPrincipal"
       botonPaginaSiguiente:
         item: "paginaSiguiente"
         amount: 1
@@ -1241,7 +1241,7 @@ menus:
 
 events:
   # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"
-  abrirPaginaSiguiente: "menu open Misiones_Principiante-Menu-Menu2.menuMisiones"
+  abrirPaginaSiguiente: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones"
 
 #####################################################################
 
