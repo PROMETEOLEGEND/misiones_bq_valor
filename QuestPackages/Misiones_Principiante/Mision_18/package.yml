@@ -9,17 +9,30 @@ events:
   agregarMarcaMisionActiva18: "tag add marcaMisionActiva18"
   iniciarObjetivoMision18: "objective start objVisitarBancoValor"
   
-  mensajeAyudaMision18: "notify \n&6&lMisión 18:\n&r El &bBanco de Valor &rse encuentra en la plaza de la zona este de la ciudad. En el banco puedes depositar y retirar dinero&r.\n&r"
+  mensajeAyudaMision18: "folder establecerObjBrujula18,mensajeAyudaMision18text"
+  mensajeAyudaMision18text: "notify \n&6&lMisión 18:\n&r El &bBanco de Valor &rse encuentra en la plaza de la zona este de la ciudad. En el banco puedes depositar y retirar dinero&r.\n&r\n &7Nota: Se ha habilitado un marcador de posición en tu brújula para indicarte la localización."
   
-  completarMision18: "folder eliminarMarcaMisionActiva18,agregarMarcaMisionCompletada18,notificacionMisionCompletada18,recompensaMision18,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision18: "folder eliminarMarcaMisionActiva18,quitarObjBrujula18,agregarMarcaMisionCompletada18,notificacionMisionCompletada18,recompensaMision18,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva18: "tag delete marcaMisionActiva18"
   agregarMarcaMisionCompletada18: "tag add marcaMisionCompletada18"
   notificacionMisionCompletada18: "notify &7----------------------------------------\n&6&l¡Misión 18 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision18: "command eco give %player% 150"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+  establecerObjBrujula18: "compass add objetivo18"
+  quitarObjBrujula18: "compass del objetivo18"
 
 ####################################################################################################
 
 objectives:
   objVisitarBancoValor: "location 1153;62;431;Zona1 5 events:completarMision18"
+  
+compass:
+  objetivo18:
+    name:
+      es: Banco
+    location: 1153;62;431;Zona1
+    item: compas
+    
+items:
+  compas: "COMPASS"

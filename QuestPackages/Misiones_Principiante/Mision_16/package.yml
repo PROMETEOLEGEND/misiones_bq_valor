@@ -85,18 +85,31 @@ events:
   agregarMarcaMisionActiva16: "tag add marcaMisionActiva16"
   iniciarObjetivoMision16: "objective start objReclamarMascotaHada"
   
-  mensajeAyudaMision16: "notify \n&6&lMisión 16:\n&r La &bTienda de mascotas de Valor esta ubicada en la zona oeste del &b/spawn &rtras un puente que se encuentra pasando el camino entre la &bTienda de Mejoras &ry la &bTienda de Arcos&r.\n&r"
+  mensajeAyudaMision16: "folder establecerObjBrujula16,mensajeAyudaMision16text"
+  mensajeAyudaMision16text: "notify \n&6&lMisión 16:\n&r La &bTienda de mascotas de Valor esta ubicada en la zona oeste del &b/spawn &rtras un puente que se encuentra pasando el camino entre la &bTienda de Mejoras &ry la &bTienda de Arcos&r.\n&r\n &7Nota: Se ha habilitado un marcador de posición en tu brújula para indicarte la localización."
   
   recompensaMascotaHada: "command lp user %player% permission set mcpets.hada"
   
-  completarMision16: "folder eliminarMarcaMisionActiva16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision16: "folder eliminarMarcaMisionActiva16,quitarObjBrujula16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva16: "tag delete marcaMisionActiva16"
   agregarMarcaMisionCompletada16: "tag add marcaMisionCompletada16"
   notificacionMisionCompletada16: "notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
+  establecerObjBrujula16: "compass add objetivo16"
+  quitarObjBrujula16: "compass del objetivo16"
 
 ####################################################################################################
 
 objectives:
   objReclamarMascotaHada: "delay 5 ticks interval:5 conditions:mascotaHadaReclamada events:completarMision16"
+
+compass:
+  objetivo16:
+    name:
+      es: "Tienda de Mascotas"
+    location: 957;61;434;Zona1
+    item: compas
+    
+items:
+  compas: "COMPASS"
