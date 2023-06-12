@@ -123,9 +123,9 @@ events:
   iniciarMision11: "tag add marcaMisionActiva11"
   
   mensajeAyudaMision11: "folder mensajeAyudaMision11_1,mensajeAyudaMision11_2,mensajeAyudaMision11_3"
-  mensajeAyudaMision11_1: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionAceptadaBufoBufo"
-  mensajeAyudaMision11_2: "notify \n&6&lMisión 11:\n&r El cristal de la mazmorra del &aRey Bufo-Bufo &rse encuentra en una pequeña sala que está justo detrás del estanque del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r condition:!mazmorraCompletadaBufoBufo"
-  mensajeAyudaMision11_3: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r condition:!misionCompletada11"
+  mensajeAyudaMision11_1: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaBufoBufo"
+  mensajeAyudaMision11_2: "notify \n&6&lMisión 11:\n&r El cristal de la mazmorra del &aRey Bufo-Bufo &rse encuentra en una pequeña sala que está justo detrás del estanque del patio del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaBufoBufo,!mazmorraCompletadaBufoBufo"
+  mensajeAyudaMision11_3: "notify \n&6&lMisión 11:\n&r El &6Rey de Valor &rte está esperando en su castillo, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaBufoBufo,mazmorraCompletadaBufoBufo"
   
   agregarMarcaInfoRecibidaBufoBufo: "tag add marcaInfoRecibidaBufoBufo"
   

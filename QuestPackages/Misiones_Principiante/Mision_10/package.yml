@@ -72,6 +72,6 @@ events:
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
   
   conversacionVikingo: "folder notificacionMisionNoDisponible10,empezarConversacionVikingo,menuRunaHogar"
-  notificacionMisionNoDisponible10: "notify &Necesitas haber iniciado la misión de principiante 10 para poder interactuar con este NPC. condition:!misionCompletada10"
+  notificacionMisionNoDisponible10: "notify &cNecesitas haber iniciado la misión de principiante 10 para poder interactuar con este NPC. condition:!misionCompletada10"
   empezarConversacionVikingo: "conversation Vikingo condition:misionActiva10"
   menuRunaHogar: "command dm open runa_hogar_ayuda %player% condition:misionCompletada10"
