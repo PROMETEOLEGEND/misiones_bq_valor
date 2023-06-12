@@ -33,6 +33,8 @@ menus:
       38: "botonMisionDisponible23,botonMisionActiva23,botonMisionCompletada23,botonMisionBloqueada23"
       39: "botonMisionDisponible24,botonMisionActiva24,botonMisionCompletada24,botonMisionBloqueada24"
       40: "botonMisionDisponible25,botonMisionActiva25,botonMisionCompletada25,botonMisionBloqueada25"
+      41: "botonMisionDisponible26,botonMisionActiva26,botonMisionCompletada26,botonMisionBloqueada26"
+      42: "botonMisionDisponible27,botonMisionActiva27,botonMisionCompletada27,botonMisionBloqueada27"
     items:
       botonMisionDisponible1:
         item: "botonMisionActiva"
@@ -1091,6 +1093,90 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_24.misionCompletada24"
+#####################################################################
+      botonMisionDisponible26:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_25.misionCompletada25,!Misiones_Principiante-Mision_26.misionActiva26,!Misiones_Principiante-Mision_26.misionCompletada26"
+        close: true
+        text:
+        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_26.mensajeAyudaMision26,Misiones_Principiante-Mision_26.iniciarMision26" 
+      botonMisionActiva26:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_26.misionActiva26,!Misiones_Principiante-Mision_26.misionCompletada26"
+        close: true
+        text:
+        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_26.mensajeAyudaMision26" 
+      botonMisionCompletada26:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_26.misionCompletada26"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&r "
+        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+      botonMisionBloqueada26:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_25.misionCompletada25"
+#####################################################################
+      botonMisionDisponible27:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_26.misionCompletada26,!Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
+        close: true
+        text:
+        - "&6&l[Misión 27]: &eUn herrero de renombre"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_27.mensajeAyudaMision27,Misiones_Principiante-Mision_27.iniciarMision27" 
+      botonMisionActiva27:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
+        close: true
+        text:
+        - "&6&l[Misión 27]: &eUn herrero de renombre"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_27.mensajeAyudaMision27" 
+      botonMisionCompletada27:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_27.misionCompletada27"
+        text:
+        - "&3¡Misión completada!"
+        - "&6&l[Misión 27]: &eUn herrero de renombre"
+        - "&r "
+        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+      botonMisionBloqueada27:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_26.misionCompletada26"
 #####################################################################
 items:
   botonMisionActiva: "INK_SAC custom-model-data:1461"
