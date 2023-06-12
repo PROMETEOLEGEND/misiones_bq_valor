@@ -35,6 +35,7 @@ menus:
       40: "botonMisionDisponible25,botonMisionActiva25,botonMisionCompletada25,botonMisionBloqueada25"
       41: "botonMisionDisponible26,botonMisionActiva26,botonMisionCompletada26,botonMisionBloqueada26"
       42: "botonMisionDisponible27,botonMisionActiva27,botonMisionCompletada27,botonMisionBloqueada27"
+      43: "botonMisionDisponible28,botonMisionActiva28,botonMisionCompletada28,botonMisionBloqueada28"
     items:
       botonMisionDisponible1:
         item: "botonMisionActiva"
