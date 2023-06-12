@@ -1,7 +1,7 @@
 events:
   conversacionReyValor: "folder menuMazmorras,empezarConversacionReyValor"
   
-  menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionCompletada11,!Misiones_Principiante-Mision_19.misionCompletada19"
+  menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_19.misionActiva19"
   
   empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2"
   conversacionReyValor1: "conversation Misiones_Principiante-Mision_11.ReyValor conditions:Misiones_Principiante-Mision_11.misionActiva11"
