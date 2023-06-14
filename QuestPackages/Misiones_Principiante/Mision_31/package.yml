@@ -1,0 +1,145 @@
+conversations:
+  ReyValorKobold:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "Bienvenido, %player%. Te he convocado porque tengo una tarea de vital importancia que solo alguien de tu valía puede llevar a cabo. ¿Has oído hablar del despiadado asesino llamado Kobold?"
+        pointer: "si1,no1"
+        conditions: "!misionInfoRecibidaKobold"
+      a1:
+        text: "Los rumores son ciertos, pero la historia detrás de Kobold es aún más sombría. Hace muchos años, Kobold era un humilde aldeano que vivía en las afueras de nuestro reino. Desafortunadamente, su vida dio un giro oscuro y trágico..."
+        pointer: "b1"
+      a2:
+        text: "Permíteme contarte entonces. Hace muchos años, Kobold era un humilde aldeano que vivía en las afueras de nuestro reino. Desafortunadamente, su vida dio un giro oscuro y trágico..."
+        pointer: "b1"
+      a3:
+        text: "Su familia fue brutalmente asesinada por un grupo de bandidos despiadados. Kobold, lleno de ira y sed de venganza, juró acabar con todos aquellos que se cruzaran en su camino. Abandonó su nombre y se convirtió en una sombra acechante, conocido como Kobold."
+        pointer: "b2"
+      a4:
+        text: "Mi pueblo no puede vivir en constante miedo. Te encomiendo la misión de enfrentarte a Kobold y poner fin a su reinado de terror. No será una tarea fácil, ya que es un adversario formidable y conocedor de todas las artes oscuras. ¿Aceptarás esta misión?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaKobold"
+        conditions: "!misionInfoRecibidaKobold"
+      c1:
+        text: "Te agradezco por tu valentía. Recuerda, no solo luchas por mí, sino por todos los inocentes que han sufrido a manos de Kobold. Ten cuidado y regresa victorioso. Que la fortuna te acompañe, valiente aventurero."
+        events: "aceptarMisionKobold"
+      c2:
+        text: "Comprendo tu decisión. Si en algún momento cambias de opinión, estaré aquí para encomendarte esta importante tarea."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaKobold,!misionAceptadaKobold"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaKobold"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Ah, valiente aventurero, has regresado triunfante! Me alegra verte sano y salvo. ¿Has logrado derrotar a Kobold y poner fin a su reinado de terror?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaKobold"
+      misionCompletada:
+        text: "¡Magnífico trabajo, héroe! Has demostrado tu valía y coraje al enfrentarte a uno de los enemigos más temibles. Gracias a ti, nuestro pueblo podrá vivir en paz y seguridad una vez más."
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Como muestra de mi gratitud, te recompensaré generosamente. ue tu camino esté lleno de éxitos y prosperidad, noble aventurero. El reino te debe una deuda de gratitud eterna. ¡Adelante y que tus futuras hazañas sean aún más gloriosas!"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+      
+      
+    player_options:
+      si1:
+        text: "Sí, mi señor, he escuchado los rumores sobre Kobold y su reinado de terror."
+        pointer: "a1"
+      no1:
+        text: "No, mi señor, esta es la primera vez que oigo hablar de Kobold."
+        pointer: "a2"
+      b1:
+        text: "¿Qué ocurrió para que se convirtiera en un asesino despiadado?"
+        pointer: "a3"
+      b2:
+        text: "Es una historia triste, mi señor. ¿Qué me pides que haga al respecto?"
+        pointer: "a4"
+      si2:
+        text: "Sí, mi señor. Aceptaré la misión y haré todo lo posible para detener a Kobold y restaurar la paz en su reino."
+        pointer: "c1"
+      no2:
+        text: "Lo siento, mi señor, pero no puedo aceptar esta misión en este momento."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la historia, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaKobold,!mazmorraCompletadaKobold"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a2"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "Sí, mi señor. He enfrentado a Kobold en su guarida y he logrado vencerlo. Ya no representará una amenaza para nuestro reino."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaKobold"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaKobold"
+      agradecerElogio:
+        text: "Fue un desafío arduo, pero valió la pena. Estoy orgulloso de haber cumplido con mi misión."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva31: "tag marcaMisionActiva31"
+  misionInfoRecibidaKobold: "tag marcaInfoRecibidaKobold"
+  misionAceptadaKobold: "tag marcaMisionAceptadaKobold"
+  mazmorraCompletadaKobold: "tag marcaMazmorraCompletadaKobold"
+  misionCompletada31: "tag marcaMisionCompletada31"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraKobold: "finishdungeon Kobold events:mazmorraCompletarKobold"
+
+#####################################################################        
+
+events:
+  iniciarMision31: "tag add marcaMisionActiva31"
+  
+  mensajeAyudaMision31: "folder mensajeAyudaMision31_1,mensajeAyudaMision31_2,mensajeAyudaMision31_3"
+  mensajeAyudaMision31_1: "notify \n&6&lMisión 31:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaKobold"
+  mensajeAyudaMision31_2: "notify \n&6&lMisión 31:\n&r El cristal de la mazmorra de &aKobold &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio.&r.\n&r conditions:misionAceptadaKobold,!mazmorraCompletadaKobold"
+  mensajeAyudaMision31_3: "notify \n&6&lMisión 31:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaKobold,mazmorraCompletadaKobold"
+  
+  agregarMarcaInfoRecibidaKobold: "tag add marcaInfoRecibidaKobold"
+  
+  aceptarMisionKobold: "folder agregarMarcaMisionAceptadaKobold,permisoMazmorraKobold,iniciarObjetivoCompletarMazmorraKobold,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaKobold: "tag add marcaMisionAceptadaKobold"
+  permisoMazmorraKobold: "command lp user %player% permission set mazmorra.Kobold"
+  iniciarObjetivoCompletarMazmorraKobold: "objective start completarMazmorraKobold"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarKobold: "folder agregarMarcaMazmorraCompletadaKobold,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaKobold: "tag add marcaMazmorraCompletadaKobold"
+  
+  completarMision31: "folder eliminarMarcasMisionActiva31,agregarMarcaMisionCompletada31,notificacionMisionCompletada31,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva31: "folder eliminarMarcaMisionActiva31,eliminarMarcaMisionInfoRecibidaKobold,eliminarMarcaMisionAceptadaKobold,eliminarMarcaMazmorraCompletadaKobold"
+  eliminarMarcaMisionActiva31: "tag delete marcaMisionActiva31"
+  eliminarMarcaMisionInfoRecibidaKobold: "tag delete marcaInfoRecibidaKobold"
+  eliminarMarcaMisionAceptadaKobold: "tag delete marcaMisionAceptadaKobold"
+  eliminarMarcaMazmorraCompletadaKobold: "tag delete marcaMazmorraCompletadaKobold"
+  agregarMarcaMisionCompletada31: "tag add marcaMisionCompletada31"
+  notificacionMisionCompletada31: "notify &7----------------------------------------\n&6&l¡Misión 31 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 2000"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."
