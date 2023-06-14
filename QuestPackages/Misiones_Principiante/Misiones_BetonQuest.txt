@@ -36,7 +36,7 @@
 36. Fabrica Esencia de amatista. (Hecho)
 37. Fabrica una Espada de amatista. (Hecho)
 38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin. (Hecho)
-39. Visita al granjero que vende bulbos.
+39. Visita al granjero que vende bulbos. (Hecho)
 40. Encuentra un bulbo.
 41. Sube a nivel 6 de prestigio.
 42. Sube a nivel 5 de granjero.
