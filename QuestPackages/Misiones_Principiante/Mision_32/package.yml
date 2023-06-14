@@ -1,0 +1,30 @@
+conditions:
+  misionActiva32: "tag marcaMisionActiva32"
+  misionCompletada32: "tag marcaMisionCompletada32"
+
+####################################################################################################
+
+events:
+  iniciarMision32: "folder agregarMarcaMisionActiva32,iniciarObjetivoMision32"
+  agregarMarcaMisionActiva32: "tag add marcaMisionActiva32"
+  iniciarObjetivoMision32: "objective start objFabricarMesaTrabajo"
+  
+  mensajeAyudaMision32: "notify \n&6&lMisión 32:\n&r Para fabricar un &bPico de diamante &rnecesitarás 3 diamantes y 2 palos. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
+  
+  completarMision32: "folder eliminarMarcaMisionActiva32,agregarMarcaMisionCompletada32,notificacionMisionCompletada32,recompensaMision32,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva32: "tag delete marcaMisionActiva32"
+  agregarMarcaMisionCompletada32: "tag add marcaMisionCompletada32"
+  notificacionMisionCompletada32: "notify &7----------------------------------------\n&6&l¡Misión 32 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision32: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objFabricarMesaTrabajo: "craft picoDiamante 1 events:completarMision32"
+  
+####################################################################################################
+
+items:
+  picoDiamante: "DIAMOND_PICKAXE"

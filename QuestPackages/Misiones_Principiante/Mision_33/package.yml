@@ -1,0 +1,26 @@
+conditions:
+  misionActiva33: "tag marcaMisionActiva33"
+  misionCompletada33: "tag marcaMisionCompletada33"
+  nivel5Clase: "mmoclass * 5"
+
+####################################################################################################
+
+events:
+  iniciarMision33: "folder agregarMarcaMisionActiva33,iniciarObjetivoMision33"
+  agregarMarcaMisionActiva33: "tag add marcaMisionActiva33"
+  iniciarObjetivoMision33: "objective start objSubirNivel5Clase"
+  
+  mensajeAyudaMision33: "notify \n&6&lMisión 33:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision33: "folder eliminarMarcaMisionActiva33,agregarMarcaMisionCompletada33,notificacionMisionCompletada33,recompensaMision33,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva33: "tag delete marcaMisionActiva33"
+  agregarMarcaMisionCompletada33: "tag add marcaMisionCompletada33"
+  notificacionMisionCompletada33: "notify &7----------------------------------------\n&6&l¡Misión 33 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision33: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objSubirNivel5Clase: "delay 5 ticks interval:5 conditions:nivel5Clase events:completarMision33"

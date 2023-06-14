@@ -28,9 +28,9 @@
 28. Sube a nivel 2 la profesion leñador. (Hecho)
 29. Visita la mina cueva de edar. (Hecho)
 30. Sube a nivel 2 la profesion de mineria. (Hecho)
-31. Supera la mazmorra de Kobold.
-32. Fabrica un pico de diamante.
-33. Sube a nivel 5 de clase.
+31. Supera la mazmorra de Kobold. (Hecho)
+32. Fabrica un pico de diamante. (Hecho)
+33. Sube a nivel 5 de clase. (Hecho)
 34. Gasta un punto de atributo.
 35. Encuentra Amatista
 36. Fabrica Esencia de amatista.

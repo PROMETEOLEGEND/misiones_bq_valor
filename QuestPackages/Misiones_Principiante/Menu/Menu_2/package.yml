@@ -9,6 +9,8 @@ menus:
       10: "botonMisionDisponible29,botonMisionActiva29,botonMisionCompletada29,botonMisionBloqueada29"
       11: "botonMisionDisponible30,botonMisionActiva30,botonMisionCompletada30,botonMisionBloqueada30"
       12: "botonMisionDisponible31,botonMisionActiva31,botonMisionCompletada31,botonMisionBloqueada31"
+      13: "botonMisionDisponible32,botonMisionActiva32,botonMisionCompletada32,botonMisionBloqueada32"
+      14: "botonMisionDisponible33,botonMisionActiva33,botonMisionCompletada33,botonMisionBloqueada33"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -160,6 +162,90 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_30.misionCompletada30"
+#####################################################################
+      botonMisionDisponible32:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_31.misionCompletada31,!Misiones_Principiante-Mision_32.misionActiva32,!Misiones_Principiante-Mision_32.misionCompletada32"
+        close: true
+        text:
+        - "&6&l[Misión 32]: &eUn pico a medida"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &6&oPico de diamante&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_32.mensajeAyudaMision32,Misiones_Principiante-Mision_32.iniciarMision32" 
+      botonMisionActiva32:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_32.misionActiva32"
+        close: true
+        text:
+        - "&6&l[Misión 32]: &eUn pico a medida"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &6&oPico de diamante&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_32.mensajeAyudaMision32" 
+      botonMisionCompletada32:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_32.misionCompletada32"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 32]: &eUn pico a medida"
+        - "&r "
+        - "&7&oFabrica un &6&oPico de diamante&7&o."
+      botonMisionBloqueada32:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_31.misionCompletada31"
+#####################################################################
+      botonMisionDisponible33:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_32.misionCompletada32,!Misiones_Principiante-Mision_33.misionActiva33,!Misiones_Principiante-Mision_33.misionCompletada33"
+        close: true
+        text:
+        - "&6&l[Misión 33]: &eMejorando tu nivel"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &6&onivel 5 de clase&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_33.mensajeAyudaMision33,Misiones_Principiante-Mision_33.iniciarMision33" 
+      botonMisionActiva33:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_33.misionActiva33"
+        close: true
+        text:
+        - "&6&l[Misión 33]: &eMejorando tu nivel"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &6&onivel 5 de clase&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_33.mensajeAyudaMision33" 
+      botonMisionCompletada33:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_33.misionCompletada33"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 33]: &eMejorando tu nivel"
+        - "&r "
+        - "&7&oSube al &6&onivel 5 de clase&7&o."
+      botonMisionBloqueada33:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_32.misionCompletada32"
 #####################################################################
 
 events:
