@@ -37,9 +37,9 @@
 37. Fabrica una Espada de amatista. (Hecho)
 38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin. (Hecho)
 39. Visita al granjero que vende bulbos. (Hecho)
-40. Encuentra un bulbo.
-41. Sube a nivel 6 de prestigio.
-42. Sube a nivel 5 de granjero.
+40. Encuentra un bulbo. (Hecho)
+41. Sube a nivel 6 de prestigio. (Hecho)
+42. Sube a nivel 5 de granjero. (Hecho)
 43. Usa una pocion de potenciador de xp.
 44. Supera la mazmorra del Minotauro.
 45. Fabrica una espada de amatista con un espacio para gema.

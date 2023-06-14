@@ -1,0 +1,26 @@
+conditions:
+  misionActiva42: "tag marcaMisionActiva42"
+  misionCompletada42: "tag marcaMisionCompletada42"
+  nivel2Granjero: "mmoprofession farming 2"
+
+####################################################################################################
+
+events:
+  iniciarMision42: "folder agregarMarcaMisionActiva42,iniciarObjetivoMision42"
+  agregarMarcaMisionActiva42: "tag add marcaMisionActiva42"
+  iniciarObjetivoMision42: "objective start objLlegarNivel2Granjero"
+  
+  mensajeAyudaMision42: "notify \n&6&lMisión 42:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel de prestigio. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision42: "folder eliminarMarcaMisionActiva42,agregarMarcaMisionCompletada42,notificacionMisionCompletada42,recompensaMision42,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva42: "tag delete marcaMisionActiva42"
+  agregarMarcaMisionCompletada42: "tag add marcaMisionCompletada42"
+  notificacionMisionCompletada42: "notify &7----------------------------------------\n&6&l¡Misión 42 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision42: "command eco give %player% 200"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objLlegarNivel2Granjero: "delay 5 ticks interval:5 conditions:nivel2Granjero events:completarMision42"
