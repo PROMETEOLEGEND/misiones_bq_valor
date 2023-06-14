@@ -67,7 +67,7 @@ events:
   # mensajeAyudaMision29: "notify \n&6&lMisión 29:\n&r El &bMinero &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
   mensajeAyudaMision29: "folder establecerObjBrujula,notificacionBrujula"
   establecerObjBrujula: "compass add objetivo1"
-  notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&4&l !! &r).\n&r"
+  notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
   # activarBrujula: "command calebcompass show %player%"
   # ocultarBrujula: "command calebcompass hide %player%"
   quitarObjBrujula: "folder quitarObj1,quitarObj2"

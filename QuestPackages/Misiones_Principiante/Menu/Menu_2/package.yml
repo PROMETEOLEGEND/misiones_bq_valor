@@ -7,6 +7,7 @@ menus:
       # 49: "botonVolverMenuPrincipal"
       51: "botonPaginaSiguiente"
       10: "botonMisionDisponible29,botonMisionActiva29,botonMisionCompletada29,botonMisionBloqueada29"
+      11: "botonMisionDisponible30,botonMisionActiva30,botonMisionCompletada30,botonMisionBloqueada30"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -57,7 +58,7 @@ menus:
         - "&7&oHabla con el Jefe de los Mineros junto a"
         - "&7&ola cueva de Edar."
         - "&r "
-        - "&7[&aClic izquierdo&7] para localizar la Tienda de Protecciones."
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
           left: "Misiones_Principiante-Mision_29.mensajeAyudaMision29" 
       botonMisionCompletada29:
@@ -65,7 +66,7 @@ menus:
         amount: 1
         conditions: "Misiones_Principiante-Mision_29.misionCompletada29"
         text:
-        - "&29¡Misión completada!"
+        - "&2¡Misión completada!"
         - "&6&l[Misión 29]: &eUna cueva Misteriosa"
         - "&r "
         - "&7&oHabla con el Jefe de los Mineros junto a"
@@ -74,6 +75,48 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_28.misionCompletada28"
+#####################################################################
+      botonMisionDisponible30:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_29.misionCompletada29,!Misiones_Principiante-Mision_30.misionActiva30,!Misiones_Principiante-Mision_30.misionCompletada30"
+        close: true
+        text:
+        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube a nivel 2 de Mineria."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_30.mensajeAyudaMision30,Misiones_Principiante-Mision_30.iniciarMision30" 
+      botonMisionActiva30:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_30.misionActiva30"
+        close: true
+        text:
+        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube a nivel 2 de Mineria."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_30.mensajeAyudaMision30" 
+      botonMisionCompletada30:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_30.misionCompletada30"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&r "
+        - "&7&oSube a nivel 2 de Mineria."
+      botonMisionBloqueada30:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_29.misionCompletada29"
 
 #####################################################################
 

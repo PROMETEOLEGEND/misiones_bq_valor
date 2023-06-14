@@ -1,0 +1,26 @@
+conditions:
+  misionActiva30: "tag marcaMisionActiva30"
+  misionCompletada30: "tag marcaMisionCompletada30"
+  nivel2Mineria: "mmoprofession mining 2"
+
+####################################################################################################
+
+events:
+  iniciarMision30: "folder agregarMarcaMisionActiva30,iniciarObjetivoMision30"
+  agregarMarcaMisionActiva30: "tag add marcaMisionActiva30"
+  iniciarObjetivoMision30: "objective start objLlegarNivel2Mineria"
+  
+  mensajeAyudaMision30: "notify \n&6&lMisión 30:\n&r Mina diferentes minerales para subir tu nivel de mineria.\n&r"
+  
+  completarMision30: "folder eliminarMarcaMisionActiva30,agregarMarcaMisionCompletada30,notificacionMisionCompletada30,recompensaMision30,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva30: "tag delete marcaMisionActiva30"
+  agregarMarcaMisionCompletada30: "tag add marcaMisionCompletada30"
+  notificacionMisionCompletada30: "notify &7----------------------------------------\n&6&l¡Misión 30 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision30: "command eco give %player% 200"
+  recompensaExpClase: "mmoclassexperience 100"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objLlegarNivel2Mineria: "delay 5 ticks interval:5 conditions:nivel2Mineria events:completarMision30"
