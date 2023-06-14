@@ -11,6 +11,17 @@ menus:
       12: "botonMisionDisponible31,botonMisionActiva31,botonMisionCompletada31,botonMisionBloqueada31"
       13: "botonMisionDisponible32,botonMisionActiva32,botonMisionCompletada32,botonMisionBloqueada32"
       14: "botonMisionDisponible33,botonMisionActiva33,botonMisionCompletada33,botonMisionBloqueada33"
+      15: "botonMisionDisponible34,botonMisionActiva34,botonMisionCompletada34,botonMisionBloqueada34"
+      16: "botonMisionDisponible35,botonMisionActiva35,botonMisionCompletada35,botonMisionBloqueada35"
+      19: "botonMisionDisponible36,botonMisionActiva36,botonMisionCompletada36,botonMisionBloqueada36"
+      20: "botonMisionDisponible37,botonMisionActiva37,botonMisionCompletada37,botonMisionBloqueada37"
+      21: "botonMisionDisponible38,botonMisionActiva38,botonMisionCompletada38,botonMisionBloqueada38"
+      22: "botonMisionDisponible39,botonMisionActiva39,botonMisionCompletada39,botonMisionBloqueada39"
+      23: "botonMisionDisponible40,botonMisionActiva40,botonMisionCompletada40,botonMisionBloqueada40"
+      24: "botonMisionDisponible41,botonMisionActiva41,botonMisionCompletada41,botonMisionBloqueada41"
+      # 25: "botonMisionDisponible42,botonMisionActiva42,botonMisionCompletada42,botonMisionBloqueada42"
+      # 28: "botonMisionDisponible43,botonMisionActiva43,botonMisionCompletada43,botonMisionBloqueada43"
+      # 29: "botonMisionDisponible44,botonMisionActiva44,botonMisionCompletada44,botonMisionBloqueada44"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -540,7 +551,48 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_39.misionCompletada39"
-
+#####################################################################
+      botonMisionDisponible41:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_40.misionCompletada40,!Misiones_Principiante-Mision_41.misionActiva41,!Misiones_Principiante-Mision_41.misionCompletada41"
+        close: true
+        text:
+        - "&6&l[Misión 41]: &eAumentando tu Prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_41.mensajeAyudaMision41,Misiones_Principiante-Mision_41.iniciarMision41" 
+      botonMisionActiva41:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_41.misionActiva41"
+        close: true
+        text:
+        - "&6&l[Misión 41]: &eAumentando tu Prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_41.mensajeAyudaMision41" 
+      botonMisionCompletada41:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_41.misionCompletada41"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 41]: &eAumentando tu Prestigio"
+        - "&r "
+        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+      botonMisionBloqueada41:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_40.misionCompletada40"
 #####################################################################
 
 events:
