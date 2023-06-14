@@ -1,0 +1,28 @@
+conditions:
+  misionActiva35: "tag marcaMisionActiva35"
+  misionCompletada35: "tag marcaMisionCompletada35"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision35: "notify \n&6&lMisión 35:&r Debes minar &b16 bloques de amatista&r, para ello necesitarás un &bPico &rde cualquier material que tengas disponible.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  iniciarMision35: "folder agregarMarcaMisionActiva35,iniciarObjetivoMision35"
+  agregarMarcaMisionActiva35: "tag add marcaMisionActiva35"
+  iniciarObjetivoMision35: "objective start objPicarBloquesAmatista"
+  
+  completarMision35: "folder eliminarMarcaMisionActiva35,agregarMarcaMisionCompletada35,notificacionMisionCompletada35,recompensaMision35,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva35: "tag delete marcaMisionActiva35"
+  recompensaMision35: "command eco give %player% 200"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+  agregarMarcaMisionCompletada35: "tag add marcaMisionCompletada35"
+  notificacionMisionCompletada35: "notify &7----------------------------------------\n&6&l¡Misión 35 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objPicarBloquesAmatista: "block bloqueAmatista -16 events:completarMision35 notify:4"
+
+items:
+  bloqueAmatista: "AMETHYST_BLOCK"

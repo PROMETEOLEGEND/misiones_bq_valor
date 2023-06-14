@@ -288,6 +288,132 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_33.misionCompletada33"
+#####################################################################
+      botonMisionDisponible35:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_34.misionCompletada34,!Misiones_Principiante-Mision_35.misionActiva35,!Misiones_Principiante-Mision_35.misionCompletada35"
+        close: true
+        text:
+        - "&6&l[Misión 35]: &eUn cristal de las profundidades"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o16 Bloques de amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_35.mensajeAyudaMision35,Misiones_Principiante-Mision_35.iniciarMision35" 
+      botonMisionActiva35:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_35.misionActiva35"
+        close: true
+        text:
+        - "&6&l[Misión 35]: &eUn cristal de las profundidades"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o16 Bloques de amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_35.mensajeAyudaMision35" 
+      botonMisionCompletada35:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_35.misionCompletada35"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 35]: &eUn cristal de las profundidades"
+        - "&r "
+        - "&7&oMina &f&o16 Bloques de amatista&7&o."
+      botonMisionBloqueada35:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_34.misionCompletada34"
+#####################################################################
+      botonMisionDisponible36:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_35.misionCompletada35,!Misiones_Principiante-Mision_36.misionActiva36,!Misiones_Principiante-Mision_36.misionCompletada36"
+        close: true
+        text:
+        - "&6&l[Misión 36]: &eDescubriendo nuevos materiales"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&o4 Esencias de Amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_36.mensajeAyudaMision36,Misiones_Principiante-Mision_36.iniciarMision36" 
+      botonMisionActiva36:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_36.misionActiva36"
+        close: true
+        text:
+        - "&6&l[Misión 36]: &eDescubriendo nuevos materiales"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&o4 Esencias de Amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_36.mensajeAyudaMision36" 
+      botonMisionCompletada36:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_36.misionCompletada36"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 36]: &eDescubriendo nuevos materiales"
+        - "&r "
+        - "&7&oFabrica &f&o4 Esencias de Amatista&7&o."
+      botonMisionBloqueada36:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_35.misionCompletada35"
+#####################################################################
+      botonMisionDisponible37:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_36.misionCompletada36,!Misiones_Principiante-Mision_37.misionActiva37,!Misiones_Principiante-Mision_37.misionCompletada37"
+        close: true
+        text:
+        - "&6&l[Misión 37]: &eConsiguiendo una mejor espada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna Espada de Amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_37.mensajeAyudaMision37,Misiones_Principiante-Mision_37.iniciarMision37" 
+      botonMisionActiva37:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_37.misionActiva37"
+        close: true
+        text:
+        - "&6&l[Misión 37]: &eConsiguiendo una mejor espada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna Espada de Amatista&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_37.mensajeAyudaMision37" 
+      botonMisionCompletada37:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_37.misionCompletada37"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 37]: &eConsiguiendo una mejor espada"
+        - "&r "
+        - "&7&oFabrica &f&ouna Espada de Amatista&7&o."
+      botonMisionBloqueada37:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_36.misionCompletada36"
 
 #####################################################################
 

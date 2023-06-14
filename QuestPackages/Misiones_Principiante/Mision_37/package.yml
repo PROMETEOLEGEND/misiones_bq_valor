@@ -1,0 +1,26 @@
+conditions:
+  misionActiva37: "tag marcaMisionActiva37"
+  misionCompletada37: "tag marcaMisionCompletada37"
+  tenerEspadaAmatista: "mmoitem ESPADA_GEMA ESPADA_AMATISTA"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision37: "notify \n&6&lMisión 37:&r Debes fabricar una &bEspada de Amatista&r, para ello necesitarás &b4 bloques de amatista &ry una &bEspada de netherita&r.\n&r"
+  
+  iniciarMision37: "folder agregarMarcaMisionActiva37,iniciarObjetivoMision37"
+  agregarMarcaMisionActiva37: "tag add marcaMisionActiva37"
+  iniciarObjetivoMision37: "objective start objFabricarEspadaAmatista"
+  
+  completarMision37: "folder eliminarMarcaMisionActiva37,agregarMarcaMisionCompletada37,notificacionMisionCompletada37,recompensaMision37,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva37: "tag delete marcaMisionActiva37"
+  recompensaMision37: "command eco give %player% 300"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+  agregarMarcaMisionCompletada37: "tag add marcaMisionCompletada37"
+  notificacionMisionCompletada37: "notify &7----------------------------------------\n&6&l¡Misión 37 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarEspadaAmatista: "delay 5 ticks interval:5 conditions:tenerEspadaAmatista events:completarMision37"

@@ -1,0 +1,26 @@
+conditions:
+  misionActiva36: "tag marcaMisionActiva36"
+  misionCompletada36: "tag marcaMisionCompletada36"
+  tenerEsenciaAmatista: "mmoitem MISCELLANEOUS ESENCIA_AMATISTA 4"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision36: "notify \n&6&lMisión 36:&r Debes fabricar &b4 Esencias de Amatista&r, para ello debes cocinar &b4 bloques de amatista &ren un horno.\n&r"
+  
+  iniciarMision36: "folder agregarMarcaMisionActiva36,iniciarObjetivoMision36"
+  agregarMarcaMisionActiva36: "tag add marcaMisionActiva36"
+  iniciarObjetivoMision36: "objective start objFabricarEsenciaAmatista"
+  
+  completarMision36: "folder eliminarMarcaMisionActiva36,agregarMarcaMisionCompletada36,notificacionMisionCompletada36,recompensaMision36,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva36: "tag delete marcaMisionActiva36"
+  recompensaMision36: "command eco give %player% 300"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+  agregarMarcaMisionCompletada36: "tag add marcaMisionCompletada36"
+  notificacionMisionCompletada36: "notify &7----------------------------------------\n&6&l¡Misión 36 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarEsenciaAmatista: "delay 5 ticks interval:5 conditions:tenerEsenciaAmatista events:completarMision36"
