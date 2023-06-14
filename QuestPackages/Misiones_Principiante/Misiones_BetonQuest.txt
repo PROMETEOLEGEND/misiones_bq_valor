@@ -34,20 +34,20 @@
 34. Gasta un punto de atributo. (Hecho)
 35. Encuentra Amatista. (Hecho)
 36. Fabrica Esencia de amatista. (Hecho)
-37. Fabrica una armadura de amatista. (Hecho)
-38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin.
-39. Amplia tu casa: coloca x bloques.
-40. Sube a nivel 6 de prestigio.
-41. Sube a nivel 5 de granjero.
-42. Usa una pocion de potenciador de xp.
-43. Supera la mazmorra del Minotauro.
-44. Fabrica una espada de amatista con un espacio para gema.
-45. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II.
-46. Coloca una gema nivel II a tu espada de amatista.
-47. Sube a nivel 7 de clase.
-48. Mejora una habilidad.
-49. Encuentra un bulbo.
-50. Visita al granjero que vende bulbos.
+37. Fabrica una Espada de amatista. (Hecho)
+38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin. (Hecho)
+39. Visita al granjero que vende bulbos.
+40. Encuentra un bulbo.
+41. Sube a nivel 6 de prestigio.
+42. Sube a nivel 5 de granjero.
+43. Usa una pocion de potenciador de xp.
+44. Supera la mazmorra del Minotauro.
+45. Fabrica una espada de amatista con un espacio para gema.
+46. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II.
+47. Coloca una gema nivel II a tu espada de amatista.
+48. Sube a nivel 7 de clase.
+49. Mejora una habilidad.
+50. Habla con el bufón y reclama un 2do hogar.
 51. Sube a nivel 10 de clase.
 52. Encuentra Rubi.
 53. Encuentra Zafiro.
