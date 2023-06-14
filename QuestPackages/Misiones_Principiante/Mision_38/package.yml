@@ -1,0 +1,146 @@
+conversations:
+  ReyValor4:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡Bienvenido de nuevo, aventurero! Me alegra que hayas venido."
+        pointer: "si1"
+        conditions: "!misionInfoRecibidaKur"
+      a1:
+        text: "Tengo una tarea importante para ti. Quiero que derrotes a un goblin guerrero llamado Kur."
+        pointer: "b1"
+      a2:
+        text: "Exactamente. Kur es un guerrero despiadado que ha estado causando estragos en nuestro reino. ¿Quieres que te cuente su historia?"
+        pointer: "b2"
+      a3:
+        text: "Permíteme contarte... Kur es un goblin temerario y valiente, que ha pasado gran parte de su vida luchando en las guerras de los clanes goblin. A pesar de su tamaño, que medía entre 2 y 3 metros, Kur es un guerrero formidable, y ha ganado muchas batallas gracias a su astucia y habilidad en el combate cuerpo a cuerpo.\nUn día, mientras patrullaba los bosques en busca de enemigos, Kur se encontró con un jabalí salvaje que estaba causando estragos en la zona. En lugar de huir, Kur decidió enfrentarse al animal, y después de una larga y dura batalla, logró domarlo y convertirlo en su montura.\nDesde ese día, Kur y su jabalí, al que llamó Rot, se convirtieron en una fuerza imparable en el campo de batalla. Kur montaba a Rot mientras blandía su alabarda de hoja doble aserrada, la Lanza de Kur, y juntos arrasaban a sus enemigos.\nCon el tiempo, Kur se convirtió en un líder respetado entre los goblins, y muchos lo seguían en la batalla. Su astucia y habilidad en el combate lo convirtieron en un guerrero despiadado, y su fama se extendió por todo el reino."
+        pointer: "b3"
+      a4:
+        text: "Entonces sabes lo peligroso que puede ser Kur. Necesito que lo derrotes y pongas fin a su reinado de terror."
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaKur"
+        conditions: "!misionInfoRecibidaKur"
+      c1:
+        text: "¡Excelente! Estoy seguro de que eres el héroe que necesitamos para detener a Kur. Cuando lo hayas derrotado, regresa aquí y te recompensaré generosamente."
+        events: "aceptarMisionKur"
+      c2:
+        text: "Entiendo que esta tarea no es para todos, pero te pido que lo pienses bien. Si decides no hacerlo, no te preocupes. Siempre puedes cambiar de opinión más adelante."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaKur,!misionAceptadaKur"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaKur"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Bienvenido de nuevo, aventurero! ¿Has logrado derrotar a Kur?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaKur"
+      misionCompletada:
+        text: "¡Excelente! Sabía que podía confiar en ti. Como prometí, aquí está tu recompensa."
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Espero que hayas disfrutado de esta misión. Si necesitas ayuda con algo más, no dudes en preguntarme."
+        events: "completarMision38"
+      misionAunNoCompletada:
+        text: "¡Buena suerte, aventurero! Que la fuerza esté contigo."
+      
+      
+    player_options:
+      si1:
+        text: "¿Qué necesita de mí, su majestad?"
+        pointer: "a1"
+      b1:
+        text: "¿Kur?"
+        pointer: "a2"
+      b2:
+        text: "Sí, por favor."
+        pointer: "a3"
+      b3:
+        text: "Que interesante historia..."
+        pointer: "a4,preguntarInfoMision"
+      si2:
+        text: "Puede contar conmigo, su majestad."
+        pointer: "c1"
+      no2:
+        text: "¿Y si no quiero hacerlo?"
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la historia, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaKur,!mazmorraCompletadaKur"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a3"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "Sí, su majestad."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaKur"
+      misionCompletadaNo:
+        text: "Aún no, su majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaKur"
+      agradecerElogio:
+        text: "Gracias, su majestad. Si necesito algo, lo haré saber."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva38: "tag marcaMisionActiva38"
+  misionInfoRecibidaKur: "tag marcaInfoRecibidaKur"
+  misionAceptadaKur: "tag marcaMisionAceptadaKur"
+  mazmorraCompletadaKur: "tag marcaMazmorraCompletadaKur"
+  misionCompletada38: "tag marcaMisionCompletada38"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraKur: "finishdungeon Kur events:mazmorraCompletarKur"
+
+#####################################################################        
+
+events:
+  iniciarMision38: "tag add marcaMisionActiva38"
+  
+  mensajeAyudaMision38: "folder mensajeAyudaMision38_1,mensajeAyudaMision38_2,mensajeAyudaMision38_3"
+  mensajeAyudaMision38_1: "notify \n&6&lMisión 38:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaKur"
+  mensajeAyudaMision38_2: "notify \n&6&lMisión 38:\n&r El cristal de la mazmorra de &aKur &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio&r.\n&r conditions:misionAceptadaKur,!mazmorraCompletadaKur"
+  mensajeAyudaMision38_3: "notify \n&6&lMisión 38:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaKur,mazmorraCompletadaKur"
+  
+  agregarMarcaInfoRecibidaKur: "tag add marcaInfoRecibidaKur"
+  
+  aceptarMisionKur: "folder agregarMarcaMisionAceptadaKur,permisoMazmorraKur,iniciarObjetivoCompletarMazmorraKur,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaKur: "tag add marcaMisionAceptadaKur"
+  permisoMazmorraKur: "command lp user %player% permission set mazmorra.kur"
+  iniciarObjetivoCompletarMazmorraKur: "objective start completarMazmorraKur"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarKur: "folder agregarMarcaMazmorraCompletadaKur,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaKur: "tag add marcaMazmorraCompletadaKur"
+  
+  completarMision38: "folder eliminarMarcasMisionActiva38,agregarMarcaMisionCompletada38,notificacionMisionCompletada38,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva38: "folder eliminarMarcaMisionActiva38,eliminarMarcaMisionInfoRecibidaKur,eliminarMarcaMisionAceptadaKur,eliminarMarcaMazmorraCompletadaKur"
+  eliminarMarcaMisionActiva38: "tag delete marcaMisionActiva38"
+  eliminarMarcaMisionInfoRecibidaKur: "tag delete marcaInfoRecibidaKur"
+  eliminarMarcaMisionAceptadaKur: "tag delete marcaMisionAceptadaKur"
+  eliminarMarcaMazmorraCompletadaKur: "tag delete marcaMazmorraCompletadaKur"
+  agregarMarcaMisionCompletada38: "tag add marcaMisionCompletada38"
+  notificacionMisionCompletada38: "notify &7----------------------------------------\n&6&l¡Misión 38 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 2000"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

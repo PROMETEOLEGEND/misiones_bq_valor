@@ -414,6 +414,48 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_36.misionCompletada36"
+#####################################################################
+      botonMisionDisponible38:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_37.misionCompletada37,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_38.misionCompletada38"
+        close: true
+        text:
+        - "&6&l[Misión 38]: &eUn goblin temerario"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_38.mensajeAyudaMision38,Misiones_Principiante-Mision_38.iniciarMision38" 
+      botonMisionActiva38:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_38.misionActiva38"
+        close: true
+        text:
+        - "&6&l[Misión 38]: &eUn goblin temerario"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_38.mensajeAyudaMision38" 
+      botonMisionCompletada38:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_38.misionCompletada38"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 38]: &eUn goblin temerario"
+        - "&r "
+        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+      botonMisionBloqueada38:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_37.misionCompletada37"
 
 #####################################################################
 
