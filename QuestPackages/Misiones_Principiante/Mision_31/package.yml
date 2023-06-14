@@ -1,5 +1,5 @@
 conversations:
-  ReyValorKobold:
+  ReyValor3:
     quester: "&6&lRey de Valor"
     first: "saludo,saludo2,saludo3"
     NPC_options:
@@ -61,7 +61,7 @@ conversations:
         text: "¿Qué ocurrió para que se convirtiera en un asesino despiadado?"
         pointer: "a3"
       b2:
-        text: "Es una historia triste, mi señor. ¿Qué me pides que haga al respecto?"
+        text: "Es una historia triste, mi señor."
         pointer: "a4"
       si2:
         text: "Sí, mi señor. Aceptaré la misión y haré todo lo posible para detener a Kobold y restaurar la paz en su reino."
@@ -123,7 +123,7 @@ events:
   
   aceptarMisionKobold: "folder agregarMarcaMisionAceptadaKobold,permisoMazmorraKobold,iniciarObjetivoCompletarMazmorraKobold,notificacionNuevoMensajeAyuda delay:1"
   agregarMarcaMisionAceptadaKobold: "tag add marcaMisionAceptadaKobold"
-  permisoMazmorraKobold: "command lp user %player% permission set mazmorra.Kobold"
+  permisoMazmorraKobold: "command lp user %player% permission set mazmorra.kobold"
   iniciarObjetivoCompletarMazmorraKobold: "objective start completarMazmorraKobold"
   notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
   
