@@ -1,0 +1,20 @@
+conditions:
+  misionActiva40: "tag marcaMisionActiva40"
+  misionCompletada40: "tag marcaMisionCompletada40"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision40: "notify \n&6&lMisión 40:&r Debes encontrar un bulbo en su forma salvaje, para ello debes buscarlos en el Mundo de Exploración. Puedes encontrar información acerca de los lugares preferidos por los Bulbos usando &b/mascotaswiki&r.\n&r"
+  
+  iniciarMision40: "tag add marcaMisionActiva40"
+  
+  completarMision40: "folder eliminarMarcaMisionActiva40,agregarMarcaMisionCompletada40,notificacionMisionCompletada40,recompensaMision40,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva40: "tag delete marcaMisionActiva40"
+  recompensaMision40: "command eco give %player% 400"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+  agregarMarcaMisionCompletada40: "tag add marcaMisionCompletada40"
+  notificacionMisionCompletada40: "notify &7----------------------------------------\n&6&l¡Misión 40 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
