@@ -31,10 +31,10 @@
 31. Supera la mazmorra de Kobold. (Hecho)
 32. Fabrica un pico de diamante. (Hecho)
 33. Sube a nivel 5 de clase. (Hecho)
-34. Gasta un punto de atributo.
-35. Encuentra Amatista
-36. Fabrica Esencia de amatista.
-37. Fabrica una armadura de amatista.
+34. Gasta un punto de atributo. (Hecho)
+35. Encuentra Amatista. (Hecho)
+36. Fabrica Esencia de amatista. (Hecho)
+37. Fabrica una armadura de amatista. (Hecho)
 38. Supera la mazmorra de Kurt y la mazmorra del Rey Goblin.
 39. Amplia tu casa: coloca x bloques.
 40. Sube a nivel 6 de prestigio.
