@@ -8,6 +8,7 @@ menus:
       51: "botonPaginaSiguiente"
       10: "botonMisionDisponible29,botonMisionActiva29,botonMisionCompletada29,botonMisionBloqueada29"
       11: "botonMisionDisponible30,botonMisionActiva30,botonMisionCompletada30,botonMisionBloqueada30"
+      12: "botonMisionDisponible31,botonMisionActiva31,botonMisionCompletada31,botonMisionBloqueada31"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
