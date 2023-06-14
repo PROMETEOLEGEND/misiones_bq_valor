@@ -1,0 +1,32 @@
+conditions:
+  misionActiva34: "tag marcaMisionActiva34"
+  misionCompletada34: "tag marcaMisionCompletada34"
+  nivel2Talador: "mmoprofession woodcutting 2"
+  comprobarPuntosAtributoInvertidos: "point puntosAtributoInvertidos 11"
+
+####################################################################################################
+
+events:
+  iniciarMision34: "folder agregarMarcaMisionActiva34,iniciarObjetivoMision34,iniciarObjetivoMision34_2"
+  agregarMarcaMisionActiva34: "tag add marcaMisionActiva34"
+  iniciarObjetivoMision34: "objective start objInvertirPuntosAtributo"
+  iniciarObjetivoMision34_2: "objective start objCalcularPuntosAtributoInvertidos"
+
+  calcularPuntosAtributoInvertidos: "point puntosAtributoInvertidos %math.calc:ph.mmocore_attribute_strength+ph.mmocore_attribute_dexterity+ph.mmocore_attribute_intelligence% action:set"
+  
+  mensajeAyudaMision34: "notify \n&6&lMisión 34:\n&r Debes tener invertidos al menos 11 puntos de atributo, para ello puedes usar &b/atributos&r.\n&r"
+  
+  completarMision34: "folder eliminarObjetivoMision34_2,eliminarMarcaMisionActiva34,agregarMarcaMisionCompletada34,notificacionMisionCompletada34,recompensaMision34,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarObjetivoMision34_2: "objective delete objCalcularPuntosAtributoInvertidos"
+  eliminarMarcaMisionActiva34: "tag delete marcaMisionActiva34"
+  agregarMarcaMisionCompletada34: "tag add marcaMisionCompletada34"
+  notificacionMisionCompletada34: "notify &7----------------------------------------\n&6&l¡Misión 34 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision34: "command eco give %player% 250"
+  recompensaExpClase: "mmoclassexperience 300"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 300 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objInvertirPuntosAtributo: "delay 5 ticks interval:5 conditions:comprobarPuntosAtributoInvertidos events:completarMision34"
+  objCalcularPuntosAtributoInvertidos: "delay 5 ticks interval:5 events:calcularPuntosAtributoInvertidos persistent"
