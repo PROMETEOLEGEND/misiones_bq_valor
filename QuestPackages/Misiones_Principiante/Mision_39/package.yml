@@ -27,7 +27,7 @@ conversations:
       adios2:
         text: "Vale, estaré aquí por si cambias de opinión."
     player_options:
-      respuestaSaludo1:
+      respuestaSaludo:
         text: "Hola, ¿qué vendes?"
         pointer: "ofrecerBulbos"
       quererBulbos:
