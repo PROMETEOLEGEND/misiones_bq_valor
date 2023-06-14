@@ -7,7 +7,7 @@ conditions:
 events:
   iniciarMision32: "folder agregarMarcaMisionActiva32,iniciarObjetivoMision32"
   agregarMarcaMisionActiva32: "tag add marcaMisionActiva32"
-  iniciarObjetivoMision32: "objective start objFabricarMesaTrabajo"
+  iniciarObjetivoMision32: "objective start objFabricarPicoDiamante"
   
   mensajeAyudaMision32: "notify \n&6&lMisión 32:\n&r Para fabricar un &bPico de diamante &rnecesitarás 3 diamantes y 2 palos. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
   
@@ -22,7 +22,7 @@ events:
 ####################################################################################################
 
 objectives:
-  objFabricarMesaTrabajo: "craft picoDiamante 1 events:completarMision32"
+  objFabricarPicoDiamante: "craft picoDiamante 1 events:completarMision32"
   
 ####################################################################################################
 
