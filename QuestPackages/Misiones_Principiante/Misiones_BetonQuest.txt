@@ -26,7 +26,7 @@
 26. Añade una gema a tu espada. (Hecho)
 27. Fabrica una mesa de herrería. (Hecho)
 28. Sube a nivel 2 la profesion leñador. (Hecho)
-29. Visita la mina cueva de edar.
+29. Visita la mina cueva de edar. (Hecho)
 30. Sube a nivel 2 la profesion de mineria.
 31. Supera la mazmorra de Kobold.
 32. Fabrica un pico de diamante.
