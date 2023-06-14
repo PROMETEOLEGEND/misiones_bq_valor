@@ -1,2 +1,3 @@
 events:
-  eventoBulbo: "run Misiones_Principiante-Mision_40.completarMision40 condition:Misiones_Principiante-Mision_40.misionActiva40"
+  eventoBulbo: "if Misiones_Principiante-Mision_40.misionActiva40 Misiones_Principiante-Mision_40.completarMision40 else nada"
+  nada: "command asd"

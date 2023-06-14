@@ -22,7 +22,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objPicarBloquesAmatista: "block bloqueAmatista -16 events:completarMision35 notify:4"
-
-items:
-  bloqueAmatista: "AMETHYST_BLOCK"
+  objPicarBloquesAmatista: "block AMETHYST_BLOCK -16 events:completarMision35 notify:4"
