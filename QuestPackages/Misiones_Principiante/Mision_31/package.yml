@@ -38,7 +38,7 @@ conversations:
         text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
         pointer: "estarListoEscucharRepeticion,rechazarMision"   
       saludo3:
-        text: "¡Ah, valiente aventurero, has regresado triunfante! Me alegra verte sano y salvo. ¿Has logrado derrotar a Kobold y poner fin a su reinado de terror?"
+        text: "¡Ah, valiente aventurero, has regresado! Me alegra verte sano y salvo. ¿Has logrado derrotar a Kobold y poner fin a su reinado de terror?"
         pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
         conditions: "misionAceptadaKobold"
       misionCompletada:
@@ -46,6 +46,7 @@ conversations:
         pointer: "agradecerElogio"        
       misionCompletada2:
         text: "Como muestra de mi gratitud, te recompensaré generosamente. ue tu camino esté lleno de éxitos y prosperidad, noble aventurero. El reino te debe una deuda de gratitud eterna. ¡Adelante y que tus futuras hazañas sean aún más gloriosas!"
+        events: "completarMision31"
       misionAunNoCompletada:
         text: "¡Confío en que seas capaz de completar la misión, aventurero!"
       
@@ -116,7 +117,7 @@ events:
   
   mensajeAyudaMision31: "folder mensajeAyudaMision31_1,mensajeAyudaMision31_2,mensajeAyudaMision31_3"
   mensajeAyudaMision31_1: "notify \n&6&lMisión 31:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaKobold"
-  mensajeAyudaMision31_2: "notify \n&6&lMisión 31:\n&r El cristal de la mazmorra de &aKobold &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio.&r.\n&r conditions:misionAceptadaKobold,!mazmorraCompletadaKobold"
+  mensajeAyudaMision31_2: "notify \n&6&lMisión 31:\n&r El cristal de la mazmorra de &aKobold &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio&r.\n&r conditions:misionAceptadaKobold,!mazmorraCompletadaKobold"
   mensajeAyudaMision31_3: "notify \n&6&lMisión 31:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaKobold,mazmorraCompletadaKobold"
   
   agregarMarcaInfoRecibidaKobold: "tag add marcaInfoRecibidaKobold"
