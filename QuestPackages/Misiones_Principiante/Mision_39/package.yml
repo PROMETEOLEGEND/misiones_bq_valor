@@ -1,0 +1,88 @@
+conversations:
+  GranjeroBulbosValor:
+    quester: "&6&lGranjero"
+    first: "saludo"
+    NPC_options:
+      saludo:
+        text: "Hola, joven aventurero. ¿Te interesa comprar algo?"
+        pointer: "respuestaSaludo"
+      ofrecerBulbos:
+        text: "Vendo Bulbos, unas mascotas muy especiales que te ayudarán en tu aventura. ¿Te interesa comprar alguno?"
+        pointer: "quererBulbos,noQuererBulbos"
+      precioBulbos:
+        text: "Cada Bulbo cuesta 100 Monedas Bulbo. ¿Cuántos quieres comprar?"
+        pointer: "preguntarMonedasBulbo"
+      infoMonedasBulbo:
+        text: "Si, son monedas que sueltan los bulbos al ser extraídos de la tierra en su estado salvaje."
+        pointer: "entenderInfoMonedasBulbo"
+      ofrecerBulbos2:
+        text: "¿Te interesa algún Bulbo?"
+        pointer: "pedirInfoBulbos"
+      infoBulbos:
+        text: "Cada variante de Bulbo tiene habilidades únicas que te ayudarán en tu aventura. Cuando tengas suficientes monedas puedes venir aquí y adquirir alguno."
+        pointer: "agradecerInformacion"
+      adios:
+        text: "Es un placer, aventurero."
+        events: "completarMision39"
+      adios2:
+        text: "Vale, estaré aquí por si cambias de opinión."
+    player_options:
+      respuestaSaludo1:
+        text: "Hola, ¿qué vendes?"
+        pointer: "ofrecerBulbos"
+      quererBulbos:
+        text: "Sí, me interesa. ¿Cuánto cuestan?"
+        pointer: "precioBulbos"
+      preguntarMonedasBulbo:
+        text: "¿Monedas Bulbo?"
+        pointer: "infoMonedasBulbo"
+      entenderInfoMonedasBulbo:
+        text: "Entiendo..."
+        pointer: "ofrecerBulbos2"
+      pedirInfoBulbos:
+        text: "Hmm, no estoy seguro. ¿Qué hacen los Bulbos exactamente?"
+        pointer: "infoBulbos"
+      agradecerInformacion:
+        text: "Gracias por la información."
+        pointer: "adios"
+      noQuererBulbos:
+        text: "Realmente no, solo estaba curioseando"
+        pointer: "adios2"
+
+####################################################################################################
+
+conditions:
+  misionActiva39: "tag marcaMisionActiva39"
+  misionCompletada39: "tag marcaMisionCompletada39"
+
+####################################################################################################
+
+events:
+  iniciarMision39: "tag add marcaMisionActiva39"
+  
+  mensajeAyudaMision39: "folder agregarBrujula,notificacionBrujula"
+  agregarBrujula: "compass add objetivo1"
+  notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+
+  completarMision39: "folder eliminarBrujula,eliminarMarcaMisionActiva39,agregarMarcaMisionCompletada39,notificacionMisionCompletada39,recompensaMision39,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarBrujula: "compass del objetivo1"
+  eliminarMarcaMisionActiva39: "tag delete marcaMisionActiva39"
+  agregarMarcaMisionCompletada39: "tag add marcaMisionCompletada39"
+  notificacionMisionCompletada39: "notify &7----------------------------------------\n&6&l¡Misión 39 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision39: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+
+####################################################################################################
+
+compass:
+  objetivo1:
+    name:
+      es: Granjero
+    location: 1048;18;654;Zona1
+    item: brujula
+
+items:
+  brujula: "COMPASS"
+
+####################################################################################################

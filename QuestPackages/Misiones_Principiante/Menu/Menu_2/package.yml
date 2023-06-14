@@ -456,6 +456,48 @@ menus:
         item: "botonMisionBloqueada"
         amount: 1
         conditions: "!Misiones_Principiante-Mision_37.misionCompletada37"
+#####################################################################
+      botonMisionDisponible39:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_38.misionCompletada38,!Misiones_Principiante-Mision_39.misionActiva39,!Misiones_Principiante-Mision_39.misionCompletada39"
+        close: true
+        text:
+        - "&6&l[Misión 39]: &eUn producto poco común"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_39.mensajeAyudaMision39,Misiones_Principiante-Mision_39.iniciarMision39" 
+      botonMisionActiva39:
+        item: "botonMisionActiva"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_39.misionActiva39"
+        close: true
+        text:
+        - "&6&l[Misión 39]: &eUn producto poco común"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar al NPC."
+        click:
+          left: "Misiones_Principiante-Mision_39.mensajeAyudaMision39" 
+      botonMisionCompletada39:
+        item: "botonMisionCompletada"
+        amount: 1
+        conditions: "Misiones_Principiante-Mision_39.misionCompletada39"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 39]: &eUn producto poco común"
+        - "&r "
+        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+      botonMisionBloqueada39:
+        item: "botonMisionBloqueada"
+        amount: 1
+        conditions: "!Misiones_Principiante-Mision_38.misionCompletada38"
 
 #####################################################################
 
