@@ -1,0 +1,146 @@
+conversations:
+  ReyValor5:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡Saludos, aventurero! ¿Estarías dispuesto a aceptar otra misión?"
+        pointer: "si1"
+        conditions: "!misionInfoRecibidaTortuga"
+      a1:
+        text: "Tengo una tarea importante para ti. Quiero que derrotes a una Tortuga Gigante."
+        pointer: "b1"
+      a2:
+        text: "Si, su tamaño es descomunal. Es una tortuga que ha estado causando estragos en las cercanías de nuestro reino. ¿Quieres que te cuente su historia?"
+        pointer: "b2"
+      a3:
+        text: "Permíteme contarte... Hace muchos años, un poderoso mago creó una tortuga gigante a partir de la magia oscura. Hace poco la tortuga se rebeló contra él y huyó a la costa cercana, donde se escondió en una cueva y comenzó a causar estragos en la zona. Los aldeanos temen a salir de sus hogares, y los animales de la costa se esconden de la tortuga gigante."
+        pointer: "b3"
+      a4:
+        text: "Necesito que la derrotes y restaures la paz en nuestras tierras. ¿Estás dispuesto a aceptar esta misión?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaTortuga"
+        conditions: "!misionInfoRecibidaTortuga"
+      c1:
+        text: "Excelente. Te deseo buena suerte, aventurero."
+        events: "aceptarMisionTortuga"
+      c2:
+        text: "¿No estás interesado en la misión? La tortuga gigante sigue causando estragos en nuestro reino. Si cambias de opinión, estaré aquí para ofrecerte la misión nuevamente."
+      saludo2:
+        text: "¿Has reconsiderado tu decisión, aventurero? La tortuga gigante sigue siendo una amenaza para nuestro reino. ¿Estás dispuesto a aceptar la misión ahora?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaTortuga,!misionAceptadaTortuga"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaTortuga"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "Bienvenido de vuelta, aventurero %player%. ¿Has completado la misión qué te encargué?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaTortuga"
+      misionCompletada:
+        text: "¡Impresionante, aventurero! Has demostrado tu valentía y habilidad al derrotar a la Tortuga Gigante. Como recompensa, te otorgo 2000 monedas de oro y un objeto mágico que te será útil en tus futuras aventuras. ¡Gracias por tu servicio a nuestro reino!"
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Espero que hayas disfrutado de esta misión. Si necesitas ayuda con algo más, no dudes en preguntarme."
+        events: "completarMision48"
+      misionAunNoCompletada:
+        text: "¡Buena suerte, aventurero! Que la fuerza esté contigo."
+      
+      
+    player_options:
+      si1:
+        text: "Por supuesto, su majestad. ¿De qué se trata?"
+        pointer: "a1"
+      b1:
+        text: "¿Tortuga Gigante? Vaya..."
+        pointer: "a2"
+      b2:
+        text: "Sí, por favor."
+        pointer: "a3"
+      b3:
+        text: "Que interesante historia..."
+        pointer: "a4,preguntarInfoMision"
+      si2:
+        text: "Sí, su majestad. Acepto la misión."
+        pointer: "c1"
+      no2:
+        text: "Aún no me siento listo para hacer eso..."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la historia, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaTortuga,!mazmorraCompletadaTortuga"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a3"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "Sí, su majestad."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaTortuga"
+      misionCompletadaNo:
+        text: "Aún no, su majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaTortuga"
+      agradecerElogio:
+        text: "Gracias, su majestad. Si necesito algo, lo haré saber."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva48: "tag marcaMisionActiva48"
+  misionInfoRecibidaTortuga: "tag marcaInfoRecibidaTortuga"
+  misionAceptadaTortuga: "tag marcaMisionAceptadaTortuga"
+  mazmorraCompletadaTortuga: "tag marcaMazmorraCompletadaTortuga"
+  misionCompletada48: "tag marcaMisionCompletada48"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraTortuga: "finishdungeon tortuga events:mazmorraCompletarTortuga"
+
+#####################################################################        
+
+events:
+  iniciarMision48: "tag add marcaMisionActiva48"
+  
+  mensajeAyudaMision48: "folder mensajeAyudaMision48_1,mensajeAyudaMision48_2,mensajeAyudaMision48_3"
+  mensajeAyudaMision48_1: "notify \n&6&lMisión 48:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaTortuga"
+  mensajeAyudaMision48_2: "notify \n&6&lMisión 48:\n&r El cristal de la mazmorra de &aTortuga &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio&r.\n&r conditions:misionAceptadaTortuga,!mazmorraCompletadaTortuga"
+  mensajeAyudaMision48_3: "notify \n&6&lMisión 48:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaTortuga,mazmorraCompletadaTortuga"
+  
+  agregarMarcaInfoRecibidaTortuga: "tag add marcaInfoRecibidaTortuga"
+  
+  aceptarMisionTortuga: "folder agregarMarcaMisionAceptadaTortuga,permisoMazmorraTortuga,iniciarObjetivoCompletarMazmorraTortuga,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaTortuga: "tag add marcaMisionAceptadaTortuga"
+  permisoMazmorraTortuga: "command lp user %player% permission set mazmorra.tortuga"
+  iniciarObjetivoCompletarMazmorraTortuga: "objective start completarMazmorraTortuga"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarTortuga: "folder agregarMarcaMazmorraCompletadaTortuga,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaTortuga: "tag add marcaMazmorraCompletadaTortuga"
+  
+  completarMision48: "folder eliminarMarcasMisionActiva48,agregarMarcaMisionCompletada48,notificacionMisionCompletada48,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva48: "folder eliminarMarcaMisionActiva48,eliminarMarcaMisionInfoRecibidaTortuga,eliminarMarcaMisionAceptadaTortuga,eliminarMarcaMazmorraCompletadaTortuga"
+  eliminarMarcaMisionActiva48: "tag delete marcaMisionActiva48"
+  eliminarMarcaMisionInfoRecibidaTortuga: "tag delete marcaInfoRecibidaTortuga"
+  eliminarMarcaMisionAceptadaTortuga: "tag delete marcaMisionAceptadaTortuga"
+  eliminarMarcaMazmorraCompletadaTortuga: "tag delete marcaMazmorraCompletadaTortuga"
+  agregarMarcaMisionCompletada48: "tag add marcaMisionCompletada48"
+  notificacionMisionCompletada48: "notify &7----------------------------------------\n&6&l¡Misión 48 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 2000"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

@@ -1,0 +1,26 @@
+conditions:
+  misionActiva45: "tag marcaMisionActiva45"
+  misionCompletada45: "tag marcaMisionCompletada45"
+  tenerGemaManaII: "mmoitem GEM_STONE GEMA_MANA_2"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision45: "notify \n&6&lMisión 45:&r Debes fabricar una &bGema de Mana II&r, para ello tendrás que unir &b3 Gemas de Mana I &ren una &bForja&r.\n&r"
+  
+  iniciarMision45: "folder agregarMarcaMisionActiva45,iniciarObjetivoMision45"
+  agregarMarcaMisionActiva45: "tag add marcaMisionActiva45"
+  iniciarObjetivoMision45: "objective start objFabricarGemaManaII"
+  
+  completarMision45: "folder eliminarMarcaMisionActiva45,agregarMarcaMisionCompletada45,notificacionMisionCompletada45,recompensaMision45,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva45: "tag delete marcaMisionActiva45"
+  recompensaMision45: "command eco give %player% 300"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+  agregarMarcaMisionCompletada45: "tag add marcaMisionCompletada45"
+  notificacionMisionCompletada45: "notify &7----------------------------------------\n&6&l¡Misión 45 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarGemaManaII: "delay 5 ticks interval:5 conditions:tenerGemaManaII events:completarMision45"

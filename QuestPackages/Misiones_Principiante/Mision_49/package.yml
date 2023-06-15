@@ -1,0 +1,26 @@
+conditions:
+  misionActiva49: "tag marcaMisionActiva49"
+  misionCompletada49: "tag marcaMisionCompletada49"
+  nivel10Clase: "mmoclass * 10"
+
+####################################################################################################
+
+events:
+  iniciarMision49: "folder agregarMarcaMisionActiva49,iniciarObjetivoMision49"
+  agregarMarcaMisionActiva49: "tag add marcaMisionActiva49"
+  iniciarObjetivoMision49: "objective start objSubirNivel10Clase"
+  
+  mensajeAyudaMision49: "notify \n&6&lMisión 49:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision49: "folder eliminarMarcaMisionActiva49,agregarMarcaMisionCompletada49,notificacionMisionCompletada49,recompensaMision49,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva49: "tag delete marcaMisionActiva49"
+  agregarMarcaMisionCompletada49: "tag add marcaMisionCompletada49"
+  notificacionMisionCompletada49: "notify &7----------------------------------------\n&6&l¡Misión 49 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision49: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objSubirNivel10Clase: "delay 5 ticks interval:5 conditions:nivel10Clase events:completarMision49"
