@@ -8,7 +8,7 @@ conversations:
         pointer: "si1,no2"
         conditions: "!misionInfoRecibidaMinotauro"
       a1:
-        text: "Excelente. En lo más profundo de un laberinto oscuro y misterioso, se encuentra encerrado un terrible minotauro. Hace siglos, este ser aterrador fue una criatura noble y sabia, pero una maldición lo corrompió, convirtiéndolo en una bestia sedienta de sangre."
+        text: "Excelente. En lo más profundo de un laberinto oscuro y misterioso, se encuentra encerrado un terrible minotauro. Hace eones, este ser aterrador fue una criatura noble y sabia, pero una maldición lo corrompió, convirtiéndolo en una bestia sedienta de sangre."
         pointer: "b1"
       a3:
         text: "Cuenta la leyenda que el minotauro fue traicionado por aquellos a quienes confió su corazón. Su amada, la princesa Ariana, fue secuestrada por un malvado hechicero que buscaba su poder. En su desesperación, el minotauro hizo un pacto oscuro para obtener la fuerza necesaria para rescatarla, pero el precio fue su humanidad."
@@ -73,7 +73,7 @@ conversations:
         pointer: "misionAunNoCompletada"
       estarListoEscucharRepeticion:
         text: "Estoy listo, Su Majestad"
-        pointer: "a2"
+        pointer: "a1"
       rechazarMision:
         text: "Aún no me siento listo, Su Majestad."
         pointer: "c2"
