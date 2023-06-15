@@ -16,3 +16,6 @@ events:
 
 objectives:
   objLlegarCheckpointMuerte: "location %ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1% 5 events:eliminacionCheckpointMuerte"
+
+items:
+  iconoCheckpointMuerte: "SOUL_CAMPFIRE"
