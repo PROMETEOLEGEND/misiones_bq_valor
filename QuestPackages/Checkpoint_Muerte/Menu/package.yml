@@ -22,8 +22,8 @@ menus:
         - "&7[&aClic izquierdo&7] para activar el punto de control."
         - "&7[&aClic derecho&7] para desactivar el punto de control."
         click:
-          left: "Checkpoint_Muerte-Controlador-Checkpoints.activarCheckpointMuerte"
-          right: "Checkpoint_Muerte-Controlador-Checkpoints.desactivarCheckpointMuerte"
+          left: "Checkpoint_Muerte-Controlador_Checkpoints.activarCheckpointMuerte"
+          right: "Checkpoint_Muerte-Controlador_Checkpoints.desactivarCheckpointMuerte"
 
 items:
   iconoCheckpointMuerte: "SOUL_CAMPFIRE"
