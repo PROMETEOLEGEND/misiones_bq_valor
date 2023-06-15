@@ -5,5 +5,5 @@ package:
 compass:
   checkpointMuerte:
     name: Punto de control del Fuego Fatuo &7[&eS3&7]
-    location: "%math.calc:ph.angelchest_x_1*1%;%math.calc:ph.angelchest_y_1*1%;%math.calc:ph.angelchest_z_1*1%;world"
+    location: "%ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
     item: iconoCheckpointMuerte
