@@ -1,0 +1,140 @@
+conversations:
+  ReyValor5:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "%player%. Me complace que hayas venido. Tengo una misión de vital importancia para ti. ¿Estás dispuesto a escuchar?"
+        pointer: "si1,no2"
+        conditions: "!misionInfoRecibidaMinotauro"
+      a1:
+        text: "Excelente. En lo más profundo de un laberinto oscuro y misterioso, se encuentra encerrado un terrible minotauro. Hace siglos, este ser aterrador fue una criatura noble y sabia, pero una maldición lo corrompió, convirtiéndolo en una bestia sedienta de sangre."
+        pointer: "b1"
+      a3:
+        text: "Cuenta la leyenda que el minotauro fue traicionado por aquellos a quienes confió su corazón. Su amada, la princesa Ariana, fue secuestrada por un malvado hechicero que buscaba su poder. En su desesperación, el minotauro hizo un pacto oscuro para obtener la fuerza necesaria para rescatarla, pero el precio fue su humanidad."
+        pointer: "b2"
+      a4:
+        text: "Quiero que te adentres en el laberinto y enfrentes al minotauro. Intenta encontrar una manera de liberarlo de su tormento y devolverle la paz, aunque sus recuerdos se hayan perdido. No será una tarea fácil, pero confío en tu valentía y determinación. ¿Aceptarás esta misión?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaMinotauro"
+        conditions: "!misionInfoRecibidaMinotauro"
+      c1:
+        text: "Eres valiente y noble, joven aventurero. Te deseo la mejor de las suertes en tu misión. Recuerda, busca una forma de redimir al minotauro y devolverle la paz, incluso si sus recuerdos se han desvanecido. Ahora ve y cumple tu destino."
+        events: "aceptarMisionMinotauro"
+      c2:
+        text: "Respeto tu elección. Si en el futuro cambias de opinión o sientes que estás preparado para asumir esta misión, no dudes en volver a buscarme. Siempre estoy dispuesto a ofrecer tareas valerosas a aquellos dispuestos a enfrentarlas."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaMinotauro,!misionAceptadaMinotauro"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaMinotauro"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Ah, valiente aventurero, has regresado! Me alegra verte sano y salvo. ¿Has logrado derrotar a Minotauro, rescatarlo de su maldición y devolverle su humanidad perdida?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaMinotauro"
+      misionCompletada:
+        text: "Aunque no hayas podido devolverle su humanidad, has cumplido con tu deber valientemente. El minotauro ahora descansa en paz, liberado de su sufrimiento y sin la necesidad de luchar contra su maldición eternamente."
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "A veces, el destino no nos permite cambiar ciertas situaciones. Has hecho todo lo que estaba en tus manos y eso es digno de reconocimiento. Por ello te has ganado una recompensa."
+        events: "completarMision43"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+      
+      
+    player_options:
+      si1:
+        text: "Por supuesto, mi señor. Estoy listo para emprender cualquier desafío."
+        pointer: "a1"
+      b1:
+        text: "¿Qué causó su maldición, mi señor?"
+        pointer: "a3"
+      b2:
+        text: "¿Cómo puedo ayudar, majestad?"
+        pointer: "a4"
+      si2:
+        text: "Sí, mi señor. Haré todo lo posible para ayudar al minotauro y liberarlo de su maldición."
+        pointer: "c1"
+      no2:
+        text: "Mi señor, agradezco vuestra confianza, pero odio los laberintos..."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Creo que no he comprendido todo, podría repetirme la historia, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaMinotauro,!mazmorraCompletadaMinotauro"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a2"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "Sí, mi señor. Pero lamentablemente a pesar de todos mis esfuerzos, no he encontrado una forma de liberarlo de su maldición y restaurar su humanidad."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaMinotauro"      
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaMinotauro"
+      agradecerElogio:
+        text: "Espero que así sea, mi señor. Me entristece no haber podido ayudarlo completamente."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva43: "tag marcaMisionActiva43"
+  misionInfoRecibidaMinotauro: "tag marcaInfoRecibidaMinotauro"
+  misionAceptadaMinotauro: "tag marcaMisionAceptadaMinotauro"
+  mazmorraCompletadaMinotauro: "tag marcaMazmorraCompletadaMinotauro"
+  misionCompletada43: "tag marcaMisionCompletada43"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraMinotauro: "finishdungeon Minotauro events:mazmorraCompletarMinotauro"
+
+#####################################################################        
+
+events:
+  iniciarMision43: "tag add marcaMisionActiva43"
+  
+  mensajeAyudaMision43: "folder mensajeAyudaMision43_1,mensajeAyudaMision43_2,mensajeAyudaMision43_3"
+  mensajeAyudaMision43_1: "notify \n&6&lMisión 43:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaMinotauro"
+  mensajeAyudaMision43_2: "notify \n&6&lMisión 43:\n&r El cristal de la mazmorra de &aMinotauro &rse encuentra en el gran salón que hay a la izquierda cuando entras al Palacio&r.\n&r conditions:misionAceptadaMinotauro,!mazmorraCompletadaMinotauro"
+  mensajeAyudaMision43_3: "notify \n&6&lMisión 43:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaMinotauro,mazmorraCompletadaMinotauro"
+  
+  agregarMarcaInfoRecibidaMinotauro: "tag add marcaInfoRecibidaMinotauro"
+  
+  aceptarMisionMinotauro: "folder agregarMarcaMisionAceptadaMinotauro,permisoMazmorraMinotauro,iniciarObjetivoCompletarMazmorraMinotauro,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaMinotauro: "tag add marcaMisionAceptadaMinotauro"
+  permisoMazmorraMinotauro: "command lp user %player% permission set mazmorra.Minotauro"
+  iniciarObjetivoCompletarMazmorraMinotauro: "objective start completarMazmorraMinotauro"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarMinotauro: "folder agregarMarcaMazmorraCompletadaMinotauro,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaMinotauro: "tag add marcaMazmorraCompletadaMinotauro"
+  
+  completarMision43: "folder eliminarMarcasMisionActiva43,agregarMarcaMisionCompletada43,notificacionMisionCompletada43,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva43: "folder eliminarMarcaMisionActiva43,eliminarMarcaMisionInfoRecibidaMinotauro,eliminarMarcaMisionAceptadaMinotauro,eliminarMarcaMazmorraCompletadaMinotauro"
+  eliminarMarcaMisionActiva43: "tag delete marcaMisionActiva43"
+  eliminarMarcaMisionInfoRecibidaMinotauro: "tag delete marcaInfoRecibidaMinotauro"
+  eliminarMarcaMisionAceptadaMinotauro: "tag delete marcaMisionAceptadaMinotauro"
+  eliminarMarcaMazmorraCompletadaMinotauro: "tag delete marcaMazmorraCompletadaMinotauro"
+  agregarMarcaMisionCompletada43: "tag add marcaMisionCompletada43"
+  notificacionMisionCompletada43: "notify &7----------------------------------------\n&6&l¡Misión 43 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 3000"
+  recompensaExpClase: "mmoclassexperience 750"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 750 exp de clase."
