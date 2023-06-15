@@ -10,7 +10,7 @@ events:
   agregarMarcaMisionActiva42: "tag add marcaMisionActiva42"
   iniciarObjetivoMision42: "objective start objLlegarNivel2Granjero"
   
-  mensajeAyudaMision42: "notify \n&6&lMisión 42:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel de prestigio. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  mensajeAyudaMision42: "notify \n&6&lMisión 42:\n&r Conforme vayas cosechando cultivos irás obteniendo experiencia para subir de nivel de granjero.\n&r"
   
   completarMision42: "folder eliminarMarcaMisionActiva42,agregarMarcaMisionCompletada42,notificacionMisionCompletada42,recompensaMision42,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva42: "tag delete marcaMisionActiva42"

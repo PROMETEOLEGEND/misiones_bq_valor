@@ -1,0 +1,25 @@
+conditions:
+  misionActiva46: "tag marcaMisionActiva46"
+  misionCompletada46: "tag marcaMisionCompletada46"
+
+####################################################################################################
+
+events:
+  iniciarMision46: "folder agregarMarcaMisionActiva46,iniciarObjetivoMision46"
+  agregarMarcaMisionActiva46: "tag add marcaMisionActiva46"
+  iniciarObjetivoMision46: "objective start objColocarGema"
+  
+  mensajeAyudaMision46: "notify \n&6&lMisión 46:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadísticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una Gema de Crítico de nivel I a tu Espada Inicial.\n \n&7Nota: La espada inicial puedes conseguirla en el Kit inicial que te da el Paladin.\n&r"
+  
+  completarMision46: "folder eliminarMarcaMisionActiva46,agregarMarcaMisionCompletada46,notificacionMisionCompletada46,recompensaMision46,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva46: "tag delete marcaMisionActiva46"
+  agregarMarcaMisionCompletada46: "tag add marcaMisionCompletada46"
+  notificacionMisionCompletada46: "notify &7----------------------------------------\n&6&l¡Misión 46 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision46: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 200"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objColocarGema: "mmoitemapplygem ESPADA_GEMA ESPADA_AMATISTA_1 GEMA_MANA_2 events:completarMision46"

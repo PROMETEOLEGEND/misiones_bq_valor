@@ -1,0 +1,26 @@
+conditions:
+  misionActiva44: "tag marcaMisionActiva44"
+  misionCompletada44: "tag marcaMisionCompletada44"
+  tenerEspadaAmatista: "mmoitem ESPADA_GEMA ESPADA_AMATISTA_1"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision44: "notify \n&6&lMisión 44:&r Debes fabricar una &bEspada de Amatista&r con un &bespacio para gema&r, para ello tendrás que unir &buna Espada de Amatista &ry un &bRecipiente para Gema I &ren una &bForja&r.\n&r"
+  
+  iniciarMision44: "folder agregarMarcaMisionActiva44,iniciarObjetivoMision44"
+  agregarMarcaMisionActiva44: "tag add marcaMisionActiva44"
+  iniciarObjetivoMision44: "objective start objFabricarEspadaAmatista"
+  
+  completarMision44: "folder eliminarMarcaMisionActiva44,agregarMarcaMisionCompletada44,notificacionMisionCompletada44,recompensaMision44,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva44: "tag delete marcaMisionActiva44"
+  recompensaMision44: "command eco give %player% 300"
+  recompensaExpClase: "mmoclassexperience 350"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
+  agregarMarcaMisionCompletada44: "tag add marcaMisionCompletada44"
+  notificacionMisionCompletada44: "notify &7----------------------------------------\n&6&l¡Misión 44 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarEspadaAmatista: "delay 5 ticks interval:5 conditions:tenerEspadaAmatista events:completarMision44"
