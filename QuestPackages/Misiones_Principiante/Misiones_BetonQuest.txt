@@ -40,15 +40,15 @@
 40. Encuentra un bulbo. (Hecho)
 41. Sube a nivel 6 de prestigio. (Hecho)
 42. Sube a nivel 5 de granjero. (Hecho)
-43. Usa una pocion de potenciador de xp.
-44. Supera la mazmorra del Minotauro.
-45. Fabrica una espada de amatista con un espacio para gema.
-46. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II.
-47. Coloca una gema nivel II a tu espada de amatista.
-48. Sube a nivel 7 de clase.
-49. Mejora una habilidad.
-50. Habla con el bufón y reclama un 2do hogar.
-51. Sube a nivel 10 de clase.
+43. Supera la mazmorra del Minotauro.
+44. Fabrica una espada de amatista con un espacio para gema.
+45. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II.
+46. Coloca una gema nivel II a tu espada de amatista.
+47. Sube a nivel 7 de clase.
+48. POR DEFINIR ¿Mejora una habilidad?
+49. POR DEFINIR
+50. Sube a nivel 10 de clase.
+51. Habla con el bufón y reclama un 2do hogar.
 52. Encuentra Rubi.
 53. Encuentra Zafiro.
 54. Fabrica una espada de rubi o zafiro.
