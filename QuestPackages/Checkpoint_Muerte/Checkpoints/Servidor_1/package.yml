@@ -1,0 +1,9 @@
+package:
+  templates:
+    - Checkpoint_Muerte-Checkpoints
+
+compass:
+  checkpointMuerte:
+    name: Punto de control del Fuego Fatuo &7[&eS1&7]
+    location: "%ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
+    item: iconoCheckpointMuerte
