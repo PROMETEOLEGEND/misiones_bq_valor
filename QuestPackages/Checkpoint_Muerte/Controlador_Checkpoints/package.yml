@@ -14,6 +14,9 @@ objectives:
   # objComprobarServidorCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
+  activarCheckpointMuerte: "objective start objCheckpointMuerte"
+  desactivarCheckpointMuerte: "objective delete objCheckpointMuerte"
+  
   establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor1,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidorDev"
   establecerCheckpointMuerteServidor1: "folder Checkpoint_Muerte-Checkpoints-Servidor_1.establecerCheckpointMuerte condition:estarEnServidor1"
   establecerCheckpointMuerteServidor2: "folder Checkpoint_Muerte-Checkpoints-Servidor_2.establecerCheckpointMuerte condition:estarEnServidor2"
