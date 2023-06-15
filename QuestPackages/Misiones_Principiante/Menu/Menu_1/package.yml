@@ -1142,7 +1142,7 @@ menus:
       botonMisionDisponible27:
         item: "botonMisionActiva"
         amount: 1
-        conditions: "Misiones_Principiante-Mision_27.misionCompletada27,!Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
+        conditions: "Misiones_Principiante-Mision_26.misionCompletada26,!Misiones_Principiante-Mision_27.misionActiva27,!Misiones_Principiante-Mision_27.misionCompletada27"
         close: true
         text:
         - "&6&l[Misión 27]: &eUn herrero de renombre"

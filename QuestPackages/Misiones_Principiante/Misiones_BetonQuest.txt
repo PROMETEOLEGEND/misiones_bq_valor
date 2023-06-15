@@ -40,7 +40,7 @@
 40. Encuentra un bulbo. (Hecho)
 41. Sube a nivel 6 de prestigio. (Hecho)
 42. Sube a nivel 2 de granjero. (Hecho)
-43. Supera la mazmorra del Minotauro.
+43. Supera la mazmorra del Minotauro. (Hecho)
 44. Fabrica una espada de amatista con un espacio para gema. (Hecho)
 45. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II. (Hecho)
 46. Coloca una gema nivel II a tu espada de amatista. (Hecho)
@@ -49,12 +49,32 @@
 49. Sube a nivel 10 de clase. (Hecho)
 50. Sube a nivel 10 de prestigio. (Hecho)
 51. Habla con el bufón y reclama un 2do hogar.
-52. Encuentra Rubi.
-53. Encuentra Zafiro.
+52. Mina 10 menas de Rubi.
+53. Mina 10 menas de Zafiro.
 54. Fabrica una espada de rubi o zafiro.
-55. Gasta un Punto de atributo.
-56. Fabrica un caldero para mascotas.
-57. Fabrica pienso de mascotas.
-58. Tamea una mascota.
-59. Supera la mazmorra de Medusa.
-60. Visita la ciudad de Crafburgo.
+55. Supera la mazmorra del Rey Goblin.
+56. Derrota a un ent guardian.
+57. Fabrica un caldero para mascotas.
+58. Fabrica pienso de mascotas.
+59. Tamea una mascota.
+60. Supera la mazmorra del Rey Crustáceo.
+61. Sube al nivel 12 de prestigio.
+62. Mina 25 menas de Rubi.
+63. Mina 25 menas de Zafiro.
+64. Visita el nether.
+65. Visita la casa del pescador.
+66. Supera la mazmorra de Medusa.
+67. Derrota un golem de Rubi.
+68. Derrota un golem de Zafiro.
+69. Derrota un golem de Mythril.
+70. Subir al nivel 14 prestigio.
+71. Supera la mazmorra de Bjorn.
+72. Fabrica un pico de Rubi o Zafiro.
+73. Mina 10 menas de Turmalina.
+74. Subir al nivel 15 de clase
+75. Fabrica una ballesta de Turmalina.
+76. Mina 30 menas de Turmalina.
+77. Fabrica una pechera de Turmalina.
+78. Subir al nivel 15 de prestigio.
+79. Supera la mazmorra del Nigromante.
+80. Visita la ciudad de Crafburgo.
