@@ -45,7 +45,7 @@ conversations:
         text: "¡Magnífico trabajo, héroe! Has demostrado tu valía y coraje al enfrentarte a uno de los enemigos más temibles. Gracias a ti, nuestro pueblo podrá vivir en paz y seguridad una vez más."
         pointer: "agradecerElogio"        
       misionCompletada2:
-        text: "Como muestra de mi gratitud, te recompensaré generosamente. ue tu camino esté lleno de éxitos y prosperidad, noble aventurero. El reino te debe una deuda de gratitud eterna. ¡Adelante y que tus futuras hazañas sean aún más gloriosas!"
+        text: "Como muestra de mi gratitud, te recompensaré generosamente. Que tu camino esté lleno de éxitos y prosperidad, noble aventurero. El reino te debe una deuda de gratitud eterna. ¡Adelante y que tus futuras hazañas sean aún más gloriosas!"
         events: "completarMision31"
       misionAunNoCompletada:
         text: "¡Confío en que seas capaz de completar la misión, aventurero!"
