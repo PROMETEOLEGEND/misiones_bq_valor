@@ -1,0 +1,29 @@
+menus:
+  checkpointMuerte:
+    title: "&b&lPunto de control del fuego fatuo"
+    command: "/puntomuerte"
+    height: 3
+    slots:
+      13: "botonCheckpointMuerte"
+    items:
+      botonCheckpointMuerte:
+        item: "iconoCheckpointMuerte"
+        text:
+        - "&b¿Qué es el punto de control del fuego fatuo?"
+        - ""
+        - "&7Es un punto de control que aparecerá en tu brújula"
+        - "&7justo después de morir, para ayudarte a llegar a tu"
+        - "&7lugar de muerte anterior."
+        - ""
+        - "&7El punto de control solo aparecerá si mueres en el"
+        - "&7Mundo de Exploración o en el Nether y no tienes el"
+        - "&7beneficio &bMantener Inventario&7."
+        - ""
+        - "&7[&aClic izquierdo&7] para activar el punto de control."
+        - "&7[&aClic derecho&7] para desactivar el punto de control."
+        click:
+          left: "Checkpoint_Muerte-Controlador_Checkpoints.activarCheckpointMuerte"
+          right: "Checkpoint_Muerte-Controlador_Checkpoints.desactivarCheckpointMuerte"
+
+items:
+  iconoCheckpointMuerte: "SOUL_CAMPFIRE"
