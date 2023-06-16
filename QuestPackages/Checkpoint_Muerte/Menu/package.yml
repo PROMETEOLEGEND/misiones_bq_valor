@@ -1,7 +1,7 @@
 menus:
   checkpointMuerte:
     title: "&b&lPunto de control del fuego fatuo"
-    # command: "/puntomuerte"
+    command: "/puntomuerte"
     height: 3
     slots:
       13: "botonCheckpointMuerte"

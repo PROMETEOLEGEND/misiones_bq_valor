@@ -1,17 +1,19 @@
-compass:
-  checkpointMuerte:
-    name: Punto de control del Fuego Fatuo
-    location: "%ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
-    item: iconoCheckpointMuerte
+# compass:
+#   checkpointMuerte:
+#     name: Punto de control del Fuego Fatuo
+#     location: "%ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
+#     item: iconoCheckpointMuerte
 
 events:
   establecerCheckpointMuerte: "folder agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
-  agregarCheckpointMuerte: "compass add checkpointMuerte"
+  # agregarCheckpointMuerte: "compass add checkpointMuerte"
+  agregarCheckpointMuerte: "compasstrack %ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
   iniciarObjLlegarCheckpointMuerte: "objective start objLlegarCheckpointMuerte"
   notificacionCheckpointMuerte: "notify &6Se ha fijado tu lugar de muerte en la brújula."
 
   eliminacionCheckpointMuerte: "folder eliminarCheckpointMuerte,notificacionEliminarCheckpointMuerte"
-  eliminarCheckpointMuerte: "compass del checkpointMuerte"
+  # eliminarCheckpointMuerte: "compass del checkpointMuerte"
+  eliminarCheckpointMuerte: "clearcompass"
   notificacionEliminarCheckpointMuerte: "notify &aHas llegado a tu lugar de muerte anterior."
 
 objectives:
