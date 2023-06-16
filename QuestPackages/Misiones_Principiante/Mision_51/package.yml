@@ -1,0 +1,130 @@
+conversations:
+  Bufon:
+    quester: "&b&lBufón"
+    first: "saludo"
+    NPC_options:
+      saludo:
+        text: "¡Hola, aventurero! Soy el bufón más ingenioso y extravagante de todo el reino. Tengo una misión especial para ti, ¿te interesa escucharla?"
+        pointer: "si,no"
+      adios:
+        text: "Oh, vaya, eso es una lástima. Estoy seguro de que te habrías divertido mucho buscando los chistes mágicos. Pero entiendo que cada aventurero tiene sus propias prioridades y responsabilidades."
+      contarmision:
+        text: "Muy bien, presta atención. Resulta que he perdido mi colección de chistes mágicos, y sin ellos, mi actuación no estará completa. Estos chistes están dispersos por toda la región de valor y necesito que los encuentres y los traigas de vuelta."
+        pointer: "respuesta1"
+      contarlugares:
+        text: "¡Maravilloso! Hay cinco chistes mágicos en total. Aquí tienes una lista de lugares donde podrías encontrarlos: poblado goblin, las cloacas bajo la plaza de valor, en la biblioteca de palacio, la tienda de mascotas y la granja de cerdos. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja."
+        pointer: "quepasasiencuentro,repetirinfo"
+      repetirinfochistes:
+        text: "La lista de lugares donde podrías encontrarlos es: poblado goblin, las cloacas bajo la plaza de valor, en la biblioteca de palacio, la tienda de mascotas y la granja de cerdos. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja."
+        pointer: "quepasasiencuentro"
+      contarfinal:
+        text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con un espacio especial donde podrás construir y guardar tu hogar."
+        pointer: "despedida"
+      contarfinalmas1:
+        text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con una fantástica recompensa."
+        pointer: "despedida"
+      adios2:
+        text: "¡Eso espero! Buena suerte, valiente aventurero. Estaré esperando aquí con ansias tus chistes mágicos. ¡Diviértete en tu búsqueda!"
+      saludo2:
+        text: "¡Hola, aventurero! ¿Has pensado sobre la misión que te comenté?"
+        pointer: "no,quemision"
+      saludo3:
+        text: "¡Saludos, aventurero! ¿Cómo va tu búsqueda de los chistes mágicos? Estoy ansioso por escuchar las divertidas historias que has descubierto."
+        pointer: "no2"
+      respuesta2:
+        text: "No te preocupes, aventurero. La búsqueda de los chistes mágicos puede ser desafiante, pero estoy seguro de que estás cerca de encontrarlos. Sigue explorando con valentía."
+        pointer: "nomerendire,repetirinfo"
+      saludo4:
+        text: "¡Oh, albricias! ¡Has vuelto! Me muero de curiosidad por saber si has encontrado los cinco chistes mágicos. ¡Cuéntame todo al respecto!"
+        pointer: "contaraventurajugador"
+      respuestachiste1:
+        text: "¡Ja, ja! Ese es genial. Sigue, por favor, ¡quiero escuchar los otros!"
+        pointer: "contarchiste2"
+      respuestachiste2:
+        text: "¡Excelente! Continúa, no puedo esperar a oír los demás."
+        pointer: "contarchiste3"
+      respuestachiste3:
+        text: "¡Ja, ja, ja! Me encanta la creatividad de ese chiste. ¡Sigue así!"
+        pointer: "contarchiste4"
+      respuestachiste4:
+        text: "¡Eso es muy ingenioso! Estoy disfrutando mucho de estos chistes. ¿Cuál es el último?"
+        pointer: "contarchiste5"
+      respuestachiste5:
+        text: "¡Ja, ja, ja! ¡Ese chiste es explosivamente divertido! Me encanta tu creatividad. Me has hecho reír de verdad. Estoy impresionado por tu habilidad para encontrar los chistes mágicos y por tu forma de contarlos."
+        pointer: "gracias"
+      respuestafinal:
+        text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes un espacio especial donde podrás construir y guardar tu hogar. Espero que lo disfrutes y te sientas como en casa."
+      respuestafinalmas1:
+        text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes tu recompensa. Espero que lo disfrutes."
+    player_options:
+      si:
+        text: "¡Hola, bufón! Estoy intrigado. Cuéntame en qué consiste tu misión."
+        pointer: "contarmision"
+      no:
+        text: "Hola, bufón. Aprecio tu oferta, pero en este momento no estoy interesado en aceptar misiones adicionales."
+        pointer: "adios"
+      respuesta1:
+        text: "¡Entendido! ¿Cuántos chistes mágicos hay que encontrar y dónde debo buscarlos?"
+        pointer: "contarlugares"
+      quepasasiencuentro:
+        text: "¡Lo tengo! Me pondré en marcha de inmediato. ¿Qué sucede cuando encuentre los chistes?"
+        pointer: "contarfinal,contarfinalmas1"
+      repetirinfo:
+        text: "¿Podrías repetirme los lugares donde encontrar los chistes?"
+        pointer: "repetirinfochistes"
+      despedida:
+        text: "¡Suena genial! Estoy emocionado por encontrar los chistes y hacerte reír. ¡No te preocupes, no te decepcionaré!"
+        pointer: "adios2"
+      quemision:
+        text: "Hola, bufón. No recuerdo la misión, ¿podrías contarme de nuevo?"
+        pointer: "contarmision"
+      no2:
+        text: "¡Hola, bufón! Lamentablemente, aún no he tenido éxito en encontrar los chistes mágicos. He estado explorando los rincones más remotos de la región, pero hasta ahora no he dado con todos."
+        pointer: "respuesta2"
+      nomerendire:
+        text: "Gracias por tus palabras de aliento, bufón. No me rendiré y continuaré mi búsqueda con renovado vigor. ¡Estoy decidido a encontrar esos chistes y compartir una buena risa contigo!"
+      contarchiste1:
+        text: "¡Saludos, bufón! Estoy emocionado de decirte que he encontrado los cinco chistes mágicos. Aquí tienes el primero: ¿Cómo se llama el caballero más divertido del reino? ¡Sir Risasalot!"
+        pointer: "respuestachiste1"
+      contarchiste2:
+        text: "Aquí está el segundo chiste: ¿Cuál es la comida favorita de los zombies en Minecraft? ¡Beren-zombis!"
+        pointer: "respuestachiste2"
+      contarchiste3:
+        text: "El tercer chiste es: ¿Cómo llamas a una oveja con espada en Minecraft? ¡Una beeeee-duelistaaaa!"
+        pointer: "respuestachiste3"
+      contarchiste4:
+        text: "El cuarto chiste es: ¿Qué hace un enderman en una biblioteca? ¡Lee-vanta bloques de conocimiento!"
+        pointer: "respuestachiste4"
+      contarchiste5:
+        text: "Por último, aquí tienes el quinto chiste: ¿Qué hacen los creepers cuando se sienten solos? ¡Se hacen estallar una fiesta!"
+        pointer: "respuestachiste5"
+      gracias:
+        text: "Gracias, bufón. Fue divertido buscarlos y aún más divertido verte reír."
+        pointer: "respuestafinal,respuestafinalmas1"
+        
+#####################################################################        
+
+conditions:
+  misionActiva51: "tag marcaMisionActiva51"
+  misionCompletada51: "tag marcaMisionCompletada51"
+
+#####################################################################        
+ 
+events:
+  iniciarMision51: "tag add marcaMisionActiva51"
+  
+  mensajeAyudaMision51: "notify \n&6&lMisión 51:\n&r El &bVikingo &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  
+  completarMision51: "folder eliminarMarcaMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darRunaHogar,enfriamientoRunaHogar,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva51: "tag delete marcaMisionActiva51"
+  agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
+  notificacionMisionCompletada51: "notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRunaHogar: "command mi give CONSUMABLE RUNA_HOGAR %player% 1"
+  enfriamientoRunaHogar: "command lp user %player% permission set runa_hogar.recibida true"
+  recompensaExpClase: "mmoclassexperience 50"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
+  
+  conversacionVikingo: "folder notificacionMisionNoDisponible51,empezarConversacionVikingo,menuRunaHogar"
+  notificacionMisionNoDisponible51: "notify &cNecesitas haber iniciado la misión de principiante 51 para poder interactuar con este NPC. condition:!misionCompletada51"
+  empezarConversacionVikingo: "conversation Vikingo condition:misionActiva51"
+  menuRunaHogar: "command dm open runa_hogar_ayuda %player% condition:misionCompletada51"

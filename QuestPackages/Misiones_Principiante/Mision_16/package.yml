@@ -96,20 +96,20 @@ events:
   notificacionMisionCompletada16: "notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
-  establecerObjBrujula16: "compass add objetivo16"
-  quitarObjBrujula16: "compass del objetivo16"
+  establecerObjBrujula16: "compasstrack 957;61;434;Zona1"
+  quitarObjBrujula16: "clearcompass"
 
 ####################################################################################################
 
 objectives:
   objReclamarMascotaHada: "delay 5 ticks interval:5 conditions:mascotaHadaReclamada events:completarMision16"
 
-compass:
-  objetivo16:
-    name:
-      es: "Tienda de Mascotas"
-    location: 957;61;434;Zona1
-    item: compas
+# compass:
+  # objetivo16:
+    # name:
+      # es: "Tienda de Mascotas"
+    # location: 957;61;434;Zona1
+    # item: compas
     
-items:
-  compas: "COMPASS"
+# items:
+  # compas: "COMPASS"
