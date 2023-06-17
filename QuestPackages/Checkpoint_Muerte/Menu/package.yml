@@ -6,8 +6,9 @@ menus:
     slots:
       13: "botonCheckpointMuerte"
     items:
-      botonCheckpointMuerte:
+      botonCheckpointMuerte1:
         item: "iconoCheckpointMuerte"
+        condition: "Checkpoint_Muerte-Controlador_Checkpoints.!checkpointMuerteActivo"
         text:
         - "&b¿Qué es el punto de control del fuego fatuo?"
         - ""
@@ -19,11 +20,28 @@ menus:
         - "&7Mundo de Exploración o en el Nether y no tienes el"
         - "&7beneficio &bMantener Inventario&7."
         - ""
-        - "&7[&aClic izquierdo&7] para activar el punto de control."
-        - "&7[&aClic derecho&7] para desactivar el punto de control."
-        click:
-          left: "Checkpoint_Muerte-Controlador_Checkpoints.activarCheckpointMuerte"
-          right: "Checkpoint_Muerte-Controlador_Checkpoints.desactivarCheckpointMuerte"
+        - "&7Actualmente lo tienes &cdesactivado&7."
+        - ""
+        - "&7[&aClic&7] para activar el punto de control."
+        click: "Checkpoint_Muerte-Controlador_Checkpoints.activacionCheckpointMuerte"
+      botonCheckpointMuerte2:
+        item: "iconoCheckpointMuerte"
+        condition: "Checkpoint_Muerte-Controlador_Checkpoints.checkpointMuerteActivo"
+        text:
+        - "&b¿Qué es el punto de control del fuego fatuo?"
+        - ""
+        - "&7Es un punto de control que aparecerá en tu brújula"
+        - "&7justo después de morir, para ayudarte a llegar a tu"
+        - "&7lugar de muerte anterior."
+        - ""
+        - "&7El punto de control solo aparecerá si mueres en el"
+        - "&7Mundo de Exploración o en el Nether y no tienes el"
+        - "&7beneficio &bMantener Inventario&7."
+        - ""
+        - "&7Actualmente lo tienes &aactivado&7."
+        - ""
+        - "&7[&aClic&7] para desactivar el punto de control."
+        click: "Checkpoint_Muerte-Controlador_Checkpoints.desactivacionCheckpointMuerte"
 
 items:
   iconoCheckpointMuerte: "SOUL_CAMPFIRE"

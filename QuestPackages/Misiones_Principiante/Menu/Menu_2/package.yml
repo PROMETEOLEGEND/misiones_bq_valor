@@ -31,7 +31,6 @@ menus:
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
-        amount: 1
         close: true
         text:
         - "&7[&aClic&7] para ir a la página anterior."
@@ -45,7 +44,6 @@ menus:
       #   click: "abrirMenuPrincipal"
       botonPaginaSiguiente:
         item: "paginaSiguiente"
-        amount: 1
         close: true
         text:
         - "&7[&aClic&7] para ir a la página siguiente."
@@ -53,7 +51,6 @@ menus:
 #####################################################################
       botonMisionDisponible29:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_28.misionCompletada28,!Misiones_Principiante-Mision_29.misionActiva29,!Misiones_Principiante-Mision_29.misionCompletada29"
         close: true
         text:
@@ -68,7 +65,6 @@ menus:
           left: "Misiones_Principiante-Mision_29.mensajeAyudaMision29,Misiones_Principiante-Mision_29.iniciarMision29" 
       botonMisionActiva29:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_29.misionActiva29"
         close: true
         text:
@@ -83,7 +79,6 @@ menus:
           left: "Misiones_Principiante-Mision_29.mensajeAyudaMision29" 
       botonMisionCompletada29:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_29.misionCompletada29"
         text:
         - "&2¡Misión completada!"
@@ -93,12 +88,10 @@ menus:
         - "&7&ola cueva de Edar."
       botonMisionBloqueada29:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_28.misionCompletada28"
 #####################################################################
       botonMisionDisponible30:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_29.misionCompletada29,!Misiones_Principiante-Mision_30.misionActiva30,!Misiones_Principiante-Mision_30.misionCompletada30"
         close: true
         text:
@@ -112,7 +105,6 @@ menus:
           left: "Misiones_Principiante-Mision_30.mensajeAyudaMision30,Misiones_Principiante-Mision_30.iniciarMision30" 
       botonMisionActiva30:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_30.misionActiva30"
         close: true
         text:
@@ -126,7 +118,6 @@ menus:
           left: "Misiones_Principiante-Mision_30.mensajeAyudaMision30" 
       botonMisionCompletada30:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_30.misionCompletada30"
         text:
         - "&2¡Misión completada!"
@@ -135,12 +126,10 @@ menus:
         - "&7&oSube a nivel 2 de Mineria."
       botonMisionBloqueada30:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_29.misionCompletada29"
 #####################################################################
       botonMisionDisponible31:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_30.misionCompletada30,!Misiones_Principiante-Mision_31.misionActiva31,!Misiones_Principiante-Mision_31.misionCompletada31"
         close: true
         text:
@@ -154,7 +143,6 @@ menus:
           left: "Misiones_Principiante-Mision_31.mensajeAyudaMision31,Misiones_Principiante-Mision_31.iniciarMision31" 
       botonMisionActiva31:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_31.misionActiva31"
         close: true
         text:
@@ -168,7 +156,6 @@ menus:
           left: "Misiones_Principiante-Mision_31.mensajeAyudaMision31" 
       botonMisionCompletada31:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_31.misionCompletada31"
         text:
         - "&2¡Misión completada!"
@@ -177,12 +164,10 @@ menus:
         - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
       botonMisionBloqueada31:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_30.misionCompletada30"
 #####################################################################
       botonMisionDisponible32:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_31.misionCompletada31,!Misiones_Principiante-Mision_32.misionActiva32,!Misiones_Principiante-Mision_32.misionCompletada32"
         close: true
         text:
@@ -196,7 +181,6 @@ menus:
           left: "Misiones_Principiante-Mision_32.mensajeAyudaMision32,Misiones_Principiante-Mision_32.iniciarMision32" 
       botonMisionActiva32:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_32.misionActiva32"
         close: true
         text:
@@ -210,7 +194,6 @@ menus:
           left: "Misiones_Principiante-Mision_32.mensajeAyudaMision32" 
       botonMisionCompletada32:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_32.misionCompletada32"
         text:
         - "&2¡Misión completada!"
@@ -219,12 +202,10 @@ menus:
         - "&7&oFabrica un &6&oPico de diamante&7&o."
       botonMisionBloqueada32:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_31.misionCompletada31"
 #####################################################################
       botonMisionDisponible33:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_32.misionCompletada32,!Misiones_Principiante-Mision_33.misionActiva33,!Misiones_Principiante-Mision_33.misionCompletada33"
         close: true
         text:
@@ -238,7 +219,6 @@ menus:
           left: "Misiones_Principiante-Mision_33.mensajeAyudaMision33,Misiones_Principiante-Mision_33.iniciarMision33" 
       botonMisionActiva33:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_33.misionActiva33"
         close: true
         text:
@@ -252,7 +232,6 @@ menus:
           left: "Misiones_Principiante-Mision_33.mensajeAyudaMision33" 
       botonMisionCompletada33:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_33.misionCompletada33"
         text:
         - "&2¡Misión completada!"
@@ -261,12 +240,10 @@ menus:
         - "&7&oSube al &6&onivel 5 de clase&7&o."
       botonMisionBloqueada33:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_32.misionCompletada32"
 #####################################################################
       botonMisionDisponible34:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_33.misionCompletada33,!Misiones_Principiante-Mision_34.misionActiva34,!Misiones_Principiante-Mision_34.misionCompletada34"
         close: true
         text:
@@ -280,7 +257,6 @@ menus:
           left: "Misiones_Principiante-Mision_34.mensajeAyudaMision34,Misiones_Principiante-Mision_34.iniciarMision34" 
       botonMisionActiva34:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_34.misionActiva34"
         close: true
         text:
@@ -294,7 +270,6 @@ menus:
           left: "Misiones_Principiante-Mision_34.mensajeAyudaMision34" 
       botonMisionCompletada34:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_34.misionCompletada34"
         text:
         - "&2¡Misión completada!"
@@ -303,12 +278,10 @@ menus:
         - "&7&oInvierte un &f&opunto de atributo &7&oen algún atributo."
       botonMisionBloqueada34:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_33.misionCompletada33"
 #####################################################################
       botonMisionDisponible35:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_34.misionCompletada34,!Misiones_Principiante-Mision_35.misionActiva35,!Misiones_Principiante-Mision_35.misionCompletada35"
         close: true
         text:
@@ -322,7 +295,6 @@ menus:
           left: "Misiones_Principiante-Mision_35.mensajeAyudaMision35,Misiones_Principiante-Mision_35.iniciarMision35" 
       botonMisionActiva35:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_35.misionActiva35"
         close: true
         text:
@@ -336,7 +308,6 @@ menus:
           left: "Misiones_Principiante-Mision_35.mensajeAyudaMision35" 
       botonMisionCompletada35:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_35.misionCompletada35"
         text:
         - "&2¡Misión completada!"
@@ -345,12 +316,10 @@ menus:
         - "&7&oMina &f&o16 Bloques de amatista&7&o."
       botonMisionBloqueada35:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_34.misionCompletada34"
 #####################################################################
       botonMisionDisponible36:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_35.misionCompletada35,!Misiones_Principiante-Mision_36.misionActiva36,!Misiones_Principiante-Mision_36.misionCompletada36"
         close: true
         text:
@@ -364,7 +333,6 @@ menus:
           left: "Misiones_Principiante-Mision_36.mensajeAyudaMision36,Misiones_Principiante-Mision_36.iniciarMision36" 
       botonMisionActiva36:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_36.misionActiva36"
         close: true
         text:
@@ -378,7 +346,6 @@ menus:
           left: "Misiones_Principiante-Mision_36.mensajeAyudaMision36" 
       botonMisionCompletada36:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_36.misionCompletada36"
         text:
         - "&2¡Misión completada!"
@@ -387,12 +354,10 @@ menus:
         - "&7&oFabrica &f&o4 Esencias de Amatista&7&o."
       botonMisionBloqueada36:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_35.misionCompletada35"
 #####################################################################
       botonMisionDisponible37:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_36.misionCompletada36,!Misiones_Principiante-Mision_37.misionActiva37,!Misiones_Principiante-Mision_37.misionCompletada37"
         close: true
         text:
@@ -406,7 +371,6 @@ menus:
           left: "Misiones_Principiante-Mision_37.mensajeAyudaMision37,Misiones_Principiante-Mision_37.iniciarMision37" 
       botonMisionActiva37:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_37.misionActiva37"
         close: true
         text:
@@ -420,7 +384,6 @@ menus:
           left: "Misiones_Principiante-Mision_37.mensajeAyudaMision37" 
       botonMisionCompletada37:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_37.misionCompletada37"
         text:
         - "&2¡Misión completada!"
@@ -429,12 +392,10 @@ menus:
         - "&7&oFabrica &f&ouna Espada de Amatista&7&o."
       botonMisionBloqueada37:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_36.misionCompletada36"
 #####################################################################
       botonMisionDisponible38:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_37.misionCompletada37,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_38.misionCompletada38"
         close: true
         text:
@@ -448,7 +409,6 @@ menus:
           left: "Misiones_Principiante-Mision_38.mensajeAyudaMision38,Misiones_Principiante-Mision_38.iniciarMision38" 
       botonMisionActiva38:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_38.misionActiva38"
         close: true
         text:
@@ -462,7 +422,6 @@ menus:
           left: "Misiones_Principiante-Mision_38.mensajeAyudaMision38" 
       botonMisionCompletada38:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_38.misionCompletada38"
         text:
         - "&2¡Misión completada!"
@@ -471,12 +430,10 @@ menus:
         - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
       botonMisionBloqueada38:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_37.misionCompletada37"
 #####################################################################
       botonMisionDisponible39:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_38.misionCompletada38,!Misiones_Principiante-Mision_39.misionActiva39,!Misiones_Principiante-Mision_39.misionCompletada39"
         close: true
         text:
@@ -490,7 +447,6 @@ menus:
           left: "Misiones_Principiante-Mision_39.mensajeAyudaMision39,Misiones_Principiante-Mision_39.iniciarMision39" 
       botonMisionActiva39:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_39.misionActiva39"
         close: true
         text:
@@ -504,7 +460,6 @@ menus:
           left: "Misiones_Principiante-Mision_39.mensajeAyudaMision39" 
       botonMisionCompletada39:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_39.misionCompletada39"
         text:
         - "&2¡Misión completada!"
@@ -513,12 +468,10 @@ menus:
         - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
       botonMisionBloqueada39:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_38.misionCompletada38"
 #####################################################################
       botonMisionDisponible40:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_39.misionCompletada39,!Misiones_Principiante-Mision_40.misionActiva40,!Misiones_Principiante-Mision_40.misionCompletada40"
         close: true
         text:
@@ -532,7 +485,6 @@ menus:
           left: "Misiones_Principiante-Mision_40.mensajeAyudaMision40,Misiones_Principiante-Mision_40.iniciarMision40" 
       botonMisionActiva40:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_40.misionActiva40"
         close: true
         text:
@@ -546,7 +498,6 @@ menus:
           left: "Misiones_Principiante-Mision_40.mensajeAyudaMision40" 
       botonMisionCompletada40:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_40.misionCompletada40"
         text:
         - "&2¡Misión completada!"
@@ -555,12 +506,10 @@ menus:
         - "&7&oEncuentra un &a&oBulbo&7&o."
       botonMisionBloqueada40:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_39.misionCompletada39"
 #####################################################################
       botonMisionDisponible41:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_40.misionCompletada40,!Misiones_Principiante-Mision_41.misionActiva41,!Misiones_Principiante-Mision_41.misionCompletada41"
         close: true
         text:
@@ -574,7 +523,6 @@ menus:
           left: "Misiones_Principiante-Mision_41.mensajeAyudaMision41,Misiones_Principiante-Mision_41.iniciarMision41" 
       botonMisionActiva41:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_41.misionActiva41"
         close: true
         text:
@@ -588,7 +536,6 @@ menus:
           left: "Misiones_Principiante-Mision_41.mensajeAyudaMision41" 
       botonMisionCompletada41:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_41.misionCompletada41"
         text:
         - "&2¡Misión completada!"
@@ -597,12 +544,10 @@ menus:
         - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
       botonMisionBloqueada41:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_40.misionCompletada40"
 #####################################################################
       botonMisionDisponible42:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_41.misionCompletada41,!Misiones_Principiante-Mision_42.misionActiva42,!Misiones_Principiante-Mision_42.misionCompletada42"
         close: true
         text:
@@ -616,7 +561,6 @@ menus:
           left: "Misiones_Principiante-Mision_42.mensajeAyudaMision42,Misiones_Principiante-Mision_42.iniciarMision42" 
       botonMisionActiva42:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_42.misionActiva42"
         close: true
         text:
@@ -630,7 +574,6 @@ menus:
           left: "Misiones_Principiante-Mision_42.mensajeAyudaMision42" 
       botonMisionCompletada42:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_42.misionCompletada42"
         text:
         - "&2¡Misión completada!"
@@ -639,12 +582,10 @@ menus:
         - "&7&oSube a &a&onivel 2 de Granjero&7&o."
       botonMisionBloqueada42:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_41.misionCompletada41"
 #####################################################################
       botonMisionDisponible43:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_42.misionCompletada42,!Misiones_Principiante-Mision_43.misionActiva43,!Misiones_Principiante-Mision_43.misionCompletada43"
         close: true
         text:
@@ -658,7 +599,6 @@ menus:
           left: "Misiones_Principiante-Mision_43.mensajeAyudaMision43,Misiones_Principiante-Mision_43.iniciarMision43" 
       botonMisionActiva43:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_43.misionActiva43"
         close: true
         text:
@@ -672,7 +612,6 @@ menus:
           left: "Misiones_Principiante-Mision_43.mensajeAyudaMision43" 
       botonMisionCompletada43:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_43.misionCompletada43"
         text:
         - "&2¡Misión completada!"
@@ -681,12 +620,10 @@ menus:
         - "&7&oHabla con el Rey de Valor&o."
       botonMisionBloqueada43:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_42.misionCompletada42"
 #####################################################################
       botonMisionDisponible44:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_43.misionCompletada43,!Misiones_Principiante-Mision_44.misionActiva44,!Misiones_Principiante-Mision_44.misionCompletada44"
         close: true
         text:
@@ -700,7 +637,6 @@ menus:
           left: "Misiones_Principiante-Mision_44.mensajeAyudaMision44,Misiones_Principiante-Mision_44.iniciarMision44" 
       botonMisionActiva44:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_44.misionActiva44"
         close: true
         text:
@@ -714,7 +650,6 @@ menus:
           left: "Misiones_Principiante-Mision_44.mensajeAyudaMision44" 
       botonMisionCompletada44:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_44.misionCompletada44"
         text:
         - "&2¡Misión completada!"
@@ -723,12 +658,10 @@ menus:
         - "&7&oFabrica &f&ouna espada de amatista &7&ocon &f&oun espacio para gema&7&o."
       botonMisionBloqueada44:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_43.misionCompletada43"
 #####################################################################
       botonMisionDisponible45:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_44.misionCompletada44,!Misiones_Principiante-Mision_45.misionActiva45,!Misiones_Principiante-Mision_45.misionCompletada45"
         close: true
         text:
@@ -742,7 +675,6 @@ menus:
           left: "Misiones_Principiante-Mision_45.mensajeAyudaMision45,Misiones_Principiante-Mision_45.iniciarMision45" 
       botonMisionActiva45:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_45.misionActiva45"
         close: true
         text:
@@ -756,7 +688,6 @@ menus:
           left: "Misiones_Principiante-Mision_45.mensajeAyudaMision45" 
       botonMisionCompletada45:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_45.misionCompletada45"
         text:
         - "&2¡Misión completada!"
@@ -765,12 +696,10 @@ menus:
         - "&7&oFusiona &f&o3 Gemas de Mana I &7&oen una &f&oForja &7&opara crear &f&ouna Gema de Mana II&7&o."
       botonMisionBloqueada45:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_44.misionCompletada44"
 #####################################################################
       botonMisionDisponible46:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_45.misionCompletada45,!Misiones_Principiante-Mision_46.misionActiva46,!Misiones_Principiante-Mision_46.misionCompletada46"
         close: true
         text:
@@ -784,7 +713,6 @@ menus:
           left: "Misiones_Principiante-Mision_46.mensajeAyudaMision46,Misiones_Principiante-Mision_46.iniciarMision46" 
       botonMisionActiva46:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_46.misionActiva46"
         close: true
         text:
@@ -798,7 +726,6 @@ menus:
           left: "Misiones_Principiante-Mision_46.mensajeAyudaMision46" 
       botonMisionCompletada46:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_46.misionCompletada46"
         text:
         - "&2¡Misión completada!"
@@ -807,12 +734,10 @@ menus:
         - "&7&oColoca &f&ouna Gema de Mana II &7&oen una &f&oEspada de Amatista con un espacio para gema&7&o."
       botonMisionBloqueada46:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_45.misionCompletada45"
 #####################################################################
       botonMisionDisponible47:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_46.misionCompletada46,!Misiones_Principiante-Mision_47.misionActiva47,!Misiones_Principiante-Mision_47.misionCompletada47"
         close: true
         text:
@@ -826,7 +751,6 @@ menus:
           left: "Misiones_Principiante-Mision_47.mensajeAyudaMision47,Misiones_Principiante-Mision_47.iniciarMision47" 
       botonMisionActiva47:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_47.misionActiva47"
         close: true
         text:
@@ -840,7 +764,6 @@ menus:
           left: "Misiones_Principiante-Mision_47.mensajeAyudaMision47" 
       botonMisionCompletada47:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_47.misionCompletada47"
         text:
         - "&2¡Misión completada!"
@@ -849,12 +772,10 @@ menus:
         - "&7&oSube al &f&onivel 7 de clase&7&o."
       botonMisionBloqueada47:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_46.misionCompletada46"
 #####################################################################
       botonMisionDisponible48:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_47.misionCompletada47,!Misiones_Principiante-Mision_48.misionActiva48,!Misiones_Principiante-Mision_48.misionCompletada48"
         close: true
         text:
@@ -868,7 +789,6 @@ menus:
           left: "Misiones_Principiante-Mision_48.mensajeAyudaMision48,Misiones_Principiante-Mision_48.iniciarMision48" 
       botonMisionActiva48:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_48.misionActiva48"
         close: true
         text:
@@ -882,7 +802,6 @@ menus:
           left: "Misiones_Principiante-Mision_48.mensajeAyudaMision48" 
       botonMisionCompletada48:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_48.misionCompletada48"
         text:
         - "&2¡Misión completada!"
@@ -891,12 +810,10 @@ menus:
         - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
       botonMisionBloqueada48:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_47.misionCompletada47"
 #####################################################################
       botonMisionDisponible49:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_48.misionCompletada48,!Misiones_Principiante-Mision_49.misionActiva49,!Misiones_Principiante-Mision_49.misionCompletada49"
         close: true
         text:
@@ -910,7 +827,6 @@ menus:
           left: "Misiones_Principiante-Mision_49.mensajeAyudaMision49,Misiones_Principiante-Mision_49.iniciarMision49" 
       botonMisionActiva49:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_49.misionActiva49"
         close: true
         text:
@@ -924,7 +840,6 @@ menus:
           left: "Misiones_Principiante-Mision_49.mensajeAyudaMision49" 
       botonMisionCompletada49:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_49.misionCompletada49"
         text:
         - "&2¡Misión completada!"
@@ -933,12 +848,10 @@ menus:
         - "&7&oSube al &f&onivel 10 de clase&7&o"
       botonMisionBloqueada49:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_48.misionCompletada48"
 #####################################################################
       botonMisionDisponible50:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_49.misionCompletada49,!Misiones_Principiante-Mision_50.misionActiva50,!Misiones_Principiante-Mision_50.misionCompletada50"
         close: true
         text:
@@ -952,7 +865,6 @@ menus:
           left: "Misiones_Principiante-Mision_50.mensajeAyudaMision50,Misiones_Principiante-Mision_50.iniciarMision50" 
       botonMisionActiva50:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_50.misionActiva50"
         close: true
         text:
@@ -966,7 +878,6 @@ menus:
           left: "Misiones_Principiante-Mision_50.mensajeAyudaMision50" 
       botonMisionCompletada50:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Principiante-Mision_50.misionCompletada50"
         text:
         - "&2¡Misión completada!"
@@ -975,7 +886,6 @@ menus:
         - "&7&oSube al &f&onivel 10 de prestigio&7&o"
       botonMisionBloqueada50:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Principiante-Mision_49.misionCompletada49"
 
 #####################################################################

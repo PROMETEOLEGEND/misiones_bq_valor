@@ -10,7 +10,6 @@ menus:
     items:
       botonMisionDisponiblePrueba01:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "!Misiones_Prueba-Mision_01.misionActivaPrueba01"
         close: true
         text:
@@ -24,7 +23,6 @@ menus:
           left: "Misiones_Prueba-Mision_01.mensajeAyudaMisionPrueba01,Misiones_Prueba-Mision_01.iniciarMisionPrueba01" 
       botonMisionActivaPrueba01:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Prueba-Mision_01.misionActivaPrueba01,!Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
         close: true
         text:
@@ -38,7 +36,6 @@ menus:
           left: "Misiones_Prueba-Mision_01.mensajeAyudaMisionPrueba01" 
       botonMisionCompletadaPrueba01:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
         text:
         - "&3¡Misión completada!"
@@ -48,7 +45,6 @@ menus:
 #####################################################################
       botonMisionDisponiblePrueba02:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Prueba-Mision_01.misionCompletadaPrueba01,!Misiones_Prueba-Mision_02.misionActivaPrueba02"
         close: true
         text:
@@ -62,7 +58,6 @@ menus:
           left: "Misiones_Prueba-Mision_02.mensajeAyudaMisionPrueba02,Misiones_Prueba-Mision_02.iniciarMisionPrueba02" 
       botonMisionActivaPrueba02:
         item: "botonMisionActiva"
-        amount: 1
         conditions: "Misiones_Prueba-Mision_02.misionActivaPrueba02,!Misiones_Prueba-Mision_02.misionCompletadaPrueba02"
         close: true
         text:
@@ -76,7 +71,6 @@ menus:
           left: "Misiones_Prueba-Mision_02.mensajeAyudaMisionPrueba02" 
       botonMisionCompletadaPrueba02:
         item: "botonMisionCompletada"
-        amount: 1
         conditions: "Misiones_Prueba-Mision_02.misionCompletadaPrueba02"
         text:
         - "&3¡Misión completada!"
@@ -85,7 +79,6 @@ menus:
         - "&7&oPica &r&o10 menas de Diamante&7&o."
       botonMisionBloqueadaPrueba02:
         item: "botonMisionBloqueada"
-        amount: 1
         conditions: "!Misiones_Prueba-Mision_01.misionCompletadaPrueba01"
 
 #####################################################################

@@ -8,7 +8,6 @@ menus:
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
-        amount: 1
         close: true
         text:
         - "&7[&aClic&7] para ir a la página anterior."
