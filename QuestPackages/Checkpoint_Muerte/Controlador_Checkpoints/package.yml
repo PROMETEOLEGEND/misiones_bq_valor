@@ -16,7 +16,6 @@ objectives:
   # objComprobarServidorCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
-
   activacionCheckpointMuerte: "folder activarCheckpointMuerte,agregarMarcaCheckpointMuerteActivo,notificacionCheckpointMuerteActivado"
   activarCheckpointMuerte: "objective start objCheckpointMuerte"
   agregarMarcaCheckpointMuerteActivo: "tag add marcaCheckpointMuerteActivo"
@@ -27,7 +26,7 @@ events:
   eliminarMarcaCheckpointMuerteActivo: "tag delete marcaCheckpointMuerteActivo"
   notificacionCheckpointMuerteDesactivado: "&cHas desactivado el punto de control del fuego fatuo."
   
-  establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor1,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidorDev"
+  establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor1,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidor3,establecerCheckpointMuerteServidorDev"
   establecerCheckpointMuerteServidor1: "folder Checkpoint_Muerte-Checkpoints-Servidor_1.establecerCheckpointMuerte condition:estarEnServidor1"
   establecerCheckpointMuerteServidor2: "folder Checkpoint_Muerte-Checkpoints-Servidor_2.establecerCheckpointMuerte condition:estarEnServidor2"
   establecerCheckpointMuerteServidor3: "folder Checkpoint_Muerte-Checkpoints-Servidor_3.establecerCheckpointMuerte condition:estarEnServidor3"
