@@ -19,20 +19,20 @@ events:
   recompensaMision18: "command eco give %player% 150"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
-  establecerObjBrujula18: "compass add objetivo18"
-  quitarObjBrujula18: "compass del objetivo18"
+  establecerObjBrujula18: "compasstrack 1153;62;431;Zona1"
+  quitarObjBrujula18: "clearcompass"
 
 ####################################################################################################
 
 objectives:
   objVisitarBancoValor: "location 1153;62;431;Zona1 5 events:completarMision18"
   
-compass:
-  objetivo18:
-    name:
-      es: Banco
-    location: 1153;62;431;Zona1
-    item: compas
+# compass:
+  # objetivo18:
+    # name:
+      # es: Banco
+    # location: 1153;62;431;Zona1
+    # item: compas
     
-items:
-  compas: "COMPASS"
+# items:
+  # compas: "COMPASS"

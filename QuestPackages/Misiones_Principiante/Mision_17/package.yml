@@ -18,20 +18,20 @@ events:
   recompensaMision17: "command eco give %player% 150"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
-  establecerObjBrujula17: "compass add objetivo17"
-  quitarObjBrujula17: "compass del objetivo17"
+  establecerObjBrujula17: "compasstrack 1075;52;427;Zona1"
+  quitarObjBrujula17: "clearcompass"
 
 ####################################################################################################
 
 objectives:
   objVisitarArmeriaValor: "location 1075;52;427;Zona1 5 events:completarMision17"
 
-compass:
-  objetivo17:
-    name:
-      es: Armeria
-    location: 1075;52;427;Zona1
-    item: compas
+# compass:
+  # objetivo17:
+    # name:
+      # es: Armeria
+    # location: 1075;52;427;Zona1
+    # item: compas
     
-items:
-  compas: "COMPASS"
+# items:
+  # compas: "COMPASS"

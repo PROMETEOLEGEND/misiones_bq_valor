@@ -61,11 +61,11 @@ events:
   iniciarMision39: "tag add marcaMisionActiva39"
   
   mensajeAyudaMision39: "folder agregarBrujula,notificacionBrujula"
-  agregarBrujula: "compass add objetivo1"
+  agregarBrujula: "compasstrack 1048;18;654;Zona1"
   notificacionBrujula: "notify \n&6&lMisión 29:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
 
   completarMision39: "folder eliminarBrujula,eliminarMarcaMisionActiva39,agregarMarcaMisionCompletada39,notificacionMisionCompletada39,recompensaMision39,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarBrujula: "compass del objetivo1"
+  eliminarBrujula: "clearcompass"
   eliminarMarcaMisionActiva39: "tag delete marcaMisionActiva39"
   agregarMarcaMisionCompletada39: "tag add marcaMisionCompletada39"
   notificacionMisionCompletada39: "notify &7----------------------------------------\n&6&l¡Misión 39 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
@@ -75,14 +75,14 @@ events:
 
 ####################################################################################################
 
-compass:
-  objetivo1:
-    name:
-      es: Granjero
-    location: 1048;18;654;Zona1
-    item: brujula
+# compass:
+  # objetivo1:
+    # name:
+      # es: Granjero
+    # location: 1048;18;654;Zona1
+    # item: brujula
 
-items:
-  brujula: "COMPASS"
+# items:
+  # brujula: "COMPASS"
 
 ####################################################################################################
