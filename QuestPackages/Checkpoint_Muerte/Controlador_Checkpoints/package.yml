@@ -6,11 +6,6 @@ conditions:
 
   checkpointMuerteActivo: "tag marcaCheckpointMuerteActivo"
 
-  estarEnServidor1: "variable %ph.servervariables_globalvalue_servidor_nombre% 1"
-  estarEnServidor2: "variable %ph.servervariables_globalvalue_servidor_nombre% 2"
-  estarEnServidor3: "variable %ph.servervariables_globalvalue_servidor_nombre% 3"
-  estarEnServidorDev: "variable %ph.servervariables_globalvalue_servidor_nombre% dev"
-
 objectives:
   objCheckpointMuerte: "die events:establecerCheckpointMuerte conditions:estarEnUnMundoValido,!permisoMantenerInventario persistent"
   # objComprobarServidorCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
@@ -26,8 +21,4 @@ events:
   eliminarMarcaCheckpointMuerteActivo: "tag delete marcaCheckpointMuerteActivo"
   notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control del fuego fatuo."
   
-  establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor1,establecerCheckpointMuerteServidor2,establecerCheckpointMuerteServidor3,establecerCheckpointMuerteServidorDev"
-  establecerCheckpointMuerteServidor1: "folder Checkpoint_Muerte-Checkpoints-Servidor_1.establecerCheckpointMuerte condition:estarEnServidor1"
-  establecerCheckpointMuerteServidor2: "folder Checkpoint_Muerte-Checkpoints-Servidor_2.establecerCheckpointMuerte condition:estarEnServidor2"
-  establecerCheckpointMuerteServidor3: "folder Checkpoint_Muerte-Checkpoints-Servidor_3.establecerCheckpointMuerte condition:estarEnServidor3"
-  establecerCheckpointMuerteServidorDev: "folder Checkpoint_Muerte-Checkpoints-Servidor_Dev.establecerCheckpointMuerte condition:estarEnServidorDev"
+  establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor"
