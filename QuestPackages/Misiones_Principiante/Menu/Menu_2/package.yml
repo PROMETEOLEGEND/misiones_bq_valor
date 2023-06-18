@@ -30,6 +30,7 @@ menus:
       37: "botonMisionDisponible50,botonMisionActiva50,botonMisionCompletada50,botonMisionBloqueada50"
       # 38: "botonMisionDisponible51,botonMisionActiva51,botonMisionCompletada51,botonMisionBloqueada51"
       39: "botonMisionDisponible52,botonMisionActiva52,botonMisionCompletada52,botonMisionBloqueada52"
+      40: "botonMisionDisponible53,botonMisionActiva53,botonMisionCompletada53,botonMisionBloqueada53"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -964,7 +965,45 @@ menus:
         - "&7&oMina  &f&o10 menas de Rubí&7&o"
       botonMisionBloqueada52:
         item: "botonMisionBloqueada"
-        conditions: "!Misiones_Principiante-Mision_51.misionCompletada51"        
+        conditions: "!Misiones_Principiante-Mision_51.misionCompletada51"      
+#####################################################################
+      botonMisionDisponible53:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_52.misionCompletada52,!Misiones_Principiante-Mision_53.misionActiva53,!Misiones_Principiante-Mision_53.misionCompletada53"
+        close: true
+        text:
+        - "&6&l[Misión 53]: &eUn nuevo Mineral Azul"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 menas de Zafiro&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_53.mensajeAyudaMision53,Misiones_Principiante-Mision_53.iniciarMision53" 
+      botonMisionActiva53:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_53.misionActiva53"
+        close: true
+        text:
+        - "&6&l[Misión 53]: &eUn nuevo Mineral Azul"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 menas de Zafiro&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
+        click:
+          left: "Misiones_Principiante-Mision_53.mensajeAyudaMision53" 
+      botonMisionCompletada53:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_53.misionCompletada53"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 53]: &eUn nuevo Mineral Azul"
+        - "&r "
+        - "&7&oMina  &f&o10 menas de Zafiro&7&o"
+      botonMisionBloqueada53:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_52.misionCompletada52"           
 #####################################################################
 
 events:

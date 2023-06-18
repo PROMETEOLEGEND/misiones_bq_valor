@@ -1,0 +1,35 @@
+conditions:
+  misionActiva53: "tag marcaMisionActiva53"
+  misionCompletada53: "tag marcaMisionCompletada53"
+  minarbloques: "point bloquesMinados 10"
+
+####################################################################################################
+
+events:
+  iniciarMision53: "folder agregarMarcaMisionActiva53,iniciarObjetivoMision53"
+  agregarMarcaMisionActiva53: "tag add marcaMisionActiva53"
+  iniciarObjetivoMision53: "run ^objective start objMinarZafiro ^objective start objMinarZafiroProfundo ^objective start objetivoMinarZafiro"
+  eliminarObjetivosMision53: "run ^objective delete objMinarZafiro ^objective delete objMinarZafiroProfundo ^objective delete objetivoMinarZafiro"  
+  
+  mensajeAyudaMision53: "notify \n&6&lMisión 53:\n&r Debes minar &b10 bloques de Zafiro&r, para ello necesitarás fabricar un &bPico &rde amatista o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  completarMision53: "folder eliminarMarcaMisionActiva53,eliminarObjetivosMision53,eliminarPuntosMision53,agregarMarcaMisionCompletada53,notificacionMisionCompletada53,recompensaMision53,recompensaExpClase,notificacionRecompensaExpClase"
+  eliminarMarcaMisionActiva53: "tag delete marcaMisionActiva53"
+  eliminarPuntosMision53: "point bloquesMinados 10 action:subtract"
+  agregarMarcaMisionCompletada53: "tag add marcaMisionCompletada53"
+  notificacionMisionCompletada53: "notify &7----------------------------------------\n&6&l¡Misión 53 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision53: "command eco give %player% 500"
+  recompensaExpClase: "mmoprofessionexperience mining 300"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 300 exp de mineria."
+  agregarPuntosMision53: "folder sumarPuntos,notificacionPuntos"
+  sumarPuntos: "point bloquesMinados 1 action:add"
+  notificacionPuntos: "notify &eHas minado %point.bloquesMinados.amount% Menas de Zafiro."
+
+####################################################################################################
+
+objectives:
+  objMinarZafiro: "mmocorebreakblock 1 block:2 events:agregarPuntosMision53 persistent"
+  objMinarZafiroProfundo: "mmocorebreakblock 1 block:3 events:agregarPuntosMision53 persistent"
+  objetivoMinarZafiro: "delay 5 ticks interval:5 conditions:minarbloques events:completarMision53 persistent"
+  
+
