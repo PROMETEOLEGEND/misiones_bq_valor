@@ -28,6 +28,8 @@ menus:
       33: "botonMisionDisponible48,botonMisionActiva48,botonMisionCompletada48,botonMisionBloqueada48"
       34: "botonMisionDisponible49,botonMisionActiva49,botonMisionCompletada49,botonMisionBloqueada49"
       37: "botonMisionDisponible50,botonMisionActiva50,botonMisionCompletada50,botonMisionBloqueada50"
+      # 38: "botonMisionDisponible51,botonMisionActiva51,botonMisionCompletada51,botonMisionBloqueada51"
+      39: "botonMisionDisponible52,botonMisionActiva52,botonMisionCompletada52,botonMisionBloqueada52"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -887,7 +889,82 @@ menus:
       botonMisionBloqueada50:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_49.misionCompletada49"
-
+#####################################################################
+      botonMisionDisponible51:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_50.misionCompletada50,!Misiones_Principiante-Mision_51.misionActiva51,!Misiones_Principiante-Mision_51.misionCompletada51"
+        close: true
+        text:
+        - "&6&l[Misión 51]: &eUna risa contagiosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &f&obufón&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_51.mensajeAyudaMision51,Misiones_Principiante-Mision_51.iniciarMision51" 
+      botonMisionActiva51:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_51.misionActiva51"
+        close: true
+        text:
+        - "&6&l[Misión 51]: &eUna risa contagiosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &f&obufón&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para localizar al bufón."
+        click:
+          left: "Misiones_Principiante-Mision_51.mensajeAyudaMision51" 
+      botonMisionCompletada51:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_51.misionCompletada51"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 51]: &eUna risa contagiosa"
+        - "&r "
+        - "&7&oVe a hablar con el &f&obufón&7&o"
+      botonMisionBloqueada51:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_50.misionCompletada50"
+#####################################################################
+      botonMisionDisponible52:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_51.misionCompletada51,!Misiones_Principiante-Mision_52.misionActiva52,!Misiones_Principiante-Mision_52.misionCompletada52"
+        close: true
+        text:
+        - "&6&l[Misión 52]: &eUn nuevo Mineral Rojo"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina  &f&o10 menas de Rubí&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_52.mensajeAyudaMision52,Misiones_Principiante-Mision_52.iniciarMision52" 
+      botonMisionActiva52:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_52.misionActiva52"
+        close: true
+        text:
+        - "&6&l[Misión 52]: &eUn nuevo Mineral Rojo"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina  &f&o10 menas de Rubí&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
+        click:
+          left: "Misiones_Principiante-Mision_52.mensajeAyudaMision52" 
+      botonMisionCompletada52:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_52.misionCompletada52"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 52]: &eUn nuevo Mineral Rojo"
+        - "&r "
+        - "&7&oMina  &f&o10 menas de Rubí&7&o"
+      botonMisionBloqueada52:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_51.misionCompletada51"        
 #####################################################################
 
 events:

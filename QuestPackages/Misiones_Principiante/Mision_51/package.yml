@@ -56,6 +56,7 @@ conversations:
         text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes un espacio especial donde podrás construir y guardar tu hogar. Espero que lo disfrutes y te sientas como en casa."
       respuestafinalmas1:
         text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes tu recompensa. Espero que lo disfrutes."
+    
     player_options:
       si:
         text: "¡Hola, bufón! Estoy intrigado. Cuéntame en qué consiste tu misión."
