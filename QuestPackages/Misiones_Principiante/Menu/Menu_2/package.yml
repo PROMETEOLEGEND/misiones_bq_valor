@@ -31,6 +31,7 @@ menus:
       # 38: "botonMisionDisponible51,botonMisionActiva51,botonMisionCompletada51,botonMisionBloqueada51"
       39: "botonMisionDisponible52,botonMisionActiva52,botonMisionCompletada52,botonMisionBloqueada52"
       40: "botonMisionDisponible53,botonMisionActiva53,botonMisionCompletada53,botonMisionBloqueada53"
+      41: "botonMisionDisponible54,botonMisionActiva54,botonMisionCompletada54,botonMisionBloqueada54"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -1004,6 +1005,44 @@ menus:
       botonMisionBloqueada53:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_52.misionCompletada52"           
+#####################################################################
+      botonMisionDisponible54:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_53.misionCompletada53,!Misiones_Principiante-Mision_54.misionActiva54,!Misiones_Principiante-Mision_54.misionCompletada54"
+        close: true
+        text:
+        - "&6&l[Misión 54]: &eUna espada mas afilada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna espada de Zafiro&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_54.mensajeAyudaMision54,Misiones_Principiante-Mision_54.iniciarMision54" 
+      botonMisionActiva54:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_54.misionActiva54"
+        close: true
+        text:
+        - "&6&l[Misión 54]: &eUna espada mas afilada"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica &f&ouna espada de Zafiro&7&o"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
+        click:
+          left: "Misiones_Principiante-Mision_54.mensajeAyudaMision54" 
+      botonMisionCompletada54:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_54.misionCompletada54"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 54]: &eUna espada mas afilada"
+        - "&r "
+        - "&7&oMina  &f&o10 menas de Zafiro&7&o"
+      botonMisionBloqueada54:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_53.misionCompletada53"           
 #####################################################################
 
 events:
