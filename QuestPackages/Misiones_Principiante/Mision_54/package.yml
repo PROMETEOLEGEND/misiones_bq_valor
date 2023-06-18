@@ -1,0 +1,26 @@
+conditions:
+  misionActiva54: "tag marcaMisionActiva54"
+  misionCompletada54: "tag marcaMisionCompletada54"
+  tenerEspadaZafiro: "mmoitem ESPADA_GEMA ESPADA_ZAFIRO"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision54: "notify \n&6&lMisión 54:&r Debes fabricar una &bEspada de Zafiro&r, para ello necesitarás &b4 lingotes de Zafiro &ry una &bEspada de netherita&r.\n&r"
+  
+  iniciarMision54: "folder agregarMarcaMisionActiva54,iniciarObjetivoMision54"
+  agregarMarcaMisionActiva54: "tag add marcaMisionActiva54"
+  iniciarObjetivoMision54: "objective start objFabricarEspadaZafiro"
+  
+  completarMision54: "folder eliminarMarcaMisionActiva54,agregarMarcaMisionCompletada54,notificacionMisionCompletada54,recompensaMision54,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva54: "tag delete marcaMisionActiva54"
+  recompensaMision54: "command eco give %player% 600"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."
+  agregarMarcaMisionCompletada54: "tag add marcaMisionCompletada54"
+  notificacionMisionCompletada54: "notify &7----------------------------------------\n&6&l¡Misión 54 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarEspadaZafiro: "delay 5 ticks interval:5 conditions:tenerEspadaZafiro events:completarMision54"
