@@ -4,7 +4,7 @@ menus:
     command: "/puntomuerte"
     height: 3
     slots:
-      13: "botonCheckpointMuerte"
+      13: "botonCheckpointMuerte1,botonCheckpointMuerte2"
     items:
       botonCheckpointMuerte1:
         item: "iconoCheckpointMuerte"
