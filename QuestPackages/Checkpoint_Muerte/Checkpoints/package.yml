@@ -1,12 +1,15 @@
 events:
-  establecerCheckpointMuerte: "folder agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
-  agregarCheckpointMuerte: "compasstrack %ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1%"
+  establecerCheckpointMuerte: "folder guardarCheckpointMuerte,agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
+  guardarCheckpointMuerte: "run ^command svar set checkpoint_muerte_x %ph.angelchest_x_1% %player% ^command svar set checkpoint_muerte_y %ph.angelchest_y_1% %player% ^command svar set checkpoint_muerte_z %ph.angelchest_z_1% %player% ^command svar set checkpoint_muerte_mundo %ph.angelchest_world_1% %player% ^command svar set checkpoint_muerte_activo true %player%"
+  agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
   iniciarObjLlegarCheckpointMuerte: "objective start objLlegarCheckpointMuerte"
   notificacionCheckpointMuerte: "notify &6Se ha fijado tu lugar de muerte en la brújula."
 
-  eliminacionCheckpointMuerte: "folder eliminarCheckpointMuerte,notificacionEliminarCheckpointMuerte"
+  eliminacionCheckpointMuerte: "folder eliminarObjLlegarCheckpointMuerte,eliminarCheckpointMuerte,notificacionEliminarCheckpointMuerte"
+  desactivarCheckpointMuerteActivo: "run ^command svar set checkpoint_muerte_activo false %player%"
+  eliminarObjLlegarCheckpointMuerte: "objective delete objLlegarCheckpointMuerte"
   eliminarCheckpointMuerte: "clearcompass"
   notificacionEliminarCheckpointMuerte: "notify &aHas llegado a tu lugar de muerte anterior."
 
 objectives:
-  objLlegarCheckpointMuerte: "location %ph.angelchest_x_1%;%ph.angelchest_y_1%;%ph.angelchest_z_1%;%ph.angelchest_world_1% 5 events:eliminacionCheckpointMuerte"
+  objLlegarCheckpointMuerte: "location %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo% 5 events:eliminacionCheckpointMuerte"

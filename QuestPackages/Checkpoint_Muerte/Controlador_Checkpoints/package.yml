@@ -4,21 +4,34 @@ conditions:
   estarEnUnMundoValido: "or estarEnMundoExploracion,estarEnNether"
   permisoMantenerInventario: "permission essentials.keepinv"
 
-  checkpointMuerteActivo: "tag marcaCheckpointMuerteActivo"
+  checkpointMuerteActivado: "tag marcaCheckpointMuerteActivado"
+
+  checkpointMuerteActivo: "variable %ph.servervariables_value_checkpoint_muerte_activo% true"
+  checkpointMuerteActivoSurvival: "variable %ph.servervariables_value_checkpoint_muerte_mundo% world"
+  checkpointMuerteActivoNether: "variable %ph.servervariables_value_checkpoint_muerte_mundo% Zona1_nether"
 
 objectives:
   objCheckpointMuerte: "die events:establecerCheckpointMuerte conditions:estarEnUnMundoValido,!permisoMantenerInventario persistent"
-  # objComprobarServidorCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
+  objComprobarEstadoCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
-  activacionCheckpointMuerte: "folder activarCheckpointMuerte,agregarMarcaCheckpointMuerteActivo,notificacionCheckpointMuerteActivado"
-  activarCheckpointMuerte: "objective start objCheckpointMuerte"
-  agregarMarcaCheckpointMuerteActivo: "tag add marcaCheckpointMuerteActivo"
+  activacionCheckpointMuerte: "folder activarObjCheckpointMuerte,activarObjComprobarEstadoCheckpointMuerte,agregarMarcaCheckpointMuerteActivado,notificacionCheckpointMuerteActivado"
+  activarObjCheckpointMuerte: "objective start objCheckpointMuerte"
+  activarObjComprobarEstadoCheckpointMuerte: "objective start objComprobarEstadoCheckpointMuerte"
+  agregarMarcaCheckpointMuerteActivado: "tag add marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteActivado: "notify &aHas activado el punto de control del fuego fatuo."
   
-  desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerte,eliminarMarcaCheckpointMuerteActivo,notificacionCheckpointMuerteDesactivado"
-  desactivarCheckpointMuerte: "objective delete objCheckpointMuerte"
-  eliminarMarcaCheckpointMuerteActivo: "tag delete marcaCheckpointMuerteActivo"
+  desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,desactivarObjCheckpointMuerte,desactivarObjComprobarEstadoCheckpointMuerte,eliminarMarcaCheckpointMuerteActivado,notificacionCheckpointMuerteDesactivado"
+  desactivarCheckpointMuerteActivo: "run ^command svar set checkpoint_muerte_activo false %player%"
+  desactivarObjCheckpointMuerte: "objective delete objCheckpointMuerte"
+  desactivarObjComprobarEstadoCheckpointMuerte: "objective delete objComprobarEstadoCheckpointMuerte"
+  eliminarMarcaCheckpointMuerteActivado: "tag delete marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control del fuego fatuo."
   
-  establecerCheckpointMuerte: "folder establecerCheckpointMuerteServidor"
+  establecerCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte"
+
+  objComprobarEstadoCheckpointMuerte: "folder notifacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
+  agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
+  notificacionCheckpointMuerteActivo: "folder notificacionCheckpointMuerteActivoSurvival,notificacionCheckpointMuerteActivoNether"
+  notificacionCheckpointMuerteActivoSurvival: "notify &6Tienes un punto de control del fuego fatuo activo en el Mundo de Exploración de este servidor. conditions:checkpointMuerteActivoSurvival"
+  notificacionCheckpointMuerteActivoNether: "notify &6Tienes un punto de control del fuego fatuo activo en el Nether de este servidor. conditions:checkpointMuerteActivoNether"
