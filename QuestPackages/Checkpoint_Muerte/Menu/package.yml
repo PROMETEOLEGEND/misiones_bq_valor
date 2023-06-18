@@ -8,7 +8,7 @@ menus:
     items:
       botonCheckpointMuerte1:
         item: "iconoCheckpointMuerte"
-        condition: "Checkpoint_Muerte-Controlador_Checkpoints.!checkpointMuerteActivo"
+        condition: "!Checkpoint_Muerte-Controlador_Checkpoints.checkpointMuerteActivo"
         text:
         - "&b¿Qué es el punto de control del fuego fatuo?"
         - ""
