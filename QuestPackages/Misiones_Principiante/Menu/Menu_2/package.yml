@@ -936,7 +936,7 @@ menus:
         - "&6&l[Misión 52]: &eUn nuevo Mineral Rojo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina  &f&o10 menas de Rubí&7&o"
+        - "&7&oMina &f&o10 menas de Rubí&7&o"
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -949,7 +949,7 @@ menus:
         - "&6&l[Misión 52]: &eUn nuevo Mineral Rojo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina  &f&o10 menas de Rubí&7&o"
+        - "&7&oMina &f&o10 menas de Rubí&7&o"
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
         click:
