@@ -57,7 +57,7 @@
 57. Fabrica un caldero para mascotas. (Hecho)
 58. Fabrica pienso de mascotas. (Hecho)
 59. Tamea una mascota. (Hecho)
-60. Supera la mazmorra del Rey Crustáceo.
+60. Supera la mazmorra del Rey Crustáceo. (Hecho)
 61. Sube al nivel 12 de prestigio. (Hecho)
 62. Mina 25 menas de Rubi. (Hecho)
 63. Mina 25 menas de Zafiro. (Hecho)
