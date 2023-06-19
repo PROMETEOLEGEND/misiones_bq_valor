@@ -1,0 +1,16 @@
+conditions:
+  estarEnLadoExteriorPuerta: "location $ladoExteriorPuerta$ 5"
+  estarEnLadoInteriorPuerta: "location $ladoInteriorPuerta$ 5"
+
+events:
+  eventoPuerta: "folder eventoEntrada,notificacionEntrada,eventoSalida"
+  eventoEntrada: "teleport $ladoInteriorPuerta$ condition:estarEnLadoExteriorPuerta"
+  notificacionEntrada: "notify io:title $mensajeEntrada$ condition:estarEnLadoExteriorPuerta"
+  eventoSalida: "teleport $ladoExteriorPuerta$ condition:estarEnLadoInteriorPuerta"
+  notificacionSalida: "notify io:title $mensajeSalida$ condition:estarEnLadoInteriorPuerta"
+
+variables:
+  ladoExteriorPuerta: "100;200;300;world"
+  ladoInteriorPuerta: "100;200;300;world"
+  mensajeEntrada: "&6Has entrado al Palacio"
+  mensajeSalida: "&6Has salido del Palacio"
