@@ -13,12 +13,21 @@ menus:
       15: "botonMisionDisponible63,botonMisionActiva63,botonMisionCompletada63,botonMisionBloqueada63"
       16: "botonMisionDisponible64,botonMisionActiva64,botonMisionCompletada64,botonMisionBloqueada64"
       19: "botonMisionDisponible65,botonMisionActiva65,botonMisionCompletada65,botonMisionBloqueada65"
-      # 20: "botonMisionDisponible66,botonMisionActiva66,botonMisionCompletada66,botonMisionBloqueada66"
-      # 21: "botonMisionDisponible67,botonMisionActiva67,botonMisionCompletada67,botonMisionBloqueada67"
-      # 22: "botonMisionDisponible68,botonMisionActiva68,botonMisionCompletada68,botonMisionBloqueada68"
-      # 23: "botonMisionDisponible69,botonMisionActiva69,botonMisionCompletada69,botonMisionBloqueada69"
-      # 24: "botonMisionDisponible70,botonMisionActiva70,botonMisionCompletada70,botonMisionBloqueada70"
+      20: "botonMisionDisponible66,botonMisionActiva66,botonMisionCompletada66,botonMisionBloqueada66"
+      21: "botonMisionDisponible67,botonMisionActiva67,botonMisionCompletada67,botonMisionBloqueada67"
+      22: "botonMisionDisponible68,botonMisionActiva68,botonMisionCompletada68,botonMisionBloqueada68"
+      23: "botonMisionDisponible69,botonMisionActiva69,botonMisionCompletada69,botonMisionBloqueada69"
+      24: "botonMisionDisponible70,botonMisionActiva70,botonMisionCompletada70,botonMisionBloqueada70"
       # 25: "botonMisionDisponible71,botonMisionActiva71,botonMisionCompletada71,botonMisionBloqueada71"
+      # 28: "botonMisionDisponible72,botonMisionActiva72,botonMisionCompletada72,botonMisionBloqueada72"
+      # 29: "botonMisionDisponible73,botonMisionActiva73,botonMisionCompletada73,botonMisionBloqueada73"
+      # 30: "botonMisionDisponible74,botonMisionActiva74,botonMisionCompletada74,botonMisionBloqueada74"
+      # 31: "botonMisionDisponible75,botonMisionActiva75,botonMisionCompletada75,botonMisionBloqueada75"
+      # 32: "botonMisionDisponible76,botonMisionActiva76,botonMisionCompletada76,botonMisionBloqueada76"
+      # 33: "botonMisionDisponible77,botonMisionActiva77,botonMisionCompletada77,botonMisionBloqueada77"
+      # 34: "botonMisionDisponible78,botonMisionActiva78,botonMisionCompletada78,botonMisionBloqueada78"
+      # 37: "botonMisionDisponible79,botonMisionActiva79,botonMisionCompletada79,botonMisionBloqueada79"
+      # 38: "botonMisionDisponible80,botonMisionActiva80,botonMisionCompletada80,botonMisionBloqueada80"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -156,7 +165,7 @@ menus:
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita al &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -169,7 +178,7 @@ menus:
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita al &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -181,7 +190,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
-        - "&7&oVisita al &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor."
       botonMisionBloqueada60:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_59.misionCompletada59"
@@ -375,6 +384,234 @@ menus:
       botonMisionBloqueada65:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_64.misionCompletada64"
+#####################################################################
+      botonMisionDisponible66:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_65.misionCompletada65,!Misiones_Principiante-Mision_66.misionActiva66,!Misiones_Principiante-Mision_66.misionCompletada66"
+        close: true
+        text:
+        - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_66.mensajeAyudaMision66,Misiones_Principiante-Mision_66.iniciarMision66" 
+      botonMisionActiva66:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_66.misionActiva66"
+        close: true
+        text:
+        - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_66.mensajeAyudaMision66" 
+      botonMisionCompletada66:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_66.misionCompletada66"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
+        - "&r "
+        - "&7&oVe a hablar con el &f&oRey de Valor."
+      botonMisionBloqueada66:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_65.misionCompletada65"
+#####################################################################
+      botonMisionDisponible67:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_66.misionCompletada66,!Misiones_Principiante-Mision_67.misionActiva67,!Misiones_Principiante-Mision_67.misionCompletada67"
+        close: true
+        text:
+        - "&6&l[Misión 67]: &eCazando criaturas antiguas"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Rubi."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_67.mensajeAyudaMision67,Misiones_Principiante-Mision_67.iniciarMision67" 
+      botonMisionActiva67:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_67.misionActiva67"
+        close: true
+        text:
+        - "&6&l[Misión 67]: &eCazando criaturas antiguas"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Rubi."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_67.mensajeAyudaMision67" 
+      botonMisionCompletada67:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_67.misionCompletada67"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 67]: &eCazando criaturas antiguas"
+        - "&r "
+        - "&7&oDerrota a un &f&oGolem de Rubi."
+      botonMisionBloqueada67:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_66.misionCompletada66"
+#####################################################################
+      botonMisionDisponible68:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_67.misionCompletada67,!Misiones_Principiante-Mision_68.misionActiva68,!Misiones_Principiante-Mision_68.misionCompletada68"
+        close: true
+        text:
+        - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Zafiro."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_68.mensajeAyudaMision68,Misiones_Principiante-Mision_68.iniciarMision68" 
+      botonMisionActiva68:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_68.misionActiva68"
+        close: true
+        text:
+        - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Zafiro."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_68.mensajeAyudaMision68" 
+      botonMisionCompletada68:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_68.misionCompletada68"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
+        - "&r "
+        - "&7&oDerrota a un &f&oGolem de Zafiro."
+      botonMisionBloqueada68:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_67.misionCompletada67"
+#####################################################################
+      botonMisionDisponible69:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_68.misionCompletada68,!Misiones_Principiante-Mision_69.misionActiva69,!Misiones_Principiante-Mision_69.misionCompletada69"
+        close: true
+        text:
+        - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Mythril."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_69.mensajeAyudaMision69,Misiones_Principiante-Mision_69.iniciarMision69" 
+      botonMisionActiva69:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_69.misionActiva69"
+        close: true
+        text:
+        - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrota a un &f&oGolem de Mythril."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_69.mensajeAyudaMision69" 
+      botonMisionCompletada69:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_69.misionCompletada69"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
+        - "&r "
+        - "&7&oDerrota a un &f&oGolem de Mythril."
+      botonMisionBloqueada69:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_68.misionCompletada68"
+#####################################################################
+      botonMisionDisponible70:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_69.misionCompletada69,!Misiones_Principiante-Mision_70.misionActiva70,!Misiones_Principiante-Mision_70.misionCompletada70"
+        close: true
+        text:
+        - "&6&l[Misión 70]: &eNecesitas más prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 14 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_70.mensajeAyudaMision70,Misiones_Principiante-Mision_70.iniciarMision70" 
+      botonMisionActiva70:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_70.misionActiva70"
+        close: true
+        text:
+        - "&6&l[Misión 70]: &eNecesitas más prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 14 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_70.mensajeAyudaMision70" 
+      botonMisionCompletada70:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_70.misionCompletada70"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 70]: &eNecesitas más prestigio"
+        - "&r "
+        - "&7&oSube al &f&onivel 14 de Prestigio."
+      botonMisionBloqueada70:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_69.misionCompletada69"
+#####################################################################
+      # botonMisionDisponible71:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_70.misionCompletada70,!Misiones_Principiante-Mision_71.misionActiva71,!Misiones_Principiante-Mision_71.misionCompletada71"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 71]: &eUn guerrero implacable"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para iniciar la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_71.mensajeAyudaMision71,Misiones_Principiante-Mision_71.iniciarMision71" 
+      # botonMisionActiva71:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_71.misionActiva71"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 71]: &eUn guerrero implacable"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_71.mensajeAyudaMision71" 
+      # botonMisionCompletada71:
+      #   item: "botonMisionCompletada"
+      #   conditions: "Misiones_Principiante-Mision_71.misionCompletada71"
+      #   text:
+      #   - "&2¡Misión completada!"
+      #   - "&6&l[Misión 71]: &eUn guerrero implacable"
+      #   - "&r "
+      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      # botonMisionBloqueada71:
+      #   item: "botonMisionBloqueada"
+      #   conditions: "!Misiones_Principiante-Mision_70.misionCompletada70"
 
 #####################################################################
 

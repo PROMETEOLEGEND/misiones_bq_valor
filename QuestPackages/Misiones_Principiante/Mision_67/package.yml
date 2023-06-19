@@ -1,0 +1,25 @@
+conditions:
+  misionActiva67: "tag marcaMisionActiva67"
+  misionCompletada67: "tag marcaMisionCompletada67"
+
+####################################################################################################
+
+events:
+  iniciarMision67: "folder agregarMarcaMisionActiva67,iniciarObjetivoMision67"
+  agregarMarcaMisionActiva67: "tag add marcaMisionActiva67"
+  iniciarObjetivoMision67: "objective start objMatarGolemRubi"
+  
+  mensajeAyudaMision67: "notify \n&6&lMisión 67:\n&r Los &bGolems de Rubi &rson unas criaturas monolíticas que parecen estar hechas de &bPiedra&r y &bRubi&r, se invocan con un huevo que puedes fabricar, puedes ver la receta de este en una &bMesa de trabajo&r\n&r"
+  
+  completarMision67: "folder eliminarMarcaMisionActiva67,agregarMarcaMisionCompletada67,notificacionMisionCompletada67,recompensaMision67,recompensaExpPrestigio,notificacionRecompensaExpPrestigio delay:1"
+  eliminarMarcaMisionActiva67: "tag delete marcaMisionActiva67"
+  agregarMarcaMisionCompletada67: "tag add marcaMisionCompletada67"
+  notificacionMisionCompletada67: "notify &7----------------------------------------\n&6&l¡Misión 67 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision67: "command eco give %player% 1500"
+  recompensaExpPrestigio: "mmoprofessionexperience prestigio 650"
+  notificacionRecompensaExpPrestigio: "notify &aHas conseguido 650 exp de prestigio."
+
+####################################################################################################
+
+objectives:
+  objMatarGolemRubi: "mmobkill redstonegolem amount:1 events:completarMision67"

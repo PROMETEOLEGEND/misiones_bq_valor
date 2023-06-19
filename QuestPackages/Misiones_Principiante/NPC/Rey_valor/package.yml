@@ -3,7 +3,8 @@ events:
   
   menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_19.misionActiva19,!Misiones_Principiante-Mision_31.misionActiva31,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_43.misionActiva43,!Misiones_Principiante-Mision_48.misionActiva48,!Misiones_Principiante-Mision_55.misionActiva55"
   
-  empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7"
+  empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7,conversacionReyValor8,conversacionReyValor9"
+  # empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7,conversacionReyValor8,conversacionReyValor9,conversacionReyValor10"
   conversacionReyValor1: "conversation Misiones_Principiante-Mision_11.ReyValor conditions:Misiones_Principiante-Mision_11.misionActiva11"
   conversacionReyValor2: "conversation Misiones_Principiante-Mision_19.ReyValor2 conditions:Misiones_Principiante-Mision_19.misionActiva19"
   conversacionReyValor3: "conversation Misiones_Principiante-Mision_31.ReyValor3 conditions:Misiones_Principiante-Mision_31.misionActiva31"
@@ -11,3 +12,6 @@ events:
   conversacionReyValor5: "conversation Misiones_Principiante-Mision_43.ReyValor5 conditions:Misiones_Principiante-Mision_43.misionActiva43"
   conversacionReyValor6: "conversation Misiones_Principiante-Mision_48.ReyValor6 conditions:Misiones_Principiante-Mision_48.misionActiva48"
   conversacionReyValor7: "conversation Misiones_Principiante-Mision_55.ReyValor7 conditions:Misiones_Principiante-Mision_55.misionActiva55"
+  conversacionReyValor8: "conversation Misiones_Principiante-Mision_60.ReyValor8 conditions:Misiones_Principiante-Mision_60.misionActiva60"
+  conversacionReyValor9: "conversation Misiones_Principiante-Mision_66.ReyValor9 conditions:Misiones_Principiante-Mision_66.misionActiva66"
+  # conversacionReyValor10: "conversation Misiones_Principiante-Mision_71.ReyValor10 conditions:Misiones_Principiante-Mision_71.misionActiva71"
