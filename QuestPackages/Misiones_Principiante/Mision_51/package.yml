@@ -155,4 +155,3 @@ events:
   darRecompensaVIP: "command eco give %player% 10000 condition:permisosYaEntregados"
   recompensaExpClase: "mmoclassexperience 500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."
-  darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true condition:!permisosYaEntregados"
