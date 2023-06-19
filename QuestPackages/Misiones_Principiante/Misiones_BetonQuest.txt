@@ -55,7 +55,7 @@
 55. Supera la mazmorra del Rey Goblin. (Hecho)
 56. Derrota a un ent guardian. (Hecho)
 57. Fabrica un caldero para mascotas. (Hecho)
-58. Fabrica pienso de mascotas.
+58. Fabrica pienso de mascotas. (Hecho)
 59. Tamea una mascota.
 60. Supera la mazmorra del Rey Crustáceo.
 61. Sube al nivel 12 de prestigio.
