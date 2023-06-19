@@ -22,7 +22,7 @@ conversations:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con un espacio especial donde podrás construir y guardar tu hogar."
         pointer: "despedida"
         conditions: "!permisosYaEntregados"
-        events: "run ^tag add marcaInfoRecibidaChistes"
+        events: "agregarMarcaInfoRecibidaChistes"
       contarfinalmas1:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con una fantástica recompensa."
         pointer: "despedida"
@@ -147,10 +147,10 @@ events:
   agregarMarcaMisionAceptadaBufon: "tag add marcaMisionAceptadaBufon"
   notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
   
-  completarMision51: "folder eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision51: "folder eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,darRecompensaVIP,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon"
   agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
   notificacionMisionCompletada51: "notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
-  darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true"
+  darRecompensaVIP: "command eco give %player% 10000 condition:permisosYaEntregados"
   recompensaExpClase: "mmoclassexperience 500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

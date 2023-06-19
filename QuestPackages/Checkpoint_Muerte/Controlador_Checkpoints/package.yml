@@ -3,7 +3,9 @@ conditions:
   estarEnMundoExploracion: "world world"
   estarEnNether: "world Zona1_nether"
   # estarEnEnd: "world Zona1_end"
-  estarEnUnMundoValido: "or estarEnSpawn,estarEnMundoExploracion,estarEnNether,estarEnEnd"
+  
+  estarEnUnMundoValido: "or estarEnSpawn,estarEnMundoExploracion,estarEnNether"
+  #estarEnUnMundoValido: "or estarEnSpawn,estarEnMundoExploracion,estarEnNether,estarEnEnd"
 
   checkpointMuerteActivado: "tag marcaCheckpointMuerteActivado"
 
