@@ -6,11 +6,9 @@ conditions:
   checkpointMuerteActivado: "tag marcaCheckpointMuerteActivado"
 
   checkpointMuerteActivo: "variable %ph.servervariables_value_checkpoint_muerte_activo% true"
-  checkpointMuerteActivoSurvival: "variable %ph.servervariables_value_checkpoint_muerte_mundo% world"
-  checkpointMuerteActivoNether: "variable %ph.servervariables_value_checkpoint_muerte_mundo% Zona1_nether"
 
 objectives:
-  objCheckpointMuerte: "die events:establecerCheckpointMuerte conditions:estarEnUnMundoValido persistent"
+  objCheckpointMuerte: "die events:Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte conditions:estarEnUnMundoValido persistent"
   objComprobarEstadoCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
@@ -18,15 +16,9 @@ events:
   activarCheckpointMuerte: "run ^objective start objCheckpointMuerte ^objective start objComprobarEstadoCheckpointMuerte ^tag add marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteActivado: "notify &aHas activado el punto de control de muerte."
   
-  desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,desactivarCheckpointMuerte,notificacionCheckpointMuerteDesactivado"
-  desactivarCheckpointMuerteActivo: "run ^command svar set checkpoint_muerte_activo false %player%"
+  desactivacionCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.desactivarCheckpointMuerteActivo,desactivarCheckpointMuerte,notificacionCheckpointMuerteDesactivado"
   desactivarCheckpointMuerte: "run ^objective delete objCheckpointMuerte ^objective delete objComprobarEstadoCheckpointMuerte ^tag delete marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control de muerte."
-  
-  establecerCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte"
 
-  comprobarCheckpointMuerteAMostrar: "folder agregarCheckpointMuerte,notificacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
-  agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
-  notificacionCheckpointMuerteActivo: "folder notificacionCheckpointMuerteActivoSurvival,notificacionCheckpointMuerteActivoNether delay:1"
-  notificacionCheckpointMuerteActivoSurvival: "notify &6Tienes un punto de control de muerte activo en el Mundo de Exploración de este servidor. conditions:checkpointMuerteActivoSurvival"
-  notificacionCheckpointMuerteActivoNether: "notify &6Tienes un punto de control de muerte activo en el Nether de este servidor. conditions:checkpointMuerteActivoNether"
+  comprobarCheckpointMuerteAMostrar: "folder Checkpoint_Muerte-Checkpoints.agregarCheckpointMuerte,notificacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
+  notificacionCheckpointMuerteActivo: "notify &6Tienes un punto de control de muerte activo en el %ph.servervariables_display_checkpoint_muerte_mundo% de este servidor. delay:1"
