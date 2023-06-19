@@ -1,6 +1,6 @@
 menus:
   checkpointMuerte:
-    title: "&b&lPunto de control del fuego fatuo"
+    title: "&b&lPunto de control de muerte"
     command: "/puntomuerte"
     height: 3
     slots:
@@ -10,15 +10,14 @@ menus:
         item: "iconoCheckpointMuerte"
         condition: "!Checkpoint_Muerte-Controlador_Checkpoints.checkpointMuerteActivo"
         text:
-        - "&b¿Qué es el punto de control del fuego fatuo?"
+        - "&b¿Qué es el punto de control de muerte?"
         - ""
         - "&7Es un punto de control que aparecerá en tu brújula"
         - "&7justo después de morir, para ayudarte a llegar a tu"
-        - "&7lugar de muerte anterior."
+        - "&7lugar de anterior."
         - ""
         - "&7El punto de control solo aparecerá si mueres en el"
-        - "&7Mundo de Exploración o en el Nether y no tienes el"
-        - "&7beneficio &bMantener Inventario&7."
+        - "&7Mundo de Exploración o en el Nether."
         - ""
         - "&7Actualmente lo tienes &cdesactivado&7."
         - ""
@@ -28,15 +27,14 @@ menus:
         item: "iconoCheckpointMuerte"
         condition: "Checkpoint_Muerte-Controlador_Checkpoints.checkpointMuerteActivo"
         text:
-        - "&b¿Qué es el punto de control del fuego fatuo?"
+        - "&b¿Qué es el punto de control de muerte?"
         - ""
         - "&7Es un punto de control que aparecerá en tu brújula"
         - "&7justo después de morir, para ayudarte a llegar a tu"
         - "&7lugar de muerte anterior."
         - ""
         - "&7El punto de control solo aparecerá si mueres en el"
-        - "&7Mundo de Exploración o en el Nether y no tienes el"
-        - "&7beneficio &bMantener Inventario&7."
+        - "&7Mundo de Exploración o en el Nether."
         - ""
         - "&7Actualmente lo tienes &aactivado&7."
         - ""

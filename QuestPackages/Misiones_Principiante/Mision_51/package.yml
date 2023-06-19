@@ -1,11 +1,12 @@
 conversations:
-  Bufon:
+  BufonValor:
     quester: "&b&lBufón"
     first: "saludo"
     NPC_options:
       saludo:
         text: "¡Hola, aventurero! Soy el bufón más ingenioso y extravagante de todo el reino. Tengo una misión especial para ti, ¿te interesa escucharla?"
         pointer: "si,noquiero"
+        conditions: "!infoRecibidaChistes,!misionAceptadaBufon"
       adios:
         text: "Oh, vaya, eso es una lástima. Estoy seguro de que te habrías divertido mucho buscando los chistes mágicos. Pero entiendo que cada aventurero tiene sus propias prioridades y responsabilidades."
       contarmision:
@@ -21,24 +22,30 @@ conversations:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con un espacio especial donde podrás construir y guardar tu hogar."
         pointer: "despedida"
         conditions: "!permisosYaEntregados"
+        events: "run ^tag add marcaInfoRecibidaChistes"
       contarfinalmas1:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con una fantástica recompensa."
         pointer: "despedida"
         conditions: "permisosYaEntregados"
+        events: "run ^tag add marcaInfoRecibidaChistes"
       adios2:
         text: "¡Eso espero! Buena suerte, valiente aventurero. Estaré esperando aquí con ansias tus chistes mágicos. ¡Diviértete en tu búsqueda!"
+        events: "aceptarMisionBufon"
       saludo2:
         text: "¡Hola, aventurero! ¿Has pensado sobre la misión que te comenté?"
         pointer: "noquiero,quemision"
+        conditions: "infoRecibidaChistes,!misionAceptadaBufon"
       saludo3:
         text: "¡Saludos, aventurero! ¿Cómo va tu búsqueda de los chistes mágicos? Estoy ansioso por escuchar las divertidas historias que has descubierto."
         pointer: "no2"
+        conditions: "infoRecibidaChistes,misionAceptadaBufon,!cantidadChistesEncontrados"
       respuesta2:
         text: "No te preocupes, aventurero. La búsqueda de los chistes mágicos puede ser desafiante, pero estoy seguro de que estás cerca de encontrarlos. Sigue explorando con valentía."
         pointer: "nomerendire,repetirinfo"
       saludo4:
         text: "¡Oh, albricias! ¡Has vuelto! Me muero de curiosidad por saber si has encontrado los cinco chistes mágicos. ¡Cuéntame todo al respecto!"
         pointer: "contarchiste1"
+        conditions: "infoRecibidaChistes,misionAceptadaBufon,cantidadChistesEncontrados"
       respuestachiste1:
         text: "¡Ja, ja! Ese es genial. Sigue, por favor, ¡quiero escuchar los otros!"
         pointer: "contarchiste2"
@@ -56,8 +63,12 @@ conversations:
         pointer: "gracias"
       respuestafinal:
         text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes un espacio especial donde podrás construir y guardar tu hogar. Espero que lo disfrutes y te sientas como en casa."
+        events: "completarMision51"
+        conditions: "!permisosYaEntregados"
       respuestafinalmas1:
         text: "Como prometí, te recompensaré generosamente por tu hazaña. Aquí tienes tu recompensa. Espero que lo disfrutes."
+        events: "completarMision51"
+        conditions: "permisosYaEntregados"
     player_options:
       si:
         text: "¡Hola, bufón! Estoy intrigado. Cuéntame en qué consiste tu misión."
@@ -115,6 +126,8 @@ conditions:
   permisoVIP: "permission group.ultra"
   permisosYaEntregados: "or permisoHogarAdicional,permisoHogarAdicional2,permisoVIP"
 
+  infoRecibidaChistes: "tag marcaInfoRecibidaChistes"
+
   misionAceptadaBufon: "tag marcaMisionAceptadaBufon"
 
   cantidadChistesEncontrados: "point chistesEncontrados 5"
@@ -124,24 +137,18 @@ conditions:
 events:
   iniciarMision51: "tag add marcaMisionActiva51"
   
-  mensajeAyudaMision29: "if !misionAceptadaBufon mensajeAyudaMision29_2 else mensajeAyudaMision29_1"
+  mensajeAyudaMision51: "if !misionAceptadaBufon mensajeAyudaMision29_2 else mensajeAyudaMision29_1"
+  mensajeAyudaMision51_1: "run ^command calebcompass show %player% ^compasstrack 1095;18;702;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  mensajeAyudaMision51_2: "notify \n&6&lMisión 51:\n&r La lista de lugares donde podrías encontrar los chistes es: &bPoblado Goblin, en el río subterráneo de Valor, en la Biblioteca de Palacio, la Tienda de Mascotas y la Granja de cerdos&r. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja.\n&r"
 
-  mensajeAyudaMision29_1: "run ^command calebcompass show %player% ^compasstrack 1095;18;702;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
-
-  mensajeAyudaMision29_2: "notify \n&6&lMisión 51:\n&r Para .\n&r"
+  aceptarMisionBufon: "folder agregarMarcaMisionAceptadaBufon,notificacionNuevoMensajeAyuda"
+  agregarMarcaMisionAceptadaBufon: "tag add marcaMisionAceptadaBufon"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
   
-  
-  
-  completarMision51: "folder eliminarMarcaMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darRunaHogar,enfriamientoRunaHogar,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcaMisionActiva51: "tag delete marcaMisionActiva51"
+  completarMision51: "folder eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon"
   agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
   notificacionMisionCompletada51: "notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
-  darRunaHogar: "command mi give CONSUMABLE RUNA_HOGAR %player% 1"
-  enfriamientoRunaHogar: "command lp user %player% permission set runa_hogar.recibida true"
-  recompensaExpClase: "mmoclassexperience 50"
-  notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
-  
-  conversacionVikingo: "folder notificacionMisionNoDisponible51,empezarConversacionVikingo,menuRunaHogar"
-  notificacionMisionNoDisponible51: "notify &cNecesitas haber iniciado la misión de principiante 51 para poder interactuar con este NPC. condition:!misionCompletada51"
-  empezarConversacionVikingo: "conversation Vikingo condition:misionActiva51"
-  menuRunaHogar: "command dm open runa_hogar_ayuda %player% condition:misionCompletada51"
+  darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true"
+  recompensaExpClase: "mmoclassexperience 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

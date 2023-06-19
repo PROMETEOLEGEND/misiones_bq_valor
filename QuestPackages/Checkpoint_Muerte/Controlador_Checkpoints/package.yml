@@ -2,7 +2,6 @@ conditions:
   estarEnMundoExploracion: "world world"
   estarEnNether: "world Zona1_nether"
   estarEnUnMundoValido: "or estarEnMundoExploracion,estarEnNether"
-  permisoMantenerInventario: "permission essentials.keepinv"
 
   checkpointMuerteActivado: "tag marcaCheckpointMuerteActivado"
 
@@ -17,17 +16,17 @@ objectives:
 events:
   activacionCheckpointMuerte: "folder activarCheckpointMuerte,notificacionCheckpointMuerteActivado"
   activarCheckpointMuerte: "run ^objective start objCheckpointMuerte ^objective start objComprobarEstadoCheckpointMuerte ^tag add marcaCheckpointMuerteActivado"
-  notificacionCheckpointMuerteActivado: "notify &aHas activado el punto de control del fuego fatuo."
+  notificacionCheckpointMuerteActivado: "notify &aHas activado el punto de control de muerte."
   
   desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,desactivarCheckpointMuerte,notificacionCheckpointMuerteDesactivado"
   desactivarCheckpointMuerteActivo: "run ^command svar set checkpoint_muerte_activo false %player%"
   desactivarCheckpointMuerte: "run ^objective delete objCheckpointMuerte ^objective delete objComprobarEstadoCheckpointMuerte ^tag delete marcaCheckpointMuerteActivado"
-  notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control del fuego fatuo."
+  notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control de muerte."
   
   establecerCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte"
 
   comprobarCheckpointMuerteAMostrar: "folder agregarCheckpointMuerte,notificacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
   agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
-  notificacionCheckpointMuerteActivo: "folder notificacionCheckpointMuerteActivoSurvival,notificacionCheckpointMuerteActivoNether"
-  notificacionCheckpointMuerteActivoSurvival: "notify &6Tienes un punto de control del fuego fatuo activo en el Mundo de Exploración de este servidor. conditions:checkpointMuerteActivoSurvival"
-  notificacionCheckpointMuerteActivoNether: "notify &6Tienes un punto de control del fuego fatuo activo en el Nether de este servidor. conditions:checkpointMuerteActivoNether"
+  notificacionCheckpointMuerteActivo: "folder notificacionCheckpointMuerteActivoSurvival,notificacionCheckpointMuerteActivoNether delay:1"
+  notificacionCheckpointMuerteActivoSurvival: "notify &6Tienes un punto de control de muerte activo en el Mundo de Exploración de este servidor. conditions:checkpointMuerteActivoSurvival"
+  notificacionCheckpointMuerteActivoNether: "notify &6Tienes un punto de control de muerte activo en el Nether de este servidor. conditions:checkpointMuerteActivoNether"

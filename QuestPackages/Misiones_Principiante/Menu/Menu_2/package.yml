@@ -28,7 +28,7 @@ menus:
       33: "botonMisionDisponible48,botonMisionActiva48,botonMisionCompletada48,botonMisionBloqueada48"
       34: "botonMisionDisponible49,botonMisionActiva49,botonMisionCompletada49,botonMisionBloqueada49"
       37: "botonMisionDisponible50,botonMisionActiva50,botonMisionCompletada50,botonMisionBloqueada50"
-      # 38: "botonMisionDisponible51,botonMisionActiva51,botonMisionCompletada51,botonMisionBloqueada51"
+      38: "botonMisionDisponible51,botonMisionActiva51,botonMisionCompletada51,botonMisionBloqueada51"
       39: "botonMisionDisponible52,botonMisionActiva52,botonMisionCompletada52,botonMisionBloqueada52"
       40: "botonMisionDisponible53,botonMisionActiva53,botonMisionCompletada53,botonMisionBloqueada53"
       41: "botonMisionDisponible54,botonMisionActiva54,botonMisionCompletada54,botonMisionBloqueada54"
@@ -902,7 +902,7 @@ menus:
         - "&6&l[Misión 51]: &eUna risa contagiosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&obufón&7&o"
+        - "&7&oVe a hablar con el &f&oBufón&7&o"
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -915,9 +915,9 @@ menus:
         - "&6&l[Misión 51]: &eUna risa contagiosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&obufón&7&o"
+        - "&7&oVe a hablar con el &f&oBufón&7&o"
         - "&r "
-        - "&7[&aClic izquierdo&7] para localizar al bufón."
+        - "&7[&aClic izquierdo&7] para localizar al NPC."
         click:
           left: "Misiones_Principiante-Mision_51.mensajeAyudaMision51" 
       botonMisionCompletada51:
@@ -927,7 +927,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 51]: &eUna risa contagiosa"
         - "&r "
-        - "&7&oVe a hablar con el &f&obufón&7&o"
+        - "&7&oVe a hablar con el &f&oBufón&7&o"
       botonMisionBloqueada51:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_50.misionCompletada50"

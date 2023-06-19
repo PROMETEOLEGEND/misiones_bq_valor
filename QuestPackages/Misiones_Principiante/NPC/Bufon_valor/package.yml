@@ -1,6 +1,6 @@
 events:
   eventoBufon: "folder menuBufon,empezarConversacionBufon"
   
-  menuBufon: "command dm open minero %player% conditions:!Misiones_Principiante-Mision_51.misionActiva51"
+  menuBufon: "command dm open homes %player% conditions:!Misiones_Principiante-Mision_51.misionActiva51"
   
   empezarConversacionBufon: "conversation Misiones_Principiante-Mision_51.BufonValor conditions:Misiones_Principiante-Mision_51.misionActiva51"
