@@ -1,7 +1,9 @@
 conditions:
+  estarEnSpawn: "world Zona1"
   estarEnMundoExploracion: "world world"
   estarEnNether: "world Zona1_nether"
-  estarEnUnMundoValido: "or estarEnMundoExploracion,estarEnNether"
+  estarEnEnd: "world Zona1_end"
+  estarEnUnMundoValido: "or estarEnSpawn,estarEnMundoExploracion,estarEnNether,estarEnEnd"
 
   checkpointMuerteActivado: "tag marcaCheckpointMuerteActivado"
 
