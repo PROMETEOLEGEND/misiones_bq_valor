@@ -151,6 +151,7 @@ events:
   eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon"
   agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
   notificacionMisionCompletada51: "notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true condition:!permisosYaEntregados"
   darRecompensaVIP: "command eco give %player% 10000 condition:permisosYaEntregados"
   recompensaExpClase: "mmoclassexperience 500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."
