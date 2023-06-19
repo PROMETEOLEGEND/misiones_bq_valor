@@ -1,0 +1,6 @@
+events:
+  eventoPiensoMascotas: "folder menuPiensoMascotas,completarMisionPiensoMascotas"
+  
+  menuPiensoMascotas: "command mcpets petFood tameo_comida_1 %player%"
+  
+  completarMisionPiensoMascotas: "if Misiones_Principiante-Mision_58.misionActiva58 Misiones_Principiante-Mision_58.completarMision58 else menuPiensoMascotas"

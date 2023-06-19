@@ -1,0 +1,21 @@
+conditions:
+  misionActiva58: "tag marcaMisionActiva58"
+  misionCompletada58: "tag marcaMisionCompletada58"
+
+####################################################################################################
+
+events:
+  iniciarMision58: "folder agregarMarcaMisionActiva58"
+  agregarMarcaMisionActiva58: "tag add marcaMisionActiva58"
+  
+  mensajeAyudaMision58: "notify \n&6&lMisión 58:\n&r Para fabricar &bPienso básico de mascotas &rnecesitarás un caldero de comida para mascotas, 3 de trigo y 3 bayas dulces.\n&r"
+  
+  completarMision58: "folder eliminarMarcaMisionActiva58,agregarMarcaMisionCompletada58,notificacionMisionCompletada58,recompensaMision58,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva58: "tag delete marcaMisionActiva58"
+  agregarMarcaMisionCompletada58: "tag add marcaMisionCompletada58"
+  notificacionMisionCompletada58: "notify &7----------------------------------------\n&6&l¡Misión 58 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision58: "command eco give %player% 2300"
+  recompensaExpClase: "mmoclassexperience 450"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 450 exp de clase."
+
+####################################################################################################
