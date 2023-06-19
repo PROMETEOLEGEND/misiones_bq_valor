@@ -33,6 +33,7 @@ menus:
       40: "botonMisionDisponible53,botonMisionActiva53,botonMisionCompletada53,botonMisionBloqueada53"
       41: "botonMisionDisponible54,botonMisionActiva54,botonMisionCompletada54,botonMisionBloqueada54"
       42: "botonMisionDisponible55,botonMisionActiva55,botonMisionCompletada55,botonMisionBloqueada55"
+      43: "botonMisionDisponible56,botonMisionActiva56,botonMisionCompletada56,botonMisionBloqueada56"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -1082,6 +1083,44 @@ menus:
       botonMisionBloqueada55:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_54.misionCompletada54"           
+#####################################################################
+      botonMisionDisponible56:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_55.misionCompletada55,!Misiones_Principiante-Mision_56.misionActiva56,!Misiones_Principiante-Mision_56.misionCompletada56"
+        close: true
+        text:
+        - "&6&l[Misión 56]: &eEl árbol gigante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrotar un &f&oEnt Guardian"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_56.mensajeAyudaMision56,Misiones_Principiante-Mision_56.iniciarMision56" 
+      botonMisionActiva56:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_56.misionActiva56"
+        close: true
+        text:
+        - "&6&l[Misión 56]: &eEl árbol gigante"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oDerrotar un &f&oEnt Guardian"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
+        click:
+          left: "Misiones_Principiante-Mision_56.mensajeAyudaMision56" 
+      botonMisionCompletada56:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_56.misionCompletada56"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 56]: &eEl árbol gigante"
+        - "&r "
+        - "&7&oDerrotar un &f&oEnt Guardian"
+      botonMisionBloqueada56:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_55.misionCompletada55"           
 #####################################################################
 
 events:

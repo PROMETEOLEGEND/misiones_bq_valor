@@ -1,0 +1,25 @@
+conditions:
+  misionActiva56: "tag marcaMisionActiva56"
+  misionCompletada56: "tag marcaMisionCompletada56"
+
+####################################################################################################
+
+events:
+  iniciarMision56: "folder agregarMarcaMisionActiva56,iniciarObjetivoMision56"
+  agregarMarcaMisionActiva56: "tag add marcaMisionActiva56"
+  iniciarObjetivoMision56: "objective start objMatarEntGuardian"
+  
+  mensajeAyudaMision56: "notify \n&6&lMisión 56:\n&r Los Ents Guardian son unas criaturas gigantescas con aspecto de árbol, viven en todo tipo de bosques.\n&r"
+  
+  completarMision56: "folder eliminarMarcaMisionActiva56,agregarMarcaMisionCompletada56,notificacionMisionCompletada56,recompensaMision56,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva56: "tag delete marcaMisionActiva56"
+  agregarMarcaMisionCompletada56: "tag add marcaMisionCompletada56"
+  notificacionMisionCompletada56: "notify &56----------------------------------------\n&6&l¡Misión 56 completada!\n \n&56Usa &r/misiones &56para activar tu siguiente misión.\n&56----------------------------------------"
+  recompensaMision56: "command eco give %player% 1500"
+  recompensaExpClase: "mmoprofessionexperience woodcutting 500"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de leñador."
+
+####################################################################################################
+
+objectives:
+  objMatarEntGuardian: "mmobkill Ent_Guardian amount:1 events:completarMision56"
