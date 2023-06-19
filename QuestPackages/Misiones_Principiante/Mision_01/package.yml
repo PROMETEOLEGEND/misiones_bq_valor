@@ -65,7 +65,7 @@ events:
   enfriamientoKitInicial: "command lp user %player% permission settemp kit_inicial.cooldown true 24h"
   recompensaExpClase: "mmoclassexperience 50"
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
-  checkPointMuerte: "folder Checkpoint_Muerte-Controlador_Checkpoints.activacionCheckpointMuerte"
+  checkPointMuerte: "folder Checkpoint_Muerte-Controlador_Checkpoints.activarCheckpointMuerte"
   
   conversacionPaladin: "if misionCompletada1 menuKitInicial else empezarConversacionPaladin"
   empezarConversacionPaladin: "conversation Paladin"

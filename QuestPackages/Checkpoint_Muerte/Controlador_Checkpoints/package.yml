@@ -15,17 +15,13 @@ objectives:
   objComprobarEstadoCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
-  activacionCheckpointMuerte: "folder activarObjCheckpointMuerte,activarObjComprobarEstadoCheckpointMuerte,agregarMarcaCheckpointMuerteActivado,notificacionCheckpointMuerteActivado"
-  activarObjCheckpointMuerte: "objective start objCheckpointMuerte"
-  activarObjComprobarEstadoCheckpointMuerte: "objective start objComprobarEstadoCheckpointMuerte"
-  agregarMarcaCheckpointMuerteActivado: "tag add marcaCheckpointMuerteActivado"
+  activacionCheckpointMuerte: "folder activarCheckpointMuerte,notificacionCheckpointMuerteActivado"
+  activarCheckpointMuerte: "run ^objective start objCheckpointMuerte ^objective start objComprobarEstadoCheckpointMuerte ^tag add marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteActivado: "notify &aHas activado el punto de control del fuego fatuo."
   
-  desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,desactivarObjCheckpointMuerte,desactivarObjComprobarEstadoCheckpointMuerte,eliminarMarcaCheckpointMuerteActivado,notificacionCheckpointMuerteDesactivado"
+  desactivacionCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,desactivarCheckpointMuerte,notificacionCheckpointMuerteDesactivado"
   desactivarCheckpointMuerteActivo: "run ^command svar set checkpoint_muerte_activo false %player%"
-  desactivarObjCheckpointMuerte: "objective delete objCheckpointMuerte"
-  desactivarObjComprobarEstadoCheckpointMuerte: "objective delete objComprobarEstadoCheckpointMuerte"
-  eliminarMarcaCheckpointMuerteActivado: "tag delete marcaCheckpointMuerteActivado"
+  desactivarCheckpointMuerte: "run ^objective delete objCheckpointMuerte ^objective delete objComprobarEstadoCheckpointMuerte ^tag delete marcaCheckpointMuerteActivado"
   notificacionCheckpointMuerteDesactivado: "notify &cHas desactivado el punto de control del fuego fatuo."
   
   establecerCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte"
