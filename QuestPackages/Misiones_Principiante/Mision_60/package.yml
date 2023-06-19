@@ -1,0 +1,140 @@
+conversations:
+  ReyValor8:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡Saludos, valiente aventurero! Has llegado en un momento oportuno. El reino está bajo la amenaza del temible Rey de los Crustáceos. Necesito a alguien valiente y audaz para enfrentarse a este despiadado gobernante del agua. ¿Conoces la historia detrás de este Rey de los Crustáceos?"
+        pointer: "si1,no1"
+        conditions: "!misionInfoRecibidaReyGamba"
+      a1:
+        text: "Entonces ya sabrás que la historia del Rey de los Crustáceos es tan antigua como el océano mismo. Se dice que surgió de las profundidades marinas hace siglos, imbuido de una fuerza descomunal y una sed insaciable de poder. Gobernando sobre las criaturas marinas con crueldad y desdén."
+        pointer: "b1"
+      a2:
+        text: "Verás el Rey Crustáceo es una criatura colosal que aterroriza nuestro rios y pone en peligro a nuestros pescadores. La historia del Rey de los Crustáceos es tan antigua como el océano mismo. Se dice que surgió de las profundidades marinas hace siglos, imbuido de una fuerza descomunal y una sed insaciable de poder. Gobernando sobre las criaturas marinas con crueldad y desdén."
+        pointer: "b1"
+      a3:
+        text: "Tu misión será derrotar al Rey de los Crustáceos y liberar nuestros rios de su dominio malévolo. Investiga los informes de avistamientos y recopila información sobre sus puntos débiles. Prepara armas y armaduras adecuadas para enfrentar su ferocidad y convoca a tus aliados más valientes. Una vez que estés listo, dirígete hacia su guarida. ¿Te ves preparado para ello?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaReyGamba"
+        conditions: "!misionInfoRecibidaReyGamba"
+      c1:
+        text: "Eres un verdadero héroe, y confío en que cumplirás con esta misión con honor y valentía. Que los dioses te guíen en tu camino y te otorguen la fuerza necesaria para derrotar a esta bestia acuática. Nuestro reino confía en ti, valiente aventurero. ¡Adelante, y que la victoria sea tuya!"
+        events: "aceptarMisionReyGamba"
+      c2:
+        text: "Entiendo tu decisión, noble aventurero. No todos están listos para enfrentar un desafío tan formidable. Si alguna vez cambias de opinión, la misión siempre estará disponible para ti. Te deseo suerte en tus futuras aventuras."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaReyGamba,!misionAceptadaReyGamba"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaReyGamba"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Ah, valiente aventurero, has regresado triunfante! Tus hazañas han llegado a mis oídos, y estoy impaciente por escuchar los detalles de tu victoria. ¿Has derrotado al Rey de los Crustáceos?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaReyGamba"
+      misionCompletada:
+        text: "¡Magnífico trabajo, héroe! Tu valentía y habilidad en el combate han salvado a nuestros rios y a nuestro pueblo de un destino sombrío. Me siento orgulloso de contar contigo como uno de los nuestros."
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Tus esfuerzos no han pasado desapercibidos. Como muestra de mi gratitud, aquí tienes unas recompensas."
+        events: "completarMision60"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+      
+      
+    player_options:
+      si1:
+        text: "Sí, mi señor, me han llegado rumores..."
+        pointer: "a1"
+      no1:
+        text: "No, mi señor, esta es la primera vez que oigo hablar de esa criatura."
+        pointer: "a2"
+      b1:
+        text: "Suena como un desafío formidable. ¿Cuáles serian mis objetivos en esta misión?"
+        pointer: "a3"
+      si2:
+        text: "Entendido, mi señor. Me prepararé adecuadamente y enfrentaré al Rey de los Crustáceos en nombre del reino."
+        pointer: "c1"
+      no2:
+        text: "Lo siento, majestad, pero por ahora no me siento preparado para asumir esa responsabilidad. Tal vez en el futuro, cuando haya adquirido más experiencia y poder."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la información, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaReyGamba,!mazmorraCompletadaReyGamba"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a2"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "¡Así es, mi señor! Me enfrenté al Rey de los Crustáceos en su guarida y logré derrotarlo. Su reinado de terror ha llegado a su fin."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaReyGamba"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaReyGamba"
+      agradecerElogio:
+        text: "Fue una batalla feroz, pero con la determinación y el apoyo de mis aliados, logramos superar al Rey de los Crustáceos. Estoy agradecido por la oportunidad de servir a nuestro reino."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva60: "tag marcaMisionActiva60"
+  misionInfoRecibidaReyGamba: "tag marcaInfoRecibidaReyGamba"
+  misionAceptadaReyGamba: "tag marcaMisionAceptadaReyGamba"
+  mazmorraCompletadaReyGamba: "tag marcaMazmorraCompletadaReyGamba"
+  misionCompletada60: "tag marcaMisionCompletada60"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraReyGamba: "finishdungeon Gamba_Rey events:mazmorraCompletarReyGamba"
+
+#####################################################################        
+
+events:
+  iniciarMision60: "tag add marcaMisionActiva60"
+  
+  mensajeAyudaMision60: "folder mensajeAyudaMision60_1,mensajeAyudaMision60_2,mensajeAyudaMision60_3"
+  mensajeAyudaMision60_1: "notify \n&6&lMisión 60:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaReyGamba"
+  mensajeAyudaMision60_2: "notify \n&6&lMisión 60:\n&r El cristal de la mazmorra del &aRey Crustáceo &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta la Cueva de Edar.&r.\n&r conditions:misionAceptadaReyGamba,!mazmorraCompletadaReyGamba"
+  mensajeAyudaMision60_3: "notify \n&6&lMisión 60:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaReyGamba,mazmorraCompletadaReyGamba"
+  
+  agregarMarcaInfoRecibidaReyGamba: "tag add marcaInfoRecibidaReyGamba"
+  
+  aceptarMisionReyGamba: "folder agregarMarcaMisionAceptadaReyGamba,permisoMazmorraReyGamba,iniciarObjetivoCompletarMazmorraReyGamba,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaReyGamba: "tag add marcaMisionAceptadaReyGamba"
+  permisoMazmorraReyGamba: "command lp user %player% permission set mazmorra.ReyGamba"
+  iniciarObjetivoCompletarMazmorraReyGamba: "objective start completarMazmorraReyGamba"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarReyGamba: "folder agregarMarcaMazmorraCompletadaReyGamba,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaReyGamba: "tag add marcaMazmorraCompletadaReyGamba"
+  
+  completarMision60: "folder eliminarMarcasMisionActiva60,agregarMarcaMisionCompletada60,notificacionMisionCompletada60,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva60: "folder eliminarMarcaMisionActiva60,eliminarMarcaMisionInfoRecibidaReyGamba,eliminarMarcaMisionAceptadaReyGamba,eliminarMarcaMazmorraCompletadaReyGamba"
+  eliminarMarcaMisionActiva60: "tag delete marcaMisionActiva60"
+  eliminarMarcaMisionInfoRecibidaReyGamba: "tag delete marcaInfoRecibidaReyGamba"
+  eliminarMarcaMisionAceptadaReyGamba: "tag delete marcaMisionAceptadaReyGamba"
+  eliminarMarcaMazmorraCompletadaReyGamba: "tag delete marcaMazmorraCompletadaReyGamba"
+  agregarMarcaMisionCompletada60: "tag add marcaMisionCompletada60"
+  notificacionMisionCompletada60: "notify &7----------------------------------------\n&6&l¡Misión 60 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 5000"
+  recompensaExpClase: "mmoclassexperience 750"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 750 exp de clase."
