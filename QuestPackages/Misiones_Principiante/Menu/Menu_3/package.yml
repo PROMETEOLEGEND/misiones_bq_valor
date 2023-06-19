@@ -60,8 +60,6 @@ menus:
         conditions: "!Misiones_Principiante-Mision_56.misionCompletada56"
 #####################################################################
 
-#####################################################################
-
 events:
   abrirPaginaAnterior: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones"
   # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"

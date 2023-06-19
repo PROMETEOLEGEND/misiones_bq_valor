@@ -8,7 +8,7 @@ events:
   iniciarMision57: "folder agregarMarcaMisionActiva57"
   agregarMarcaMisionActiva57: "tag add marcaMisionActiva57"
   
-  mensajeAyudaMision57: "notify \n&6&lMisión 57:\n&r Para fabricar una &bForja &rnecesitarás 6 bloques de hierro, 1 palo, 1 horno y una hoguera. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
+  mensajeAyudaMision57: "notify \n&6&lMisión 57:\n&r Para fabricar una &bForja &rnecesitarás 6 bloques de hierro, 1 palo, 1 caldero y una hoguera. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
   
   completarMision57: "folder eliminarMarcaMisionActiva57,agregarMarcaMisionCompletada57,notificacionMisionCompletada57,recompensaMision57,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva57: "tag delete marcaMisionActiva57"

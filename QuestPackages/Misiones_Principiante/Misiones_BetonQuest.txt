@@ -53,8 +53,8 @@
 53. Mina 10 menas de Zafiro. (Hecho)
 54. Fabrica una espada de rubi o zafiro.  (Hecho)
 55. Supera la mazmorra del Rey Goblin. (Hecho)
-56. Derrota a un ent guardian.
-57. Fabrica un caldero para mascotas.
+56. Derrota a un ent guardian. (Hecho)
+57. Fabrica un caldero para mascotas. (Hecho)
 58. Fabrica pienso de mascotas.
 59. Tamea una mascota.
 60. Supera la mazmorra del Rey Crustáceo.
