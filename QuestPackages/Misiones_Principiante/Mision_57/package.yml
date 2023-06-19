@@ -1,0 +1,21 @@
+conditions:
+  misionActiva57: "tag marcaMisionActiva57"
+  misionCompletada57: "tag marcaMisionCompletada57"
+
+####################################################################################################
+
+events:
+  iniciarMision57: "folder agregarMarcaMisionActiva57"
+  agregarMarcaMisionActiva57: "tag add marcaMisionActiva57"
+  
+  mensajeAyudaMision57: "notify \n&6&lMisión 57:\n&r Para fabricar una &bForja &rnecesitarás 6 bloques de hierro, 1 palo, 1 horno y una hoguera. Puedes ver su crafteo en el libro de recetas de la mesa de trabajo.\n&r"
+  
+  completarMision57: "folder eliminarMarcaMisionActiva57,agregarMarcaMisionCompletada57,notificacionMisionCompletada57,recompensaMision57,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva57: "tag delete marcaMisionActiva57"
+  agregarMarcaMisionCompletada57: "tag add marcaMisionCompletada57"
+  notificacionMisionCompletada57: "notify &7----------------------------------------\n&6&l¡Misión 57 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision57: "command eco give %player% 2500"
+  recompensaExpClase: "mmoclassexperience 550"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 550 exp de clase."
+
+####################################################################################################

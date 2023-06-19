@@ -1,0 +1,6 @@
+events:
+  eventoCalderoMascotas: "folder menuCalderoMascotas,completarMisionCalderoMascotas"
+  
+  menuCalderoMascotas: "command dm open fabricacion_comidas_mascotas %player%"
+  
+  completarMisionCalderoMascotas: "if Misiones_Principiante-Mision_57.misionActiva57 Misiones_Principiante-Mision_57.completarMision57 else menuCalderoMascotas"
