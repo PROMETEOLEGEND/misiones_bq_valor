@@ -7,7 +7,18 @@ menus:
       # 49: "botonVolverMenuPrincipal"
       10: "botonMisionDisponible57,botonMisionActiva57,botonMisionCompletada57,botonMisionBloqueada57"
       11: "botonMisionDisponible58,botonMisionActiva58,botonMisionCompletada58,botonMisionBloqueada58"
-      12: "botonMisionDisponible59,botonMisionActiva59,botonMisionCompletada59,botonMisionBloqueada59"
+      12: "botonMisionDisponible60,botonMisionActiva60,botonMisionCompletada60,botonMisionBloqueada60"
+      13: "botonMisionDisponible61,botonMisionActiva61,botonMisionCompletada61,botonMisionBloqueada61"
+      14: "botonMisionDisponible62,botonMisionActiva62,botonMisionCompletada62,botonMisionBloqueada62"
+      15: "botonMisionDisponible63,botonMisionActiva63,botonMisionCompletada63,botonMisionBloqueada63"
+      16: "botonMisionDisponible64,botonMisionActiva64,botonMisionCompletada64,botonMisionBloqueada64"
+      19: "botonMisionDisponible65,botonMisionActiva65,botonMisionCompletada65,botonMisionBloqueada65"
+      # 20: "botonMisionDisponible66,botonMisionActiva66,botonMisionCompletada66,botonMisionBloqueada66"
+      # 21: "botonMisionDisponible67,botonMisionActiva67,botonMisionCompletada67,botonMisionBloqueada67"
+      # 22: "botonMisionDisponible68,botonMisionActiva68,botonMisionCompletada68,botonMisionBloqueada68"
+      # 23: "botonMisionDisponible69,botonMisionActiva69,botonMisionCompletada69,botonMisionBloqueada69"
+      # 24: "botonMisionDisponible70,botonMisionActiva70,botonMisionCompletada70,botonMisionBloqueada70"
+      # 25: "botonMisionDisponible71,botonMisionActiva71,botonMisionCompletada71,botonMisionBloqueada71"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -136,6 +147,234 @@ menus:
       botonMisionBloqueada59:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_58.misionCompletada58"
+#####################################################################
+      botonMisionDisponible60:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_59.misionCompletada59,!Misiones_Principiante-Mision_60.misionActiva60,!Misiones_Principiante-Mision_60.misionCompletada60"
+        close: true
+        text:
+        - "&6&l[Misión 60]: &eUn crustáceo colosal"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita al &f&oRey de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_60.mensajeAyudaMision60,Misiones_Principiante-Mision_60.iniciarMision60" 
+      botonMisionActiva60:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_60.misionActiva60"
+        close: true
+        text:
+        - "&6&l[Misión 60]: &eUn crustáceo colosal"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita al &f&oRey de Valor."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_60.mensajeAyudaMision60" 
+      botonMisionCompletada60:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_60.misionCompletada60"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 60]: &eUn crustáceo colosal"
+        - "&r "
+        - "&7&oVisita al &f&oRey de Valor."
+      botonMisionBloqueada60:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_59.misionCompletada59"
+#####################################################################
+      botonMisionDisponible61:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_60.misionCompletada60,!Misiones_Principiante-Mision_61.misionActiva61,!Misiones_Principiante-Mision_61.misionCompletada61"
+        close: true
+        text:
+        - "&6&l[Misión 61]: &e¿Más prestigio?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 12 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_61.mensajeAyudaMision61,Misiones_Principiante-Mision_61.iniciarMision61" 
+      botonMisionActiva61:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_61.misionActiva61"
+        close: true
+        text:
+        - "&6&l[Misión 61]: &e¿Más prestigio?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 12 de Prestigio."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_61.mensajeAyudaMision61" 
+      botonMisionCompletada61:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_61.misionCompletada61"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 61]: &e¿Más prestigio?"
+        - "&r "
+        - "&7&oSube al &f&onivel 12 de Prestigio."
+      botonMisionBloqueada61:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_60.misionCompletada60"
+#####################################################################
+      botonMisionDisponible62:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_61.misionCompletada61,!Misiones_Principiante-Mision_62.misionActiva62,!Misiones_Principiante-Mision_62.misionCompletada62"
+        close: true
+        text:
+        - "&6&l[Misión 62]: &eNecesitando minerales"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o25 Menas de Rubi."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_62.mensajeAyudaMision62,Misiones_Principiante-Mision_62.iniciarMision62" 
+      botonMisionActiva62:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_62.misionActiva62"
+        close: true
+        text:
+        - "&6&l[Misión 62]: &eNecesitando minerales"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o25 Menas de Rubi."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_62.mensajeAyudaMision62" 
+      botonMisionCompletada62:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_62.misionCompletada62"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 62]: &eNecesitando minerales"
+        - "&r "
+        - "&7&oMina &f&o25 Menas de Rubi."
+      botonMisionBloqueada62:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_61.misionCompletada61"
+#####################################################################
+      botonMisionDisponible63:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_62.misionCompletada62,!Misiones_Principiante-Mision_63.misionActiva63,!Misiones_Principiante-Mision_63.misionCompletada63"
+        close: true
+        text:
+        - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o25 Menas de Zafiro."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_63.mensajeAyudaMision63,Misiones_Principiante-Mision_63.iniciarMision63" 
+      botonMisionActiva63:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_63.misionActiva63"
+        close: true
+        text:
+        - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o25 Menas de Zafiro."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_63.mensajeAyudaMision63" 
+      botonMisionCompletada63:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_63.misionCompletada63"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
+        - "&r "
+        - "&7&oMina &f&o25 Menas de Zafiro."
+      botonMisionBloqueada63:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_62.misionCompletada62"
+#####################################################################
+      botonMisionDisponible64:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_63.misionCompletada63,!Misiones_Principiante-Mision_64.misionActiva64,!Misiones_Principiante-Mision_64.misionCompletada64"
+        close: true
+        text:
+        - "&6&l[Misión 64]: &eUna nueva aventura"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita el &f&oNether."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_64.mensajeAyudaMision64,Misiones_Principiante-Mision_64.iniciarMision64" 
+      botonMisionActiva64:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_64.misionActiva64"
+        close: true
+        text:
+        - "&6&l[Misión 64]: &eUna nueva aventura"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita el &f&oNether."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_64.mensajeAyudaMision64" 
+      botonMisionCompletada64:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_64.misionCompletada64"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 64]: &eUna nueva aventura"
+        - "&r "
+        - "&7&oVisita el &f&oNether."
+      botonMisionBloqueada64:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_63.misionCompletada63"
+#####################################################################
+      botonMisionDisponible65:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_64.misionCompletada64,!Misiones_Principiante-Mision_65.misionActiva65,!Misiones_Principiante-Mision_65.misionCompletada65"
+        close: true
+        text:
+        - "&6&l[Misión 65]: &ePescando oportunidades"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita la &f&oCasa del Pescador."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_65.mensajeAyudaMision65,Misiones_Principiante-Mision_65.iniciarMision65" 
+      botonMisionActiva65:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_65.misionActiva65"
+        close: true
+        text:
+        - "&6&l[Misión 65]: &ePescando oportunidades"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oVisita la &f&oCasa del Pescador."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_65.mensajeAyudaMision65" 
+      botonMisionCompletada65:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_65.misionCompletada65"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 65]: &ePescando oportunidades"
+        - "&r "
+        - "&7&oVisita la &f&oCasa del Pescador."
+      botonMisionBloqueada65:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_64.misionCompletada64"
 
 #####################################################################
 
