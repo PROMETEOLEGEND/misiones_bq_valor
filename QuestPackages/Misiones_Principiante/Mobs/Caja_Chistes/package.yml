@@ -1,0 +1,28 @@
+conditions:
+  estarCercaCajaChistes1: "location 1116;46;456;Zona1 5"
+  estarCercaCajaChistes2: "location 870;23;888;Zona1 5"
+  estarCercaCajaChistes3: "location 1504;77;-652;Zona1 5"
+  estarCercaCajaChistes4: "location 1116;46;456;Zona1 5"
+  estarCercaCajaChistes5: "location 1116;46;456;Zona1 5"
+
+  chisteEncontrado1: "tag marcaChisteEncontrado1"
+  chisteEncontrado2: "tag marcaChisteEncontrado2"
+  chisteEncontrado3: "tag marcaChisteEncontrado3"
+  chisteEncontrado4: "tag marcaChisteEncontrado4"
+  chisteEncontrado5: "tag marcaChisteEncontrado5"
+
+events:
+  eventoCajaChistes: "if Misiones_Principiante-Mision_51.misionActiva51 eventoRomperCajaChistes else darRupias"
+  eventoRomperCajaChistes: "folder romperCajaChistes1,romperCajaChistes2,romperCajaChistes3,romperCajaChistes4,romperCajaChistes5"
+  romperCajaChistes1: "folder encontrarChiste1,notificacionChisteEncontrado conditions:estarCercaCajaChistes1,!chisteEncontrado1"
+  encontrarChiste1: "run ^tag add marcaChisteEncontrado1 ^point chistesEncontrados 1 action:add"
+  romperCajaChistes2: "folder encontrarChiste2,notificacionChisteEncontrado conditions:estarCercaCajaChistes2,!chisteEncontrado2"
+  encontrarChiste2: "run ^tag add marcaChisteEncontrado2 ^point chistesEncontrados 1 action:add"
+  romperCajaChistes3: "folder encontrarChiste3,notificacionChisteEncontrado conditions:estarCercaCajaChistes3,!chisteEncontrado3"
+  encontrarChiste3: "run ^tag add marcaChisteEncontrado3 ^point chistesEncontrados 1 action:add"
+  romperCajaChistes4: "folder encontrarChiste4,notificacionChisteEncontrado conditions:estarCercaCajaChistes4,!chisteEncontrado4"
+  encontrarChiste4: "run ^tag add marcaChisteEncontrado4 ^point chistesEncontrados 1 action:add"
+  romperCajaChistes5: "folder encontrarChiste5,notificacionChisteEncontrado conditions:estarCercaCajaChistes5,!chisteEncontrado5"
+  encontrarChiste5: "run ^tag add marcaChisteEncontrado5 ^point chistesEncontrados 1 action:add"
+  notificacionChisteEncontrado: "notify &b¡Has encontrado un chiste mágico! Te faltan %math.calc:5-%point.chistesEncontrados.amount%."
+  darRupias: "run ^command mm i give -s %player% moneda_2 ^notify &a¡Has encontrado 10 Rupias!"

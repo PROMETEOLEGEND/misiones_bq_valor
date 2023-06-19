@@ -1,3 +1,2 @@
 events:
-  eventoBulbo: "if Misiones_Principiante-Mision_40.misionActiva40 Misiones_Principiante-Mision_40.completarMision40 else nada"
-  nada: "command asd"
+  eventoBulbo: "folder Misiones_Principiante-Mision_40.completarMision40 condition: Misiones_Principiante-Mision_40.misionActiva40"
