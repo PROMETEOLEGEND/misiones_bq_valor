@@ -1,0 +1,28 @@
+conditions:
+  misionActiva59: "tag marcaMisionActiva59"
+  misionCompletada59: "tag marcaMisionCompletada59"
+  tenerSeeweed: "permission brawlpets.seeweed"
+  tenerNorimon: "permission brawlpets.norimon"
+  tenerMascotaRequerida: "or tenerSeeweed,tenerNorimon"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision59: "notify \n&6&lMisión 59:&r Debes tamear un &bSeeweed&r, aparecen en biomas de &bPlanicie &rdurante el &bdía&r.\n&r"
+  
+  iniciarMision59: "folder agregarMarcaMisionActiva59,iniciarObjetivoMision59"
+  agregarMarcaMisionActiva59: "tag add marcaMisionActiva59"
+  iniciarObjetivoMision59: "objective start objCapturarMascota"
+  
+  completarMision59: "folder eliminarMarcaMisionActiva59,agregarMarcaMisionCompletada59,notificacionMisionCompletada59,recompensaMision59,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva59: "tag delete marcaMisionActiva59"
+  recompensaMision59: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 650"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 650 exp de clase."
+  agregarMarcaMisionCompletada59: "tag add marcaMisionCompletada59"
+  notificacionMisionCompletada59: "notify &7----------------------------------------\n&6&l¡Misión 59 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objCapturarMascota: "delay 5 ticks interval:5 conditions:tenerMascotaRequerida events:completarMision59"
