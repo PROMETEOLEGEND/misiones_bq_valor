@@ -30,7 +30,7 @@ events:
   
   establecerCheckpointMuerte: "folder Checkpoint_Muerte-Checkpoints.establecerCheckpointMuerte"
 
-  objComprobarEstadoCheckpointMuerte: "folder notifacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
+  comprobarCheckpointMuerteAMostrar: "folder agregarCheckpointMuerte,notificacionCheckpointMuerteActivo condition:checkpointMuerteActivo"
   agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
   notificacionCheckpointMuerteActivo: "folder notificacionCheckpointMuerteActivoSurvival,notificacionCheckpointMuerteActivoNether"
   notificacionCheckpointMuerteActivoSurvival: "notify &6Tienes un punto de control del fuego fatuo activo en el Mundo de Exploración de este servidor. conditions:checkpointMuerteActivoSurvival"
