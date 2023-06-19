@@ -32,6 +32,7 @@ menus:
       39: "botonMisionDisponible52,botonMisionActiva52,botonMisionCompletada52,botonMisionBloqueada52"
       40: "botonMisionDisponible53,botonMisionActiva53,botonMisionCompletada53,botonMisionBloqueada53"
       41: "botonMisionDisponible54,botonMisionActiva54,botonMisionCompletada54,botonMisionBloqueada54"
+      42: "botonMisionDisponible55,botonMisionActiva55,botonMisionCompletada55,botonMisionBloqueada55"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -1039,10 +1040,48 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 54]: &eUna espada mas afilada"
         - "&r "
-        - "&7&oMina  &f&o10 menas de Zafiro&7&o"
+        - "&7&oMina &f&o10 menas de Zafiro&7&o"
       botonMisionBloqueada54:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_53.misionCompletada53"           
+#####################################################################
+      botonMisionDisponible55:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_54.misionCompletada54,!Misiones_Principiante-Mision_55.misionActiva55,!Misiones_Principiante-Mision_55.misionCompletada55"
+        close: true
+        text:
+        - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHablar con el Rey de Valor"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_55.mensajeAyudaMision55,Misiones_Principiante-Mision_55.iniciarMision55" 
+      botonMisionActiva55:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_55.misionActiva55"
+        close: true
+        text:
+        - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oHablar con el Rey de Valor"
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
+        click:
+          left: "Misiones_Principiante-Mision_55.mensajeAyudaMision55" 
+      botonMisionCompletada55:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_55.misionCompletada55"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
+        - "&r "
+        - "&7&oHablar con el Rey de Valor"
+      botonMisionBloqueada55:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_54.misionCompletada54"           
 #####################################################################
 
 events:

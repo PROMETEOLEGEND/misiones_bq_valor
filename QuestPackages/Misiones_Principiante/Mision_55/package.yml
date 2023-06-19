@@ -1,0 +1,146 @@
+conversations:
+  ReyValor7:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: " ¡Ah, bienvenido, valeroso aventurero! Me complace verte en mi reino. Tengo una misión de vital importancia que solo alguien de tu valía podría llevar a cabo. ¿Conoces la raza Goblin?"
+        pointer: "si1,no1"
+        conditions: "!misionInfoRecibidaReyGoblin"
+      a1:
+        text: "Entonces ya sabrás que los Goblins son una raza antigua y astuta que ha habitado en las profundidades de los bosques y montañas durante siglos. Algunas tribus goblin han sido pacíficas y se han adaptado a convivir con otras razas, mientras que otras han optado por la violencia y el saqueo."
+        pointer: "b1"
+      a2:
+        text: "Los Goblins son una raza antigua y astuta que ha habitado en las profundidades de los bosques y montañas durante siglos. Se caracterizan por su pequeña estatura, piel verde, narices aguileñas y orejas puntiagudas. A lo largo de la historia, los goblins han vivido en tribus organizadas, lideradas por reyes goblin que han buscado expandir su influencia y riquezas a expensas de otros."
+        pointer: "b1"
+      a3:
+        text: "Hemos tenido problemas con una creciente amenaza goblin en los límites de nuestro reino. El Rey Goblin ha estado liderando ataques contra nuestros pueblos y aldeas, sembrando el caos y el miedo. Necesito que te enfrentes a él y lo derrotes para restaurar la paz en nuestras tierras."
+        pointer: "b2"
+      a4:
+        text: "Comprendo que esta misión no es apta para todos, pero confío en tus habilidades y coraje. Si decides aceptarla, te recompensaré generosamente y tendrás la gratitud de todo el reino. ¿Estás dispuesto a aceptar esta misión?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaReyGoblin"
+        conditions: "!misionInfoRecibidaReyGoblin"
+      c1:
+        text: "Eres un verdadero héroe. El reino cuenta contigo y confío en que tendrás éxito en tu misión. Que la buena fortuna te acompañe, valiente aventurero."
+        events: "aceptarMisionReyGoblin"
+      c2:
+        text: "Entiendo tu decisión, noble aventurero. No todos están listos para enfrentar un desafío tan formidable. Si alguna vez cambias de opinión, la misión siempre estará disponible para ti. Te deseo suerte en tus futuras aventuras."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaReyGoblin,!misionAceptadaReyGoblin"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaReyGoblin"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Ah, valiente aventurero, has regresado! Me alegra verte sano y salvo. ¿Has logrado derrotar a Rey Goblin y poner fin a las incursiones?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaReyGoblin"
+      misionCompletada:
+        text: " ¡Aventurero valiente, has cumplido con tu misión! El reino te está eternamente agradecido por tu coraje y dedicación. Cuéntame, ¿cómo lograste derrotar al Rey Goblin?"
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Tu valentía es asombrosa, querido aventurero. Has demostrado ser un verdadero líder y protector de nuestro reino. Gracias a ti, nuestros súbditos pueden vivir en paz y seguridad una vez más."
+        events: "completarMision55"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+      
+      
+    player_options:
+      si1:
+        text: "Sí, mi señor, ya he luchado contra ellos en otras ocasiones."
+        pointer: "a1"
+      no1:
+        text: "No, mi señor, esta es la primera vez que oigo hablar de los Goblins."
+        pointer: "a2"
+      b1:
+        text: "¿Están causando muchos problemas en el reino los goblins?"
+        pointer: "a3"
+      b2:
+        text: "Suena como una tarea peligrosa, mi señor."
+        pointer: "a4"
+      si2:
+        text: "Está bien, majestad. Acepto el desafío y me enfrentaré al Rey Goblin para proteger nuestro reino. Haré todo lo que esté a mi alcance para derrotarlo."
+        pointer: "c1"
+      no2:
+        text: "Lo siento, majestad, pero por ahora no me siento preparado para asumir esa responsabilidad. Tal vez en el futuro, cuando haya adquirido más experiencia y poder, pueda enfrentar al Rey Goblin."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la información, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaReyGoblin,!mazmorraCompletadaReyGoblin"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a2"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "¡Majestad, he regresado victorioso! El Rey Goblin ha sido derrotado y su reinado de caos ha llegado a su fin."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaReyGoblin"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaReyGoblin"
+      agradecerElogio:
+        text: "Fue una batalla ardua, majestad. Con la ayuda de mis aliados y utilizando estrategia y valentía, logramos enfrentarlo en su propio bastión. Sus seguidores goblin se rindieron ante nuestro poder y, finalmente, pude enfrentarlo en un combate mano a mano. Fue una lucha intensa, pero con determinación y habilidad, prevalecí."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva55: "tag marcaMisionActiva55"
+  misionInfoRecibidaReyGoblin: "tag marcaInfoRecibidaReyGoblin"
+  misionAceptadaReyGoblin: "tag marcaMisionAceptadaReyGoblin"
+  mazmorraCompletadaReyGoblin: "tag marcaMazmorraCompletadaReyGoblin"
+  misionCompletada55: "tag marcaMisionCompletada55"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraReyGoblin: "finishdungeon ReyGoblin events:mazmorraCompletarReyGoblin"
+
+#####################################################################        
+
+events:
+  iniciarMision55: "tag add marcaMisionActiva55"
+  
+  mensajeAyudaMision55: "folder mensajeAyudaMision55_1,mensajeAyudaMision55_2,mensajeAyudaMision55_3"
+  mensajeAyudaMision55_1: "notify \n&6&lMisión 55:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaReyGoblin"
+  mensajeAyudaMision55_2: "notify \n&6&lMisión 55:\n&r El cristal de la mazmorra del &aRey Goblin &rse encuentra saliendo de la ciudad de Valor y siguiendo hasta el rio grande, justo antes de llegar a la derecha.&r.\n&r conditions:misionAceptadaReyGoblin,!mazmorraCompletadaReyGoblin"
+  mensajeAyudaMision55_3: "notify \n&6&lMisión 55:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaReyGoblin,mazmorraCompletadaReyGoblin"
+  
+  agregarMarcaInfoRecibidaReyGoblin: "tag add marcaInfoRecibidaReyGoblin"
+  
+  aceptarMisionReyGoblin: "folder agregarMarcaMisionAceptadaReyGoblin,permisoMazmorraReyGoblin,iniciarObjetivoCompletarMazmorraReyGoblin,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaReyGoblin: "tag add marcaMisionAceptadaReyGoblin"
+  permisoMazmorraReyGoblin: "command lp user %player% permission set mazmorra.ReyGoblin"
+  iniciarObjetivoCompletarMazmorraReyGoblin: "objective start completarMazmorraReyGoblin"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarReyGoblin: "folder agregarMarcaMazmorraCompletadaReyGoblin,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaReyGoblin: "tag add marcaMazmorraCompletadaReyGoblin"
+  
+  completarMision55: "folder eliminarMarcasMisionActiva55,agregarMarcaMisionCompletada55,notificacionMisionCompletada55,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva55: "folder eliminarMarcaMisionActiva55,eliminarMarcaMisionInfoRecibidaReyGoblin,eliminarMarcaMisionAceptadaReyGoblin,eliminarMarcaMazmorraCompletadaReyGoblin"
+  eliminarMarcaMisionActiva55: "tag delete marcaMisionActiva55"
+  eliminarMarcaMisionInfoRecibidaReyGoblin: "tag delete marcaInfoRecibidaReyGoblin"
+  eliminarMarcaMisionAceptadaReyGoblin: "tag delete marcaMisionAceptadaReyGoblin"
+  eliminarMarcaMazmorraCompletadaReyGoblin: "tag delete marcaMazmorraCompletadaReyGoblin"
+  agregarMarcaMisionCompletada55: "tag add marcaMisionCompletada55"
+  notificacionMisionCompletada55: "notify &7----------------------------------------\n&6&l¡Misión 55 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 5000"
+  recompensaExpClase: "mmoclassexperience 700"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 700 exp de clase."
