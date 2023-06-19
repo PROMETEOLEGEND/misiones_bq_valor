@@ -612,6 +612,348 @@ menus:
       # botonMisionBloqueada71:
       #   item: "botonMisionBloqueada"
       #   conditions: "!Misiones_Principiante-Mision_70.misionCompletada70"
+#####################################################################
+      botonMisionDisponible72:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_71.misionCompletada71,!Misiones_Principiante-Mision_72.misionActiva72,!Misiones_Principiante-Mision_72.misionCompletada72"
+        close: true
+        text:
+        - "&6&l[Misión 72]: &eMejora tus herramientas"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &f&oPico de Rubi&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_72.mensajeAyudaMision72,Misiones_Principiante-Mision_72.iniciarMision72" 
+      botonMisionActiva72:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_72.misionActiva72"
+        close: true
+        text:
+        - "&6&l[Misión 72]: &eMejora tus herramientas"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica un &f&oPico de Rubi&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_72.mensajeAyudaMision72" 
+      botonMisionCompletada72:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_72.misionCompletada72"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 72]: &eMejora tus herramientas"
+        - "&r "
+        - "&7&oFabrica un &f&oPico de Rubi&7&o."
+      botonMisionBloqueada72:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_71.misionCompletada71"
+#####################################################################
+      botonMisionDisponible73:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_72.misionCompletada72,!Misiones_Principiante-Mision_73.misionActiva73,!Misiones_Principiante-Mision_73.misionCompletada73"
+        close: true
+        text:
+        - "&6&l[Misión 73]: &e¿Turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_73.mensajeAyudaMision73,Misiones_Principiante-Mision_73.iniciarMision73" 
+      botonMisionActiva73:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_73.misionActiva73"
+        close: true
+        text:
+        - "&6&l[Misión 73]: &e¿Turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_73.mensajeAyudaMision73" 
+      botonMisionCompletada73:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_73.misionCompletada73"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 73]: &e¿Turmalina?"
+        - "&r "
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+      botonMisionBloqueada73:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_72.misionCompletada72"
+#####################################################################
+      botonMisionDisponible74:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_73.misionCompletada73,!Misiones_Principiante-Mision_74.misionActiva74,!Misiones_Principiante-Mision_74.misionCompletada74"
+        close: true
+        text:
+        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_74.mensajeAyudaMision74,Misiones_Principiante-Mision_74.iniciarMision74" 
+      botonMisionActiva74:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_74.misionActiva74"
+        close: true
+        text:
+        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_74.mensajeAyudaMision74" 
+      botonMisionCompletada74:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_74.misionCompletada74"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&r "
+        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+      botonMisionBloqueada74:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_73.misionCompletada73"
+#####################################################################
+      botonMisionDisponible75:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_74.misionCompletada74,!Misiones_Principiante-Mision_75.misionActiva75,!Misiones_Principiante-Mision_75.misionCompletada75"
+        close: true
+        text:
+        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_75.mensajeAyudaMision75,Misiones_Principiante-Mision_75.iniciarMision75" 
+      botonMisionActiva75:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_75.misionActiva75"
+        close: true
+        text:
+        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_75.mensajeAyudaMision75" 
+      botonMisionCompletada75:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_75.misionCompletada75"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&r "
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+      botonMisionBloqueada75:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_74.misionCompletada74"
+#####################################################################
+      botonMisionDisponible76:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_75.misionCompletada75,!Misiones_Principiante-Mision_76.misionActiva76,!Misiones_Principiante-Mision_76.misionCompletada76"
+        close: true
+        text:
+        - "&6&l[Misión 76]: &e¿Más turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o30 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_76.mensajeAyudaMision76,Misiones_Principiante-Mision_76.iniciarMision76" 
+      botonMisionActiva76:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_76.misionActiva76"
+        close: true
+        text:
+        - "&6&l[Misión 76]: &e¿Más turmalina?"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oMina &f&o30 Menas de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_76.mensajeAyudaMision76" 
+      botonMisionCompletada76:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_76.misionCompletada76"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 76]: &e¿Más turmalina?"
+        - "&r "
+        - "&7&oMina &f&o30 Menas de Turmalina&7&o."
+      botonMisionBloqueada76:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_75.misionCompletada75"
+#####################################################################
+      botonMisionDisponible77:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_76.misionCompletada76,!Misiones_Principiante-Mision_77.misionActiva77,!Misiones_Principiante-Mision_77.misionCompletada77"
+        close: true
+        text:
+        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_77.mensajeAyudaMision77,Misiones_Principiante-Mision_77.iniciarMision77" 
+      botonMisionActiva77:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_77.misionActiva77"
+        close: true
+        text:
+        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_77.mensajeAyudaMision77" 
+      botonMisionCompletada77:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_77.misionCompletada77"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&r "
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+      botonMisionBloqueada77:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_76.misionCompletada76"
+#####################################################################
+      botonMisionDisponible78:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_77.misionCompletada77,!Misiones_Principiante-Mision_78.misionActiva78,!Misiones_Principiante-Mision_78.misionCompletada78"
+        close: true
+        text:
+        - "&6&l[Misión 78]: &eNecesitas un poco más de´prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 15 de prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para iniciar la misión."
+        click:
+          left: "Misiones_Principiante-Mision_78.mensajeAyudaMision78,Misiones_Principiante-Mision_78.iniciarMision78" 
+      botonMisionActiva78:
+        item: "botonMisionActiva"
+        conditions: "Misiones_Principiante-Mision_78.misionActiva78"
+        close: true
+        text:
+        - "&6&l[Misión 78]: &eNecesitas un poco más de´prestigio"
+        - "&r "
+        - "&aObjetivo:"
+        - "&7&oSube al &f&onivel 15 de prestigio&7&o."
+        - "&r "
+        - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+        click:
+          left: "Misiones_Principiante-Mision_78.mensajeAyudaMision78" 
+      botonMisionCompletada78:
+        item: "botonMisionCompletada"
+        conditions: "Misiones_Principiante-Mision_78.misionCompletada78"
+        text:
+        - "&2¡Misión completada!"
+        - "&6&l[Misión 78]: &eNecesitas un poco más de´prestigio"
+        - "&r "
+        - "&7&oSube al &f&onivel 15 de prestigio&7&o."
+      botonMisionBloqueada78:
+        item: "botonMisionBloqueada"
+        conditions: "!Misiones_Principiante-Mision_77.misionCompletada77"
+#####################################################################
+      # botonMisionDisponible79:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_78.misionCompletada78,!Misiones_Principiante-Mision_79.misionActiva79,!Misiones_Principiante-Mision_79.misionCompletada79"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 79]: &eSombras del pasado"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para iniciar la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_79.mensajeAyudaMision79,Misiones_Principiante-Mision_79.iniciarMision79" 
+      # botonMisionActiva79:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_79.misionActiva79"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 79]: &eSombras del pasado"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_79.mensajeAyudaMision79" 
+      # botonMisionCompletada79:
+      #   item: "botonMisionCompletada"
+      #   conditions: "Misiones_Principiante-Mision_79.misionCompletada79"
+      #   text:
+      #   - "&2¡Misión completada!"
+      #   - "&6&l[Misión 79]: &eSombras del pasado"
+      #   - "&r "
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      # botonMisionBloqueada79:
+      #   item: "botonMisionBloqueada"
+      #   conditions: "!Misiones_Principiante-Mision_78.misionCompletada78"
+#####################################################################
+      # botonMisionDisponible80:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_79.misionCompletada79,!Misiones_Principiante-Mision_80.misionActiva80,!Misiones_Principiante-Mision_80.misionCompletada80"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 80]: &eUna nueva ciudad"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para iniciar la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_80.mensajeAyudaMision80,Misiones_Principiante-Mision_80.iniciarMision80" 
+      # botonMisionActiva80:
+      #   item: "botonMisionActiva"
+      #   conditions: "Misiones_Principiante-Mision_80.misionActiva80"
+      #   close: true
+      #   text:
+      #   - "&6&l[Misión 80]: &eUna nueva ciudad"
+      #   - "&r "
+      #   - "&aObjetivo:"
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      #   - "&r "
+      #   - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
+      #   click:
+      #     left: "Misiones_Principiante-Mision_80.mensajeAyudaMision80" 
+      # botonMisionCompletada80:
+      #   item: "botonMisionCompletada"
+      #   conditions: "Misiones_Principiante-Mision_80.misionCompletada80"
+      #   text:
+      #   - "&2¡Misión completada!"
+      #   - "&6&l[Misión 80]: &eUna nueva ciudad"
+      #   - "&r "
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
+      # botonMisionBloqueada80:
+      #   item: "botonMisionBloqueada"
+      #   conditions: "!Misiones_Principiante-Mision_79.misionCompletada79"
 
 #####################################################################
 
