@@ -14,7 +14,7 @@ events:
   completarMision56: "folder eliminarMarcaMisionActiva56,agregarMarcaMisionCompletada56,notificacionMisionCompletada56,recompensaMision56,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva56: "tag delete marcaMisionActiva56"
   agregarMarcaMisionCompletada56: "tag add marcaMisionCompletada56"
-  notificacionMisionCompletada56: "notify &56----------------------------------------\n&6&l¡Misión 56 completada!\n \n&56Usa &r/misiones &56para activar tu siguiente misión.\n&56----------------------------------------"
+  notificacionMisionCompletada56: "notify &7----------------------------------------\n&6&l¡Misión 56 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision56: "command eco give %player% 1500"
   recompensaExpClase: "mmoprofessionexperience woodcutting 500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de leñador."
