@@ -1,0 +1,25 @@
+conditions:
+  misionActiva69: "tag marcaMisionActiva69"
+  misionCompletada69: "tag marcaMisionCompletada69"
+
+####################################################################################################
+
+events:
+  iniciarMision69: "folder agregarMarcaMisionActiva69,iniciarObjetivoMision69"
+  agregarMarcaMisionActiva69: "tag add marcaMisionActiva69"
+  iniciarObjetivoMision69: "objective start objMatarGolemMythril"
+  
+  mensajeAyudaMision67: "notify \n&6&lMisión 67:\n&r Los &bGolems de Mythril &rson unas criaturas monolíticas que parecen estar hechas de &bPiedra&r y &bMythril&r, se invocan con un huevo que puedes fabricar, puedes ver la receta de este en una &bMesa de trabajo&r\n&r"
+
+  completarMision69: "folder eliminarMarcaMisionActiva69,agregarMarcaMisionCompletada69,notificacionMisionCompletada69,recompensaMision69,recompensaExpPrestigio,notificacionRecompensaExpPrestigio delay:1"
+  eliminarMarcaMisionActiva69: "tag delete marcaMisionActiva69"
+  agregarMarcaMisionCompletada69: "tag add marcaMisionCompletada69"
+  notificacionMisionCompletada69: "notify &7----------------------------------------\n&6&l¡Misión 69 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision69: "command eco give %player% 1500"
+  recompensaExpPrestigio: "mmoprofessionexperience prestigio 500"
+  notificacionRecompensaExpPrestigio: "notify &aHas conseguido 500 exp de prestigio."
+
+####################################################################################################
+
+objectives:
+  objMatarGolemMythril: "mmobkill quartzgolem amount:1 events:completarMision69"
