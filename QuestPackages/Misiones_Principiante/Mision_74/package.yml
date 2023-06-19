@@ -1,0 +1,26 @@
+conditions:
+  misionActiva74: "tag marcaMisionActiva74"
+  misionCompletada74: "tag marcaMisionCompletada74"
+  nivel15Clase: "mmoclass * 15"
+
+####################################################################################################
+
+events:
+  iniciarMision74: "folder agregarMarcaMisionActiva74,iniciarObjetivoMision74"
+  agregarMarcaMisionActiva74: "tag add marcaMisionActiva74"
+  iniciarObjetivoMision74: "objective start objSubirNivel15Clase"
+  
+  mensajeAyudaMision74: "notify \n&6&lMisión 74:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision74: "folder eliminarMarcaMisionActiva74,agregarMarcaMisionCompletada74,notificacionMisionCompletada74,recompensaMision74,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva74: "tag delete marcaMisionActiva74"
+  agregarMarcaMisionCompletada74: "tag add marcaMisionCompletada74"
+  notificacionMisionCompletada74: "notify &7----------------------------------------\n&6&l¡Misión 74 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision74: "command eco give %player% 1500"
+  recompensaExpClase: "mmoclassexperience 850"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objSubirNivel15Clase: "delay 5 ticks interval:5 conditions:nivel15Clase events:completarMision74"

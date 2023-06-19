@@ -1,0 +1,26 @@
+conditions:
+  misionActiva72: "tag marcaMisionActiva72"
+  misionCompletada72: "tag marcaMisionCompletada72"
+  tenerPicoRubi: "mmoitem HERRAMIENTAS PICO_RUBI"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision72: "notify \n&6&lMisión 72:&r Debes fabricar un &bPico de Rubi&r, para ello necesitarás &b4 lingotes de Rubi &ry un &bPico de netherita&r.\n&r"
+  
+  iniciarMision72: "folder agregarMarcaMisionActiva72,iniciarObjetivoMision72"
+  agregarMarcaMisionActiva72: "tag add marcaMisionActiva72"
+  iniciarObjetivoMision72: "objective start objFabricarPicoRubi"
+  
+  completarMision72: "folder eliminarMarcaMisionActiva72,agregarMarcaMisionCompletada72,notificacionMisionCompletada72,recompensaMision72,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva72: "tag delete marcaMisionActiva72"
+  recompensaMision72: "command eco give %player% 1000"
+  recompensaExpClase: "mmoclassexperience 600"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 600 exp de clase."
+  agregarMarcaMisionCompletada72: "tag add marcaMisionCompletada72"
+  notificacionMisionCompletada72: "notify &7----------------------------------------\n&6&l¡Misión 72 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarPicoRubi: "delay 5 ticks interval:5 conditions:tenerPicoRubi events:completarMision72"

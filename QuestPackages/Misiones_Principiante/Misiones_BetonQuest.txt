@@ -51,7 +51,7 @@
 51. Habla con el bufón y reclama un 2do hogar.
 52. Mina 10 menas de Rubi. (Hecho)
 53. Mina 10 menas de Zafiro. (Hecho)
-54. Fabrica una espada de rubi o zafiro.  (Hecho)
+54. Fabrica una espada de zafiro.  (Hecho)
 55. Supera la mazmorra del Rey Goblin. (Hecho)
 56. Derrota a un ent guardian. (Hecho)
 57. Fabrica un caldero para mascotas. (Hecho)
@@ -63,18 +63,18 @@
 63. Mina 25 menas de Zafiro. (Hecho)
 64. Visita el nether. (Hecho)
 65. Visita la casa del pescador. (Hecho)
-66. Supera la mazmorra de Medusa. (Por hacer)
+66. Supera la mazmorra de Medusa. (Hecho)
 67. Derrota un golem de Rubi. (Hecho)
 68. Derrota un golem de Zafiro. (Hecho)
 69. Derrota un golem de Mythril. (Hecho)
 70. Subir al nivel 14 prestigio. (Hecho)
-71. Supera la mazmorra de Bjorn.
-72. Fabrica un pico de Rubi o Zafiro.
-73. Mina 10 menas de Turmalina.
-74. Subir al nivel 15 de clase
-75. Fabrica una ballesta de Turmalina.
-76. Mina 30 menas de Turmalina.
-77. Fabrica una pechera de Turmalina.
-78. Subir al nivel 15 de prestigio.
-79. Supera la mazmorra del Nigromante.
-80. Visita la ciudad de Crafburgo.
+71. Supera la mazmorra de Bjorn. (Por hacer)
+72. Fabrica un pico de Rubi o Zafiro. (Hecho)
+73. Mina 10 menas de Turmalina. (Hecho)
+74. Subir al nivel 15 de clase. (Hecho)
+75. Fabrica una ballesta de Turmalina. (Hecho)
+76. Mina 30 menas de Turmalina. (Hecho)
+77. Fabrica una pechera de Turmalina. (Hecho)
+78. Subir al nivel 15 de prestigio. (Hecho)
+79. Supera la mazmorra del Nigromante. (Por hacer)
+80. Visita la ciudad de Crafburgo. (Por hacer)

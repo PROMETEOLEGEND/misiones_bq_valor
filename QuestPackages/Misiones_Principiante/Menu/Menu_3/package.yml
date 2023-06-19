@@ -19,15 +19,15 @@ menus:
       23: "botonMisionDisponible69,botonMisionActiva69,botonMisionCompletada69,botonMisionBloqueada69"
       24: "botonMisionDisponible70,botonMisionActiva70,botonMisionCompletada70,botonMisionBloqueada70"
       # 25: "botonMisionDisponible71,botonMisionActiva71,botonMisionCompletada71,botonMisionBloqueada71"
-      # 28: "botonMisionDisponible72,botonMisionActiva72,botonMisionCompletada72,botonMisionBloqueada72"
-      # 29: "botonMisionDisponible73,botonMisionActiva73,botonMisionCompletada73,botonMisionBloqueada73"
-      # 30: "botonMisionDisponible74,botonMisionActiva74,botonMisionCompletada74,botonMisionBloqueada74"
-      # 31: "botonMisionDisponible75,botonMisionActiva75,botonMisionCompletada75,botonMisionBloqueada75"
-      # 32: "botonMisionDisponible76,botonMisionActiva76,botonMisionCompletada76,botonMisionBloqueada76"
-      # 33: "botonMisionDisponible77,botonMisionActiva77,botonMisionCompletada77,botonMisionBloqueada77"
-      # 34: "botonMisionDisponible78,botonMisionActiva78,botonMisionCompletada78,botonMisionBloqueada78"
+      28: "botonMisionDisponible72,botonMisionActiva72,botonMisionCompletada72,botonMisionBloqueada72"
+      29: "botonMisionDisponible73,botonMisionActiva73,botonMisionCompletada73,botonMisionBloqueada73"
+      30: "botonMisionDisponible74,botonMisionActiva74,botonMisionCompletada74,botonMisionBloqueada74"
+      31: "botonMisionDisponible75,botonMisionActiva75,botonMisionCompletada75,botonMisionBloqueada75"
+      32: "botonMisionDisponible76,botonMisionActiva76,botonMisionCompletada76,botonMisionBloqueada76"
+      33: "botonMisionDisponible77,botonMisionActiva77,botonMisionCompletada77,botonMisionBloqueada77"
+      34: "botonMisionDisponible78,botonMisionActiva78,botonMisionCompletada78,botonMisionBloqueada78"
       # 37: "botonMisionDisponible79,botonMisionActiva79,botonMisionCompletada79,botonMisionBloqueada79"
-      # 38: "botonMisionDisponible80,botonMisionActiva80,botonMisionCompletada80,botonMisionBloqueada80"
+      38: "botonMisionDisponible80,botonMisionActiva80,botonMisionCompletada80,botonMisionBloqueada80"
     items:
       botonPaginaAnterior:
         item: "paginaAnterior"
@@ -51,7 +51,7 @@ menus:
         - "&6&l[Misión 57]: &eUn caldero de crianza"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica y usa un &f&oCaldero de mascotas."
+        - "&7&oFabrica y usa un &f&oCaldero de mascotas&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -64,7 +64,7 @@ menus:
         - "&6&l[Misión 57]: &eUn caldero de crianza"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica y usa un &f&oCaldero de mascotas."
+        - "&7&oFabrica y usa un &f&oCaldero de mascotas&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -76,7 +76,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 57]: &eUn caldero de crianza"
         - "&r "
-        - "&7&oFabrica y usa un &f&oCaldero de mascotas."
+        - "&7&oFabrica y usa un &f&oCaldero de mascotas&7&o."
       botonMisionBloqueada57:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_56.misionCompletada56"
@@ -89,7 +89,7 @@ menus:
         - "&6&l[Misión 58]: &eComida de mascotas"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&oPienso básico de mascotas."
+        - "&7&oFabrica &f&oPienso básico de mascotas&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -102,7 +102,7 @@ menus:
         - "&6&l[Misión 58]: &eComida de mascotas"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&oPienso básico de mascotas."
+        - "&7&oFabrica &f&oPienso básico de mascotas&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -114,7 +114,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 58]: &eComida de mascotas"
         - "&r "
-        - "&7&oFabrica &f&oPienso básico de mascotas."
+        - "&7&oFabrica &f&oPienso básico de mascotas&7&o."
       botonMisionBloqueada58:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_57.misionCompletada57"
@@ -127,7 +127,7 @@ menus:
         - "&6&l[Misión 59]: &eUna nueva mascota"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oTamea un &f&oSeeweed."
+        - "&7&oTamea un &f&oSeeweed&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -140,7 +140,7 @@ menus:
         - "&6&l[Misión 59]: &eUna nueva mascota"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oTamea un &f&oSeeweed."
+        - "&7&oTamea un &f&oSeeweed&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -152,7 +152,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 59]: &eUna nueva mascota"
         - "&r "
-        - "&7&oTamea un &f&oSeeweed."
+        - "&7&oTamea un &f&oSeeweed&7&o."
       botonMisionBloqueada59:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_58.misionCompletada58"
@@ -165,7 +165,7 @@ menus:
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -178,7 +178,7 @@ menus:
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -190,7 +190,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 60]: &eUn crustáceo colosal"
         - "&r "
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       botonMisionBloqueada60:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_59.misionCompletada59"
@@ -203,7 +203,7 @@ menus:
         - "&6&l[Misión 61]: &e¿Más prestigio?"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 12 de Prestigio."
+        - "&7&oSube al &f&onivel 12 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -216,7 +216,7 @@ menus:
         - "&6&l[Misión 61]: &e¿Más prestigio?"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 12 de Prestigio."
+        - "&7&oSube al &f&onivel 12 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -228,7 +228,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 61]: &e¿Más prestigio?"
         - "&r "
-        - "&7&oSube al &f&onivel 12 de Prestigio."
+        - "&7&oSube al &f&onivel 12 de Prestigio&7&o."
       botonMisionBloqueada61:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_60.misionCompletada60"
@@ -241,7 +241,7 @@ menus:
         - "&6&l[Misión 62]: &eNecesitando minerales"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o25 Menas de Rubi."
+        - "&7&oMina &f&o25 Menas de Rubi&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -254,7 +254,7 @@ menus:
         - "&6&l[Misión 62]: &eNecesitando minerales"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o25 Menas de Rubi."
+        - "&7&oMina &f&o25 Menas de Rubi&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -266,7 +266,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 62]: &eNecesitando minerales"
         - "&r "
-        - "&7&oMina &f&o25 Menas de Rubi."
+        - "&7&oMina &f&o25 Menas de Rubi&7&o."
       botonMisionBloqueada62:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_61.misionCompletada61"
@@ -279,7 +279,7 @@ menus:
         - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o25 Menas de Zafiro."
+        - "&7&oMina &f&o25 Menas de Zafiro&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -292,7 +292,7 @@ menus:
         - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o25 Menas de Zafiro."
+        - "&7&oMina &f&o25 Menas de Zafiro&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -304,7 +304,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 63]: &eNecesitando minerales, parte 2"
         - "&r "
-        - "&7&oMina &f&o25 Menas de Zafiro."
+        - "&7&oMina &f&o25 Menas de Zafiro&7&o."
       botonMisionBloqueada63:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_62.misionCompletada62"
@@ -317,7 +317,7 @@ menus:
         - "&6&l[Misión 64]: &eUna nueva aventura"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita el &f&oNether."
+        - "&7&oVisita el &f&oNether&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -330,7 +330,7 @@ menus:
         - "&6&l[Misión 64]: &eUna nueva aventura"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita el &f&oNether."
+        - "&7&oVisita el &f&oNether&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -342,7 +342,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 64]: &eUna nueva aventura"
         - "&r "
-        - "&7&oVisita el &f&oNether."
+        - "&7&oVisita el &f&oNether&7&o."
       botonMisionBloqueada64:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_63.misionCompletada63"
@@ -355,7 +355,7 @@ menus:
         - "&6&l[Misión 65]: &ePescando oportunidades"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita la &f&oCasa del Pescador."
+        - "&7&oVisita la &f&oCasa del Pescador&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -368,7 +368,7 @@ menus:
         - "&6&l[Misión 65]: &ePescando oportunidades"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVisita la &f&oCasa del Pescador."
+        - "&7&oVisita la &f&oCasa del Pescador&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -380,7 +380,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 65]: &ePescando oportunidades"
         - "&r "
-        - "&7&oVisita la &f&oCasa del Pescador."
+        - "&7&oVisita la &f&oCasa del Pescador&7&o."
       botonMisionBloqueada65:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_64.misionCompletada64"
@@ -393,7 +393,7 @@ menus:
         - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -406,7 +406,7 @@ menus:
         - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -418,7 +418,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 66]: &eUna criatura con una mirada petrificante"
         - "&r "
-        - "&7&oVe a hablar con el &f&oRey de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       botonMisionBloqueada66:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_65.misionCompletada65"
@@ -431,7 +431,7 @@ menus:
         - "&6&l[Misión 67]: &eCazando criaturas antiguas"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Rubi."
+        - "&7&oDerrota a un &f&oGolem de Rubi&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -444,7 +444,7 @@ menus:
         - "&6&l[Misión 67]: &eCazando criaturas antiguas"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Rubi."
+        - "&7&oDerrota a un &f&oGolem de Rubi&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -456,7 +456,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 67]: &eCazando criaturas antiguas"
         - "&r "
-        - "&7&oDerrota a un &f&oGolem de Rubi."
+        - "&7&oDerrota a un &f&oGolem de Rubi&7&o."
       botonMisionBloqueada67:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_66.misionCompletada66"
@@ -469,7 +469,7 @@ menus:
         - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Zafiro."
+        - "&7&oDerrota a un &f&oGolem de Zafiro&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -482,7 +482,7 @@ menus:
         - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Zafiro."
+        - "&7&oDerrota a un &f&oGolem de Zafiro&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -494,7 +494,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 68]: &eCazando criaturas antiguas, parte 2"
         - "&r "
-        - "&7&oDerrota a un &f&oGolem de Zafiro."
+        - "&7&oDerrota a un &f&oGolem de Zafiro&7&o."
       botonMisionBloqueada68:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_67.misionCompletada67"
@@ -507,7 +507,7 @@ menus:
         - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Mythril."
+        - "&7&oDerrota a un &f&oGolem de Mythril&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -520,7 +520,7 @@ menus:
         - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota a un &f&oGolem de Mythril."
+        - "&7&oDerrota a un &f&oGolem de Mythril&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -532,7 +532,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 69]: &eCazando criaturas antiguas, parte 3"
         - "&r "
-        - "&7&oDerrota a un &f&oGolem de Mythril."
+        - "&7&oDerrota a un &f&oGolem de Mythril&7&o."
       botonMisionBloqueada69:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_68.misionCompletada68"
@@ -545,7 +545,7 @@ menus:
         - "&6&l[Misión 70]: &eNecesitas más prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 14 de Prestigio."
+        - "&7&oSube al &f&onivel 14 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -558,7 +558,7 @@ menus:
         - "&6&l[Misión 70]: &eNecesitas más prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 14 de Prestigio."
+        - "&7&oSube al &f&onivel 14 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -570,7 +570,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 70]: &eNecesitas más prestigio"
         - "&r "
-        - "&7&oSube al &f&onivel 14 de Prestigio."
+        - "&7&oSube al &f&onivel 14 de Prestigio&7&o."
       botonMisionBloqueada70:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_69.misionCompletada69"
@@ -583,7 +583,7 @@ menus:
       #   - "&6&l[Misión 71]: &eUn guerrero implacable"
       #   - "&r "
       #   - "&aObjetivo:"
-      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       #   - "&r "
       #   - "&7[&aClic izquierdo&7] para iniciar la misión."
       #   click:
@@ -596,7 +596,7 @@ menus:
       #   - "&6&l[Misión 71]: &eUn guerrero implacable"
       #   - "&r "
       #   - "&aObjetivo:"
-      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       #   - "&r "
       #   - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
       #   click:
@@ -608,7 +608,7 @@ menus:
       #   - "&2¡Misión completada!"
       #   - "&6&l[Misión 71]: &eUn guerrero implacable"
       #   - "&r "
-      #   - "&7&oVe a hablar con el &f&oRey de Valor."
+      #   - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       # botonMisionBloqueada71:
       #   item: "botonMisionBloqueada"
       #   conditions: "!Misiones_Principiante-Mision_70.misionCompletada70"

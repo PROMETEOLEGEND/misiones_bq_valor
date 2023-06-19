@@ -1,0 +1,26 @@
+conditions:
+  misionActiva77: "tag marcaMisionActiva77"
+  misionCompletada77: "tag marcaMisionCompletada77"
+  tenerPecheraTurmalina: "mmoitem ARMADURAS_CUSTOM PECHERA_TURMALINA"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision77: "notify \n&6&lMisión 77:&r Debes fabricar una &bPechera de Turmalina&r, para ello necesitarás &buna Pechera de Zafiro&r, &buna Pechera de Rubi&r, &b5 lingotes de Turmalina&r y un &bPapel Mágico&r.\n&r"
+  
+  iniciarMision77: "folder agregarMarcaMisionActiva77,iniciarObjetivoMision77"
+  agregarMarcaMisionActiva77: "tag add marcaMisionActiva77"
+  iniciarObjetivoMision77: "objective start objFabricarPecheraTurmalina"
+  
+  completarMision77: "folder eliminarMarcaMisionActiva77,agregarMarcaMisionCompletada77,notificacionMisionCompletada77,recompensaMision77,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva77: "tag delete marcaMisionActiva77"
+  recompensaMision77: "command eco give %player% 800"
+  recompensaExpClase: "mmoclassexperience 650"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 650 exp de clase."
+  agregarMarcaMisionCompletada77: "tag add marcaMisionCompletada77"
+  notificacionMisionCompletada77: "notify &7----------------------------------------\n&6&l¡Misión 77 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarPecheraTurmalina: "delay 5 ticks interval:5 conditions:tenerPecheraTurmalina events:completarMision77"

@@ -1,0 +1,26 @@
+conditions:
+  misionActiva75: "tag marcaMisionActiva75"
+  misionCompletada75: "tag marcaMisionCompletada75"
+  tenerBallestaTurmalina: "mmoitem BOW BALLESTA_TURMALINA"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision75: "notify \n&6&lMisión 75:&r Debes fabricar una &bBallesta de Turmalina&r, para ello necesitarás &b4 lingotes de Turmalina &ry una &bBallesta&r.\n&r"
+  
+  iniciarMision75: "folder agregarMarcaMisionActiva75,iniciarObjetivoMision75"
+  agregarMarcaMisionActiva75: "tag add marcaMisionActiva75"
+  iniciarObjetivoMision75: "objective start objFabricarBallestaTurmalina"
+  
+  completarMision75: "folder eliminarMarcaMisionActiva75,agregarMarcaMisionCompletada75,notificacionMisionCompletada75,recompensaMision75,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva75: "tag delete marcaMisionActiva75"
+  recompensaMision75: "command eco give %player% 900"
+  recompensaExpClase: "mmoclassexperience 650"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 650 exp de clase."
+  agregarMarcaMisionCompletada75: "tag add marcaMisionCompletada75"
+  notificacionMisionCompletada75: "notify &7----------------------------------------\n&6&l¡Misión 75 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objFabricarBallestaTurmalina: "delay 5 ticks interval:5 conditions:tenerBallestaTurmalina events:completarMision75"

@@ -1,0 +1,35 @@
+conditions:
+  misionActiva73: "tag marcaMisionActiva73"
+  misionCompletada73: "tag marcaMisionCompletada73"
+  minarbloques: "point bloquesMinados 10"
+
+####################################################################################################
+
+events:
+  iniciarMision73: "folder agregarMarcaMisionActiva73,iniciarObjetivoMision73"
+  agregarMarcaMisionActiva73: "tag add marcaMisionActiva73"
+  iniciarObjetivoMision73: "run ^objective start objMinarTurmalina ^objective start objMinarTurmalinaProfunda ^objective start objetivoMinarTurmalina"
+  eliminarObjetivosMision73: "run ^objective delete objMinarTurmalina ^objective delete objMinarTurmalinaProfunda ^objective delete objetivoMinarTurmalina"  
+  
+  mensajeAyudaMision73: "notify \n&6&lMisión 73:\n&r Debes minar &b10 bloques de Turmalina&r, para ello necesitarás fabricar un &bPico de Rubi/Zafiro&r o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  completarMision73: "folder eliminarMarcaMisionActiva73,eliminarObjetivosMision73,eliminarPuntosMision73,agregarMarcaMisionCompletada73,notificacionMisionCompletada73,recompensaMision73,recompensaExpMineria,notificacionRecompensaExpMineria"
+  eliminarMarcaMisionActiva73: "tag delete marcaMisionActiva73"
+  eliminarPuntosMision73: "point bloquesMinados 10 action:subtract"
+  agregarMarcaMisionCompletada73: "tag add marcaMisionCompletada73"
+  notificacionMisionCompletada73: "notify &7----------------------------------------\n&6&l¡Misión 73 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision73: "command eco give %player% 1000"
+  recompensaExpMineria: "mmoprofessionexperience mining 750"
+  notificacionRecompensaExpMineria: "notify &aHas conseguido 750 exp de mineria."
+  agregarPuntosMision73: "folder sumarPuntos,notificacionPuntos"
+  sumarPuntos: "point bloquesMinados 1 action:add"
+  notificacionPuntos: "notify &eHas minado %point.bloquesMinados.amount% Menas de Turmalina."
+
+####################################################################################################
+
+objectives:
+  objMinarTurmalina: "mmocorebreakblock 1 block:21 events:agregarPuntosMision73 persistent"
+  objMinarTurmalinaProfunda: "mmocorebreakblock 1 block:22 events:agregarPuntosMision73 persistent"
+  objetivoMinarTurmalina: "delay 5 ticks interval:5 conditions:minarbloques events:completarMision73 persistent"
+  
+

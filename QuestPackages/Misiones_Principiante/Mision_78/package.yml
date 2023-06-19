@@ -1,0 +1,26 @@
+conditions:
+  misionActiva78: "tag marcaMisionActiva78"
+  misionCompletada78: "tag marcaMisionCompletada78"
+  nivel15Prestigio: "mmoprofession prestigio 15"
+
+####################################################################################################
+
+events:
+  iniciarMision78: "folder agregarMarcaMisionActiva78,iniciarObjetivoMision78"
+  agregarMarcaMisionActiva78: "tag add marcaMisionActiva78"
+  iniciarObjetivoMision78: "objective start objLlegarNivel15Prestigio"
+  
+  mensajeAyudaMision78: "notify \n&6&lMisión 78:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel de prestigio. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
+  
+  completarMision78: "folder eliminarMarcaMisionActiva78,agregarMarcaMisionCompletada78,notificacionMisionCompletada78,recompensaMision78,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva78: "tag delete marcaMisionActiva78"
+  agregarMarcaMisionCompletada78: "tag add marcaMisionCompletada78"
+  notificacionMisionCompletada78: "notify &7----------------------------------------\n&6&l¡Misión 78 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision78: "command eco give %player% 1250"
+  recompensaExpClase: "mmoclassexperience 600"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 600 exp de clase."
+
+####################################################################################################
+
+objectives:
+  objLlegarNivel15Prestigio: "delay 5 ticks interval:5 conditions:nivel15Prestigio events:completarMision78"
