@@ -15,14 +15,16 @@ conversations:
         text: "¡Maravilloso! Hay cinco chistes mágicos en total. Aquí tienes una lista de lugares donde podrías encontrarlos: poblado goblin, las cloacas bajo la plaza de valor, en la biblioteca de palacio, la tienda de mascotas y la granja de cerdos. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja."
         pointer: "quepasasiencuentro,repetirinfo"
       repetirinfochistes:
-        text: "La lista de lugares donde podrías encontrarlos es: poblado goblin, las cloacas bajo la plaza de valor, en la biblioteca de palacio, la tienda de mascotas y la granja de cerdos. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja."
+        text: "La lista de lugares donde podrías encontrarlos es: Poblado Goblin, en el río subterráneo de Valor, en la Biblioteca de Palacio, la Tienda de Mascotas y la Granja de cerdos. Visita cada uno de estos lugares y localiza los chistes, estarán en el interior de alguna caja."
         pointer: "quepasasiencuentro"
       contarfinal:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con un espacio especial donde podrás construir y guardar tu hogar."
         pointer: "despedida"
+        conditions: "!permisosYaEntregados"
       contarfinalmas1:
         text: "Una vez que hayas encontrado los cinco chistes mágicos, regresa a mí y me los contarás. Si logras hacerme reír con tu interpretación de los chistes, te recompensaré con una fantástica recompensa."
         pointer: "despedida"
+        conditions: "permisosYaEntregados"
       adios2:
         text: "¡Eso espero! Buena suerte, valiente aventurero. Estaré esperando aquí con ansias tus chistes mágicos. ¡Diviértete en tu búsqueda!"
       saludo2:
@@ -108,12 +110,27 @@ conditions:
   misionActiva51: "tag marcaMisionActiva51"
   misionCompletada51: "tag marcaMisionCompletada51"
 
+  permisoHogarAdicional: "permission essentials.sethome.multiple.mejora_1"
+  permisoHogarAdicional2: "permission essentials.sethome.multiple.mejora_2"
+  permisoVIP: "permission group.ultra"
+  permisosYaEntregados: "or permisoHogarAdicional,permisoHogarAdicional2,permisoVIP"
+
+  misionAceptadaBufon: "tag marcaMisionAceptadaBufon"
+
+  cantidadChistesEncontrados: "point chistesEncontrados 5"
+
 #####################################################################        
  
 events:
   iniciarMision51: "tag add marcaMisionActiva51"
   
-  mensajeAyudaMision51: "notify \n&6&lMisión 51:\n&r El &bVikingo &rse encuentra en su puesto de la Plaza de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  mensajeAyudaMision29: "if !misionAceptadaBufon mensajeAyudaMision29_2 else mensajeAyudaMision29_1"
+
+  mensajeAyudaMision29_1: "run ^command calebcompass show %player% ^compasstrack 1095;18;702;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+
+  mensajeAyudaMision29_2: "notify \n&6&lMisión 51:\n&r Para .\n&r"
+  
+  
   
   completarMision51: "folder eliminarMarcaMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darRunaHogar,enfriamientoRunaHogar,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva51: "tag delete marcaMisionActiva51"

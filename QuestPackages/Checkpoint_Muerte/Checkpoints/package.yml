@@ -1,6 +1,6 @@
 events:
   establecerCheckpointMuerte: "folder guardarCheckpointMuerte,agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
-  guardarCheckpointMuerte: "run ^command svar set checkpoint_muerte_x %ph.angelchest_x_1% %player% ^command svar set checkpoint_muerte_y %ph.angelchest_y_1% %player% ^command svar set checkpoint_muerte_z %ph.angelchest_z_1% %player% ^command svar set checkpoint_muerte_mundo %ph.angelchest_world_1% %player% ^command svar set checkpoint_muerte_activo true %player%"
+  guardarCheckpointMuerte: "run ^command svar set checkpoint_muerte_x %location.x% %player% ^command svar set checkpoint_muerte_y %location.y% %player% ^command svar set checkpoint_muerte_z %location.z% %player% ^command svar set checkpoint_muerte_mundo %location.world% %player% ^command svar set checkpoint_muerte_activo true %player%"
   agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
   iniciarObjLlegarCheckpointMuerte: "objective start objLlegarCheckpointMuerte"
   notificacionCheckpointMuerte: "notify &6Se ha fijado tu lugar de muerte en la brújula."
