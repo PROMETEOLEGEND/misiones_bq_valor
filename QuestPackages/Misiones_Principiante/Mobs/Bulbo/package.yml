@@ -1,2 +1,2 @@
 events:
-  eventoBulbo: "folder Misiones_Principiante-Mision_40.completarMision40 condition: Misiones_Principiante-Mision_40.misionActiva40"
+  eventoBulbo: "folder Misiones_Principiante-Mision_40.completarMision40 condition:Misiones_Principiante-Mision_40.misionActiva40"
