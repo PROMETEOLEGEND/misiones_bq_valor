@@ -1,5 +1,5 @@
 events:
-  eventoPiensoMascotas: "folder menuPiensoMascotas,completarMisionPiensoMascotas"
+  eventoPiensoMascotas: "folder completarMisionPiensoMascotas"
   
   menuPiensoMascotas: "command mcpets petFood tameo_comida_1 %player%"
   
