@@ -1,0 +1,22 @@
+conditions:
+  requerimientoEntradaPuerta: "location $ubicacionSalida$ 5"
+  requerimientoSalidaPuerta: "location $ubicacionEntrada$ 5"
+
+events:
+  eventoPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:requerimientoEntradaPuerta"
+  notificacionEntrada: "notify io:title $mensajeEntrada$ condition:requerimientoEntradaPuerta"
+  notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$ condition:requerimientoEntradaPuerta"
+  eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$ condition:requerimientoSalidaPuerta"
+  notificacionSalida: "notify io:title $mensajeSalida$ condition:requerimientoSalidaPuerta"
+  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:requerimientoEntradaPuerta"
+
+variables:
+  ubicacionEntrada: 100;200;300;world
+  pitchYawEntrada: 0;0
+  ubicacionSalida: 100;200;300;world
+  pitchYawSalida: 0;0
+  mensajeEntrada: "&6Has entrado al Lugar"
+  mensajeSalida: "&6Has salido del Lugar"
+  efectoSonidoEntrada: block.iron_door.open
+  efectoSonidoSalida: block.iron_door.close

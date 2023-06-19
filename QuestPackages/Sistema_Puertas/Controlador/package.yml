@@ -1,3 +1,2 @@
 events:
-  eventoPuerta: "folder Sistema_Puertas-Puertas-Valor-Palacio.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Artefactos.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Mascotas.eventoPuerta,Sistema_Puertas-Puertas-Anabor-Entrada.eventoPuerta"
-  
+  eventoPuerta: "folder Sistema_Puertas-Puertas-Valor-Palacio.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Artefactos.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Mascotas.eventoPuerta,Sistema_Puertas-Puertas-Valor-Cripta_Nigromante.eventoPuerta,Sistema_Puertas-Puertas-Anabor-Entrada.eventoPuerta"

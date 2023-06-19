@@ -1,0 +1,11 @@
+package:
+  templates:
+    - Sistema_Puertas-Puertas
+
+variables:
+  ubicacionEntrada: 1269;78;-655;Zona1
+  pitchYawEntrada: 180;0
+  ubicacionSalida: 1123;61;375;Zona1
+  pitchYawSalida: 0;0
+  mensajeEntrada: "&6Has entrado en el Laboratorio"
+  mensajeSalida: "&6Has salido del Laboratorio"

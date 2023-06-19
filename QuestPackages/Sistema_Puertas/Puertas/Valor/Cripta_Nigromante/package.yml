@@ -1,0 +1,11 @@
+package:
+  templates:
+    - Sistema_Puertas-Puertas
+
+variables:
+  ubicacionEntrada: 1041;19;933;Zona1
+  pitchYawEntrada: 180;0
+  ubicacionSalida: 1033;19;933;Zona1
+  pitchYawSalida: 0;0
+  mensajeEntrada: "&6Has entrado en la Cripta del Nigromante"
+  mensajeSalida: "&6Has salido de la Cripta del Nigromante"
