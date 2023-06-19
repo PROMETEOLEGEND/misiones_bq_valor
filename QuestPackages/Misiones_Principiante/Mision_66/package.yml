@@ -1,0 +1,134 @@
+conversations:
+  ReyValor9:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡Saludos, valiente aventurero! Me complace verte una vez más en mi corte. Tengo una tarea de suma importancia para ti. Una criatura aterradora conocida como Medusa ha surgido en nuestras tierras. Posee un cuerpo de serpiente y una mirada que puede petrificar a cualquiera que se atreva a enfrentarla."
+        pointer: "si1"
+        conditions: "!misionInfoRecibidaMedusa"
+      a1:
+        text: "Medusa, la temida Gorgona, es conocida por su belleza maldita y su capacidad de convertir a las personas en estatuas de piedra con solo mirarlas a los ojos. Debemos detener su reinado de terror antes de que petrifique a más inocentes."
+        pointer: "b1"
+      a3:
+        text: "Tu misión será infiltrarte en la guarida de Medusa, enfrentarla y derrotarla para liberar a nuestro reino de su maléfico influjo. ¿Te ves preparado para ello?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        events: "agregarMarcaInfoRecibidaMedusa"
+        conditions: "!misionInfoRecibidaMedusa"
+      c1:
+        text: "Confío en tu habilidad y coraje, valiente aventurero. Recuerda, si logras derrotar a Medusa, serás recompensado con grandes recompensas. ¡Que los dioses te guíen en tu misión y que regreses victorioso!"
+        events: "aceptarMisionMedusa"
+      c2:
+        text: "Entiendo tu decisión, noble aventurero. No todos están listos para enfrentar un desafío tan formidable. Si alguna vez cambias de opinión, la misión siempre estará disponible para ti. Te deseo suerte en tus futuras aventuras."
+      saludo2:
+        text: "¡Bienvenido de vuelta, %player%! ¿Has pensado acerca de la misión que te ofrecí?"
+        pointer: "si2,no2,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaMedusa,!misionAceptadaMedusa"
+      preguntarInfoMision:
+        text: "¿Esta vez has comprendido la historia? O quieres que vuelva a repetirla."
+        pointer: "infoMisionComprendida,pedirRepeticionInfoMision"
+        conditions: "misionInfoRecibidaMedusa"
+      repetirInfoMision:
+        text: "No hay problema, avísame cuando estés listo para escuchar de nuevo la historia."
+        pointer: "estarListoEscucharRepeticion,rechazarMision"   
+      saludo3:
+        text: "¡Ah, valiente aventurero, has regresado! ¿Has logrado derrotar a la temible Medusa y liberar a nuestro reino de su influjo maligno?"
+        pointer: "misionCompletadaSi,misionCompletadaNo,pedirRepeticionInfoMision"
+        conditions: "misionAceptadaMedusa"
+      misionCompletada:
+        text: "¡Maravilloso! Tus hazañas son verdaderamente admirables. Has demostrado valor y astucia al encontrar una manera de superar el poder de petrificación de Medusa. El reino te está profundamente agradecido por tu valentía."
+        pointer: "agradecerElogio"        
+      misionCompletada2:
+        text: "Tu valía y dedicación son dignas de elogio. Como muestra de mi gratitud, te entrego estas recompensas."
+        events: "completarMision66"
+      misionAunNoCompletada:
+        text: "¡Confío en que seas capaz de completar la misión, aventurero!"
+      
+      
+    player_options:
+      si1:
+        text: "Majestad, estoy dispuesto a enfrentar cualquier peligro por el bienestar de nuestro reino. ¿Puede contarme más sobre esta temible criatura?"
+        pointer: "a1"
+      b1:
+        text: "Comprendo la gravedad de la situación, mi señor. ¿Cuáles serán mis objetivos en esta misión?"
+        pointer: "a3"
+      si2:
+        text: "Entendido, mi señor. Me aseguraré de encontrar el equipamiento necesario para enfrentar a Medusa y restaurar la paz en nuestro reino."
+        pointer: "c1"
+      no2:
+        text: "Lo siento, majestad, pero por ahora no me siento preparado para asumir esa responsabilidad. Tal vez en el futuro, cuando haya adquirido más experiencia y poder."
+        pointer: "c2"
+      pedirRepeticionInfoMision:
+        text: "¿Podría ser tan amable de repetir la información, Su Majestad?"
+        pointer: "repetirInfoMision"
+        condition: "misionInfoRecibidaMedusa,!mazmorraCompletadaMedusa"
+      infoMisionComprendida:
+        text: "Si, Su Majestad."
+        pointer: "misionAunNoCompletada"
+      estarListoEscucharRepeticion:
+        text: "Estoy listo, Su Majestad"
+        pointer: "a2"
+      rechazarMision:
+        text: "Aún no me siento listo, Su Majestad."
+        pointer: "c2"
+      misionCompletadaSi:
+        text: "¡Sí, mi señor! Me enfrenté a Medusa con todo mi equipamiento y poder. Su reinado de terror ha llegado a su fin."
+        pointer: "misionCompletada"
+        condition: "mazmorraCompletadaMedusa"
+      misionCompletadaNo:
+        text: "Aún no, Su Majestad."
+        pointer: "misionAunNoCompletada"
+        condition: "!mazmorraCompletadaMedusa"
+      agradecerElogio:
+        text: "Agradezco su apoyo, mi señor. Fue un desafío formidable, pero la determinación y el ingenio me permitieron salir victorioso. Me siento honrado de haber podido proteger a nuestro reino de la amenaza de Medusa."
+        pointer: "misionCompletada2"
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva66: "tag marcaMisionActiva66"
+  misionInfoRecibidaMedusa: "tag marcaInfoRecibidaMedusa"
+  misionAceptadaMedusa: "tag marcaMisionAceptadaMedusa"
+  mazmorraCompletadaMedusa: "tag marcaMazmorraCompletadaMedusa"
+  misionCompletada66: "tag marcaMisionCompletada66"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraMedusa: "finishdungeon Gamba_Rey events:mazmorraCompletarMedusa"
+
+#####################################################################        
+
+events:
+  iniciarMision66: "tag add marcaMisionActiva66"
+  
+  mensajeAyudaMision66: "folder mensajeAyudaMision66_1,mensajeAyudaMision66_2,mensajeAyudaMision66_3"
+  mensajeAyudaMision66_1: "notify \n&6&lMisión 66:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaMedusa"
+  mensajeAyudaMision66_2: "notify \n&6&lMisión 66:\n&r El cristal de la mazmorra de &aMedusa &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta la Cueva Oscura&r.\n&r conditions:misionAceptadaMedusa,!mazmorraCompletadaMedusa"
+  mensajeAyudaMision66_3: "notify \n&6&lMisión 66:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaMedusa,mazmorraCompletadaMedusa"
+  
+  agregarMarcaInfoRecibidaMedusa: "tag add marcaInfoRecibidaMedusa"
+  
+  aceptarMisionMedusa: "folder agregarMarcaMisionAceptadaMedusa,permisoMazmorraMedusa,iniciarObjetivoCompletarMazmorraMedusa,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaMedusa: "tag add marcaMisionAceptadaMedusa"
+  permisoMazmorraMedusa: "command lp user %player% permission set mazmorra.Medusa"
+  iniciarObjetivoCompletarMazmorraMedusa: "objective start completarMazmorraMedusa"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarMedusa: "folder agregarMarcaMazmorraCompletadaMedusa,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaMedusa: "tag add marcaMazmorraCompletadaMedusa"
+  
+  completarMision66: "folder eliminarMarcasMisionActiva66,agregarMarcaMisionCompletada66,notificacionMisionCompletada66,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva66: "folder eliminarMarcaMisionActiva66,eliminarMarcaMisionInfoRecibidaMedusa,eliminarMarcaMisionAceptadaMedusa,eliminarMarcaMazmorraCompletadaMedusa"
+  eliminarMarcaMisionActiva66: "tag delete marcaMisionActiva66"
+  eliminarMarcaMisionInfoRecibidaMedusa: "tag delete marcaInfoRecibidaMedusa"
+  eliminarMarcaMisionAceptadaMedusa: "tag delete marcaMisionAceptadaMedusa"
+  eliminarMarcaMazmorraCompletadaMedusa: "tag delete marcaMazmorraCompletadaMedusa"
+  agregarMarcaMisionCompletada66: "tag add marcaMisionCompletada66"
+  notificacionMisionCompletada66: "notify &7----------------------------------------\n&6&l¡Misión 66 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 6000"
+  recompensaExpClase: "mmoclassexperience 800"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 800 exp de clase."
