@@ -11,7 +11,7 @@ conditions:
   checkpointMuerteActivoNether: "variable %ph.servervariables_value_checkpoint_muerte_mundo% Zona1_nether"
 
 objectives:
-  objCheckpointMuerte: "die events:establecerCheckpointMuerte conditions:estarEnUnMundoValido,!permisoMantenerInventario persistent"
+  objCheckpointMuerte: "die events:establecerCheckpointMuerte conditions:estarEnUnMundoValido persistent"
   objComprobarEstadoCheckpointMuerte: "login events:comprobarCheckpointMuerteAMostrar persistent"
 
 events:
