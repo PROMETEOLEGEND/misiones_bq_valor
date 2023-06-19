@@ -1,0 +1,26 @@
+conditions:
+  misionActiva64: "tag marcaMisionActiva64"
+  misionCompletada64: "tag marcaMisionCompletada64"
+  estarEnNether: "world Zona1_nether"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision64: "notify \n&6&lMisión 64:&r Debes visitar el &6Nether&r, para ello necesitarás al menos &b10 bloques de Obsidiana&r y un &bMechero&r en caso que no tengas un &bPortal&r.\n&r"
+  
+  iniciarMision64: "folder agregarMarcaMisionActiva64,iniciarObjetivoMision64"
+  agregarMarcaMisionActiva64: "tag add marcaMisionActiva64"
+  iniciarObjetivoMision64: "objective start objVisitarNether"
+  
+  completarMision64: "folder eliminarMarcaMisionActiva64,agregarMarcaMisionCompletada64,notificacionMisionCompletada64,recompensaMision64,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcaMisionActiva64: "tag delete marcaMisionActiva64"
+  recompensaMision64: "command eco give %player% 500"
+  recompensaExpClase: "mmoclassexperience 650"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 650 exp de clase."
+  agregarMarcaMisionCompletada64: "tag add marcaMisionCompletada64"
+  notificacionMisionCompletada64: "notify &7----------------------------------------\n&6&l¡Misión 64 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objVisitarNether: "delay 5 ticks interval:5 conditions:estarEnNether events:completarMision64"

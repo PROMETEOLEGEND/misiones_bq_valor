@@ -1,0 +1,26 @@
+conditions:
+  misionActiva65: "tag marcaMisionActiva65"
+  misionCompletada65: "tag marcaMisionCompletada65"
+
+####################################################################################################
+
+events:
+  mensajeAyudaMision65: "run ^command calebcompass show %player% ^compasstrack 913;10;985;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  
+  iniciarMision65: "folder agregarMarcaMisionActiva65,iniciarObjetivoMision65"
+  agregarMarcaMisionActiva65: "tag add marcaMisionActiva65"
+  iniciarObjetivoMision65: "objective start objVisitarCasaPescador"
+  
+  completarMision65: "folder eliminarObjBrujula,eliminarMarcaMisionActiva65,agregarMarcaMisionCompletada65,notificacionMisionCompletada65,recompensaMision65,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarObjBrujula: "clearcompass"
+  eliminarMarcaMisionActiva65: "tag delete marcaMisionActiva65"
+  recompensaMision65: "command eco give %player% 600"
+  recompensaExpClase: "mmoclassexperience 400"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 400 exp de clase."
+  agregarMarcaMisionCompletada65: "tag add marcaMisionCompletada65"
+  notificacionMisionCompletada65: "notify &7----------------------------------------\n&6&l¡Misión 65 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+
+####################################################################################################
+
+objectives:
+  objVisitarCasaPescador: "location 913;10;985;Zona1 5 events:completarMision65"

@@ -56,13 +56,13 @@
 56. Derrota a un ent guardian. (Hecho)
 57. Fabrica un caldero para mascotas. (Hecho)
 58. Fabrica pienso de mascotas. (Hecho)
-59. Tamea una mascota.
+59. Tamea una mascota. (Hecho)
 60. Supera la mazmorra del Rey Crustáceo.
-61. Sube al nivel 12 de prestigio.
-62. Mina 25 menas de Rubi.
-63. Mina 25 menas de Zafiro.
-64. Visita el nether.
-65. Visita la casa del pescador.
+61. Sube al nivel 12 de prestigio. (Hecho)
+62. Mina 25 menas de Rubi. (Hecho)
+63. Mina 25 menas de Zafiro. (Hecho)
+64. Visita el nether. (Hecho)
+65. Visita la casa del pescador. (Hecho)
 66. Supera la mazmorra de Medusa.
 67. Derrota un golem de Rubi.
 68. Derrota un golem de Zafiro.

@@ -1,0 +1,35 @@
+conditions:
+  misionActiva62: "tag marcaMisionActiva62"
+  misionCompletada62: "tag marcaMisionCompletada62"
+  minarbloques: "point bloquesMinados 25"
+
+####################################################################################################
+
+events:
+  iniciarMision62: "folder agregarMarcaMisionActiva62,iniciarObjetivoMision62"
+  agregarMarcaMisionActiva62: "tag add marcaMisionActiva62"
+  iniciarObjetivoMision62: "run ^objective start objMinarRubi ^objective start objMinarRubiProfundo ^objective start objetivoMinarRubi"
+  eliminarObjetivosMision62: "run ^objective delete objMinarRubi ^objective delete objMinarRubiProfundo ^objective delete objetivoMinarRubi"  
+  
+  mensajeAyudaMision62: "notify \n&6&lMisión 62:\n&r Debes minar &b10 bloques de Rubi&r, para ello necesitarás fabricar un &bPico &rde amatista o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  
+  completarMision62: "folder eliminarMarcaMisionActiva62,eliminarObjetivosMision62,eliminarPuntosMision62,agregarMarcaMisionCompletada62,notificacionMisionCompletada62,recompensaMision62,recompensaExpMineria,notificacionRecompensaExpMineria"
+  eliminarMarcaMisionActiva62: "tag delete marcaMisionActiva62"
+  eliminarPuntosMision62: "point bloquesMinados 10 action:subtract"
+  agregarMarcaMisionCompletada62: "tag add marcaMisionCompletada62"
+  notificacionMisionCompletada62: "notify &7----------------------------------------\n&6&l¡Misión 62 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaMision62: "command eco give %player% 500"
+  recompensaExpMineria: "mmoprofessionexperience mining 400"
+  notificacionRecompensaExpMineria: "notify &aHas conseguido 400 exp de mineria."
+  agregarPuntosMision62: "folder sumarPuntos,notificacionPuntos"
+  sumarPuntos: "point bloquesMinados 1 action:add"
+  notificacionPuntos: "notify &eHas minado %point.bloquesMinados.amount% Menas de Rubí."
+
+####################################################################################################
+
+objectives:
+  objMinarRubi: "mmocorebreakblock 1 block:5 events:agregarPuntosMision62 persistent"
+  objMinarRubiProfundo: "mmocorebreakblock 1 block:6 events:agregarPuntosMision62 persistent"
+  objetivoMinarRubi: "delay 5 ticks interval:5 conditions:minarbloques events:completarMision62 persistent"
+  
+
