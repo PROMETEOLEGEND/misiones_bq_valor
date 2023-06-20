@@ -96,7 +96,7 @@ conditions:
 #####################################################################        
 
 objectives:
-  completarMazmorraMedusa: "finishdungeon Gamba_Rey events:mazmorraCompletarMedusa"
+  completarMazmorraMedusa: "finishdungeon Medusa events:mazmorraCompletarMedusa"
 
 #####################################################################        
 
