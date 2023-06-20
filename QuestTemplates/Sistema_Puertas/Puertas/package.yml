@@ -1,19 +1,29 @@
 conditions:
-  requerimientoEntradaPuerta: "location $ubicacionSalida$ 5"
-  requerimientoSalidaPuerta: "location $ubicacionEntrada$ 5"
+  requerimientoEntradaPuerta: "and ubicacionEntradaPuerta,!pasandoPuerta"
+  ubicacionEntradaPuerta: "location $ubicacionSalida$ 5"
+  requerimientoSalidaPuerta: "and ubicacionSalidaPuerta,!pasandoPuerta"
+  ubicacionSalidaPuerta: "location $ubicacionEntrada$ 5"
+  pasandoPuerta: "tag Sistema_Puertas-Controlador.marcaPasandoPuerta"
 
 events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoPuerta2"
   eventoPuerta2: "if requerimientoSalidaPuerta eventoSalidaPuerta else eventoErrorPuerta"
   eventoErrorPuerta: "run ^tag add a ^tag delete a"
-  eventoEntradaPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
+  eventoEntradaPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaPasandoPuerta,iniciarObjEliminarMarcaPasandoPuerta"
   eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$"
   notificacionEntrada: "notify io:title $mensajeEntrada$"
   notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$"
-  eventoSalidaPuerta: "folder eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  eventoSalidaPuerta: "folder eventoSalida,notificacionSalida,notificacionSonidoSalida,agregarMarcaPasandoPuerta,iniciarObjEliminarMarcaPasandoPuerta"
   eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$"
   notificacionSalida: "notify io:title $mensajeSalida$"
   notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$"
+  
+  agregarMarcaPasandoPuerta: "tag add Sistema_Puertas-Controlador.marcaPasandoPuerta"
+  eliminarMarcaPasandoPuerta: "tag delete Sistema_Puertas-Controlador.marcaPasandoPuerta"
+  iniciarObjEliminarMarcaPasandoPuerta: "objective start objEliminarMarcaPasandoPuerta"
+
+objectives:
+  objEliminarMarcaPasandoPuerta: "delay 2 events:eliminarMarcaPasandoPuerta"
 
 variables:
   ubicacionEntrada: 0;0;0;Zona1
