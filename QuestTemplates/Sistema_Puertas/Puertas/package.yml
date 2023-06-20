@@ -1,12 +1,11 @@
 conditions:
   requerimientoEntradaPuerta: "location $ubicacionSalida$ 5"
   requerimientoSalidaPuerta: "location $ubicacionEntrada$ 5"
-  # pasandoPuerta: "tag marcaPasandoPuerta"
 
 events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoPuerta2"
   eventoPuerta2: "if requerimientoSalidaPuerta eventoSalidaPuerta else eventoErrorPuerta"
-  eventoErrorPuerta: "notify &cNo estás en el lugar correcto para usar este tirador."
+  eventoErrorPuerta: "run ^tag add a ^tag delete a"
   eventoEntradaPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
   eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$"
   notificacionEntrada: "notify io:title $mensajeEntrada$"
@@ -15,12 +14,6 @@ events:
   eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$"
   notificacionSalida: "notify io:title $mensajeSalida$"
   notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$"
-
-  # agregarMarcaPasandoPuerta: "tag add marcaPasandoPuerta"
-  # eliminarMarcaPasandoPuerta: "tag delete marcaPasandoPuerta"
-
-# objectives:
-#   objEliminarMarcaPasandoPuerta: "delay 1 events:eliminarMarcaPasandoPuerta"
 
 variables:
   ubicacionEntrada: 0;0;0;Zona1
