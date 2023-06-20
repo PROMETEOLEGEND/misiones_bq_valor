@@ -1,5 +1,5 @@
 events:
-  establecerCheckpointMuerte: "folder guardarCheckpointMuerte,agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
+  establecerCheckpointMuerte: "folder desactivarCheckpointMuerteActivo,guardarCheckpointMuerte,agregarCheckpointMuerte,iniciarObjLlegarCheckpointMuerte,notificacionCheckpointMuerte"
   guardarCheckpointMuerte: "run ^command svar set checkpoint_muerte_x %location.x% %player% ^command svar set checkpoint_muerte_y %location.y% %player% ^command svar set checkpoint_muerte_z %location.z% %player% ^command svar set checkpoint_muerte_mundo %location.world% %player% ^command svar set checkpoint_muerte_activo true %player%"
   agregarCheckpointMuerte: "compasstrack %ph.servervariables_value_checkpoint_muerte_x%;%ph.servervariables_value_checkpoint_muerte_y%;%ph.servervariables_value_checkpoint_muerte_z%;%ph.servervariables_value_checkpoint_muerte_mundo%"
   iniciarObjLlegarCheckpointMuerte: "objective start objLlegarCheckpointMuerte"
