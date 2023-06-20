@@ -1,3 +1,3 @@
 events:
-  eventoPuerta: "folder notificacionSonidoTirador,Sistema_Puertas-Puertas-Valor-Palacio.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Artefactos.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Mascotas.eventoPuerta,Sistema_Puertas-Puertas-Valor-Cripta_Nigromante.eventoPuerta,Sistema_Puertas-Puertas-Anabor-Entrada.eventoPuerta"
+  eventoPuerta: "folder notificacionSonidoTirador,Sistema_Puertas-Puertas-Tutorial-Puerta_1.eventoPuerta,Sistema_Puertas-Puertas-Tutorial-Puerta_2.eventoPuerta,Sistema_Puertas-Puertas-Tutorial-Puerta_3.eventoPuerta,Sistema_Puertas-Puertas-Valor-Palacio.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Artefactos.eventoPuerta,Sistema_Puertas-Puertas-Valor-Tienda_Mascotas.eventoPuerta,Sistema_Puertas-Puertas-Valor-Cripta_Nigromante.eventoPuerta,Sistema_Puertas-Puertas-Anabor-Entrada.eventoPuerta"
   notificacionSonidoTirador: "notify io:sound soundcategory:blocks sound:block.iron_door.open"

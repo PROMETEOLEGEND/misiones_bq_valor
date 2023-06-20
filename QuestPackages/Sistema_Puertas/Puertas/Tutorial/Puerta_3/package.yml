@@ -8,14 +8,12 @@ conditions:
   permisoRequerido: "permission tutorial.puerta2"
 
 events:
-  eventoPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,notificacionEntradaBloqueada,notificacionSonidoEntradaBloqueada,eventoSalida,notificacionSalida,notificacionSonidoSalida"
-  notificacionEntradaBloqueada: "notify &cNecesitas haber derrotado al Esqueleto para usar la puerta."
-  notificacionSonidoEntradaBloqueada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$ condition:requerimientoEntradaPuerta"
+  eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else notificacionEntradaBloqueada"
+  notificacionEntradaBloqueada: "run ^notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$ ^notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
 
 variables:
   ubicacionEntrada: 1770.5;79;-933.5;Zona1
   pitchYawEntrada: 140;0
   ubicacionSalida: 1771.5;77;-923.5;Zona1
-  mensajeEntrada: "&aHas pasado a la siguiente etapa del tutorial"
-  efectoSonidoEntradaBloqueada: "entity.villager.no"
-  mensajeSalida: ""
+  mensajeEntrada: &aHas pasado a la siguiente etapa del tutorial
+  efectoSonidoEntradaBloqueada: entity.villager.no
