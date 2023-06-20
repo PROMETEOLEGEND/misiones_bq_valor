@@ -3,11 +3,11 @@ package:
     - Sistema_Puertas-Puertas
 
 conditions:
-  clasePorDefecto: "variable %ph.mmocore_class% &fHumano"
+  haberElegidoClase: "mmoclass *"
 
 events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoErrorPuerta"
-  eventoEntradaPuerta: "if !clasePorDefecto eventoEntradaPuerta2 else notificacionEntradaBloqueada"
+  eventoEntradaPuerta: "if haberElegidoClase eventoEntradaPuerta2 else notificacionEntradaBloqueada"
   eventoEntradaPuerta2: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaPasandoPuerta,iniciarObjEliminarMarcaPasandoPuerta"
   notificacionEntradaBloqueada: "folder notificacionEntradaBloqueada1,notificacionEntradaBloqueada2"
   notificacionEntradaBloqueada1: "notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
