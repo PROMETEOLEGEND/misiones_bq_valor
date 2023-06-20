@@ -1,0 +1,107 @@
+conversations:
+  ReyValor11:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
+        pointer: "a1"
+      b1:
+        text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
+        pointer: "a2"
+      b1_1:
+        text: "Presta atención. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
+        pointer: "a2"
+      b2:
+        text: "El nigromante, respaldado por su ejército de muertos vivientes, parecía invencible. Sin embargo, los valientes guerreros del reino se unieron en un último esfuerzo desesperado para enfrentar al nigromante y su maldad incesante. Durante días y noches, se libró una encarnizada lucha en la que ambos bandos sufrieron grandes pérdidas."
+        pointer: "a3"      
+      b3:
+        text: "Finalmente, los sabios y poderosos magos del reino lograron conjurar un hechizo de encierro. Con su último aliento de magia, confinaron al nigromante en una torre maldita, sellando sus poderes oscuros y asegurando su cautiverio."
+        pointer: "a4,entendido"
+      b4:
+        text: "Los años han ido pasando y el reino ha recuperado la paz. Los eventos de la guerra se convirtieron en leyendas, sus héroes recordados y sus sacrificios honrados. Sin embargo, recientemente, una siniestra energía comenzó a emerger de la torre encantada."
+        pointer: "a5"
+      b5:
+        text: "Me temo que si %player%. Todos los indicios apuntan a que un poder maligno esta resurgiendo en el interior de la torre. Pero penetrar en la torre no es algo sencillo... Una poderosa magia ancestral la rodea, debes reunir cinco conjuros antiguos, los cuales se encuentran dispersos en lugares de gran poder y misterio en nuestro reino. Cada conjuro es clave para abrir las puertas de la torre y enfrentar al Nigromante en su propio dominio."
+        pointer: "a6"
+      b6:
+        text: "Esa información escapa a mi conocimiento, debe ser un mago de de gran poder quien te ayude y guie en esta tarea. Habla con el Mago de la corte real que se encuentra en la biblioteca del Palacio. Él es la persona indicada."
+      saludo2:
+        text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
+        pointer: "a1"
+        
+      
+    player_options:
+      a1:
+        text: "¡Mi Rey, me siento honrado y agradecido por confiar en mí una vez más! Cada misión que he emprendido en nombre de nuestro reino ha sido un privilegio y un desafío que he abrazado con todo mi ser."
+        pointer: "a1"
+      a2:
+        text: "Deberieron ser tiempos terribles..."
+        pointer: "b2"
+      a3:
+        text: "¿Qué sucedió al final?"
+        pointer: "b3"
+      entendido:
+        text: "¿Podría repetirme la historia, majestad?"
+        pointer: "b1_1"
+      a4:
+        text: "¡Es fascinante escuchar la historia de cómo los sabios y poderosos magos del reino lograron confinar al nigromante en esa torre maldita! Me hace reflexionar sobre la importancia de mantener el equilibrio entre el bien y el mal en nuestro reino."
+        pointer: "b4"
+      a5:
+        text: "¿El nigromante ha logrado romper el sello que lo mantenía prisionero?"
+        pointer: "b5"
+      a6:
+        text: "Entendido, mi señor. ¿Podría saber cuáles son estos conjuros y dónde puedo encontrarlos?"
+        pointer: "b6"
+        
+      
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva79: "tag marcaMisionActiva79"
+  misionInfoRecibidaNigromante: "tag marcaInfoRecibidaNigromante"
+  misionAceptadaNigromante: "tag marcaMisionAceptadaNigromante"
+  mazmorraCompletadaNigromante: "tag marcaMazmorraCompletadaNigromante"
+  misionCompletada79: "tag marcaMisionCompletada79"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraNigromante: "finishdungeon Nigromante events:mazmorraCompletarNigromante"
+
+#####################################################################        
+
+events:
+  iniciarMision79: "tag add marcaMisionActiva79"
+  
+  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3"
+  mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaNigromante"
+  mensajeAyudaMision79_2: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra de &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar la casa del pescador veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
+  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
+  
+  agregarMarcaInfoRecibidaNigromante: "tag add marcaInfoRecibidaNigromante"
+  
+  aceptarMisionNigromante: "folder agregarMarcaMisionAceptadaNigromante,permisoMazmorraNigromante,iniciarObjetivoCompletarMazmorraNigromante,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaNigromante: "tag add marcaMisionAceptadaNigromante"
+  permisoMazmorraNigromante: "command lp user %player% permission set mazmorra.Nigromante"
+  iniciarObjetivoCompletarMazmorraNigromante: "objective start completarMazmorraNigromante"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarNigromante: "folder agregarMarcaMazmorraCompletadaNigromante,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaNigromante: "tag add marcaMazmorraCompletadaNigromante"
+  
+  completarMision79: "folder eliminarMarcasMisionActiva79,agregarMarcaMisionCompletada79,notificacionMisionCompletada79,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva79: "folder eliminarMarcaMisionActiva79,eliminarMarcaMisionInfoRecibidaNigromante,eliminarMarcaMisionAceptadaNigromante,eliminarMarcaMazmorraCompletadaNigromante"
+  eliminarMarcaMisionActiva79: "tag delete marcaMisionActiva79"
+  eliminarMarcaMisionInfoRecibidaNigromante: "tag delete marcaInfoRecibidaNigromante"
+  eliminarMarcaMisionAceptadaNigromante: "tag delete marcaMisionAceptadaNigromante"
+  eliminarMarcaMazmorraCompletadaNigromante: "tag delete marcaMazmorraCompletadaNigromante"
+  agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
+  notificacionMisionCompletada79: "notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 6500"
+  recompensaExpClase: "mmoclassexperience 850"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."
