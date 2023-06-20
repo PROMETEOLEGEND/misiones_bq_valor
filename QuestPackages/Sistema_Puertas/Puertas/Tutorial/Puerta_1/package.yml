@@ -4,7 +4,7 @@ package:
 
 conditions:
   requerimientoEntradaPuerta: "and estarEnRangoPuerta,!claseRequerida"
-  estarEnRangoPuerta: "location $ubicacionSalida$"
+  estarEnRangoPuerta: "location $ubicacionSalida$ 5"
   claseRequerida: "variable %ph.mmocore_class% Humano"
 
 events:

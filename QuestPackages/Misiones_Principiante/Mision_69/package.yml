@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva69: "tag add marcaMisionActiva69"
   iniciarObjetivoMision69: "objective start objMatarGolemMythril"
   
-  mensajeAyudaMision67: "notify \n&6&lMisión 67:\n&r Los &bGolems de Mythril &rson unas criaturas monolíticas que parecen estar hechas de &bPiedra&r y &bMythril&r, se invocan con un huevo que puedes fabricar, puedes ver la receta de este en una &bMesa de trabajo&r\n&r"
+  mensajeAyudaMision69: "notify \n&6&lMisión 67:\n&r Los &bGolems de Mythril &rson unas criaturas monolíticas que parecen estar hechas de &bPiedra&r y &bMythril&r, se invocan con un huevo que puedes fabricar, puedes ver la receta de este en una &bMesa de trabajo&r\n&r"
 
   completarMision69: "folder eliminarMarcaMisionActiva69,agregarMarcaMisionCompletada69,notificacionMisionCompletada69,recompensaMision69,recompensaExpPrestigio,notificacionRecompensaExpPrestigio delay:1"
   eliminarMarcaMisionActiva69: "tag delete marcaMisionActiva69"

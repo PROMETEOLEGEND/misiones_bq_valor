@@ -4,7 +4,7 @@ package:
 
 conditions:
   requerimientoEntradaPuerta: "and estarEnRangoPuerta,permisoRequerido"
-  estarEnRangoPuerta: "location $ubicacionSalida$"
+  estarEnRangoPuerta: "location $ubicacionSalida$ 5"
   permisoRequerido: "permission tutorial.puerta"
 
 events:

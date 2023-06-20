@@ -67,7 +67,7 @@ conversations:
         pointer: "misionAunNoCompletada"
       estarListoEscucharRepeticion:
         text: "Estoy listo, Su Majestad"
-        pointer: "a2"
+        pointer: "a1"
       rechazarMision:
         text: "Aún no me siento listo, Su Majestad."
         pointer: "c2"
