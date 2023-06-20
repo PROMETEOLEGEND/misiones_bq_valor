@@ -9,7 +9,9 @@ events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoErrorPuerta"
   eventoEntradaPuerta: "if !clasePorDefecto eventoEntradaPuerta2 else notificacionEntradaBloqueada"
   eventoEntradaPuerta2: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaPasandoPuerta,iniciarObjEliminarMarcaPasandoPuerta"
-  notificacionEntradaBloqueada: "run ^notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$ ^notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
+  notificacionEntradaBloqueada: "folder notificacionEntradaBloqueada1,notificacionEntradaBloqueada2"
+  notificacionEntradaBloqueada1: "notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
+  notificacionEntradaBloqueada2: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$"
 
 variables:
   ubicacionEntrada: 1820.5;61;-446.5;Zona1
