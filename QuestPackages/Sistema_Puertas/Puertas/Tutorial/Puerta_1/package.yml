@@ -3,7 +3,7 @@ package:
     - Sistema_Puertas-Puertas
 
 conditions:
-  clasePorDefecto: "variable %ph.mmocore_class% Humano"
+  clasePorDefecto: "variable %ph.mmocore_class% &fHumano"
 
 events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoErrorPuerta"
