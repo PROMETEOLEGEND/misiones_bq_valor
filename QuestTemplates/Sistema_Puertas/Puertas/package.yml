@@ -1,30 +1,26 @@
 conditions:
   requerimientoEntradaPuerta: "location $ubicacionSalida$ 5"
   requerimientoSalidaPuerta: "location $ubicacionEntrada$ 5"
-  entrandoPuerta: "tag marcaEntrandoPuerta"
-  saliendoPuerta: "tag marcaSaliendoPuerta"
+  # pasandoPuerta: "tag marcaPasandoPuerta"
 
 events:
-  eventoPuerta: "folder eventoEntrarPuerta,eventoSalirPuerta"
-  eventoEntrarPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada condition:requerimientoEntradaPuerta"
-  agregarMarcaEntrandoPuerta: "tag add marcaEntrandoPuerta condition:!entrandoPuerta"
-  iniciarObjEntrarPuerta: "objective start objEntrarPuerta condition:entrandoPuerta"
-  eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:!saliendoPuerta"
-  notificacionEntrada: "notify io:title $mensajeEntrada$ condition:!saliendoPuerta"
-  notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$ condition:!saliendoPuerta"
-  eventoSalirPuerta: "folder agregarMarcaSaliendoPuerta,iniciarObjSalirPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida condition:requerimientoSalidaPuerta"
-  agregarMarcaSaliendoPuerta: "tag add marcaSaliendoPuerta condition:!saliendoPuerta"
-  iniciarObjSalirPuerta: "objective start objSalirPuerta condition:saliendoPuerta"
-  eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$ condition:!entrandoPuerta"
-  notificacionSalida: "notify io:title $mensajeSalida$ condition:!entrandoPuerta"
-  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:!entrandoPuerta"
-  
-  eliminarMarcaEntrandoPuerta: "tag delete marcaEntrandoPuerta"
-  eliminarMarcaSaliendoPuerta: "tag delete marcaSaliendoPuerta"
+  eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoPuerta2"
+  eventoPuerta2: "if requerimientoSalidaPuerta eventoSalidaPuerta else eventoErrorPuerta"
+  eventoErrorPuerta: "notify &cNo estás en el lugar correcto para usar este tirador."
+  eventoEntradaPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
+  eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$"
+  notificacionEntrada: "notify io:title $mensajeEntrada$"
+  notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$"
+  eventoSalidaPuerta: "folder eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$"
+  notificacionSalida: "notify io:title $mensajeSalida$"
+  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$"
 
-objectives:
-  objEntrarPuerta: "delay 2 events:eliminarMarcaEntrandoPuerta"
-  objSalirPuerta: "delay 2 events:eliminarMarcaSaliendoPuerta"
+  # agregarMarcaPasandoPuerta: "tag add marcaPasandoPuerta"
+  # eliminarMarcaPasandoPuerta: "tag delete marcaPasandoPuerta"
+
+# objectives:
+#   objEliminarMarcaPasandoPuerta: "delay 1 events:eliminarMarcaPasandoPuerta"
 
 variables:
   ubicacionEntrada: 0;0;0;Zona1
