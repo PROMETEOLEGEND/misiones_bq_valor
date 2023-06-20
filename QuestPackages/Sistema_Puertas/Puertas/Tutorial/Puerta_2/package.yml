@@ -1,0 +1,21 @@
+package:
+  templates:
+    - Sistema_Puertas-Puertas
+
+conditions:
+  requerimientoEntradaPuerta: "and estarEnRangoPuerta,permisoRequerido"
+  estarEnRangoPuerta: "location $ubicacionSalida$"
+  permisoRequerido: "permission tutorial.puerta"
+
+events:
+  eventoPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,notificacionEntradaBloqueada,notificacionSonidoEntradaBloqueada,eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  notificacionEntradaBloqueada: "notify &cNecesitas haber derrotado al Goblin para usar la puerta."
+  notificacionSonidoEntradaBloqueada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$ condition:requerimientoEntradaPuerta"
+
+variables:
+  ubicacionEntrada: 1805.5;59;-678.5;Zona1
+  pitchYawEntrada: -180;0
+  ubicacionSalida: 1804.5;61;-668.5;Zona1
+  mensajeEntrada: "&aHas pasado a la siguiente etapa del tutorial"
+  efectoSonidoEntradaBloqueada: "entity.villager.no"
+  mensajeSalida: ""

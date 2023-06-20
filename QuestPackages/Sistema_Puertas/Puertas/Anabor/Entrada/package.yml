@@ -3,9 +3,9 @@ package:
     - Sistema_Puertas-Puertas
 
 variables:
-  ubicacionEntrada: -90;89;768;Zona1
+  ubicacionEntrada: -89.5;89;768.5;Zona1
   pitchYawEntrada: 90;0
-  ubicacionSalida: 36;98;766;Zona1
+  ubicacionSalida: 36.5;98;766.5;Zona1
   pitchYawSalida: -90;0
   mensajeEntrada: "&6Has entrado en la Fortaleza de Anabor"
   mensajeSalida: "&6Has salido de la Fortaleza de Anabor"

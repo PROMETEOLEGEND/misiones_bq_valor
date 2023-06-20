@@ -3,9 +3,9 @@ package:
     - Sistema_Puertas-Puertas
 
 variables:
-  ubicacionEntrada: 1040;61;343;Zona1
+  ubicacionEntrada: 1444.5;76;-593.5;Zona1
   pitchYawEntrada: 180;0
-  ubicacionSalida: 1444;76;-594;Zona1
+  ubicacionSalida: 1040.5;61;343.5;Zona1
   pitchYawSalida: 0;0
   mensajeEntrada: "&6Has entrado en el Palacio Real"
   mensajeSalida: "&6Has salido del Palacio Real"

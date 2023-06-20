@@ -12,9 +12,9 @@ events:
   notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:requerimientoEntradaPuerta"
 
 variables:
-  ubicacionEntrada: 100;200;300;world
+  ubicacionEntrada: 0;0;0;Zona1
   pitchYawEntrada: 0;0
-  ubicacionSalida: 100;200;300;world
+  ubicacionSalida: 0;0;0;Zona1
   pitchYawSalida: 0;0
   mensajeEntrada: "&6Has entrado al Lugar"
   mensajeSalida: "&6Has salido del Lugar"

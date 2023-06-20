@@ -3,9 +3,9 @@ package:
     - Sistema_Puertas-Puertas
 
 variables:
-  ubicacionEntrada: 1587;92;-429;Zona1
+  ubicacionEntrada: 1587.5;92;-428.5;Zona1
   pitchYawEntrada: 90;0
-  ubicacionSalida: 959;61;434;Zona1
+  ubicacionSalida: 959.5;61;434.5;Zona1
   pitchYawSalida: -90;0
   mensajeEntrada: "&6Has entrado en la Tienda de Mascotas"
   mensajeSalida: "&6Has salido de la Tienda de Mascotas"
