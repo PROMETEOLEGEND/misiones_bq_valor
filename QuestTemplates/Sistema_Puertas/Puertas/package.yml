@@ -5,9 +5,9 @@ conditions:
   saliendoPuerta: "tag marcaSaliendoPuerta"
 
 events:
-  eventoPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaSaliendoPuerta,iniciarObjSalirPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida"
-  # eventoEntrarPuerta: ""
-  # eventoSalirPuerta: ""
+  eventoPuerta: "folder eventoEntrarPuerta,eventoSalirPuerta"
+  eventoEntrarPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada condition:requerimientoEntradaPuerta"
+  eventoSalirPuerta: "folder agregarMarcaSaliendoPuerta,iniciarObjSalirPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida condition:requerimientoSalidaPuerta"
   agregarMarcaEntrandoPuerta: "tag add marcaEntrandoPuerta conditions:requerimientoEntradaPuerta,!entrandoPuerta"
   iniciarObjEntrarPuerta: "objective start objEntrarPuerta conditions:requerimientoEntradaPuerta,entrandoPuerta"
   eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:requerimientoEntradaPuerta,!saliendoPuerta"
@@ -23,8 +23,8 @@ events:
   eliminarMarcaEntrandoPuerta: "tag delete marcaSaliendoPuerta"
 
 objectives:
-  objEntrarPuerta: "delay 2 events:eliminarMarcaSaliendoPuerta"
-  objSalirPuerta: "delay 2 events:eliminarMarcaEntrandoPuerta"
+  objEntrarPuerta: "delay 2 events:eliminarMarcaEntrandoPuerta"
+  objSalirPuerta: "delay 2 events:eliminarMarcaSaliendoPuerta"
 
 variables:
   ubicacionEntrada: 0;0;0;Zona1
