@@ -8,7 +8,7 @@ conditions:
 events:
   eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoErrorPuerta"
   eventoEntradaPuerta: "if permisoRequerido eventoEntradaPuerta2 else notificacionEntradaBloqueada"
-  eventoEntradaPuerta2: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaPasandoPuerta,iniciarObjEliminarMarcaPasandoPuerta"
+  eventoEntradaPuerta2: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
   notificacionEntradaBloqueada: "folder notificacionEntradaBloqueada1,notificacionEntradaBloqueada2"
   notificacionEntradaBloqueada1: "notify &cNecesitas haber derrotado al Esqueleto para usar la puerta."
   notificacionEntradaBloqueada2: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$"
