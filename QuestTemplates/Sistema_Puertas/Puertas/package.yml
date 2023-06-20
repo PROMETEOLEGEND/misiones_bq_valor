@@ -5,7 +5,9 @@ conditions:
   saliendoPuerta: "tag marcaSaliendoPuerta"
 
 events:
-  eventoPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaSaliendoPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  eventoPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaSaliendoPuerta,iniciarObjSalirPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  # eventoEntrarPuerta: ""
+  # eventoSalirPuerta: ""
   agregarMarcaEntrandoPuerta: "tag add marcaEntrandoPuerta conditions:requerimientoEntradaPuerta,!entrandoPuerta"
   iniciarObjEntrarPuerta: "objective start objEntrarPuerta conditions:requerimientoEntradaPuerta,entrandoPuerta"
   eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:requerimientoEntradaPuerta,!saliendoPuerta"
@@ -15,7 +17,7 @@ events:
   iniciarObjSalirPuerta: "objective start objSalirPuerta conditions:requerimientoSalidaPuerta,saliendoPuerta"
   eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$ condition:requerimientoSalidaPuerta,!entrandoPuerta"
   notificacionSalida: "notify io:title $mensajeSalida$ condition:requerimientoSalidaPuerta,!entrandoPuerta"
-  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:requerimientoEntradaPuerta,!entrandoPuerta"
+  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:requerimientoSalidaPuerta,!entrandoPuerta"
   
   eliminarMarcaSaliendoPuerta: "tag delete marcaEntrandoPuerta"
   eliminarMarcaEntrandoPuerta: "tag delete marcaSaliendoPuerta"
