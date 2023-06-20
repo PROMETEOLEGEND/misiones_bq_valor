@@ -5,7 +5,7 @@ conditions:
   saliendoPuerta: "tag marcaSaliendoPuerta"
 
 events:
-  eventoPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaSaliendoPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida condition:!pasandoPuerta"
+  eventoPuerta: "folder agregarMarcaEntrandoPuerta,iniciarObjEntrarPuerta,eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,agregarMarcaSaliendoPuerta,eventoSalida,notificacionSalida,notificacionSonidoSalida"
   agregarMarcaEntrandoPuerta: "tag add marcaEntrandoPuerta conditions:requerimientoEntradaPuerta,!entrandoPuerta"
   iniciarObjEntrarPuerta: "objective start objEntrarPuerta conditions:requerimientoEntradaPuerta,entrandoPuerta"
   eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:requerimientoEntradaPuerta,!saliendoPuerta"
