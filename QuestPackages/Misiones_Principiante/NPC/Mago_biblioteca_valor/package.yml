@@ -1,6 +1,6 @@
-events:
-  eventoMago: "folder menuMago,empezarConversacionMago"
+# events:
+#   eventoMago: "folder menuMago,empezarConversacionMago"
   
-  menuMago: "command dm open mago_clase %player% conditions:!Misiones_Principiante-Mision_79.misionActiva79"
+#   menuMago: "command dm open mago_clase %player% conditions:!Misiones_Principiante-Mision_79.misionActiva79"
   
-  empezarConversacionMago: "conversation Misiones_Principiante-Mision_79.MagoValor conditions:Misiones_Principiante-Mision_79.misionActiva79"
+#   empezarConversacionMago: "conversation Misiones_Principiante-Mision_79.MagoValor conditions:Misiones_Principiante-Mision_79.misionActiva79"
