@@ -3,13 +3,17 @@ conditions:
   requerimientoSalidaPuerta: "location $ubicacionEntrada$ 5"
 
 events:
-  eventoPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,eventoSalida,notificacionSalida,notificacionSonidoSalida"
-  eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$ condition:requerimientoEntradaPuerta"
-  notificacionEntrada: "notify io:title $mensajeEntrada$ condition:requerimientoEntradaPuerta"
-  notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$ condition:requerimientoEntradaPuerta"
-  eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$ condition:requerimientoSalidaPuerta"
-  notificacionSalida: "notify io:title $mensajeSalida$ condition:requerimientoSalidaPuerta"
-  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$ condition:requerimientoEntradaPuerta"
+  eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoPuerta2"
+  eventoPuerta2: "if requerimientoSalidaPuerta eventoSalidaPuerta else eventoErrorPuerta"
+  eventoErrorPuerta: "run ^tag add a ^tag delete a"
+  eventoEntradaPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
+  eventoEntrada: "teleport $ubicacionEntrada$;$pitchYawEntrada$"
+  notificacionEntrada: "notify io:title $mensajeEntrada$"
+  notificacionSonidoEntrada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntrada$"
+  eventoSalidaPuerta: "folder eventoSalida,notificacionSalida,notificacionSonidoSalida"
+  eventoSalida: "teleport $ubicacionSalida$;$pitchYawSalida$"
+  notificacionSalida: "notify io:title $mensajeSalida$"
+  notificacionSonidoSalida: "notify io:sound soundcategory:blocks sound:$efectoSonidoSalida$"
 
 variables:
   ubicacionEntrada: 0;0;0;Zona1
