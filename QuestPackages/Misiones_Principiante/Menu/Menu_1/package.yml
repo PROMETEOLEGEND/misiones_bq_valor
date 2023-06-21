@@ -469,7 +469,7 @@ menus:
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de clase."
+        - "&7&oSube al nivel 3 de clase."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -482,7 +482,7 @@ menus:
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de clase."
+        - "&7&oSube al nivel 3 de clase."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -494,7 +494,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
-        - "&7&oSube al nivel 2 de clase."
+        - "&7&oSube al nivel 3 de clase."
       botonMisionBloqueada12:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_11.misionCompletada11"
@@ -507,7 +507,7 @@ menus:
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de Prestigio."
+        - "&7&oSube al nivel 3 de Prestigio."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -520,7 +520,7 @@ menus:
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de Prestigio."
+        - "&7&oSube al nivel 3 de Prestigio."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -532,7 +532,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
-        - "&7&oSube al nivel 2 de Prestigio."
+        - "&7&oSube al nivel 3 de Prestigio."
       botonMisionBloqueada13:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_12.misionCompletada12"
@@ -545,7 +545,7 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -558,7 +558,7 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -570,7 +570,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 2 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
       botonMisionBloqueada14:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_13.misionCompletada13"

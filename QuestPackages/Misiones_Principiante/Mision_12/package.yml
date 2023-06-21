@@ -1,14 +1,14 @@
 conditions:
   misionActiva12: "tag marcaMisionActiva12"
   misionCompletada12: "tag marcaMisionCompletada12"
-  nivel2Clase: "mmoclass * 2"
+  nivel3Clase: "mmoclass * 3"
 
 ####################################################################################################
 
 events:
   iniciarMision12: "folder agregarMarcaMisionActiva12,iniciarObjetivoMision12"
   agregarMarcaMisionActiva12: "tag add marcaMisionActiva12"
-  iniciarObjetivoMision12: "objective start objSubirNivel2Clase"
+  iniciarObjetivoMision12: "objective start objSubirNivel3Clase"
   
   mensajeAyudaMision12: "notify \n&6&lMisión 12:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
@@ -23,4 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objSubirNivel2Clase: "delay 5 ticks interval:5 conditions:nivel2Clase events:completarMision12"
+  objSubirNivel3Clase: "delay 5 ticks interval:5 conditions:nivel3Clase events:completarMision12"

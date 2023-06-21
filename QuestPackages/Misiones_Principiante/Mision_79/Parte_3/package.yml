@@ -1,0 +1,42 @@
+conditions:
+  estarCercaDeUnJefe: "mythicmobdistance Lich_King 50"
+
+events:
+  iniciarParte4: "command a"
+
+  invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target marked:JefeObelisco1"
+  invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target marked:JefeObelisco2"
+  invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target marked:JefeObelisco3"
+  invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target marked:JefeObelisco4"
+  # invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco1"
+  # invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco2"
+  # invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco3"
+  # invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco4"
+  # superarObelisco1: "run ^objective delete objDerrotarJefeObelisco1 ^"
+  superarObelisco1: "objective delete objDerrotarJefeObelisco1"
+  superarObelisco2: "objective delete objDerrotarJefeObelisco2"
+  superarObelisco3: "objective delete objDerrotarJefeObelisco3"
+  superarObelisco4: "objective delete objDerrotarJefeObelisco4"
+  
+
+#####################################################################      
+
+objectives:
+  objVisitarObelisco1: "location 861.5;70;532.5;Zona1 15 conditions:!estarCercaDeUnJefe events:invocarJefeObelisco1 persistent"
+  objVisitarObelisco2: "location 874.5;236;242.5;Zona1 15 conditions:!estarCercaDeUnJefe events:invocarJefeObelisco2 persistent"
+  objVisitarObelisco3: "location 1427.5;243;233.5;Zona1 30 conditions:!estarCercaDeUnJefe events:invocarJefeObelisco3 persistent"
+  objVisitarObelisco4: "location 1314.5;219;722.5;Zona1 30 conditions:!estarCercaDeUnJefe events:invocarJefeObelisco4 persistent"
+  objDerrotarJefeObelisco1: "mmobkill Lich_King amount:1 events:superarObelisco1 marked:JefeObelisco1"
+  objDerrotarJefeObelisco2: "mmobkill Lich_King amount:1 events:superarObelisco2 marked:JefeObelisco2"
+  objDerrotarJefeObelisco3: "mmobkill Lich_King amount:1 events:superarObelisco3 marked:JefeObelisco3"
+  objDerrotarJefeObelisco4: "mmobkill Lich_King amount:1 events:superarObelisco4 marked:JefeObelisco4"
+
+#####################################################################      
+
+items:
+
+
+#####################################################################      
+
+menus:
+

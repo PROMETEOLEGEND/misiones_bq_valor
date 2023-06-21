@@ -1,14 +1,14 @@
 conditions:
   misionActiva13: "tag marcaMisionActiva13"
   misionCompletada13: "tag marcaMisionCompletada13"
-  nivel2Prestigio: "mmoprofession prestigio 2"
+  nivel3Prestigio: "mmoprofession prestigio 3"
 
 ####################################################################################################
 
 events:
   iniciarMision13: "folder agregarMarcaMisionActiva13,iniciarObjetivoMision13"
   agregarMarcaMisionActiva13: "tag add marcaMisionActiva13"
-  iniciarObjetivoMision13: "objective start objLlegarNivel2Prestigio"
+  iniciarObjetivoMision13: "objective start objLlegarNivel3Prestigio"
   
   mensajeAyudaMision13: "notify \n&6&lMisión 13:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel de prestigio. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
@@ -23,4 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objLlegarNivel2Prestigio: "delay 5 ticks interval:5 conditions:nivel2Prestigio events:completarMision13"
+  objLlegarNivel3Prestigio: "delay 5 ticks interval:5 conditions:nivel3Prestigio events:completarMision13"

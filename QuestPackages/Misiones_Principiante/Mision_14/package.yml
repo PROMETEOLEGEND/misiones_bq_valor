@@ -1,14 +1,14 @@
 conditions:
   misionActiva14: "tag marcaMisionActiva14"
   misionCompletada14: "tag marcaMisionCompletada14"
-  recompensaNivel2PrestigioReclamada: "permission rankup.prestigio_nivel_2"
+  recompensaNivel3PrestigioReclamada: "permission rankup.prestigio_nivel_3"
 
 ####################################################################################################
 
 events:
   iniciarMision14: "folder agregarMarcaMisionActiva14,iniciarObjetivoMision14"
   agregarMarcaMisionActiva14: "tag add marcaMisionActiva14"
-  iniciarObjetivoMision14: "objective start objReclamarRecompensaNivel2Prestigio"
+  iniciarObjetivoMision14: "objective start objReclamarRecompensaNivel3Prestigio"
   
   mensajeAyudaMision14: "notify \n&6&lMisión 14:\n&r El comando &b/prestigio &rte permitirá obtener recompensas a medida que vayas subiendo tu nivel de Prestigio.\n&r"
   
@@ -23,4 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objReclamarRecompensaNivel2Prestigio: "delay 5 ticks interval:5 conditions:recompensaNivel2PrestigioReclamada events:completarMision14"
+  objReclamarRecompensaNivel3Prestigio: "delay 5 ticks interval:5 conditions:recompensaNivel3PrestigioReclamada events:completarMision14"
