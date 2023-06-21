@@ -779,7 +779,7 @@ menus:
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al nivel 5 de clase."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -792,7 +792,7 @@ menus:
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al nivel 5 de clase."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -804,7 +804,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al nivel 5 de clase."
       botonMisionBloqueada20:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_19.misionCompletada19"
@@ -969,7 +969,7 @@ menus:
         - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+        - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -979,10 +979,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_25.misionActiva25,!Misiones_Principiante-Mision_25.misionCompletada25"
         close: true
         text:
-        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&6&l[Misión 25]: &eObteniendo Prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+        - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -992,9 +992,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_25.misionCompletada25"
         text:
         - "&3¡Misión completada!"
-        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&6&l[Misión 25]: &eObteniendo Prestigio"
         - "&r "
-        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
+        - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
       botonMisionBloqueada25:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_24.misionCompletada24"
