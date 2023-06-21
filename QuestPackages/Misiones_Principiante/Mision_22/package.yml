@@ -5,15 +5,16 @@ conditions:
 ####################################################################################################
 
 events:
-  mensajeAyudaMision22: "notify \n&6&lMisión 22:&r Debes minar &b20 menas de Diamante&r, para ello necesitarás un &bPico &rInicial, de Hierro o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  mensajeAyudaMision22: "notify \n&6&lMisión 22:&r Debes minar &b10 menas de Diamante&r, para ello necesitarás un &bPico &rInicial, de Hierro o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
   
   iniciarMision22: "folder agregarMarcaMisionActiva22,iniciarObjetivoMision22"
   agregarMarcaMisionActiva22: "tag add marcaMisionActiva22"
   iniciarObjetivoMision22: "objective start objPicarMenasDiamante"
   
-  completarMision22: "folder eliminarMarcaMisionActiva22,agregarMarcaMisionCompletada22,notificacionMisionCompletada22,recompensaMision22,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision22: "folder eliminarMarcaMisionActiva22,agregarMarcaMisionCompletada22,notificacionMisionCompletada22,recompensaMision22,recompensaPapelMagico,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva22: "tag delete marcaMisionActiva22"
   recompensaMision22: "command eco give %player% 200"
+  recompensaPapelMagico: "command mi give MISCELLANEOUS PAPEL_MAGICO %player% 2"
   recompensaExpClase: "mmoclassexperience 200"
   notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."
   agregarMarcaMisionCompletada22: "tag add marcaMisionCompletada22"

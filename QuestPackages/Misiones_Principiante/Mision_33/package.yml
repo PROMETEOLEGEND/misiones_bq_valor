@@ -12,9 +12,11 @@ events:
   agregarMarcaMisionActiva33: "tag add marcaMisionActiva33"
   iniciarObjetivoMision33: "objective start objFabricarReparadorDorado"
   
-  completarMision33: "folder eliminarMarcaMisionActiva33,agregarMarcaMisionCompletada33,notificacionMisionCompletada33,recompensaMision33,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision33: "folder eliminarMarcaMisionActiva33,agregarMarcaMisionCompletada33,notificacionMisionCompletada33,recompensaMision33,recompensaExpClase,recompensaReparador,recompensaComida,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva33: "tag delete marcaMisionActiva33"
   recompensaMision33: "command eco give %player% 300"
+  recompensaReparador: "run ^mmoitemgive CONSUMABLE REPARADOR_250 2 ^notify &aHas conseguido 2 Reparadores Básicos."
+  recompensaComida: "run ^command give %player% potato 5 ^notify &aHas conseguido 5 Patatas."
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
   agregarMarcaMisionCompletada33: "tag add marcaMisionCompletada33"
