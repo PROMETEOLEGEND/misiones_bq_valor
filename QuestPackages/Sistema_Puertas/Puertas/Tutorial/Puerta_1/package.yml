@@ -3,19 +3,19 @@ package:
     - Sistema_Puertas-Puertas
 
 conditions:
-  requerimientoEntradaPuerta: "and estarEnRangoPuerta,!claseRequerida"
-  estarEnRangoPuerta: "location $ubicacionSalida$ 5"
-  claseRequerida: "variable %ph.mmocore_class% Humano"
+  tenerClaseHumano: "mmoclass humano"
 
 events:
-  eventoPuerta: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada,notificacionEntradaBloqueada,notificacionSonidoEntradaBloqueada,eventoSalida,notificacionSalida,notificacionSonidoSalida"
-  notificacionEntradaBloqueada: "notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
-  notificacionSonidoEntradaBloqueada: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$ condition:requerimientoEntradaPuerta"
+  eventoPuerta: "if requerimientoEntradaPuerta eventoEntradaPuerta else eventoErrorPuerta"
+  eventoEntradaPuerta: "if !tenerClaseHumano eventoEntradaPuerta2 else notificacionEntradaBloqueada"
+  eventoEntradaPuerta2: "folder eventoEntrada,notificacionEntrada,notificacionSonidoEntrada"
+  notificacionEntradaBloqueada: "folder notificacionEntradaBloqueada1,notificacionEntradaBloqueada2"
+  notificacionEntradaBloqueada1: "notify &cNecesitas haber elegido una clase para pasar a la siguiente zona."
+  notificacionEntradaBloqueada2: "notify io:sound soundcategory:blocks sound:$efectoSonidoEntradaBloqueada$"
 
 variables:
   ubicacionEntrada: 1820.5;61;-446.5;Zona1
   pitchYawEntrada: -180;0
   ubicacionSalida: 1819.5;63;-436.5;Zona1
-  mensajeEntrada: "&aHas pasado a la siguiente etapa del tutorial"
-  efectoSonidoEntradaBloqueada: "entity.villager.no"
-  mensajeSalida: ""
+  mensajeEntrada: Has pasado a la siguiente etapa del tutorial
+  efectoSonidoEntradaBloqueada: entity.villager.no
