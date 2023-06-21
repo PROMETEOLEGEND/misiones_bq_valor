@@ -90,10 +90,11 @@ events:
   
   recompensaMascotaHada: "command lp user %player% permission set mcpets.hada"
   
-  completarMision16: "folder eliminarMarcaMisionActiva16,quitarObjBrujula16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision16: "folder eliminarMarcaMisionActiva16,quitarObjBrujula16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva16: "tag delete marcaMisionActiva16"
   agregarMarcaMisionCompletada16: "tag add marcaMisionCompletada16"
   notificacionMisionCompletada16: "notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  recompensaComida: "run ^command give %player% carrot 3 ^notify &aHas conseguido 3 Zanahorias."
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
   establecerObjBrujula16: "compasstrack 957;61;434;Zona1"

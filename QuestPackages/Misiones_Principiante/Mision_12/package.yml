@@ -12,11 +12,12 @@ events:
   
   mensajeAyudaMision12: "notify \n&6&lMisión 12:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
-  completarMision12: "folder eliminarMarcaMisionActiva12,agregarMarcaMisionCompletada12,notificacionMisionCompletada12,recompensaMision12,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision12: "folder eliminarMarcaMisionActiva12,agregarMarcaMisionCompletada12,notificacionMisionCompletada12,recompensaMision12,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva12: "tag delete marcaMisionActiva12"
   agregarMarcaMisionCompletada12: "tag add marcaMisionCompletada12"
   notificacionMisionCompletada12: "notify &7----------------------------------------\n&6&l¡Misión 12 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision12: "command eco give %player% 200"
+  recompensaComida: "run ^command give %player% carrot 3 ^notify &aHas conseguido 3 Zanahorias."
   recompensaExpClase: "mmoclassexperience 50"
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
 
