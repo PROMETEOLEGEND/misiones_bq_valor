@@ -121,7 +121,7 @@ events:
   mazmorraCompletarMedusa: "folder agregarMarcaMazmorraCompletadaMedusa,notificacionNuevoMensajeAyuda delay:1"
   agregarMarcaMazmorraCompletadaMedusa: "tag add marcaMazmorraCompletadaMedusa"
   
-  completarMision66: "folder eliminarMarcasMisionActiva66,agregarMarcaMisionCompletada66,notificacionMisionCompletada66,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision66: "folder eliminarMarcasMisionActiva66,agregarMarcaMisionCompletada66,notificacionMisionCompletada66,darRecompensaMisionMascota,darRecompensaMisionMascotaMensaje,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcasMisionActiva66: "folder eliminarMarcaMisionActiva66,eliminarMarcaMisionInfoRecibidaMedusa,eliminarMarcaMisionAceptadaMedusa,eliminarMarcaMazmorraCompletadaMedusa"
   eliminarMarcaMisionActiva66: "tag delete marcaMisionActiva66"
   eliminarMarcaMisionInfoRecibidaMedusa: "tag delete marcaInfoRecibidaMedusa"
@@ -130,5 +130,7 @@ events:
   agregarMarcaMisionCompletada66: "tag add marcaMisionCompletada66"
   notificacionMisionCompletada66: "notify &7----------------------------------------\n&6&l¡Misión 66 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   darRecompensaMision: "command eco give %player% 6000"
+  darRecompensaMisionMascota: "command lp user %player% permission set mcpets.basilisk_wild"
+  darRecompensaMisionMascotaMensaje: "notify &aHas conseguido una nueva montura: &6Basilisco Salvaje&e. Usa &f/mascotas &epara ver tu nueva montura."
   recompensaExpClase: "mmoclassexperience 800"
   notificacionRecompensaExpClase: "notify &aHas conseguido 800 exp de clase."
