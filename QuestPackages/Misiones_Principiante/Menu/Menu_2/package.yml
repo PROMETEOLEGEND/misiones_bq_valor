@@ -752,7 +752,7 @@ menus:
         - "&6&l[Misión 47]: &eSubiendo nivel, de nuevo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 7 de clase&7&o."
+        - "&7&oSube al &f&onivel 9 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -765,7 +765,7 @@ menus:
         - "&6&l[Misión 47]: &eSubiendo nivel, de nuevo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 7 de clase&7&o."
+        - "&7&oSube al &f&onivel 9 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -777,7 +777,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 47]: &eSubiendo nivel, de nuevo"
         - "&r "
-        - "&7&oSube al &f&onivel 7 de clase&7&o."
+        - "&7&oSube al &f&onivel 9 de clase&7&o."
       botonMisionBloqueada47:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_46.misionCompletada46"
@@ -828,7 +828,7 @@ menus:
         - "&6&l[Misión 49]: &eSubiendo como la espuma"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 10 de clase&7&o"
+        - "&7&oSube al &f&onivel 12 de clase&7&o"
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -841,7 +841,7 @@ menus:
         - "&6&l[Misión 49]: &eSubiendo como la espuma"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 10 de clase&7&o"
+        - "&7&oSube al &f&onivel 12 de clase&7&o"
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -853,7 +853,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 49]: &eSubiendo como la espuma"
         - "&r "
-        - "&7&oSube al &f&onivel 10 de clase&7&o"
+        - "&7&oSube al &f&onivel 12 de clase&7&o"
       botonMisionBloqueada49:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_48.misionCompletada48"
