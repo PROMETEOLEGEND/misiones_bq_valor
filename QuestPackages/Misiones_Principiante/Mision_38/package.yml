@@ -108,7 +108,7 @@ conditions:
 #####################################################################        
 
 objectives:
-  completarMazmorraKur: "finishdungeon Kur events:mazmorraCompletarKur"
+  completarMazmorraKur: "finishdungeon Kurt events:mazmorraCompletarKur"
 
 #####################################################################        
 
