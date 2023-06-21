@@ -12,12 +12,13 @@ events:
   
   mensajeAyudaMision13: "notify \n&6&lMisión 13:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel de prestigio. Los jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
-  completarMision13: "folder eliminarMarcaMisionActiva13,agregarMarcaMisionCompletada13,notificacionMisionCompletada13,recompensaMision13,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision13: "folder eliminarMarcaMisionActiva13,agregarMarcaMisionCompletada13,notificacionMisionCompletada13,recompensaMision13,recompensaReparador,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva13: "tag delete marcaMisionActiva13"
   agregarMarcaMisionCompletada13: "tag add marcaMisionCompletada13"
   notificacionMisionCompletada13: "notify &7----------------------------------------\n&6&l¡Misión 13 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision13: "command eco give %player% 200"
   recompensaExpClase: "mmoclassexperience 50"
+  recompensaReparador: "mmoitemgive CONSUMABLE REPARADOR_250 2"
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."
 
 ####################################################################################################

@@ -12,11 +12,12 @@ events:
   
   mensajeAyudaMision15: "notify \n&6&lMisión 15:\n&r El comando &b/pase&r te permite visualizar el menú del &bPase de Batalla&r. Conforme vayas completando misiones del Pase de Batalla irás obteniendo puntos, y por cada 150 puntos que obtengas podrás reclamar recompensas.\n&r"
   
-  completarMision15: "folder eliminarMarcaMisionActiva15,agregarMarcaMisionCompletada15,notificacionMisionCompletada15,recompensaMision15,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  completarMision15: "folder eliminarMarcaMisionActiva15,agregarMarcaMisionCompletada15,notificacionMisionCompletada15,recompensaMision15,recompensaReparador,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva15: "tag delete marcaMisionActiva15"
   agregarMarcaMisionCompletada15: "tag add marcaMisionCompletada15"
   notificacionMisionCompletada15: "notify &7----------------------------------------\n&6&l¡Misión 15 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision15: "command eco give %player% 250"
+  recompensaReparador: "mmoitemgive CONSUMABLE REPARADOR_250 2"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."
 
