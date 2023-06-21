@@ -30,7 +30,7 @@
 30. Sube a nivel 2 la profesion de mineria. (Hecho)
 31. Supera la mazmorra de Kobold. (Hecho)
 32. Fabrica un pico de diamante. (Hecho)
-33. Sube a nivel 5 de clase. (Hecho)
+33. Fabrica un reparador dorado. (Hecho)
 34. Gasta un punto de atributo. (Hecho)
 35. Encuentra Amatista. (Hecho)
 36. Fabrica Esencia de amatista. (Hecho)
