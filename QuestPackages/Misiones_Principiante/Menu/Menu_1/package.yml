@@ -3,10 +3,10 @@ menus:
     height: 6
     title: "§f§f㊑"
     # open_conditions: "misionTutorialCompletada"
-    open_events: "sonidoAbrirMenu,abrirPaginaActual"
+    open_events: "sonidoAbrirMenu"
     close_events: "sonidoCerrarMenu"
     # bind: "objetoMision"
-    command: "/misiones"
+    # command: "/misiones"
     slots:
       10: "botonMisionDisponible1,botonMisionCompletada1"
       11: "botonMisionDisponible2,botonMisionActiva2,botonMisionCompletada2,botonMisionBloqueada2"
@@ -1143,14 +1143,9 @@ menus:
 events:
   # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"
   abrirPaginaSiguiente: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones"
+
   sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
-
-  abrirPaginaActual: "folder primeraPagina,segundaPagina,terceraPagina"
-  primeraPagina: "menu open menuMisiones condition:!Misiones_Principiante-Mision_28.misionCompletada28"
-  segundaPagina: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones condition:Misiones_Principiante-Mision_28.misionCompletada28"
-  terceraPagina: "menu open Misiones_Principiante-Menu-Menu_3.menuMisiones condition:Misiones_Principiante-Mision_56.misionCompletada56"
-
 
 #####################################################################
 

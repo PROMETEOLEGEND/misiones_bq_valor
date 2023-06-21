@@ -2,6 +2,8 @@ menus:
   menuMisiones:
     height: 6
     title: "§f§f㊑"
+    open_events: "sonidoAbrirMenu"
+    close_events: "sonidoCerrarMenu"
     slots:
       47: "botonPaginaAnterior"
       # 49: "botonVolverMenuPrincipal"

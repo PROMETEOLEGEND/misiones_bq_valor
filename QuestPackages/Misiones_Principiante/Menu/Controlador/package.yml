@@ -1,0 +1,21 @@
+menus:
+  menuMisiones:
+    height: 6
+    title: "§f§f㊑"
+    open_events: "abrirPaginaActual"
+    command: "/misiones"
+    slots:
+      0: "dummyButton"
+    items:
+      dummyButton:
+        item: "dummyItem"
+
+
+events:
+  abrirPaginaActual: "folder primeraPagina,segundaPagina,terceraPagina"
+  primeraPagina: "menu open Misiones_Principiante-Menu-Menu_1.menuMisiones condition:!Misiones_Principiante-Mision_28.misionCompletada28"
+  segundaPagina: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones condition:Misiones_Principiante-Mision_28.misionCompletada28"
+  terceraPagina: "menu open Misiones_Principiante-Menu-Menu_3.menuMisiones condition:Misiones_Principiante-Mision_56.misionCompletada56"
+
+items:
+  botonMisionActiva: "INK_SAC custom-model-data:1461"
