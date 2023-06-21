@@ -6,7 +6,7 @@ conditions:
 ####################################################################################################
 
 events:
-  mensajeAyudaMision37: "notify \n&6&lMisión 37:&r Debes fabricar una &bEspada de Amatista&r, para ello necesitarás &b4 bloques de amatista &ry una &bEspada de netherita&r.\n&r"
+  mensajeAyudaMision37: "notify \n&6&lMisión 37:&r Debes fabricar una &bEspada de Amatista&r, para ello necesitarás &b4 Esencias de Amatista &ry una &bEspada de netherita&r.\n&r"
   
   iniciarMision37: "folder agregarMarcaMisionActiva37,iniciarObjetivoMision37"
   agregarMarcaMisionActiva37: "tag add marcaMisionActiva37"

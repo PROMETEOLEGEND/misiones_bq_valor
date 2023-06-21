@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva27: "tag add marcaMisionActiva27"
   iniciarObjetivoMision27: "objective start objFabricarMesaHerreria"
   
-  mensajeAyudaMision27: "notify \n&6&lMisión 27:\n&r Para fabricar una &bMesa de herreria &rnecesitarás 4 bloques de cualquier madera y 2 lingotes de hierro, los cuales puedes obtener del tronco de cualquier árbol y cocinando menas de hierro respectivamente.\n&r"
+  mensajeAyudaMision27: "notify \n&6&lMisión 27:\n&r Para fabricar una &bMesa de herrería &rnecesitarás 4 bloques de cualquier madera y 2 lingotes de hierro, los cuales puedes obtener del tronco de cualquier árbol y cocinando menas de hierro respectivamente.\n&r"
   
   completarMision27: "folder eliminarMarcaMisionActiva27,agregarMarcaMisionCompletada27,notificacionMisionCompletada27,recompensaMision27,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva27: "tag delete marcaMisionActiva27"

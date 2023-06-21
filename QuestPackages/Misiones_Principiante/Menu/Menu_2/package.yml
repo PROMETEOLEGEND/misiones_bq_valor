@@ -63,8 +63,8 @@ menus:
         - "&6&l[Misión 29]: &eUna cueva Misteriosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Jefe de los Mineros junto a"
-        - "&7&ola cueva de Edar."
+        - "&7&oHabla con el &f&oJefe de los Mineros&7&o junto a"
+        - "&f&ola cueva de Edar&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -77,8 +77,8 @@ menus:
         - "&6&l[Misión 29]: &eUna cueva Misteriosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Jefe de los Mineros junto a"
-        - "&7&ola cueva de Edar."
+        - "&7&oHabla con el &f&oJefe de los Mineros&7&o junto a"
+        - "&f&ola cueva de Edar&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -90,8 +90,8 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 29]: &eUna cueva Misteriosa"
         - "&r "
-        - "&7&oHabla con el Jefe de los Mineros junto a"
-        - "&7&ola cueva de Edar."
+        - "&7&oHabla con el &f&oJefe de los Mineros&7&o junto a"
+        - "&f&ola cueva de Edar&7&o."
       botonMisionBloqueada29:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_28.misionCompletada28"
@@ -101,10 +101,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_29.misionCompletada29,!Misiones_Principiante-Mision_30.misionActiva30,!Misiones_Principiante-Mision_30.misionCompletada30"
         close: true
         text:
-        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&6&l[Misión 30]: &eEl arte de la minería"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a nivel 2 de Mineria."
+        - "&7&oSube a &f&onivel 2 de minería&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -114,10 +114,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_30.misionActiva30"
         close: true
         text:
-        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&6&l[Misión 30]: &eEl arte de la minería"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a nivel 2 de Mineria."
+        - "&7&oSube a &f&onivel 2 de minería&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -127,9 +127,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_30.misionCompletada30"
         text:
         - "&2¡Misión completada!"
-        - "&6&l[Misión 30]: &eEl arte de la Mineria"
+        - "&6&l[Misión 30]: &eEl arte de la minería"
         - "&r "
-        - "&7&oSube a nivel 2 de Mineria."
+        - "&7&oSube a &f&onivel 2 de minería&7&o."
       botonMisionBloqueada30:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_29.misionCompletada29"
@@ -142,7 +142,7 @@ menus:
         - "&6&l[Misión 31]: &eUn asesino despiadado"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -155,7 +155,7 @@ menus:
         - "&6&l[Misión 31]: &eUn asesino despiadado"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -167,7 +167,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 31]: &eUn asesino despiadado"
         - "&r "
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
       botonMisionBloqueada31:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_30.misionCompletada30"
@@ -180,7 +180,7 @@ menus:
         - "&6&l[Misión 32]: &eUn pico a medida"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica un &6&oPico de diamante&7&o."
+        - "&7&oFabrica un &f&oPico de diamante&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -193,7 +193,7 @@ menus:
         - "&6&l[Misión 32]: &eUn pico a medida"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica un &6&oPico de diamante&7&o."
+        - "&7&oFabrica un &f&oPico de diamante&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -205,7 +205,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 32]: &eUn pico a medida"
         - "&r "
-        - "&7&oFabrica un &6&oPico de diamante&7&o."
+        - "&7&oFabrica un &f&oPico de diamante&7&o."
       botonMisionBloqueada32:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_31.misionCompletada31"
@@ -215,10 +215,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_32.misionCompletada32,!Misiones_Principiante-Mision_33.misionActiva33,!Misiones_Principiante-Mision_33.misionCompletada33"
         close: true
         text:
-        - "&6&l[Misión 33]: &eMejorando tu nivel"
+        - "&6&l[Misión 33]: &eReparando tu equipamiento"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &6&onivel 5 de clase&7&o."
+        - "&7&oFabrica un &f&oReparador Dorado&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -231,7 +231,7 @@ menus:
         - "&6&l[Misión 33]: &eMejorando tu nivel"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &6&onivel 5 de clase&7&o."
+        - "&7&oFabrica un &f&oReparador Dorado&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -243,7 +243,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 33]: &eMejorando tu nivel"
         - "&r "
-        - "&7&oSube al &6&onivel 5 de clase&7&o."
+        - "&7&oFabrica un &f&oReparador Dorado&7&o."
       botonMisionBloqueada33:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_32.misionCompletada32"
@@ -408,7 +408,7 @@ menus:
         - "&6&l[Misión 38]: &eUn goblin temerario"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -421,7 +421,7 @@ menus:
         - "&6&l[Misión 38]: &eUn goblin temerario"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -433,7 +433,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 38]: &eUn goblin temerario"
         - "&r "
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       botonMisionBloqueada38:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_37.misionCompletada37"
@@ -446,7 +446,7 @@ menus:
         - "&6&l[Misión 39]: &eUn producto poco común"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+        - "&7&oVe a hablar con el &f&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -459,7 +459,7 @@ menus:
         - "&6&l[Misión 39]: &eUn producto poco común"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+        - "&7&oVe a hablar con el &f&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
         - "&r "
         - "&7[&aClic izquierdo&7] para localizar al NPC."
         click:
@@ -471,7 +471,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 39]: &eUn producto poco común"
         - "&r "
-        - "&7&oVe a hablar con el &6&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
+        - "&7&oVe a hablar con el &f&oGranjero &7&oque vive a las afueras de la ciudad de Valor."
       botonMisionBloqueada39:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_38.misionCompletada38"
@@ -484,7 +484,7 @@ menus:
         - "&6&l[Misión 40]: &eEn busca de Bulbos"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oEncuentra un &a&oBulbo&7&o."
+        - "&7&oEncuentra un &f&oBulbo&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -497,7 +497,7 @@ menus:
         - "&6&l[Misión 40]: &eEn busca de Bulbos"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oEncuentra un &a&oBulbo&7&o."
+        - "&7&oEncuentra un &f&oBulbo&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -509,7 +509,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 40]: &eEn busca de Bulbos"
         - "&r "
-        - "&7&oEncuentra un &a&oBulbo&7&o."
+        - "&7&oEncuentra un &f&oBulbo&7&o."
       botonMisionBloqueada40:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_39.misionCompletada39"
@@ -522,7 +522,7 @@ menus:
         - "&6&l[Misión 41]: &eAumentando tu Prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+        - "&7&oSube a &f&onivel 5 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -535,7 +535,7 @@ menus:
         - "&6&l[Misión 41]: &eAumentando tu Prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+        - "&7&oSube a &f&onivel 5 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -547,7 +547,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 41]: &eAumentando tu Prestigio"
         - "&r "
-        - "&7&oSube a &a&onivel 5 de Prestigio&7&o."
+        - "&7&oSube a &f&onivel 5 de Prestigio&7&o."
       botonMisionBloqueada41:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_40.misionCompletada40"
@@ -560,7 +560,7 @@ menus:
         - "&6&l[Misión 42]: &eAprendiendo a cultivar"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a &a&onivel 2 de Granjero&7&o."
+        - "&7&oSube a &f&onivel 2 de Granjero&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -573,7 +573,7 @@ menus:
         - "&6&l[Misión 42]: &eAprendiendo a cultivar"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube a &a&onivel 2 de Granjero&7&o."
+        - "&7&oSube a &f&onivel 2 de Granjero&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -585,7 +585,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 42]: &eAprendiendo a cultivar"
         - "&r "
-        - "&7&oSube a &a&onivel 2 de Granjero&7&o."
+        - "&7&oSube a &f&onivel 2 de Granjero&7&o."
       botonMisionBloqueada42:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_41.misionCompletada41"
@@ -598,7 +598,7 @@ menus:
         - "&6&l[Misión 43]: &eUna criatura mitológica"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Rey de Valor&o."
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -611,7 +611,7 @@ menus:
         - "&6&l[Misión 43]: &eUna criatura mitológica"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Rey de Valor&o."
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -623,7 +623,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 43]: &eUna criatura mitológica"
         - "&r "
-        - "&7&oHabla con el Rey de Valor&o."
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
       botonMisionBloqueada43:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_42.misionCompletada42"
@@ -788,7 +788,7 @@ menus:
         - "&6&l[Misión 48]: &eUn caparazón muy grueso"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -801,7 +801,7 @@ menus:
         - "&6&l[Misión 48]: &eUn caparazón muy grueso"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -813,7 +813,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 48]: &eUn caparazón muy grueso"
         - "&r "
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o."
       botonMisionBloqueada48:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_47.misionCompletada47"
@@ -1054,7 +1054,7 @@ menus:
         - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHablar con el Rey de Valor"
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1067,7 +1067,7 @@ menus:
         - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHablar con el Rey de Valor"
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
         click:
@@ -1079,7 +1079,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 55]: &eUna raza pequeña pero peligrosa"
         - "&r "
-        - "&7&oHablar con el Rey de Valor"
+        - "&7&oHabla con el &f&oRey de Valor&7&o."
       botonMisionBloqueada55:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_54.misionCompletada54"           
@@ -1092,7 +1092,7 @@ menus:
         - "&6&l[Misión 56]: &eEl árbol gigante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrotar un &f&oEnt Guardian"
+        - "&7&oDerrota un &f&oEnt Guardian&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1105,7 +1105,7 @@ menus:
         - "&6&l[Misión 56]: &eEl árbol gigante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrotar un &f&oEnt Guardian"
+        - "&7&oDerrota un &f&oEnt Guardian&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda sobre la misión."
         click:
@@ -1117,7 +1117,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 56]: &eEl árbol gigante"
         - "&r "
-        - "&7&oDerrotar un &f&oEnt Guardian"
+        - "&7&oDerrota un &f&oEnt Guardian&7&o."
       botonMisionBloqueada56:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_55.misionCompletada55"           

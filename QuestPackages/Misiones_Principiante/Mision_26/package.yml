@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva26: "tag add marcaMisionActiva26"
   iniciarObjetivoMision26: "objective start objColocarGema"
   
-  mensajeAyudaMision26: "notify \n&6&lMisión 26:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadísticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una Gema de Crítico de nivel I a tu Espada Inicial.\n \n&7Nota: La espada inicial puedes conseguirla en el Kit inicial que te da el Paladin.\n&r"
+  mensajeAyudaMision26: "notify \n&6&lMisión 26:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadísticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una Gema de Crítico de nivel I a tu Espada Básica.\n \n&7Nota: La Espada Básica puedes conseguirla en el Tutorial o comprarla en la Armeria de Valor.\n&r"
   
   completarMision26: "folder eliminarMarcaMisionActiva26,agregarMarcaMisionCompletada26,notificacionMisionCompletada26,recompensaMision26,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva26: "tag delete marcaMisionActiva26"
@@ -22,4 +22,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objColocarGema: "mmoitemapplygem ESPADA_GEMA ESPADA_INICIAL GEMA_CRITICO_1 events:completarMision26"
+  objColocarGema: "mmoitemapplygem ESPADA_GEMA ESPADA_BASICA GEMA_CRITICO_1 events:completarMision26"
