@@ -1147,9 +1147,9 @@ events:
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
 
   abrirPaginaActual: "folder primeraPagina,segundaPagina,terceraPagina"
-  primeraPagina: "menu menuPrincipal condition:!Misiones_Principiante-Mision_28.misionCompletada28"
-  segundaPagina: "menu Misiones_Principiante-Menu-Menu_2.menuMisiones condition:Misiones_Principiante-Mision_28.misionCompletada28"
-  terceraPagina: "menu Misiones_Principiante-Menu-Menu_3.menuMisiones condition:Misiones_Principiante-Mision_56.misionCompletada56"
+  primeraPagina: "menu open menuPrincipal condition:!Misiones_Principiante-Mision_28.misionCompletada28"
+  segundaPagina: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones condition:Misiones_Principiante-Mision_28.misionCompletada28"
+  terceraPagina: "menu open Misiones_Principiante-Menu-Menu_3.menuMisiones condition:Misiones_Principiante-Mision_56.misionCompletada56"
 
 
 #####################################################################
