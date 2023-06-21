@@ -393,7 +393,9 @@ menus:
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar&7&o,"
+        - "&7&opara ello usa &f&o/spawn&7&o y ve a hablar"
+        - "&7&ocon el &f&oVikingo &7&oen la &f&oPlaza de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -406,7 +408,9 @@ menus:
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar&7&o,"
+        - "&7&opara ello usa &f&o/spawn&7&o y ve a hablar"
+        - "&7&ocon el &f&oVikingo &7&oen la &f&oPlaza de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -418,7 +422,9 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 10]: &eNo hay lugar como el hogar, parte 2"
         - "&r "
-        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar &7&opara ello usa &b&o/spawn&7&o y ve a hablar con el Vikingo en la plaza de Valor."
+        - "&7&oPara volver a tu casa necesitas una &f&oRuna del Hogar&7&o,"
+        - "&7&opara ello usa &f&o/spawn&7&o y ve a hablar"
+        - "&7&ocon el &f&oVikingo &7&oen la &f&oPlaza de Valor&7&o."
       botonMisionBloqueada10:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_09.misionCompletada9"
@@ -431,7 +437,8 @@ menus:
         - "&6&l[Misión 11]: &eUna misión pegajosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve"
+        - "&7&oal &f&oSalón del Trono &7&odel &f&oPalacio de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -444,7 +451,8 @@ menus:
         - "&6&l[Misión 11]: &eUna misión pegajosa"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve"
+        - "&7&oal &f&oSalón del Trono &7&odel &f&oPalacio de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -456,7 +464,8 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 11]: &eUna misión pegajosa"
         - "&r "
-        - "&7&oVe a hablar con el &6&oRey de Valor&7&o, para ello ve al Salón del Trono del Palacio de Valor."
+        - "&7&oVe a hablar con el &f&oRey de Valor&7&o, para ello ve"
+        - "&7&oal &f&oSalón del Trono &7&odel &f&oPalacio de Valor&7&o."
       botonMisionBloqueada11:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_10.misionCompletada10"
@@ -469,7 +478,7 @@ menus:
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al &f&onivel 3 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -482,7 +491,7 @@ menus:
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al &f&onivel 3 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -494,7 +503,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 12]: &eUn nuevo nivel"
         - "&r "
-        - "&7&oSube al nivel 3 de clase."
+        - "&7&oSube al &f&onivel 3 de clase&7&o."
       botonMisionBloqueada12:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_11.misionCompletada11"
@@ -507,7 +516,7 @@ menus:
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de Prestigio."
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -520,7 +529,7 @@ menus:
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 3 de Prestigio."
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -532,7 +541,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 13]: &eObteniendo prestigio"
         - "&r "
-        - "&7&oSube al nivel 3 de Prestigio."
+        - "&7&oSube al &f&onivel 3 de Prestigio&7&o."
       botonMisionBloqueada13:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_12.misionCompletada12"
@@ -545,7 +554,8 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa"
+        - "&7&odel &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -558,7 +568,8 @@ menus:
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa"
+        - "&7&odel &f&onivel 3 de Prestigio&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -570,7 +581,8 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 14]: &eRecompensa inesperada"
         - "&r "
-        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa del &f&onivel 3 de Prestigio&7&o."
+        - "&7&oUsa &f&o/prestigio &7&oy reclama la recompensa"
+        - "&7&odel &f&onivel 3 de Prestigio&7&o."
       botonMisionBloqueada14:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_13.misionCompletada13"
@@ -624,8 +636,8 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
-        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la"
+        - "&f&oTienda de mascotas de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -638,8 +650,8 @@ menus:
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
-        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la"
+        - "&f&oTienda de mascotas de Valor&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -651,8 +663,8 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 16]: &eConsiguiendo un acompañante"
         - "&r "
-        - "&7&oHabla con el Granjero que está en la &f&oTienda de"
-        - "&f&omascotas de Valor &7&opara obtener una mascota &f&oHada&7&o."
+        - "&7&oHabla con el Granjero que está en la"
+        - "&f&oTienda de mascotas de Valor&7&o."
       botonMisionBloqueada16:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_15.misionCompletada15"
@@ -779,7 +791,7 @@ menus:
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 5 de clase."
+        - "&7&oSube al &f&onivel 5 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -792,7 +804,7 @@ menus:
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 5 de clase."
+        - "&7&oSube al &f&onivel 5 de clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -804,7 +816,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 20]: &eUn nuevo nivel, parte 2"
         - "&r "
-        - "&7&oSube al nivel 5 de clase."
+        - "&7&oSube al &f&onivel 5 de clase&7&o."
       botonMisionBloqueada20:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_19.misionCompletada19"
@@ -966,7 +978,7 @@ menus:
         conditions: "Misiones_Principiante-Mision_24.misionCompletada24,!Misiones_Principiante-Mision_25.misionActiva25,!Misiones_Principiante-Mision_25.misionCompletada25"
         close: true
         text:
-        - "&6&l[Misión 25]: &eObteniendo Prestigio, Parte 2"
+        - "&6&l[Misión 25]: &eObteniendo prestigio, parte 2"
         - "&r "
         - "&aObjetivo:"
         - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
@@ -979,7 +991,7 @@ menus:
         conditions: "Misiones_Principiante-Mision_25.misionActiva25,!Misiones_Principiante-Mision_25.misionCompletada25"
         close: true
         text:
-        - "&6&l[Misión 25]: &eObteniendo Prestigio"
+        - "&6&l[Misión 25]: &eObteniendo prestigio, parte 2"
         - "&r "
         - "&aObjetivo:"
         - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
@@ -992,7 +1004,7 @@ menus:
         conditions: "Misiones_Principiante-Mision_25.misionCompletada25"
         text:
         - "&3¡Misión completada!"
-        - "&6&l[Misión 25]: &eObteniendo Prestigio"
+        - "&6&l[Misión 25]: &eObteniendo prestigio, parte 2"
         - "&r "
         - "&7&oSube al &f&onivel 5 de Prestigio&7&o."
       botonMisionBloqueada25:
@@ -1004,10 +1016,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_25.misionCompletada25,!Misiones_Principiante-Mision_26.misionActiva26,!Misiones_Principiante-Mision_26.misionCompletada26"
         close: true
         text:
-        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&6&l[Misión 26]: &eDotando de poder a tu espada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+        - "&7&oEquipa &f&ouna Gema de Crítico I &7&oa tu &f&oEspada Básica&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1017,10 +1029,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_26.misionActiva26,!Misiones_Principiante-Mision_26.misionCompletada26"
         close: true
         text:
-        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&6&l[Misión 26]: &eDotando de poder a tu espada"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+        - "&7&oEquipa &f&ouna Gema de Crítico I &7&oa tu &f&oEspada Básica&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -1030,9 +1042,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_26.misionCompletada26"
         text:
         - "&3¡Misión completada!"
-        - "&6&l[Misión 26]: &eDotando de poder a tu Espada"
+        - "&6&l[Misión 26]: &eDotando de poder a tu espada"
         - "&r "
-        - "&7&oEquipa &f&ouna Gema de Crítico I a tu Espada Inicial&7&o."
+        - "&7&oEquipa &f&ouna Gema de Crítico I &7&oa tu &f&oEspada Básica&7&o."
       botonMisionBloqueada26:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_25.misionCompletada25"
@@ -1045,7 +1057,7 @@ menus:
         - "&6&l[Misión 27]: &eUn herrero de renombre"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+        - "&7&oFabrica &f&ouna Mesa de herrería&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1058,7 +1070,7 @@ menus:
         - "&6&l[Misión 27]: &eUn herrero de renombre"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+        - "&7&oFabrica &f&ouna Mesa de herrería&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -1070,20 +1082,20 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 27]: &eUn herrero de renombre"
         - "&r "
-        - "&7&oFabrica &f&ouna Mesa de Herreria&7&o."
+        - "&7&oFabrica &f&ouna Mesa de herrería&7&o."
       botonMisionBloqueada27:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_26.misionCompletada26"
 #####################################################################
       botonMisionDisponible28:
         item: "botonMisionActiva"
-        conditions: "Misiones_Principiante-Mision_26.misionCompletada26,!Misiones_Principiante-Mision_28.misionActiva28,!Misiones_Principiante-Mision_28.misionCompletada28"
+        conditions: "Misiones_Principiante-Mision_27.misionCompletada27,!Misiones_Principiante-Mision_28.misionActiva28,!Misiones_Principiante-Mision_28.misionCompletada28"
         close: true
         text:
         - "&6&l[Misión 28]: &eLeñador aficionado"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de Leñador."
+        - "&7&oSube al &f&onivel 2 de Leñador&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -1096,7 +1108,7 @@ menus:
         - "&6&l[Misión 28]: &eLeñador aficionado"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al nivel 2 de Leñador."
+        - "&7&oSube al &f&onivel 2 de Leñador&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -1108,7 +1120,7 @@ menus:
         - "&3¡Misión completada!"
         - "&6&l[Misión 28]: &eLeñador aficionado"
         - "&r "
-        - "&7&oSube al nivel 2 de Leñador."
+        - "&7&oSube al &f&onivel 2 de Leñador&7&o."
       botonMisionBloqueada28:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_27.misionCompletada27"
