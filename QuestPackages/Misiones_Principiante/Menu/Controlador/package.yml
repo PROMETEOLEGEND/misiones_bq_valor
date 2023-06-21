@@ -18,4 +18,4 @@ events:
   terceraPagina: "menu open Misiones_Principiante-Menu-Menu_3.menuMisiones condition:Misiones_Principiante-Mision_56.misionCompletada56"
 
 items:
-  botonMisionActiva: "INK_SAC custom-model-data:1461"
+  dummyItem: "INK_SAC custom-model-data:1461"

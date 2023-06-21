@@ -962,6 +962,9 @@ menus:
 events:
   abrirPaginaAnterior: "menu open Misiones_Principiante-Menu-Menu_2.menuMisiones"
   # abrirMenuPrincipal: "menu open Menu_Principal_Misiones.menuMisiones"
+  
+  sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
+  sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
 
 #####################################################################
 
