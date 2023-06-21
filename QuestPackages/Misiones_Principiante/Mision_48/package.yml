@@ -108,7 +108,7 @@ conditions:
 #####################################################################        
 
 objectives:
-  completarMazmorraTortuga: "finishdungeon tortuga events:mazmorraCompletarTortuga"
+  completarMazmorraTortuga: "finishdungeon Tortuga events:mazmorraCompletarTortuga"
 
 #####################################################################        
 
