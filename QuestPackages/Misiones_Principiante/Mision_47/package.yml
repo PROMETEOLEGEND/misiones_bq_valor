@@ -1,14 +1,14 @@
 conditions:
   misionActiva47: "tag marcaMisionActiva47"
   misionCompletada47: "tag marcaMisionCompletada47"
-  nivel7Clase: "mmoclass * 7"
+  nivel9Clase: "mmoclass * 9"
 
 ####################################################################################################
 
 events:
   iniciarMision47: "folder agregarMarcaMisionActiva47,iniciarObjetivoMision47"
   agregarMarcaMisionActiva47: "tag add marcaMisionActiva47"
-  iniciarObjetivoMision47: "objective start objSubirNivel7Clase"
+  iniciarObjetivoMision47: "objective start objSubirNivel9Clase"
   
   mensajeAyudaMision47: "notify \n&6&lMisión 47:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
@@ -23,4 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objSubirNivel7Clase: "delay 5 ticks interval:5 conditions:nivel7Clase events:completarMision47"
+  objSubirNivel9Clase: "delay 5 ticks interval:5 conditions:nivel9Clase events:completarMision47"
