@@ -44,9 +44,9 @@
 44. Fabrica una espada de amatista con un espacio para gema. (Hecho)
 45. Fusiona 3 gemas de nivel I para obtener 1 gema de nivel II. (Hecho)
 46. Coloca una gema nivel II a tu espada de amatista. (Hecho)
-47. Sube a nivel 7 de clase. (Hecho)
+47. Sube a nivel 9 de clase. (Hecho)
 48. Supera la mazmorra de la Tortuga Gigante. (Hecho)
-49. Sube a nivel 10 de clase. (Hecho)
+49. Sube a nivel 12 de clase. (Hecho)
 50. Sube a nivel 10 de prestigio. (Hecho)
 51. Habla con el bufón y reclama un 2do hogar.
 52. Mina 10 menas de Rubi. (Hecho)

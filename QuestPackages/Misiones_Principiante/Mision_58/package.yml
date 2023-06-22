@@ -13,7 +13,7 @@ events:
   completarMision58: "folder eliminarMarcaMisionActiva58,agregarMarcaMisionCompletada58,notificacionMisionCompletada58,recompensaMision58,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva58: "tag delete marcaMisionActiva58"
   agregarMarcaMisionCompletada58: "tag add marcaMisionCompletada58"
-  notificacionMisionCompletada58: "notify &7----------------------------------------\n&6&l¡Misión 58 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada58: ""run ^notify &7----------------------------------------\n&6&l¡Misión 58 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision58: "command eco give %player% 2300"
   recompensaExpClase: "mmoclassexperience 450"
   notificacionRecompensaExpClase: "notify &aHas conseguido 450 exp de clase."

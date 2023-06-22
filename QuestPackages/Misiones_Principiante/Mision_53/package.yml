@@ -17,7 +17,7 @@ events:
   eliminarMarcaMisionActiva53: "tag delete marcaMisionActiva53"
   eliminarPuntosMision53: "point bloquesMinados 10 action:subtract"
   agregarMarcaMisionCompletada53: "tag add marcaMisionCompletada53"
-  notificacionMisionCompletada53: "notify &7----------------------------------------\n&6&l¡Misión 53 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada53: ""run ^notify &7----------------------------------------\n&6&l¡Misión 53 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision53: "command eco give %player% 500"
   recompensaExpClase: "mmoprofessionexperience mining 300"
   notificacionRecompensaExpClase: "notify &aHas conseguido 300 exp de mineria."

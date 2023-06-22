@@ -17,7 +17,7 @@ events:
   eliminarMarcaMisionActiva76: "tag delete marcaMisionActiva76"
   eliminarPuntosMision76: "point bloquesMinados 10 action:subtract"
   agregarMarcaMisionCompletada76: "tag add marcaMisionCompletada76"
-  notificacionMisionCompletada76: "notify &7----------------------------------------\n&6&l¡Misión 76 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada76: ""run ^notify &7----------------------------------------\n&6&l¡Misión 76 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision76: "command eco give %player% 1000"
   recompensaExpMineria: "mmoprofessionexperience mining 850"
   notificacionRecompensaExpMineria: "notify &aHas conseguido 850 exp de mineria."

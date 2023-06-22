@@ -15,7 +15,7 @@ events:
   eliminarMarcaMisionActiva21: "tag delete marcaMisionActiva21"
   eliminarMarcaMisionActiva21_2: "objective delete objUsarComandoHabilidades,objUsarComandoHabilidades2"
   agregarMarcaMisionCompletada21: "tag add marcaMisionCompletada21"
-  notificacionMisionCompletada21: "notify &7----------------------------------------\n&6&l¡Misión 21 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada21: ""run ^notify &7----------------------------------------\n&6&l¡Misión 21 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision21: "command eco give %player% 150"
   recompensaExpClase: "mmoclassexperience 250"
   notificacionRecompensaExpClase: "notify &aHas conseguido 250 exp de clase."

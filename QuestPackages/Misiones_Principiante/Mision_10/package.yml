@@ -65,7 +65,7 @@ events:
   completarMision10: "folder eliminarMarcaMisionActiva10,agregarMarcaMisionCompletada10,notificacionMisionCompletada10,darRunaHogar,enfriamientoRunaHogar,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva10: "tag delete marcaMisionActiva10"
   agregarMarcaMisionCompletada10: "tag add marcaMisionCompletada10"
-  notificacionMisionCompletada10: "notify &7----------------------------------------\n&6&l¡Misión 10 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada10: ""run ^notify &7----------------------------------------\n&6&l¡Misión 10 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darRunaHogar: "command mi give CONSUMABLE RUNA_HOGAR %player% 1"
   enfriamientoRunaHogar: "command lp user %player% permission set runa_hogar.recibida true"
   recompensaExpClase: "mmoclassexperience 50"

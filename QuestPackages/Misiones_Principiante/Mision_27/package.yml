@@ -14,7 +14,7 @@ events:
   completarMision27: "folder eliminarMarcaMisionActiva27,agregarMarcaMisionCompletada27,notificacionMisionCompletada27,recompensaMision27,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva27: "tag delete marcaMisionActiva27"
   agregarMarcaMisionCompletada27: "tag add marcaMisionCompletada27"
-  notificacionMisionCompletada27: "notify &7----------------------------------------\n&6&l¡Misión 27 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada27: ""run ^notify &7----------------------------------------\n&6&l¡Misión 27 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   recompensaMision27: "command eco give %player% 500"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."

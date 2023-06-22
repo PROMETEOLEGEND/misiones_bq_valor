@@ -1,21 +1,21 @@
 conditions:
   misionActiva47: "tag marcaMisionActiva47"
   misionCompletada47: "tag marcaMisionCompletada47"
-  nivel7Clase: "mmoclass * 7"
+  nivel9Clase: "mmoclass * 9"
 
 ####################################################################################################
 
 events:
   iniciarMision47: "folder agregarMarcaMisionActiva47,iniciarObjetivoMision47"
   agregarMarcaMisionActiva47: "tag add marcaMisionActiva47"
-  iniciarObjetivoMision47: "objective start objSubirNivel7Clase"
+  iniciarObjetivoMision47: "objective start objSubirNivel9Clase"
   
   mensajeAyudaMision47: "notify \n&6&lMisión 47:\n&r Conforme vayas derrotando enemigos irás obteniendo experiencia para subir de nivel. Los Jefes de mazmorras otorgan una mayor cantidad de experiencia al ser derrotados.\n&r"
   
   completarMision47: "folder eliminarMarcaMisionActiva47,agregarMarcaMisionCompletada47,notificacionMisionCompletada47,recompensaMision47,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva47: "tag delete marcaMisionActiva47"
   agregarMarcaMisionCompletada47: "tag add marcaMisionCompletada47"
-  notificacionMisionCompletada47: "notify &7----------------------------------------\n&6&l¡Misión 47 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada47: ""run ^notify &7----------------------------------------\n&6&l¡Misión 47 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision47: "command eco give %player% 500"
   recompensaExpClase: "mmoclassexperience 350"
   notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."
@@ -23,4 +23,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objSubirNivel7Clase: "delay 5 ticks interval:5 conditions:nivel7Clase events:completarMision47"
+  objSubirNivel9Clase: "delay 5 ticks interval:5 conditions:nivel9Clase events:completarMision47"

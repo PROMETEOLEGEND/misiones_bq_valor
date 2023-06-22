@@ -14,7 +14,7 @@ events:
   completarMision7: "folder eliminarMarcaMisionActiva7,agregarMarcaMisionCompletada7,notificacionMisionCompletada7,recompensaMision7,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva7: "tag delete marcaMisionActiva7"
   agregarMarcaMisionCompletada7: "tag add marcaMisionCompletada7"
-  notificacionMisionCompletada7: "notify &7----------------------------------------\n&6&l¡Misión 7 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada7: ""run ^notify &7----------------------------------------\n&6&l¡Misión 7 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision7: "command eco give %player% 100"
   recompensaExpClase: "mmoprofessionexperience woodcutting 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de leñador."

@@ -68,7 +68,7 @@ events:
   eliminarBrujula: "clearcompass"
   eliminarMarcaMisionActiva39: "tag delete marcaMisionActiva39"
   agregarMarcaMisionCompletada39: "tag add marcaMisionCompletada39"
-  notificacionMisionCompletada39: "notify &7----------------------------------------\n&6&l¡Misión 39 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada39: ""run ^notify &7----------------------------------------\n&6&l¡Misión 39 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision39: "command eco give %player% 500"
   recompensaExpClase: "mmoclassexperience 350"
   notificacionRecompensaExpClase: "notify &aHas conseguido 350 exp de clase."

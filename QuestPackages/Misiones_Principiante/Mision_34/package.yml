@@ -20,7 +20,7 @@ events:
   eliminarObjetivoMision34_2: "objective delete objCalcularPuntosAtributoInvertidos"
   eliminarMarcaMisionActiva34: "tag delete marcaMisionActiva34"
   agregarMarcaMisionCompletada34: "tag add marcaMisionCompletada34"
-  notificacionMisionCompletada34: "notify &7----------------------------------------\n&6&l¡Misión 34 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada34: ""run ^notify &7----------------------------------------\n&6&l¡Misión 34 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision34: "command eco give %player% 250"
   recompensaExpClase: "mmoclassexperience 300"
   notificacionRecompensaExpClase: "notify &aHas conseguido 300 exp de clase."

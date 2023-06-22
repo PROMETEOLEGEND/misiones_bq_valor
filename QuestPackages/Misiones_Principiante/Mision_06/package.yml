@@ -14,7 +14,7 @@ events:
   completarMision6: "folder eliminarMarcaMisionActiva6,agregarMarcaMisionCompletada6,notificacionMisionCompletada6,recompensaMision6,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva6: "tag delete marcaMisionActiva6"
   agregarMarcaMisionCompletada6: "tag add marcaMisionCompletada6"
-  notificacionMisionCompletada6: "notify &7----------------------------------------\n&6&l¡Misión 6 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada6: ""run ^notify &7----------------------------------------\n&6&l¡Misión 6 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision6: "command eco give %player% 100"
   recompensaExpClase: "mmoprofessionexperience mining 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de mineria."

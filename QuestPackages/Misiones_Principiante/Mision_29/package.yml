@@ -75,7 +75,7 @@ events:
   completarMision29: "folder eliminarMarcaMisionActiva29,quitarObjBrujula,agregarMarcaMisionCompletada29,notificacionMisionCompletada29,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva29: "tag delete marcaMisionActiva29"
   agregarMarcaMisionCompletada29: "tag add marcaMisionCompletada29"
-  notificacionMisionCompletada29: "notify &7----------------------------------------\n&6&l¡Misión 29 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada29: ""run ^notify &7----------------------------------------\n&6&l¡Misión 29 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
   darPico: "command give %player% IRON_PICKAXE 1"
   darAccesoMina: "command lp user %player% permission set group.mina1"
   recompensaExpClase: "mmoclassexperience 50"

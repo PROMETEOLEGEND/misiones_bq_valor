@@ -14,7 +14,7 @@ events:
   completarMision69: "folder eliminarMarcaMisionActiva69,agregarMarcaMisionCompletada69,notificacionMisionCompletada69,recompensaMision69,recompensaExpPrestigio,notificacionRecompensaExpPrestigio delay:1"
   eliminarMarcaMisionActiva69: "tag delete marcaMisionActiva69"
   agregarMarcaMisionCompletada69: "tag add marcaMisionCompletada69"
-  notificacionMisionCompletada69: "notify &7----------------------------------------\n&6&l¡Misión 69 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada69: ""run ^notify &7----------------------------------------\n&6&l¡Misión 69 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision69: "command eco give %player% 1500"
   recompensaExpPrestigio: "mmoprofessionexperience prestigio 500"
   notificacionRecompensaExpPrestigio: "notify &aHas conseguido 500 exp de prestigio."

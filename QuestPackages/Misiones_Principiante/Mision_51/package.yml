@@ -150,7 +150,7 @@ events:
   completarMision51: "folder eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,darRecompensaVIP,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon"
   agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
-  notificacionMisionCompletada51: "notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada51: ""run ^notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true condition:!permisosYaEntregados"
   darRecompensaVIP: "command eco give %player% 10000 condition:permisosYaEntregados"
   recompensaExpClase: "mmoclassexperience 500"

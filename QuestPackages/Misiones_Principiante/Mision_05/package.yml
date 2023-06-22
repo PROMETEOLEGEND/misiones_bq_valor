@@ -14,7 +14,7 @@ events:
   completarMision5: "folder eliminarMarcaMisionActiva5,agregarMarcaMisionCompletada5,notificacionMisionCompletada5,recompensaMision5,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva5: "tag delete marcaMisionActiva5"
   agregarMarcaMisionCompletada5: "tag add marcaMisionCompletada5"
-  notificacionMisionCompletada5: "notify &7----------------------------------------\n&6&l¡Misión 5 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada5: ""run ^notify &7----------------------------------------\n&6&l¡Misión 5 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision5: "command eco give %player% 250"
   recompensaComida: "run ^command give %player% bread 3 ^notify &aHas conseguido 3 Panes."
   recompensaExpClase: "mmoclassexperience 50"

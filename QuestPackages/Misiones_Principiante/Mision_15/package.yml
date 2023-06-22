@@ -15,7 +15,7 @@ events:
   completarMision15: "folder eliminarMarcaMisionActiva15,agregarMarcaMisionCompletada15,notificacionMisionCompletada15,recompensaMision15,recompensaComida,recompensaReparador,recompensaReparadorMensaje,recompensaExpClase,notificacionRecompensaExpClase"
   eliminarMarcaMisionActiva15: "tag delete marcaMisionActiva15"
   agregarMarcaMisionCompletada15: "tag add marcaMisionCompletada15"
-  notificacionMisionCompletada15: "notify &7----------------------------------------\n&6&l¡Misión 15 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada15: ""run ^notify &7----------------------------------------\n&6&l¡Misión 15 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision15: "command eco give %player% 250"
   recompensaComida: "run ^command give %player% bread 5 ^notify &aHas conseguido 5 Panes."
   recompensaReparador: "mmoitemgive CONSUMABLE REPARADOR_250 2"

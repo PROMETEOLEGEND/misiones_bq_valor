@@ -93,7 +93,7 @@ events:
   completarMision16: "folder eliminarMarcaMisionActiva16,quitarObjBrujula16,agregarMarcaMisionCompletada16,notificacionMisionCompletada16,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva16: "tag delete marcaMisionActiva16"
   agregarMarcaMisionCompletada16: "tag add marcaMisionCompletada16"
-  notificacionMisionCompletada16: "notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada16: ""run ^notify &7----------------------------------------\n&6&l¡Misión 16 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaComida: "run ^command give %player% carrot 3 ^notify &aHas conseguido 3 Zanahorias."
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."

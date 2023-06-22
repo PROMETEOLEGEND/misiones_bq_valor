@@ -140,7 +140,7 @@ events:
   eliminarMarcaMisionAceptadaReyGoblin: "tag delete marcaMisionAceptadaReyGoblin"
   eliminarMarcaMazmorraCompletadaReyGoblin: "tag delete marcaMazmorraCompletadaReyGoblin"
   agregarMarcaMisionCompletada55: "tag add marcaMisionCompletada55"
-  notificacionMisionCompletada55: "notify &7----------------------------------------\n&6&l¡Misión 55 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada55: ""run ^notify &7----------------------------------------\n&6&l¡Misión 55 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darRecompensaMision: "command eco give %player% 5000"
   recompensaExpClase: "mmoclassexperience 700"
   notificacionRecompensaExpClase: "notify &aHas conseguido 700 exp de clase."

@@ -1,0 +1,126 @@
+conversations:
+  ReyValor11:
+    quester: "&6&lRey de Valor"
+    first: "saludo,saludo2,saludo3"
+    NPC_options:
+      saludo:
+        text: "Saludos ¡%player%!. Cuanto has crecido y mejorado tus habilidades! Aún recuerdo los días cuando no eras mas que un novato y te enseñaba las nociones básicas sobre tus habilidades y el uso de armas. ¿Qué necesitas?"
+        pointer: "a1"
+      b1:
+        text: "Entiendo... El hechizo en cuestión es el Conjuro de los Vínculos Antiguos. Este poderoso hechizo es lo que mantiene sellada la torre del nigromante y evita que su influencia se extienda aún más."
+        pointer: "a2"
+      b1_1:
+        text: "Presta atención. El hechizo en cuestión es el Conjuro de los Vínculos Antiguos. Este poderoso hechizo es lo que mantiene sellada la torre del nigromante y evita que su influencia se extienda aún más."
+        pointer: "a2"
+      b2:
+        text: "El Conjuro de los Vínculos Antiguos fue creado por los sabios y poderosos magos del reino durante la época de la gran guerra contra el nigromante. Con su conocimiento arcano, unieron las fuerzas de la luz y la oscuridad en un delicado equilibrio, logrando así encerrar al nigromante en su prisión eterna."
+        pointer: "a3"      
+      b3:
+        text: "Este conjuro actúa como un sello mágico que protege la torre del nigromante de cualquier intento de entrada. Solo aquellos que posean el conocimiento adecuado y los sellos correspondientes podrán romper el encantamiento y enfrentar al nigromante en su guarida maligna."
+        pointer: "a4,entendido"
+      b4:
+        text: "Para conseguir los sellos debes visitar los cuatro altares rúnicos que rodean nuestra amada Ciudad de Valor."
+        pointer: "a5"
+      b5:
+        text: "Los altares rúnicos son lugares sagrados donde residen los guardianes de los conjuros necesarios para romper el hechizo de protección de la torre. En cada uno de ellos, encontrarás una criatura poderosa que protege el conjuro correspondiente. Sin estos conjuros, el hechizo de protección se mantendrá fuerte y la torre permanecerá inaccesible."
+        pointer: "a6"
+      b6:
+        text: "Para invocar a los guardianes y obtener los conjuros, te concederé un poder especial. A través de este poder, podrás enfrentarte a las criaturas protectoras de los altares y demostrar tu valía como merecedor de los conjuros."
+        pointer: "a7"
+      b7:
+        text: "Los altares se encuentran en lo alto de las montañas que rodean el valle de Valor. Te anotaré las ubicaciones en tu brújula para que puedas llegar más facilmente."
+        pointer: "a8"
+      b8:
+        text: "Me alegra escuchar eso, valiente aventurero. Recuerda, aventurero, que el poder del Conjuro de los Vínculos Antiguos es inmenso y peligroso. Debes usarlo con sabiduría y cautela, pues cualquier error podría liberar al nigromante y desatar nuevamente su terror en nuestro reino."
+      saludo2:
+        text: "Saludos ¡%player%!. ¿Has logrado deshacer el conjuro de los Vínculos Antiguos?"
+        pointer: "no,preguntainfo"
+      b9:
+        text: "No te demores mucho %player% el tiempo juega en nuestra contra..."
+      
+    player_options:
+      a1:
+        text: "¡Me envia el Rey. Dice que sólo tú puedes ayudarme a derrotar al Nigromante. Necesito información sobre un hechizo que protege la torre del nigromante."
+        pointer: "a1"
+      a2:
+        text: "¿Podrías contarme más sobre el Conjuro de los Vínculos Antiguos?"
+        pointer: "b2"
+      a3:
+        text: "¿Cómo funciona exactamente este conjuro?"
+        pointer: "b3"
+      entendido:
+        text: "¿Podría repetirme de nuevo el hechizo?"
+        pointer: "b1_1"
+      a4:
+        text: "¿Cómo consigo esos sellos de los que hablas?"
+        pointer: "b4"
+      a5:
+        text: "¿Cuál es el propósito de visitar los altares? ¿Qué relación tienen con el hechizo de protección de la torre?"
+        pointer: "b5"
+      a6:
+        text: "¿Cómo puedo obtener los conjuros de cada altar? ¿Cuál es mi papel en todo esto?"
+        pointer: "b6"
+      a7:
+        text: "Me siento honrado por confiarme a mi semejante poder. ¿Puedes indicarme donde encontrar los altares?"
+        pointer: "b7"
+      a8:
+        text: "Entiendo, Mago del Rey. Acepto el desafío de obtener los conjuros y enfrentar al nigromante. No defraudaré la confianza depositada en mí."
+        pointer: "b8"
+      no:
+        text: "Aún no, Mago del Rey. Necesito algo más de tiempo para prepararme en esta misión."
+        pointer: "b9"
+      preguntainfo:
+        text: "¿Podrías recordarme la información sobre el conjuro?"
+        pointer: "b1_1"
+        
+      
+      
+
+#####################################################################        
+
+conditions:
+  misionActiva79: "tag marcaMisionActiva79"
+  misionInfoRecibidaNigromante: "tag marcaInfoRecibidaNigromante"
+  misionAceptadaNigromante: "tag marcaMisionAceptadaNigromante"
+  mazmorraCompletadaNigromante: "tag marcaMazmorraCompletadaNigromante"
+  misionCompletada79: "tag marcaMisionCompletada79"
+
+#####################################################################        
+
+objectives:
+  completarMazmorraNigromante: "finishdungeon Nigromante events:mazmorraCompletarNigromante"
+
+#####################################################################        
+
+events:
+  iniciarMision79: "tag add marcaMisionActiva79"
+  
+  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3"
+  mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaNigromante"
+  mensajeAyudaMision79_2: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra de &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar la casa del pescador veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
+  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
+  
+  agregarMarcaInfoRecibidaNigromante: "tag add marcaInfoRecibidaNigromante"
+  
+  aceptarMisionNigromante: "folder agregarMarcaMisionAceptadaNigromante,permisoMazmorraNigromante,iniciarObjetivoCompletarMazmorraNigromante,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMisionAceptadaNigromante: "tag add marcaMisionAceptadaNigromante"
+  permisoMazmorraNigromante: "command lp user %player% permission set mazmorra.Nigromante"
+  iniciarObjetivoCompletarMazmorraNigromante: "objective start completarMazmorraNigromante"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  
+  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
+  
+  mazmorraCompletarNigromante: "folder agregarMarcaMazmorraCompletadaNigromante,notificacionNuevoMensajeAyuda delay:1"
+  agregarMarcaMazmorraCompletadaNigromante: "tag add marcaMazmorraCompletadaNigromante"
+  
+  completarMision79: "folder eliminarMarcasMisionActiva79,agregarMarcaMisionCompletada79,notificacionMisionCompletada79,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva79: "folder eliminarMarcaMisionActiva79,eliminarMarcaMisionInfoRecibidaNigromante,eliminarMarcaMisionAceptadaNigromante,eliminarMarcaMazmorraCompletadaNigromante"
+  eliminarMarcaMisionActiva79: "tag delete marcaMisionActiva79"
+  eliminarMarcaMisionInfoRecibidaNigromante: "tag delete marcaInfoRecibidaNigromante"
+  eliminarMarcaMisionAceptadaNigromante: "tag delete marcaMisionAceptadaNigromante"
+  eliminarMarcaMazmorraCompletadaNigromante: "tag delete marcaMazmorraCompletadaNigromante"
+  agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
+  notificacionMisionCompletada79: "notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  darRecompensaMision: "command eco give %player% 6500"
+  recompensaExpClase: "mmoclassexperience 850"
+  notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."
