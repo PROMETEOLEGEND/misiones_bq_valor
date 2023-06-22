@@ -20,10 +20,10 @@ events:
   # invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco4"
   # superarObelisco1: "run ^objective delete objDerrotarJefeObelisco1 ^"
 
-  superarObelisco1: "objective delete objDerrotarJefeObelisco1"
-  superarObelisco2: "objective delete objDerrotarJefeObelisco2"
-  superarObelisco3: "objective delete objDerrotarJefeObelisco3"
-  superarObelisco4: "objective delete objDerrotarJefeObelisco4"
+  superarObelisco1: "run ^objective delete objDerrotarJefeObelisco1 ^give sello1 notify"
+  superarObelisco2: "run ^objective delete objDerrotarJefeObelisco2 ^give sello2 notify"
+  superarObelisco3: "run ^objective delete objDerrotarJefeObelisco3 ^give sello3 notify"
+  superarObelisco4: "run ^objective delete objDerrotarJefeObelisco4 ^give sello4 notify"
   
   sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
