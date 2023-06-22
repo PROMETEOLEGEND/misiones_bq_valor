@@ -14,7 +14,7 @@ events:
   
   completarMision77: "folder eliminarMarcaMisionActiva77,agregarMarcaMisionCompletada77,notificacionMisionCompletada77,recompensaMision77,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva77: "tag delete marcaMisionActiva77"
-  recompensaMision77: "command eco give %player% 800"
+  recompensaMision77: "command eco give %player% 1800"
   recompensaExpClase: "mmoclassexperience 650"
   notificacionRecompensaExpClase: "notify &aHas conseguido 650 exp de clase."
   agregarMarcaMisionCompletada77: "tag add marcaMisionCompletada77"

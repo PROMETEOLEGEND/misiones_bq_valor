@@ -11,14 +11,14 @@ events:
   iniciarObjetivoMision76: "run ^objective start objMinarTurmalina ^objective start objMinarTurmalinaProfunda ^objective start objetivoMinarTurmalina"
   eliminarObjetivosMision76: "run ^objective delete objMinarTurmalina ^objective delete objMinarTurmalinaProfunda ^objective delete objetivoMinarTurmalina"  
   
-  mensajeAyudaMision76: "notify \n&6&lMisión 76:\n&r Debes minar &b10 bloques de Turmalina&r, para ello necesitarás fabricar un &bPico de Rubi/Zafiro&r o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
+  mensajeAyudaMision76: "notify \n&6&lMisión 76:\n&r Debes minar &b30 bloques de Turmalina&r, para ello necesitarás fabricar un &bPico de Rubi/Zafiro&r o superior.\n\n&c&o Nota: Colocar bloques de tu inventario aumentará la cantidad de bloques que debes minar para cumplir la misión, ya que se considera como hacer trampa.\n&r"
   
   completarMision76: "folder eliminarMarcaMisionActiva76,eliminarObjetivosMision76,eliminarPuntosMision76,agregarMarcaMisionCompletada76,notificacionMisionCompletada76,recompensaMision76,recompensaExpMineria,notificacionRecompensaExpMineria"
   eliminarMarcaMisionActiva76: "tag delete marcaMisionActiva76"
   eliminarPuntosMision76: "point bloquesMinados 10 action:subtract"
   agregarMarcaMisionCompletada76: "tag add marcaMisionCompletada76"
   notificacionMisionCompletada76: "run ^notify &7----------------------------------------\n&6&l¡Misión 76 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
-  recompensaMision76: "command eco give %player% 1000"
+  recompensaMision76: "command eco give %player% 2500"
   recompensaExpMineria: "mmoprofessionexperience mining 850"
   notificacionRecompensaExpMineria: "notify &aHas conseguido 850 exp de mineria."
   agregarPuntosMision76: "folder sumarPuntos,notificacionPuntos"
