@@ -47,10 +47,14 @@ objectives:
 #####################################################################      
 
 items:
-  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Objeto_de_misión"
-  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Objeto_de_misión"
-  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Objeto_de_misión"
-  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Objeto_de_misión"
+  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello1PorEncontrar: "INK_SAC custom-model-data:982 name:&aSello_natural lore:&r_;&e¡Aún no has encontrado este sello!"
+  sello2PorEncontrar: "INK_SAC custom-model-data:984 name:&6Sello_ígneo lore:&r_;&e¡Aún no has encontrado este sello!"
+  sello3PorEncontrar: "INK_SAC custom-model-data:986 name:&bSello_de_las_aguas lore:&r_;&e¡Aún no has encontrado este sello!"
+  sello4PorEncontrar: "INK_SAC custom-model-data:988 name:&7Sello_de_los_vientos lore:&r_;&e¡Aún no has encontrado este sello!"
   iconoBotonRomperConjuro: "PAPER custom-model-data:1807"
 
 #####################################################################      
@@ -69,25 +73,17 @@ menus:
       22: "botonSelloPorEncontrar4,botonSelloEncontrado4"
     items:
       botonSelloPorEncontrar1:
-        item: "sello1"
+        item: "sello1PorEncontrar"
         condition: "!tenerSello1"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
       botonSelloPorEncontrar2:
-        item: "sello2"
+        item: "sello2PorEncontrar"
         condition: "!tenerSello2"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
       botonSelloPorEncontrar3:
-        item: "sello3"
+        item: "sello3PorEncontrar"
         condition: "!tenerSello3"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
       botonSelloPorEncontrar4:
-        item: "sello4"
+        item: "sello4PorEncontrar"
         condition: "!tenerSello4"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
       botonSelloEncontrado1:
         item: "sello1"
         condition: "tenerSello1"
