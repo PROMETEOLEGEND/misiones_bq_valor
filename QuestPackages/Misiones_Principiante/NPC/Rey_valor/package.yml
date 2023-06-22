@@ -1,10 +1,10 @@
 events:
   conversacionReyValor: "folder menuMazmorras,empezarConversacionReyValor"
   
-  menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_19.misionActiva19,!Misiones_Principiante-Mision_31.misionActiva31,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_43.misionActiva43,!Misiones_Principiante-Mision_48.misionActiva48,!Misiones_Principiante-Mision_55.misionActiva55,!Misiones_Principiante-Mision_60.misionActiva60,!Misiones_Principiante-Mision_66.misionActiva66,!Misiones_Principiante-Mision_71.misionActiva71"
+  menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_19.misionActiva19,!Misiones_Principiante-Mision_31.misionActiva31,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_43.misionActiva43,!Misiones_Principiante-Mision_48.misionActiva48,!Misiones_Principiante-Mision_55.misionActiva55,!Misiones_Principiante-Mision_60.misionActiva60,!Misiones_Principiante-Mision_66.misionActiva66,!Misiones_Principiante-Mision_71.misionActiva71,!Misiones_Principiante-Mision_79.misionActiva79"
   # menuMazmorras: "command dm open comprar_accesos_mazmorras %player% conditions:!Misiones_Principiante-Mision_11.misionActiva11,!Misiones_Principiante-Mision_19.misionActiva19,!Misiones_Principiante-Mision_31.misionActiva31,!Misiones_Principiante-Mision_38.misionActiva38,!Misiones_Principiante-Mision_43.misionActiva43,!Misiones_Principiante-Mision_48.misionActiva48,!Misiones_Principiante-Mision_55.misionActiva55,!Misiones_Principiante-Mision_60.misionActiva60,!Misiones_Principiante-Mision_66.misionActiva66,!Misiones_Principiante-Mision_71.misionActiva71,!Misiones_Principiante-Mision_79.misionActiva79,!Misiones_Principiante-Mision_80.misionActiva80"
   
-  empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7,conversacionReyValor8,conversacionReyValor9,conversacionReyValor10"
+  empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7,conversacionReyValor8,conversacionReyValor9,conversacionReyValor10,conversacionReyValor11"
   # empezarConversacionReyValor: "folder conversacionReyValor1,conversacionReyValor2,conversacionReyValor3,conversacionReyValor4,conversacionReyValor5,conversacionReyValor6,conversacionReyValor7,conversacionReyValor8,conversacionReyValor9,conversacionReyValor10,conversacionReyValor11,conversacionReyValor12"
   conversacionReyValor1: "conversation Misiones_Principiante-Mision_11.ReyValor conditions:Misiones_Principiante-Mision_11.misionActiva11"
   conversacionReyValor2: "conversation Misiones_Principiante-Mision_19.ReyValor2 conditions:Misiones_Principiante-Mision_19.misionActiva19"
@@ -16,5 +16,5 @@ events:
   conversacionReyValor8: "conversation Misiones_Principiante-Mision_60.ReyValor8 conditions:Misiones_Principiante-Mision_60.misionActiva60"
   conversacionReyValor9: "conversation Misiones_Principiante-Mision_66.ReyValor9 conditions:Misiones_Principiante-Mision_66.misionActiva66"
   conversacionReyValor10: "conversation Misiones_Principiante-Mision_71.ReyValor10 conditions:Misiones_Principiante-Mision_71.misionActiva71"
-  # conversacionReyValor11: "conversation Misiones_Principiante-Mision_79.ReyValor11 conditions:Misiones_Principiante-Mision_79.misionActiva79"
+  conversacionReyValor11: "conversation Misiones_Principiante-Mision_79-Parte_1.ReyValor11 conditions:Misiones_Principiante-Mision_79.misionActiva79"
   # conversacionReyValor12: "conversation Misiones_Principiante-Mision_80.ReyValor12 conditions:Misiones_Principiante-Mision_80.misionActiva80"

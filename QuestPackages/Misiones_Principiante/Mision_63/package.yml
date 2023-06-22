@@ -28,8 +28,8 @@ events:
 ####################################################################################################
 
 objectives:
-  objMinarZafiro: "mmocorebreakblock 1 block:2 events:agregarPuntosMision63 persistent"
-  objMinarZafiroProfundo: "mmocorebreakblock 1 block:3 events:agregarPuntosMision63 persistent"
+  objMinarZafiro: "mmocorebreakblock 1 block:1 events:agregarPuntosMision63 persistent"
+  objMinarZafiroProfundo: "mmocorebreakblock 1 block:2 events:agregarPuntosMision63 persistent"
   objetivoMinarZafiro: "delay 5 ticks interval:5 conditions:minarbloques events:completarMision63 persistent"
   
 
