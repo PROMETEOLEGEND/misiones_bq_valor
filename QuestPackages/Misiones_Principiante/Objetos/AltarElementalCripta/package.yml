@@ -1,0 +1,6 @@
+events:
+  eventoAltar: "if Misiones_Principiante-Mision_79.misionActiva79 menuAltar else notificacionMisionYaCompletada"
+  
+  menuAltar: "menu open Misiones_Principiante-Mision_79-Parte_3.altarElementalCripta"
+  
+  notificacionMisionYaCompletada: "notify &eDebes completar o a has completado la misión de principiante 79."
