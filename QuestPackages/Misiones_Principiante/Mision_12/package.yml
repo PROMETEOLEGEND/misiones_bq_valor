@@ -15,7 +15,7 @@ events:
   completarMision12: "folder eliminarMarcaMisionActiva12,agregarMarcaMisionCompletada12,notificacionMisionCompletada12,recompensaMision12,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva12: "tag delete marcaMisionActiva12"
   agregarMarcaMisionCompletada12: "tag add marcaMisionCompletada12"
-  notificacionMisionCompletada12: "notify &7----------------------------------------\n&6&l¡Misión 12 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada12: "run ^notify &7----------------------------------------\n&6&l¡Misión 12 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision12: "command eco give %player% 200"
   recompensaComida: "run ^command give %player% carrot 3 ^notify &aHas conseguido 3 Zanahorias."
   recompensaExpClase: "mmoclassexperience 50"

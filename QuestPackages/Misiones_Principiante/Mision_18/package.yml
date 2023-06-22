@@ -15,7 +15,7 @@ events:
   completarMision18: "folder eliminarMarcaMisionActiva18,quitarObjBrujula18,agregarMarcaMisionCompletada18,notificacionMisionCompletada18,recompensaMision18,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva18: "tag delete marcaMisionActiva18"
   agregarMarcaMisionCompletada18: "tag add marcaMisionCompletada18"
-  notificacionMisionCompletada18: "notify &7----------------------------------------\n&6&l¡Misión 18 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada18: "run ^notify &7----------------------------------------\n&6&l¡Misión 18 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision18: "command eco give %player% 150"
   recompensaExpClase: "mmoclassexperience 100"
   notificacionRecompensaExpClase: "notify &aHas conseguido 100 exp de clase."

@@ -147,7 +147,7 @@ events:
   eliminarMarcaMisionAceptadaHipogrifo: "tag delete marcaMisionAceptadaHipogrifo"
   eliminarMarcaMazmorraCompletadaHipogrifo: "tag delete marcaMazmorraCompletadaHipogrifo"
   agregarMarcaMisionCompletada19: "tag add marcaMisionCompletada19"
-  notificacionMisionCompletada19: "notify &7----------------------------------------\n&6&l¡Misión 19 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada19: "run ^notify &7----------------------------------------\n&6&l¡Misión 19 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darRecompensaMision: "command eco give %player% 2000"
   recompensaExpClase: "mmoclassexperience 500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."

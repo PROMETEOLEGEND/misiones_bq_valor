@@ -2,8 +2,8 @@ conditions:
   estarCercaCajaChistes1: "location 1116;46;456;Zona1 5"
   estarCercaCajaChistes2: "location 870;23;888;Zona1 5"
   estarCercaCajaChistes3: "location 1504;77;-652;Zona1 5"
-  estarCercaCajaChistes4: "location 1116;46;456;Zona1 5"
-  estarCercaCajaChistes5: "location 1116;46;456;Zona1 5"
+  estarCercaCajaChistes4: "location 1464;92;-420;Zona1 5"
+  estarCercaCajaChistes5: "location 974;41;567;Zona1 5"
 
   chisteEncontrado1: "tag marcaChisteEncontrado1"
   chisteEncontrado2: "tag marcaChisteEncontrado2"

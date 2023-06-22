@@ -14,7 +14,7 @@ events:
   completarMision8: "folder eliminarMarcaMisionActiva8,agregarMarcaMisionCompletada8,notificacionMisionCompletada8,recompensaMision8,recompensaComida,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva8: "tag delete marcaMisionActiva8"
   agregarMarcaMisionCompletada8: "tag add marcaMisionCompletada8"
-  notificacionMisionCompletada8: "notify &7----------------------------------------\n&6&l¡Misión 8 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada8: "run ^notify &7----------------------------------------\n&6&l¡Misión 8 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision8: "command eco give %player% 250"
   recompensaComida: "run ^command give %player% potato 4 ^notify &aHas conseguido 4 Patatas."
   recompensaExpClase: "mmoclassexperience 50"

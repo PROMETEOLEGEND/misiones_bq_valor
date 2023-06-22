@@ -20,7 +20,7 @@ events:
   recompensaExpClase: "mmoclassexperience 150"
   notificacionRecompensaExpClase: "notify &aHas conseguido 150 exp de clase."
   agregarMarcaMisionCompletada33: "tag add marcaMisionCompletada33"
-  notificacionMisionCompletada33: "notify &7----------------------------------------\n&6&l¡Misión 33 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
+  notificacionMisionCompletada33: "run ^notify &7----------------------------------------\n&6&l¡Misión 33 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
 
 ####################################################################################################
 
