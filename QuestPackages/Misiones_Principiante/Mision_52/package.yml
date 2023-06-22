@@ -15,7 +15,7 @@ events:
   
   completarMision52: "folder eliminarMarcaMisionActiva52,eliminarObjetivosMision52,eliminarPuntosMision52,agregarMarcaMisionCompletada52,notificacionMisionCompletada52,recompensaMision52,recompensaExpClase,notificacionRecompensaExpClase"
   eliminarMarcaMisionActiva52: "tag delete marcaMisionActiva52"
-  eliminarPuntosMision52: "point bloquesMinados 10 action:subtract"
+  eliminarPuntosMision52: "deletepoint bloquesMinados"
   agregarMarcaMisionCompletada52: "tag add marcaMisionCompletada52"
   notificacionMisionCompletada52: "run ^notify &7----------------------------------------\n&6&l¡Misión 52 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision52: "command eco give %player% 500"

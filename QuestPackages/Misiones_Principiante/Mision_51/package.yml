@@ -130,7 +130,7 @@ conditions:
 
   misionAceptadaBufon: "tag marcaMisionAceptadaBufon"
 
-  cantidadChistesEncontrados: "point chistesEncontrados 5"
+  cantidadChistesEncontrados: "point Misiones_Principiante-Mobs-Caja_Chistes.chistesEncontrados 5"
 
 #####################################################################        
  
@@ -143,14 +143,16 @@ events:
 
   agregarMarcaInfoRecibidaChistes: "tag add marcaInfoRecibidaChistes"
 
-  aceptarMisionBufon: "folder agregarMarcaMisionAceptadaBufon,iniciarObjRecolectarChistes,notificacionNuevoMensajeAyuda"
+  aceptarMisionBufon: "folder eliminarObjBrujula,agregarMarcaMisionAceptadaBufon,iniciarObjRecolectarChistes,notificacionNuevoMensajeAyuda"
   agregarMarcaMisionAceptadaBufon: "tag add marcaMisionAceptadaBufon"
   iniciarObjRecolectarChistes: "objective start objRecolectarChistes"
   eliminarMarcaMisionAceptadaBufon: "tag delete marcaMisionAceptadaBufon"
   notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
   
-  completarMision51: "folder eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,darRecompensaVIP,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon ^deletepoint chistesEncontrados ^clearcompass"
+  eliminarObjBrujula: "clearcompass"
+
+  completarMision51: "folder eliminarObjBrujula,eliminarMarcasMisionActiva51,agregarMarcaMisionCompletada51,notificacionMisionCompletada51,darHogarAdicional,darRecompensaVIP,recompensaExpClase,notificacionRecompensaExpClase delay:1"
+  eliminarMarcasMisionActiva51: "run ^tag delete marcaMisionActiva51 ^tag delete marcaInfoRecibidaChistes ^tag delete marcaMisionAceptadaBufon ^deletepoint chistesEncontrados"
   agregarMarcaMisionCompletada51: "tag add marcaMisionCompletada51"
   notificacionMisionCompletada51: "run ^notify &7----------------------------------------\n&6&l¡Misión 51 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darHogarAdicional: "command lp user %player% permission set essentials.sethome.multiple.mejora_1 true condition:!permisosYaEntregados"
