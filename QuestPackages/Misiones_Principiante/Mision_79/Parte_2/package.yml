@@ -36,14 +36,14 @@ conversations:
         events: "Misiones_Principiante-Mision_79.completarParte2"
       saludo2:
         text: "Saludos ¡%player%!. ¿Has logrado deshacer el conjuro de los Vínculos Antiguos?"
-        pointer: "no,preguntainfo"
+        pointer: "no1,preguntainfo"
       b9:
         text: "No te demores mucho %player% el tiempo juega en nuestra contra..."
       
     player_options:
       a1:
         text: "¡Me envia el Rey. Dice que sólo tú puedes ayudarme a derrotar al Nigromante. Necesito información sobre un hechizo que protege la torre del nigromante."
-        pointer: "a1"
+        pointer: "b1_1"
       a2:
         text: "¿Podrías contarme más sobre el Conjuro de los Vínculos Antiguos?"
         pointer: "b2"
@@ -68,7 +68,7 @@ conversations:
       a8:
         text: "Entiendo, Mago del Rey. Acepto el desafío de obtener los conjuros y enfrentar al nigromante. No defraudaré la confianza depositada en mí."
         pointer: "b8"
-      no:
+      no1:
         text: "Aún no, Mago del Rey. Necesito algo más de tiempo para prepararme en esta misión."
         pointer: "b9"
       preguntainfo:
