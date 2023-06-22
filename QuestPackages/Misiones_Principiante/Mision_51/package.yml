@@ -143,7 +143,7 @@ events:
 
   agregarMarcaInfoRecibidaChistes: "tag add marcaInfoRecibidaChistes"
 
-  aceptarMisionBufon: "folder agregarMarcaMisionAceptadaBufon,notificacionNuevoMensajeAyuda"
+  aceptarMisionBufon: "folder agregarMarcaMisionAceptadaBufon,iniciarObjRecolectarChistes,notificacionNuevoMensajeAyuda"
   agregarMarcaMisionAceptadaBufon: "tag add marcaMisionAceptadaBufon"
   iniciarObjRecolectarChistes: "objective start objRecolectarChistes"
   eliminarMarcaMisionAceptadaBufon: "tag delete marcaMisionAceptadaBufon"
