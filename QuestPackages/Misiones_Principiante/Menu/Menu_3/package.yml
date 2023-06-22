@@ -697,10 +697,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_73.misionCompletada73,!Misiones_Principiante-Mision_74.misionActiva74,!Misiones_Principiante-Mision_74.misionCompletada74"
         close: true
         text:
-        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -710,10 +710,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_74.misionActiva74"
         close: true
         text:
-        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -723,9 +723,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_74.misionCompletada74"
         text:
         - "&2¡Misión completada!"
-        - "&6&l[Misión 74]: &e¿Turmalina?"
+        - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
-        - "&7&oMina &f&o10 Menas de Turmalina&7&o."
+        - "&7&oSube al &f&onivel 15 de Clase&7&o."
       botonMisionBloqueada74:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_73.misionCompletada73"
@@ -735,10 +735,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_74.misionCompletada74,!Misiones_Principiante-Mision_75.misionActiva75,!Misiones_Principiante-Mision_75.misionCompletada75"
         close: true
         text:
-        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&6&l[Misión 75]: &eUna nueva arma"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -748,10 +748,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_75.misionActiva75"
         close: true
         text:
-        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&6&l[Misión 75]: &eUna nueva arma"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -761,9 +761,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_75.misionCompletada75"
         text:
         - "&2¡Misión completada!"
-        - "&6&l[Misión 75]: &eEntrenamiento intensivo"
+        - "&6&l[Misión 75]: &eUna nueva arma"
         - "&r "
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
       botonMisionBloqueada75:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_74.misionCompletada74"
@@ -811,10 +811,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_76.misionCompletada76,!Misiones_Principiante-Mision_77.misionActiva77,!Misiones_Principiante-Mision_77.misionCompletada77"
         close: true
         text:
-        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&6&l[Misión 77]: &eNecesitas una nueva pechera"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+        - "&7&oFabrica una &f&oPechera de Turmalina&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -824,10 +824,10 @@ menus:
         conditions: "Misiones_Principiante-Mision_77.misionActiva77"
         close: true
         text:
-        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&6&l[Misión 77]: &eNecesitas una nueva pechera"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+        - "&7&oFabrica una &f&oPechera de Turmalina&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -837,9 +837,9 @@ menus:
         conditions: "Misiones_Principiante-Mision_77.misionCompletada77"
         text:
         - "&2¡Misión completada!"
-        - "&6&l[Misión 77]: &eUna nueva arma"
+        - "&6&l[Misión 77]: &eNecesitas una nueva pechera"
         - "&r "
-        - "&7&oFabrica una &f&oBallesta de Turmalina&7&o."
+        - "&7&oFabrica una &f&oPechera de Turmalina&7&o."
       botonMisionBloqueada77:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_76.misionCompletada76"

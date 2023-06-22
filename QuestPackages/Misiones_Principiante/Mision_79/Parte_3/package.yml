@@ -28,6 +28,7 @@ events:
   sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
   sonidoRomperConjuro: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
+  eliminarSellos: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
 
   darPermisoEntradaCripta: "command lp user %player% permission set group.torre_nigromante"
 
@@ -46,10 +47,10 @@ objectives:
 #####################################################################      
 
 items:
-  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
-  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
-  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
-  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
+  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
+  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
   iconoBotonRomperConjuro: "PAPER custom-model-data:1807"
 
 #####################################################################      
