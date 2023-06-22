@@ -700,7 +700,7 @@ menus:
         - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oSube al &f&onivel 16 de Clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para iniciar la misión."
         click:
@@ -713,7 +713,7 @@ menus:
         - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oSube al &f&onivel 16 de Clase&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:
@@ -725,7 +725,7 @@ menus:
         - "&2¡Misión completada!"
         - "&6&l[Misión 74]: &eEntrenamiento intensivo"
         - "&r "
-        - "&7&oSube al &f&onivel 15 de Clase&7&o."
+        - "&7&oSube al &f&onivel 16 de Clase&7&o."
       botonMisionBloqueada74:
         item: "botonMisionBloqueada"
         conditions: "!Misiones_Principiante-Mision_73.misionCompletada73"
