@@ -2,17 +2,22 @@ conditions:
   estarCercaDeUnJefe: "mythicmobdistance Lich_King 50"
 
 events:
-  iniciarParte4: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4"
+  iniciarParte3: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4"
+
+  
+  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^compasstrack 861.5;70;532.5;Zona1 ^compasstrack 874.5;236;242.5;Zona1 ^compasstrack 1427.5;243;233.5;Zona1 ^compasstrack 1314.5;219;722.5;Zona1"
 
   invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target marked:JefeObelisco1"
   invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target marked:JefeObelisco2"
   invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target marked:JefeObelisco3"
   invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target marked:JefeObelisco4"
+
   # invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco1"
   # invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco2"
   # invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco3"
   # invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco4"
   # superarObelisco1: "run ^objective delete objDerrotarJefeObelisco1 ^"
+
   superarObelisco1: "objective delete objDerrotarJefeObelisco1"
   superarObelisco2: "objective delete objDerrotarJefeObelisco2"
   superarObelisco3: "objective delete objDerrotarJefeObelisco3"
