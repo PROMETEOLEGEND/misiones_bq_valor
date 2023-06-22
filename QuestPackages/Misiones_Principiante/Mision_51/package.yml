@@ -163,4 +163,4 @@ events:
   notificacionRecompensaExpClase: "notify &aHas conseguido 500 exp de clase."
 
 objectives:
-  objRecolectarChistes: "delay 5 interval:5 events:agregarMarcaMisionCompletadaBufon,notificacionNuevoMensajeAyuda_2 condition:cantidadChistesEncontrados"
+  objRecolectarChistes: "delay 5 ticks interval:5 events:agregarMarcaMisionCompletadaBufon,notificacionNuevoMensajeAyuda_2 condition:cantidadChistesEncontrados"
