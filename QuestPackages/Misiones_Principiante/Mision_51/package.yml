@@ -6,7 +6,7 @@ conversations:
       saludo:
         text: "¡Hola, aventurero! Soy el bufón más ingenioso y extravagante de todo el reino. Tengo una misión especial para ti, ¿te interesa escucharla?"
         pointer: "si,noquiero"
-        conditions: "!infoRecibidaChistes,!misionEnCursoBufon"
+        conditions: "!infoRecibidaChistes,!misionEnCursoBufon,!cantidadChistesEncontrados"
       adios:
         text: "Oh, vaya, eso es una lástima. Estoy seguro de que te habrías divertido mucho buscando los chistes mágicos. Pero entiendo que cada aventurero tiene sus propias prioridades y responsabilidades."
       contarmision:
@@ -34,7 +34,7 @@ conversations:
       saludo2:
         text: "¡Hola, aventurero! ¿Has pensado sobre la misión que te comenté?"
         pointer: "noquiero,quemision"
-        conditions: "infoRecibidaChistes,!misionEnCursoBufon"
+        conditions: "infoRecibidaChistes,!misionEnCursoBufon,!cantidadChistesEncontrados"
       saludo3:
         text: "¡Saludos, aventurero! ¿Cómo va tu búsqueda de los chistes mágicos? Estoy ansioso por escuchar las divertidas historias que has descubierto."
         pointer: "no2"
