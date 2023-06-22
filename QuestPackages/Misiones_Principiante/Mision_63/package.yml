@@ -17,7 +17,7 @@ events:
   eliminarMarcaMisionActiva63: "tag delete marcaMisionActiva63"
   eliminarPuntosMision63: "point bloquesMinados 10 action:subtract"
   agregarMarcaMisionCompletada63: "tag add marcaMisionCompletada63"
-  notificacionMisionCompletada63: ""run ^notify &7----------------------------------------\n&6&l¡Misión 63 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada63: "run ^notify &7----------------------------------------\n&6&l¡Misión 63 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision63: "command eco give %player% 500"
   recompensaExpMineria: "mmoprofessionexperience mining 400"
   notificacionRecompensaExpMineria: "notify &aHas conseguido 400 exp de mineria."
@@ -28,8 +28,8 @@ events:
 ####################################################################################################
 
 objectives:
-  objMinarZafiro: "mmocorebreakblock 1 block:2 events:agregarPuntosMision63 persistent"
-  objMinarZafiroProfundo: "mmocorebreakblock 1 block:3 events:agregarPuntosMision63 persistent"
+  objMinarZafiro: "mmocorebreakblock 1 block:1 events:agregarPuntosMision63 persistent"
+  objMinarZafiroProfundo: "mmocorebreakblock 1 block:2 events:agregarPuntosMision63 persistent"
   objetivoMinarZafiro: "delay 5 ticks interval:5 conditions:minarbloques events:completarMision63 persistent"
   
 

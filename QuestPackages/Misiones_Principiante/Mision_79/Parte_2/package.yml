@@ -1,6 +1,6 @@
 conversations:
-  ReyValor11:
-    quester: "&6&lRey de Valor"
+  MagoValor:
+    quester: "&b&lMago de la Corte Real"
     first: "saludo,saludo2,saludo3"
     NPC_options:
       saludo:
@@ -32,6 +32,7 @@ conversations:
         pointer: "a8"
       b8:
         text: "Me alegra escuchar eso, valiente aventurero. Recuerda, aventurero, que el poder del Conjuro de los Vínculos Antiguos es inmenso y peligroso. Debes usarlo con sabiduría y cautela, pues cualquier error podría liberar al nigromante y desatar nuevamente su terror en nuestro reino."
+        events: "Misiones_Principiante-Mision_79.completarParte2"
       saludo2:
         text: "Saludos ¡%player%!. ¿Has logrado deshacer el conjuro de los Vínculos Antiguos?"
         pointer: "no,preguntainfo"
@@ -72,55 +73,5 @@ conversations:
       preguntainfo:
         text: "¿Podrías recordarme la información sobre el conjuro?"
         pointer: "b1_1"
-        
-      
-      
 
-#####################################################################        
-
-conditions:
-  misionActiva79: "tag marcaMisionActiva79"
-  misionInfoRecibidaNigromante: "tag marcaInfoRecibidaNigromante"
-  misionAceptadaNigromante: "tag marcaMisionAceptadaNigromante"
-  mazmorraCompletadaNigromante: "tag marcaMazmorraCompletadaNigromante"
-  misionCompletada79: "tag marcaMisionCompletada79"
-
-#####################################################################        
-
-objectives:
-  completarMazmorraNigromante: "finishdungeon Nigromante events:mazmorraCompletarNigromante"
-
-#####################################################################        
-
-events:
-  iniciarMision79: "tag add marcaMisionActiva79"
-  
-  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3"
-  mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaNigromante"
-  mensajeAyudaMision79_2: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra de &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar la casa del pescador veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
-  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
-  
-  agregarMarcaInfoRecibidaNigromante: "tag add marcaInfoRecibidaNigromante"
-  
-  aceptarMisionNigromante: "folder agregarMarcaMisionAceptadaNigromante,permisoMazmorraNigromante,iniciarObjetivoCompletarMazmorraNigromante,notificacionNuevoMensajeAyuda delay:1"
-  agregarMarcaMisionAceptadaNigromante: "tag add marcaMisionAceptadaNigromante"
-  permisoMazmorraNigromante: "command lp user %player% permission set mazmorra.Nigromante"
-  iniciarObjetivoCompletarMazmorraNigromante: "objective start completarMazmorraNigromante"
-  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
-  
-  eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
-  
-  mazmorraCompletarNigromante: "folder agregarMarcaMazmorraCompletadaNigromante,notificacionNuevoMensajeAyuda delay:1"
-  agregarMarcaMazmorraCompletadaNigromante: "tag add marcaMazmorraCompletadaNigromante"
-  
-  completarMision79: "folder eliminarMarcasMisionActiva79,agregarMarcaMisionCompletada79,notificacionMisionCompletada79,darRecompensaMision,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcasMisionActiva79: "folder eliminarMarcaMisionActiva79,eliminarMarcaMisionInfoRecibidaNigromante,eliminarMarcaMisionAceptadaNigromante,eliminarMarcaMazmorraCompletadaNigromante"
-  eliminarMarcaMisionActiva79: "tag delete marcaMisionActiva79"
-  eliminarMarcaMisionInfoRecibidaNigromante: "tag delete marcaInfoRecibidaNigromante"
-  eliminarMarcaMisionAceptadaNigromante: "tag delete marcaMisionAceptadaNigromante"
-  eliminarMarcaMazmorraCompletadaNigromante: "tag delete marcaMazmorraCompletadaNigromante"
-  agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
-  notificacionMisionCompletada79: "notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7----------------------------------------"
-  darRecompensaMision: "command eco give %player% 6500"
-  recompensaExpClase: "mmoclassexperience 850"
-  notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."
+#####################################################################

@@ -60,7 +60,7 @@ events:
   
   completarMision1: "folder agregarMarcaMisionCompletada1,notificacionMisionCompletada1,darKitInicial,enfriamientoKitInicial,recompensaExpClase,notificacionRecompensaExpClase,checkPointMuerte delay:1"
   agregarMarcaMisionCompletada1: "tag add marcaMisionCompletada1"
-  notificacionMisionCompletada1: ""run ^notify &7----------------------------------------\n&6&l¡Misión 1 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada1: "run ^notify &7----------------------------------------\n&6&l¡Misión 1 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darKitInicial: "command kit inicial %player%"
   enfriamientoKitInicial: "command lp user %player% permission settemp kit_inicial.cooldown true 24h"
   recompensaExpClase: "mmoclassexperience 50"

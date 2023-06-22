@@ -14,7 +14,7 @@ events:
   completarMision32: "folder eliminarMarcaMisionActiva32,agregarMarcaMisionCompletada32,notificacionMisionCompletada32,recompensaMision32,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva32: "tag delete marcaMisionActiva32"
   agregarMarcaMisionCompletada32: "tag add marcaMisionCompletada32"
-  notificacionMisionCompletada32: ""run ^notify &7----------------------------------------\n&6&l¡Misión 32 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada32: "run ^notify &7----------------------------------------\n&6&l¡Misión 32 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision32: "command eco give %player% 500"
   recompensaExpClase: "mmoclassexperience 200"
   notificacionRecompensaExpClase: "notify &aHas conseguido 200 exp de clase."

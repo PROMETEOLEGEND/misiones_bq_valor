@@ -14,7 +14,7 @@ events:
   completarMision4: "folder eliminarMarcaMisionActiva4,agregarMarcaMisionCompletada4,notificacionMisionCompletada4,recompensaMision4,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva4: "tag delete marcaMisionActiva4"
   agregarMarcaMisionCompletada4: "tag add marcaMisionCompletada4"
-  notificacionMisionCompletada4: ""run ^notify &7----------------------------------------\n&6&l¡Misión 4 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada4: "run ^notify &7----------------------------------------\n&6&l¡Misión 4 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision4: "command eco give %player% 250"
   recompensaExpClase: "mmoclassexperience 50"
   notificacionRecompensaExpClase: "notify &aHas conseguido 50 exp de clase."

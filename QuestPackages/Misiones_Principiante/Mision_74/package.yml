@@ -15,7 +15,7 @@ events:
   completarMision74: "folder eliminarMarcaMisionActiva74,agregarMarcaMisionCompletada74,notificacionMisionCompletada74,recompensaMision74,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva74: "tag delete marcaMisionActiva74"
   agregarMarcaMisionCompletada74: "tag add marcaMisionCompletada74"
-  notificacionMisionCompletada74: ""run ^notify &7----------------------------------------\n&6&l¡Misión 74 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada74: "run ^notify &7----------------------------------------\n&6&l¡Misión 74 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   recompensaMision74: "command eco give %player% 1500"
   recompensaExpClase: "mmoclassexperience 850"
   notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."

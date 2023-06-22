@@ -1,11 +1,12 @@
 conversations:
   ReyValor11:
     quester: "&6&lRey de Valor"
-    first: "saludo,saludo2,saludo3"
+    first: "saludo,saludo2"
     NPC_options:
       saludo:
         text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
         pointer: "a1"
+        conditions: "!Misiones_Principiante-Mision_79.infoRecibidaNigromante"
       b1:
         text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
@@ -26,9 +27,10 @@ conversations:
         pointer: "a6"
       b6:
         text: "Esa información escapa a mi conocimiento, debe ser un mago de de gran poder quien te ayude y guie en esta tarea. Habla con el Mago de la corte real que se encuentra en la biblioteca del Palacio. Él es la persona indicada."
-      saludo2:
-        text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
-        pointer: "a1"
+        events: "Misiones_Principiante-Mision_79.completarParte1"
+      # saludo2:
+      #   text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
+      #   pointer: "a1"
     
     player_options:
       a1:

@@ -1,6 +1,7 @@
 conditions:
   misionActiva79: "tag marcaMisionActiva79"
   misionInfoRecibidaNigromante: "tag marcaInfoRecibidaNigromante"
+  misionInfoRecibidaNigromante_2: "tag marcaInfoRecibidaNigromante_2"
   misionAceptadaNigromante: "tag marcaMisionAceptadaNigromante"
   mazmorraCompletadaNigromante: "tag marcaMazmorraCompletadaNigromante"
   misionCompletada79: "tag marcaMisionCompletada79"
@@ -8,25 +9,36 @@ conditions:
 #####################################################################        
 
 objectives:
-  completarMazmorraNigromante: "finishdungeon Nigromante events:mazmorraCompletarNigromante"
+  completarMazmorraNigromante: "finishdungeon nigromante events:mazmorraCompletarNigromante"
 
 #####################################################################        
 
 events:
   iniciarMision79: "tag add marcaMisionActiva79"
   
-  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3"
+  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3,mensajeAyudaMision79_4,mensajeAyudaMision79_5"
   mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaNigromante"
-  mensajeAyudaMision79_2: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra de &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar la casa del pescador veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
-  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
+  mensajeAyudaMision79_2: "folder agregarObjetivosBrujula conditions:infoRecibidaNigromante,!infoRecibidaNigromante_2,!misionAceptadaNigromante"
+  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r Debes recuperar los &bConjuros sagrados &rque se encuentran en las ruinas ancestrales que están dispersas por las montañas del &aReino de Valor&r.\n&r conditions:infoRecibidaNigromante,infoRecibidaNigromante_2,!misionAceptadaNigromante"
+  mensajeAyudaMision79_4: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra del &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar por la cripta de este veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
+  mensajeAyudaMision79_5: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
   
+  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^compasstrack 861.5;70;532.5;Zona1 ^compasstrack 874.5;236;242.5;Zona1 ^compasstrack 1427.5;243;233.5;Zona1 ^compasstrack 1314.5;219;722.5;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+
+  mostrarMensajeAyudaMision79_2: "folder mensajeAyudaMision79_2 delay:2"
+
   agregarMarcaInfoRecibidaNigromante: "tag add marcaInfoRecibidaNigromante"
+  agregarMarcaInfoRecibidaNigromante_2: "tag add marcaInfoRecibidaNigromante_2"
+
+  completarParte1: "folder agregarMarcaInfoRecibidaNigromante,notificacionNuevoMensajeAyuda delay:2"
+  completarParte2: "folder agregarMarcaInfoRecibidaNigromante_2,notificacionNuevoMensajeAyuda,Misiones_Principiante-Mision_79-Parte_3.iniciarParte3 delay:2"
+  completarParte3: "folder aceptarMisionNigromante,notificacionNuevoMensajeAyuda delay:2"
   
   aceptarMisionNigromante: "folder agregarMarcaMisionAceptadaNigromante,permisoMazmorraNigromante,iniciarObjetivoCompletarMazmorraNigromante,notificacionNuevoMensajeAyuda delay:1"
   agregarMarcaMisionAceptadaNigromante: "tag add marcaMisionAceptadaNigromante"
-  permisoMazmorraNigromante: "command lp user %player% permission set mazmorra.Nigromante"
+  permisoMazmorraNigromante: "command lp user %player% permission set mazmorra.nigromante"
   iniciarObjetivoCompletarMazmorraNigromante: "objective start completarMazmorraNigromante"
-  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
+  notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7----------------------------------------"
   
   eventoayuda: "folder notificacionNuevoMensajeAyuda delay:1"
   

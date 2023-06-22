@@ -128,7 +128,7 @@ events:
   eliminarMarcaMisionAceptadaMedusa: "tag delete marcaMisionAceptadaMedusa"
   eliminarMarcaMazmorraCompletadaMedusa: "tag delete marcaMazmorraCompletadaMedusa"
   agregarMarcaMisionCompletada66: "tag add marcaMisionCompletada66"
-  notificacionMisionCompletada66: ""run ^notify &7----------------------------------------\n&6&l¡Misión 66 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
+  notificacionMisionCompletada66: "run ^notify &7----------------------------------------\n&6&l¡Misión 66 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darRecompensaMision: "command eco give %player% 6000"
   darRecompensaMisionMascota: "command lp user %player% permission set mcpets.basilisk_wild"
   darRecompensaMisionMascotaMensaje: "notify &aHas conseguido una nueva montura: &6Basilisco Salvaje&e. Usa &f/mascotas &epara ver tu nueva montura."
