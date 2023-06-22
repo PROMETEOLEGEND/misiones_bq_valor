@@ -28,7 +28,7 @@ events:
   sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
   sonidoRomperConjuro: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
-  eliminarSellos: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
+  eliminarSellos: "run ^take sello1 invOrder:Inventory ^take sello2 invOrder:Inventory ^take sello3 invOrder:Inventory ^take sello4 invOrder:Inventory"
 
   darPermisoEntradaCripta: "command lp user %player% permission set group.torre_nigromante"
 
@@ -106,4 +106,4 @@ menus:
         - "&ePresiona este botón para romper el conjuro"
         - "&eque mantiene prisionero al Nigromante."
         condition: "tenerSello1,tenerSello2,tenerSello3,tenerSello4"
-        click: "sonidoRomperConjuro,darPermisoEntradaCripta,Misiones_Principiante-Mision_79.completarParte3"
+        click: "sonidoRomperConjuro,eliminarSellos,darPermisoEntradaCripta,Misiones_Principiante-Mision_79.completarParte3"
