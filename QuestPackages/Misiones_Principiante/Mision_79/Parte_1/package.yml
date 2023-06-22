@@ -6,6 +6,7 @@ conversations:
       saludo:
         text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
         pointer: "a1"
+        conditions: "!Misiones_Principiante-Mision_79.infoRecibidaNigromante"
       b1:
         text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
@@ -24,10 +25,9 @@ conversations:
       b5:
         text: "Me temo que si %player%. Todos los indicios apuntan a que un poder maligno esta resurgiendo en el interior de la torre. Pero penetrar en la torre no es algo sencillo... Una poderosa magia ancestral la rodea, debes reunir cuatro sellos antiguos, los cuales se encuentran dispersos en lugares de gran poder y misterio en nuestro reino. Cada sello es clave para abrir las puertas de la torre y enfrentar al Nigromante en su propio dominio."
         pointer: "a6"
-        events: "Misiones_Principiante-Mision_79.agregarMarcaInfoRecibidaNigromante"
       b6:
         text: "Esa información escapa a mi conocimiento, debe ser un mago de de gran poder quien te ayude y guie en esta tarea. Habla con el Mago de la corte real que se encuentra en la biblioteca del Palacio. Él es la persona indicada."
-        events: "Misiones_Principiante-Mision_79."
+        events: "Misiones_Principiante-Mision_79.completarParte1"
       # saludo2:
       #   text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
       #   pointer: "a1"

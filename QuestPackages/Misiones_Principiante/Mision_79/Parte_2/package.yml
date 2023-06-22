@@ -32,6 +32,7 @@ conversations:
         pointer: "a8"
       b8:
         text: "Me alegra escuchar eso, valiente aventurero. Recuerda, aventurero, que el poder del Conjuro de los Vínculos Antiguos es inmenso y peligroso. Debes usarlo con sabiduría y cautela, pues cualquier error podría liberar al nigromante y desatar nuevamente su terror en nuestro reino."
+        events: "Misiones_Principiante-Mision_79.completarParte2"
       saludo2:
         text: "Saludos ¡%player%!. ¿Has logrado deshacer el conjuro de los Vínculos Antiguos?"
         pointer: "no,preguntainfo"

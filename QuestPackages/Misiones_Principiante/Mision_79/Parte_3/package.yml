@@ -1,11 +1,13 @@
 conditions:
   estarCercaDeUnJefe: "mythicmobdistance Lich_King 50"
 
+  tenerSello1: "item sello1"
+  tenerSello2: "item sello2"
+  tenerSello3: "item sello3"
+  tenerSello4: "item sello4"
+
 events:
   iniciarParte3: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4"
-
-  
-  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^compasstrack 861.5;70;532.5;Zona1 ^compasstrack 874.5;236;242.5;Zona1 ^compasstrack 1427.5;243;233.5;Zona1 ^compasstrack 1314.5;219;722.5;Zona1"
 
   invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target marked:JefeObelisco1"
   invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target marked:JefeObelisco2"
@@ -23,6 +25,11 @@ events:
   superarObelisco3: "objective delete objDerrotarJefeObelisco3"
   superarObelisco4: "objective delete objDerrotarJefeObelisco4"
   
+  sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
+  sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
+  sonidoRomperConjuro: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
+
+  darPermisoEntradaCripta: "command lp user %player% permission set group.torre_nigromante"
 
 #####################################################################      
 
@@ -39,9 +46,63 @@ objectives:
 #####################################################################      
 
 items:
-
+  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
+  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
+  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
+  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante."
+  iconoBotonRomperConjuro: "PAPER custom-model-data:1807"
 
 #####################################################################      
 
 menus:
-
+  altarElementalCripta:
+    height: 6
+    title: "§f§f㊒"
+    open_events: "sonidoAbrirMenu"
+    close_events: "sonidoCerrarMenu"
+    slots:
+      4: "botonSelloPorEncontrar1,botonSelloEncontrado1"
+      11: "botonSelloPorEncontrar2,botonSelloEncontrado2"
+      15: "botonSelloPorEncontrar3,botonSelloEncontrado3"
+      17: "botonRomperConjuro"
+      22: "botonSelloPorEncontrar4,botonSelloEncontrado4"
+    items:
+      botonSelloPorEncontrar1:
+        item: "sello1"
+        condition: "!tenerSello1"
+        text:
+        - "&e¡Aún no has encontrado este sello!"
+      botonSelloPorEncontrar2:
+        item: "sello2"
+        condition: "!tenerSello2"
+        text:
+        - "&e¡Aún no has encontrado este sello!"
+      botonSelloPorEncontrar3:
+        item: "sello3"
+        condition: "!tenerSello3"
+        text:
+        - "&e¡Aún no has encontrado este sello!"
+      botonSelloPorEncontrar4:
+        item: "sello4"
+        condition: "!tenerSello4"
+        text:
+        - "&e¡Aún no has encontrado este sello!"
+      botonSelloEncontrado1:
+        item: "sello1"
+        condition: "tenerSello1"
+      botonSelloEncontrado2:
+        item: "sello2"
+        condition: "tenerSello2"
+      botonSelloEncontrado3:
+        item: "sello3"
+        condition: "tenerSello3"
+      botonSelloEncontrado4:
+        item: "sello4"
+        condition: "tenerSello4"
+      botonRomperConjuro:
+        item: "iconoBotonRomperConjuro"
+        text:
+        - "&ePresiona este botón para romper el conjuro"
+        - "&eque mantiene prisionero al Nigromante."
+        condition: "tenerSello1,tenerSello2,tenerSello3,tenerSello4"
+        click: "sonidoRomperConjuro,darPermisoEntradaCripta,Misiones_Principiante-Mision_79.completarParte3"
