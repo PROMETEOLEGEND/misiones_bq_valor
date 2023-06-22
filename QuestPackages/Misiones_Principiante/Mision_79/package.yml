@@ -18,8 +18,8 @@ events:
   
   mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3,mensajeAyudaMision79_4,mensajeAyudaMision79_5"
   mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionAceptadaNigromante"
-  mensajeAyudaMision79_2: "folder agregarObjetivosBrujula conditions:infoRecibidaNigromante,!infoRecibidaNigromante_2,!misionAceptadaNigromante"
-  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r Debes recuperar los &bConjuros sagrados &rque se encuentran en las ruinas ancestrales que están dispersas por las montañas del &aReino de Valor&r.\n&r conditions:infoRecibidaNigromante,infoRecibidaNigromante_2,!misionAceptadaNigromante"
+  mensajeAyudaMision79_2: "folder agregarObjetivosBrujula conditions:misionInfoRecibidaNigromante,!misionInfoRecibidaNigromante_2,!misionAceptadaNigromante"
+  mensajeAyudaMision79_3: "notify \n&6&lMisión 79:\n&r Debes recuperar los &bConjuros sagrados &rque se encuentran en las ruinas ancestrales que están dispersas por las montañas del &aReino de Valor&r.\n&r conditions:misionInfoRecibidaNigromante,misionInfoRecibidaNigromante_2,!misionAceptadaNigromante"
   mensajeAyudaMision79_4: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra del &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar por la cripta de este veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
   mensajeAyudaMision79_5: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
   

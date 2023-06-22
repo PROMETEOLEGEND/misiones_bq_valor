@@ -1,7 +1,8 @@
 conversations:
   MagoValor:
     quester: "&b&lMago de la Corte Real"
-    first: "saludo,saludo2,saludo3"
+    first: "saludo,saludo2"
+    # first: "saludo,saludo2,saludo3"
     NPC_options:
       saludo:
         text: "Saludos ¡%player%!. Cuanto has crecido y mejorado tus habilidades! Aún recuerdo los días cuando no eras mas que un novato y te enseñaba las nociones básicas sobre tus habilidades y el uso de armas. ¿Qué necesitas?"

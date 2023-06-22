@@ -1,12 +1,13 @@
 conversations:
   ReyValor11:
     quester: "&6&lRey de Valor"
-    first: "saludo,saludo2"
+    first: "saludo"
+    # first: "saludo,saludo2"
     NPC_options:
       saludo:
         text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
         pointer: "a1"
-        conditions: "!Misiones_Principiante-Mision_79.infoRecibidaNigromante"
+        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante"
       b1:
         text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
