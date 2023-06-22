@@ -24,5 +24,5 @@ events:
   encontrarChiste4: "run ^tag add marcaChisteEncontrado4 ^point chistesEncontrados 1 action:add"
   romperCajaChistes5: "folder encontrarChiste5,notificacionChisteEncontrado conditions:estarCercaCajaChistes5,!chisteEncontrado5"
   encontrarChiste5: "run ^tag add marcaChisteEncontrado5 ^point chistesEncontrados 1 action:add"
-  notificacionChisteEncontrado: "notify &b¡Has encontrado un chiste mágico! Te faltan %math.calc:5-%point.chistesEncontrados.amount%."
+  notificacionChisteEncontrado: "notify &b¡Has encontrado un chiste mágico! Te faltan %math.calc:5-point.chistesEncontrados.amount%."
   darRupias: "run ^command mm i give -s %player% moneda_2 ^notify &a¡Has encontrado 10 Rupias!"
