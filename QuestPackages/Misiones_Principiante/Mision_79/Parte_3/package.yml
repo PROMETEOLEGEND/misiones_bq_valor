@@ -1,10 +1,10 @@
 conditions:
   estarCercaDeUnJefe: "mythicmobdistance Lich_King 50"
 
-  tenerSello1: "item sello1:1"
-  tenerSello2: "item sello2:1"
-  tenerSello3: "item sello3:1"
-  tenerSello4: "item sello4:1"
+  tenerSello1: "variable %checkitem_mat:INK_SAC,custommodeldata:981% yes"
+  tenerSello2: "variable %checkitem_mat:INK_SAC,custommodeldata:983% yes"
+  tenerSello3: "variable %checkitem_mat:INK_SAC,custommodeldata:985% yes"
+  tenerSello4: "variable %checkitem_mat:INK_SAC,custommodeldata:987% yes"
 
 events:
   iniciarParte3: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4 ^objective start objDerrotarJefeObelisco1 ^objective start objDerrotarJefeObelisco2 ^objective start objDerrotarJefeObelisco3 ^objective start objDerrotarJefeObelisco4"
