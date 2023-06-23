@@ -94,6 +94,6 @@ conversations:
         text: "Sí, mi Rey. Con valor y determinación, he enfrentado al nigromante y he deshecho su maligno hechizo. El reino está a salvo una vez más."
         pointer: "f1"
       e2:
-        text: "Fue una batalla ardua, mi Rey, pero no estaba solo. Los sellos que obtuve de los altares rúnicos me permitieron abrir el camino hacia la torre del nigromante y enfrentar sus fuerzas malignas."
+        text: "Fue una batalla ardua, mi Rey. Los sellos que obtuve de los altares rúnicos me permitieron abrir el camino hacia la torre del nigromante y enfrentar a sus fuerzas."
         pointer: "f2"
 #####################################################################
