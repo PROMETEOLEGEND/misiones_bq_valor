@@ -18,8 +18,8 @@ conversations:
         pointer: "a3"        
       b3:
         text: "Confío en ti, valiente guerrero. Sé que cumplirás esta misión con la misma dedicación y determinación que has demostrado hasta ahora. Nuestro reino cuenta contigo."
-        pointer: "a4"
         events: "Misiones_Principiante-Mision_80.completarParte1"
+
 #####################################################################
       saludo2:
         text: "Ah, valiente aventurero, veo que has regresado. ¿Cómo va tu progreso en la misión que te encomendé? ¿Has hablado con el paladin?"
