@@ -33,7 +33,8 @@ events:
   mostrarObjBrujula4: "command calebcompass toggle %player% altar4 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado4"
   mostrarObjBrujulaAltar: "compasstrack 1019.5;16;933.5;Zona1"
   notificacionObjBrujula: "notify \n&6&lMisión 79:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
-  agregarObjetivosBrujula_2: "folder limpiarBrujula,mostrarBrujula,mostrarObjBrujulaAltar,notificacionObjBrujula"
+  notificacionObjBrujula_2: "notify \n&6&lMisión 79:\n&r Debes ir al altar elemental teniendo los cuatro &bsellos elementales &ren tu inventario para romper el hechizo. En caso que no tengas los sellos, revisa tu &b/mochilamisiones&r. Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  agregarObjetivosBrujula_2: "folder limpiarBrujula,mostrarBrujula,mostrarObjBrujulaAltar,notificacionObjBrujula_2"
 
   mostrarMensajeAyudaMision79_2: "folder mensajeAyudaMision79_2 delay:2"
 
