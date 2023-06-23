@@ -6,7 +6,7 @@ conversations:
       saludo:
         text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
         pointer: "a1"
-        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante"
+        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,!Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
       b1:
         text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
@@ -35,12 +35,23 @@ conversations:
       saludo2:
         text: "Ah, valiente aventurero, veo que has regresado. ¿Cómo va tu progreso en la misión que te encomendé? ¿Has logrado avanzar lo suficiente?"
         pointer: "c1,c2"
-        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante"
+        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,!Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
       d1:
         text: "Entiendo, valiente guerrero. A veces, las misiones más importantes pueden llevar más tiempo y esfuerzo del esperado. Pero recuerda, la determinación y la perseverancia son las llaves del éxito."
       d2:
         text: "No te preocupes, avísame cuando estés listo para escuchar la historia."
         pointer: "c3,c4"
+#####################################################################
+      saludo3:
+        text: "¡Héroe de Valor, has vuelto triunfante! Tus hazañas en la torre del nigromante han llegado a mis oídos. Cuéntame, ¿has logrado derrotarlo y romper el hechizo que amenazaba nuestro reino?"
+        pointer: "e1"
+        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
+      f1:
+        text: "¡Magnífico! Tus acciones valerosas han asegurado la paz y la protección de nuestros súbditos. El nigromante era una amenaza temible que ahora ha sido erradicada gracias a ti."
+        pointer: "e2"
+      f2:
+        text: "Eres un verdadero héroe, capaz de enfrentar los peligros más oscuros y superar desafíos que pocos podrían soportar. El reino te debe una deuda de gratitud eterna."
+        events: "Misiones_Principiante-Mision_79.completarMision79"
 #####################################################################
     player_options:
       a1:
@@ -78,3 +89,11 @@ conversations:
       c4:
         text: "Aún no me siento listo..."
         pointer: "d1"
+#####################################################################
+      e1:
+        text: "Sí, mi Rey. Con valor y determinación, he enfrentado al nigromante y he deshecho su maligno hechizo. El reino está a salvo una vez más."
+        pointer: "f1"
+      e2:
+        text: "Fue una batalla ardua, mi Rey, pero no estaba solo. Los sellos que obtuve de los altares rúnicos me permitieron abrir el camino hacia la torre del nigromante y enfrentar sus fuerzas malignas."
+        pointer: "f2"
+#####################################################################
