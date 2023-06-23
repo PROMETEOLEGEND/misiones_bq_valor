@@ -30,7 +30,7 @@ events:
   agregarMarcaInfoRecibidaNigromante: "tag add marcaInfoRecibidaNigromante"
   agregarMarcaInfoRecibidaNigromante_2: "tag add marcaInfoRecibidaNigromante_2"
 
-  completarParte1: "folder agregarMarcaInfoRecibidaNigromante,notificacionNuevoMensajeAyuda delay:2"
+  completarParte1: "folder agregarMarcaInfoRecibidaNigromante,notificacionNuevoMensajeAyuda delay:2 condition:!misionInfoRecibidaNigromante"
   completarParte2: "folder agregarMarcaInfoRecibidaNigromante_2,notificacionNuevoMensajeAyuda,Misiones_Principiante-Mision_79-Parte_3.iniciarParte3 delay:2"
   completarParte3: "folder aceptarMisionNigromante,notificacionNuevoMensajeAyuda delay:2"
   
