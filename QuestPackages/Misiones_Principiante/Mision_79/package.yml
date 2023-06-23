@@ -68,6 +68,7 @@ events:
   agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
   notificacionMisionCompletada79: "run ^notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
   darRecompensaMision: "command eco give %player% 15000"
+  darRecompensaBasilisco: "run ^command lp user %player% permission set mcpets.basilisk_obsidian ^notify &aHas conseguido una nueva montura: &6Basilisco de Obsidiana&a.&e Usa &f/mascotas &epara ver tu nueva montura."
   darRecompensaBasilisco: "run ^command lp user %player permission set mcpets.basilisk_obsidian ^notify &aHas conseguido una nueva montura: &6Basilisco de Obsidiana&a.&e Usa &f/mascotas &epara ver tu nueva montura."
   recompensaExpClase: "mmoclassexperience 1500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 1500 exp de clase."
