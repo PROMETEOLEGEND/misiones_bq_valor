@@ -942,7 +942,7 @@ menus:
         - "&6&l[Misión 79]: &eSombras del pasado"
         - "&r "
         - "&aObjetivo:"
-        - "&7&oDerrota al &f&oal Nigromante&7&o."
+        - "&7&oDerrota al &f&oNigromante&7&o."
         - "&r "
         - "&7[&aClic izquierdo&7] para recibir un mensaje de ayuda acerca de la misión."
         click:

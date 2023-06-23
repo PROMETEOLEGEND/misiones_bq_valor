@@ -42,7 +42,7 @@ events:
 
   completarParte1: "folder agregarMarcaInfoRecibidaNigromante,notificacionNuevoMensajeAyuda delay:2 condition:!misionInfoRecibidaNigromante"
   completarParte2: "folder agregarMarcaInfoRecibidaNigromante_2,notificacionNuevoMensajeAyuda,Misiones_Principiante-Mision_79-Parte_3.iniciarParte3 delay:2 conditions:!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante_2"
-  completarParte3: "folder aceptarMisionNigromante,notificacionNuevoMensajeAyuda delay:2"
+  completarParte3: "folder aceptarMisionNigromante delay:1"
   
   aceptarMisionNigromante: "folder agregarMarcaMisionAceptadaNigromante,permisoMazmorraNigromante,iniciarObjetivoCompletarMazmorraNigromante,notificacionNuevoMensajeAyuda delay:1"
   agregarMarcaMisionAceptadaNigromante: "tag add marcaMisionAceptadaNigromante"
