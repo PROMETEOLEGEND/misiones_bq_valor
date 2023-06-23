@@ -1,7 +1,7 @@
 conversations:
   ReyValor12:
     quester: "&6&lRey de Valor"
-    first: "saludo,saludo2,saludo3"
+    first: "saludo,saludo2"
     NPC_options:
       saludo:
         text: "¡Ah %player%! Te has destacado en cada una de las misiones que te he encomendado. Tu valor y dedicación han honrado a nuestro reino."
