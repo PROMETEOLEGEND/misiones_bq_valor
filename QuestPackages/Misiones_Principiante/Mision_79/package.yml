@@ -24,8 +24,16 @@ events:
   mensajeAyudaMision79_5: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra del &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar por la cripta de este veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
   mensajeAyudaMision79_6: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
   
-  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^command calebcompass toggle %player% altar1 enable ^command calebcompass toggle %player% altar2 enable ^command calebcompass toggle %player% altar3 enable ^command calebcompass toggle %player% altar4 enable ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
-  agregarObjetivosBrujula_2: "run ^clearcompass ^command calebcompass show %player% ^compasstrack 1019.5;16;933.5;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  agregarObjetivosBrujula: "folder limpiarBrujula,mostrarBrujula,mostrarObjBrujula1,mostrarObjBrujula2,mostrarObjBrujula3,mostrarObjBrujula4,notificacionObjBrujula"
+  limpiarBrujula: "command calebcompass show %player%"
+  mostrarBrujula: "command calebcompass show %player%"
+  mostrarObjBrujula1: "command calebcompass toggle %player% altar1 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado1"
+  mostrarObjBrujula2: "command calebcompass toggle %player% altar2 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado2"
+  mostrarObjBrujula3: "command calebcompass toggle %player% altar3 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado3"
+  mostrarObjBrujula4: "command calebcompass toggle %player% altar4 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado4"
+  mostrarObjBrujulaAltar: "compasstrack 1019.5;16;933.5;Zona1"
+  notificacionObjBrujula: "notify \n&6&lMisión 79:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  agregarObjetivosBrujula_2: "folder limpiarBrujula,mostrarBrujula,mostrarObjBrujulaAltar,notificacionObjBrujula"
 
   mostrarMensajeAyudaMision79_2: "folder mensajeAyudaMision79_2 delay:2"
 
@@ -48,12 +56,13 @@ events:
   agregarMarcaMazmorraCompletadaNigromante: "tag add marcaMazmorraCompletadaNigromante"
   
   completarMision79: "folder eliminarMarcasMisionActiva79,agregarMarcaMisionCompletada79,notificacionMisionCompletada79,darRecompensaMision,darRecompensaBasilisco,recompensaExpClase,notificacionRecompensaExpClase delay:1"
-  eliminarMarcasMisionActiva79: "folder eliminarMarcaMisionActiva79,eliminarMarcaMisionInfoRecibidaNigromante,eliminarMarcaMisionInfoRecibidaNigromante_2,eliminarMarcaMisionAceptadaNigromante,eliminarMarcaMazmorraCompletadaNigromante"
+  eliminarMarcasMisionActiva79: "folder eliminarMarcaMisionActiva79,eliminarMarcaMisionInfoRecibidaNigromante,eliminarMarcaMisionInfoRecibidaNigromante_2,eliminarMarcaMisionAceptadaNigromante,eliminarMarcaMazmorraCompletadaNigromante,eliminarMarcaConjuroDesactivado,eliminarMarcasGuardianesDerrotados"
   eliminarMarcaMisionActiva79: "tag delete marcaMisionActiva79"
   eliminarMarcaMisionInfoRecibidaNigromante: "tag delete marcaInfoRecibidaNigromante"
   eliminarMarcaMisionInfoRecibidaNigromante_2: "tag delete marcaInfoRecibidaNigromante_2"
   eliminarMarcaMisionAceptadaNigromante: "tag delete marcaMisionAceptadaNigromante"
   eliminarMarcaConjuroDesactivado: "tag delete Misiones_Principiante-Mision_79-Parte_3.marcaConjuroDesactivado"
+  eliminarMarcasGuardianesDerrotados: "run ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado1 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado2 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado3 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado4"
   eliminarMarcaMazmorraCompletadaNigromante: "tag delete marcaMazmorraCompletadaNigromante"
   agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
   notificacionMisionCompletada79: "run ^notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
