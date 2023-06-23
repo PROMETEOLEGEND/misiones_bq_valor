@@ -7,7 +7,7 @@ conversations:
       saludo:
         text: "Saludos ¡%player%!. Cuanto has crecido y mejorado tus habilidades! Aún recuerdo los días cuando no eras mas que un novato y te enseñaba las nociones básicas sobre tus habilidades y el uso de armas. ¿Qué necesitas?"
         pointer: "a1"
-
+        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante_2"
       b1:
         text: "Entiendo... El hechizo en cuestión es el Conjuro de los Vínculos Antiguos. Este poderoso hechizo es lo que mantiene sellada la torre del nigromante y evita que su influencia se extienda aún más."
         pointer: "a2"
@@ -41,6 +41,7 @@ conversations:
       saludo2:
         text: "Saludos ¡%player%!. ¿Has logrado deshacer el conjuro de los Vínculos Antiguos?"
         pointer: "no1,preguntainfo"
+        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante_2"
       b9:
         text: "No te demores mucho %player% el tiempo juega en nuestra contra..."
       
