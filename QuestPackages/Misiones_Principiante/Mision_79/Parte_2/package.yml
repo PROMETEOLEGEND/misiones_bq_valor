@@ -7,6 +7,7 @@ conversations:
       saludo:
         text: "Saludos ¡%player%!. Cuanto has crecido y mejorado tus habilidades! Aún recuerdo los días cuando no eras mas que un novato y te enseñaba las nociones básicas sobre tus habilidades y el uso de armas. ¿Qué necesitas?"
         pointer: "a1"
+
       b1:
         text: "Entiendo... El hechizo en cuestión es el Conjuro de los Vínculos Antiguos. Este poderoso hechizo es lo que mantiene sellada la torre del nigromante y evita que su influencia se extienda aún más."
         pointer: "a2"
@@ -23,10 +24,13 @@ conversations:
         text: "Para conseguir los sellos debes visitar los cuatro altares rúnicos que rodean nuestra amada Ciudad de Valor."
         pointer: "a5"
       b5:
-        text: "Los altares rúnicos son lugares sagrados donde residen los guardianes de los conjuros necesarios para romper el hechizo de protección de la torre. En cada uno de ellos, encontrarás una criatura poderosa que protege el conjuro correspondiente. Sin estos conjuros, el hechizo de protección se mantendrá fuerte y la torre permanecerá inaccesible."
+        text: "Los altares rúnicos son lugares sagrados donde residen los guardianes de los sellos necesarios para romper el hechizo de protección de la torre. En cada uno de ellos, encontrarás una criatura poderosa que protege el conjuro correspondiente."
+        pointer: "a5_2"
+      b5_2:
+        text: "Sin estos sellos, el hechizo de protección se mantendrá fuerte y la torre permanecerá inaccesible."
         pointer: "a6"
       b6:
-        text: "Para invocar a los guardianes y obtener los conjuros, te concederé un poder especial. A través de este poder, podrás enfrentarte a las criaturas protectoras de los altares y demostrar tu valía como merecedor de los conjuros."
+        text: "Para invocar a los guardianes y obtener los sellos, te concederé un poder especial. A través de este poder, podrás enfrentarte a las criaturas protectoras de los altares y demostrar tu valía como merecedor de los sellos."
         pointer: "a7"
       b7:
         text: "Los altares se encuentran en lo alto de las montañas que rodean el valle de Valor. Te anotaré las ubicaciones en tu brújula para que puedas llegar más facilmente."
@@ -57,13 +61,16 @@ conversations:
         text: "¿Cómo consigo esos sellos de los que hablas?"
         pointer: "b4"
       a5:
-        text: "¿Cuál es el propósito de visitar los altares? ¿Qué relación tienen con el hechizo de protección de la torre?"
+        text: "¿Cuál es el propósito de visitar los altares?"
         pointer: "b5"
+      a5_2:
+        text: "¿Qué relación tienen con el hechizo de protección de la torre?"
+        pointer: "b5_2"
       a6:
         text: "¿Cómo puedo obtener los conjuros de cada altar? ¿Cuál es mi papel en todo esto?"
         pointer: "b6"
       a7:
-        text: "Me siento honrado por confiarme a mi semejante poder. ¿Puedes indicarme donde encontrar los altares?"
+        text: "¿Puedes indicarme donde encontrar los altares?"
         pointer: "b7"
       a8:
         text: "Entiendo, Mago del Rey. Acepto el desafío de obtener los conjuros y enfrentar al nigromante. No defraudaré la confianza depositada en mí."
