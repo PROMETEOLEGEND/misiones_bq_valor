@@ -36,7 +36,7 @@ conversations:
     
     player_options:
       a1:
-        text: "¡Mi Rey, me siento honrado y agradecido por confiar en mí una vez más! Cada misión que he emprendido en nombre de nuestro reino ha sido un privilegio y un desafío que he abrazado con todo mi ser."
+        text: "¡Mi Rey, me siento honrado y agradecido por confiar en mí una vez más!"
         pointer: "b1"
       a2:
         text: "Deberieron ser tiempos terribles..."
