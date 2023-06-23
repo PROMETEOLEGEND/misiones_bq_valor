@@ -47,7 +47,7 @@ conversations:
         pointer: "e1"
         conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
       f1:
-        text: "¡Magnífico! Tus acciones valerosas han asegurado la paz y la protección de nuestros súbditos. El nigromante era una amenaza temible que ahora ha sido erradicada gracias a ti."
+        text: "¡Magnífico! Tus acciones han asegurado la paz y la protección de nuestros súbditos. El nigromante era una amenaza temible que ahora ha sido erradicada gracias a ti."
         pointer: "e2"
       f2:
         text: "Eres un verdadero héroe, capaz de enfrentar los peligros más oscuros y superar desafíos que pocos podrían soportar. El reino te debe una deuda de gratitud eterna."
