@@ -63,7 +63,7 @@ events:
   eliminarMarcaMisionInfoRecibidaNigromante_2: "tag delete marcaInfoRecibidaNigromante_2"
   eliminarMarcaMisionAceptadaNigromante: "tag delete marcaMisionAceptadaNigromante"
   eliminarMarcaConjuroDesactivado: "tag delete Misiones_Principiante-Mision_79-Parte_3.marcaConjuroDesactivado"
-  eliminarMarcasGuardianesDerrotados: "run ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado1 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado2 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado3 ^tag delete !Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado4"
+  eliminarMarcasGuardianesDerrotados: "run ^tag delete Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado1 ^tag delete Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado2 ^tag delete Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado3 ^tag delete Misiones_Principiante-Mision_79-Parte_3.marcaGuardianDerrotado4 ^deletepoint Misiones_Principiante-Mision_79-Parte_3.guardianesDerrotados"
   eliminarMarcaMazmorraCompletadaNigromante: "tag delete marcaMazmorraCompletadaNigromante"
   agregarMarcaMisionCompletada79: "tag add marcaMisionCompletada79"
   notificacionMisionCompletada79: "run ^notify &7----------------------------------------\n&6&l¡Misión 79 completada!\n \n&7Usa &r/misiones &7para activar tu siguiente misión.\n&7---------------------------------------- ^notify io:sound soundcategory:players sound:ui.toast.challenge_complete"
