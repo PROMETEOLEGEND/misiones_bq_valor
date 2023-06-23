@@ -16,7 +16,7 @@ objectives:
 events:
   iniciarMision79: "tag add marcaMisionActiva79"
   
-  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3,mensajeAyudaMision79_4,mensajeAyudaMision79_5,"
+  mensajeAyudaMision79: "folder mensajeAyudaMision79_1,mensajeAyudaMision79_2,mensajeAyudaMision79_3,mensajeAyudaMision79_4,mensajeAyudaMision79_5,mensajeAyudaMision79_6"
   mensajeAyudaMision79_1: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:!misionInfoRecibidaNigromante"
   mensajeAyudaMision79_2: "notify \n&6&lMisión 79:\n&r Debes hablar con el &bMago de la Corte Real &rque se encuentra en la Biblioteca del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionInfoRecibidaNigromante,!misionInfoRecibidaNigromante_2,!misionAceptadaNigromante"
   mensajeAyudaMision79_3: "folder agregarObjetivosBrujula conditions:misionInfoRecibidaNigromante,misionInfoRecibidaNigromante_2,!misionAceptadaNigromante,!Misiones_Principiante-Mision_79-Parte_3.cantidadGuardianesDerrotados"
