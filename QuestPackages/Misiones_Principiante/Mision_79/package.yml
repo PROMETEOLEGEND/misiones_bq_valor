@@ -70,5 +70,5 @@ events:
   darRecompensaMision: "command eco give %player% 15000"
   darRecompensaBasilisco: "run ^command lp user %player% permission set mcpets.basilisk_obsidian ^notify &aHas conseguido una nueva montura: &6Basilisco de Obsidiana&a.&e Usa &f/mascotas &epara ver tu nueva montura."
   darRecompensaBasilisco: "run ^command lp user %player permission set mcpets.basilisk_obsidian ^notify &aHas conseguido una nueva montura: &6Basilisco de Obsidiana&a.&e Usa &f/mascotas &epara ver tu nueva montura."
- recompensaExpClase: "mmoclassexperience 1500"
+  recompensaExpClase: "mmoclassexperience 1500"
   notificacionRecompensaExpClase: "notify &aHas conseguido 1500 exp de clase."
