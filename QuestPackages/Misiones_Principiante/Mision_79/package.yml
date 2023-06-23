@@ -25,7 +25,7 @@ events:
   mensajeAyudaMision79_6: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
   
   agregarObjetivosBrujula: "folder limpiarBrujula,mostrarBrujula,mostrarObjBrujula1,mostrarObjBrujula2,mostrarObjBrujula3,mostrarObjBrujula4,notificacionObjBrujula"
-  limpiarBrujula: "command calebcompass show %player%"
+  limpiarBrujula: "clearcompass"
   mostrarBrujula: "command calebcompass show %player%"
   mostrarObjBrujula1: "command calebcompass toggle %player% altar1 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado1"
   mostrarObjBrujula2: "command calebcompass toggle %player% altar2 enable condition:!Misiones_Principiante-Mision_79-Parte_3.guardianDerrotado2"
