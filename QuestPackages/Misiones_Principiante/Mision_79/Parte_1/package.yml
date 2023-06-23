@@ -1,12 +1,12 @@
 conversations:
   ReyValor11:
     quester: "&6&lRey de Valor"
-    first: "saludo,saludo2"
+    first: "saludo,saludo2,saludo3"
     NPC_options:
       saludo:
         text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
         pointer: "a1"
-        conditions: "!Misiones_Principiante-Mision_79.infoRecibidaNigromante"
+        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,!Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
       b1:
         text: "Déjame contarte una antigua historia. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
@@ -14,43 +14,86 @@ conversations:
         text: "Presta atención. En tiempos pasados, nuestras tierras fueron testigos de una terrible guerra. Durante aquel conflicto, uno de los enemigos más poderosos y temidos era el nigromante. Maestro de las artes oscuras y la necromancia, el nigromante sembraba el caos y el terror en cada rincón del reino."
         pointer: "a2"
       b2:
-        text: "El nigromante, respaldado por su ejército de muertos vivientes, parecía invencible. Sin embargo, los valientes guerreros del reino se unieron en un último esfuerzo desesperado para enfrentar al nigromante y su maldad incesante. Durante días y noches, se libró una encarnizada lucha en la que ambos bandos sufrieron grandes pérdidas."
+        text: "El nigromante, respaldado por su ejército de muertos vivientes, parecía invencible. Sin embargo, los valientes guerreros del reino se unieron en un último esfuerzo desesperado para enfrentar al nigromante. Durante días y noches, se libró una lucha en la que ambos bandos sufrieron grandes pérdidas."
         pointer: "a3"      
       b3:
-        text: "Finalmente, los sabios y poderosos magos del reino lograron conjurar un hechizo de encierro. Con su último aliento de magia, confinaron al nigromante en una torre maldita, sellando sus poderes oscuros y asegurando su cautiverio."
-        pointer: "a4,entendido"
+        text: "Finalmente, los sabios magos del reino lograron conjurar un hechizo de encierro. Con su último aliento de magia, confinaron al nigromante en una torre maldita, sellando sus poderes oscuros y asegurando su cautiverio."
+        pointer: "a4"
       b4:
         text: "Los años han ido pasando y el reino ha recuperado la paz. Los eventos de la guerra se convirtieron en leyendas, sus héroes recordados y sus sacrificios honrados. Sin embargo, recientemente, una siniestra energía comenzó a emerger de la torre encantada."
         pointer: "a5"
       b5:
-        text: "Me temo que si %player%. Todos los indicios apuntan a que un poder maligno esta resurgiendo en el interior de la torre. Pero penetrar en la torre no es algo sencillo... Una poderosa magia ancestral la rodea, debes reunir cuatro sellos antiguos, los cuales se encuentran dispersos en lugares de gran poder y misterio en nuestro reino. Cada sello es clave para abrir las puertas de la torre y enfrentar al Nigromante en su propio dominio."
+        text: "Me temo que si %player%. Todos los indicios apuntan a que un poder maligno esta resurgiendo en el interior de la torre. Pero penetrar en la torre no es algo sencillo..."
         pointer: "a6"
       b6:
+        text: Una poderosa magia ancestral la rodea, debes reunir cuatro sellos antiguos, los cuales se encuentran dispersos en lugares de gran poder y misterio en nuestro reino. Cada sello es clave para abrir las puertas de la torre y enfrentar al Nigromante en su propio dominio.
+        pointer: "a7"
+      b7:
         text: "Esa información escapa a mi conocimiento, debe ser un mago de de gran poder quien te ayude y guie en esta tarea. Habla con el Mago de la corte real que se encuentra en la biblioteca del Palacio. Él es la persona indicada."
         events: "Misiones_Principiante-Mision_79.completarParte1"
-      # saludo2:
-      #   text: "¡%player%! Hoy, te convoco una vez más, para enfrentar un desafío más grande y oscuro que todo lo que has encontrado hasta ahora. Una sombra se cierne sobre nuestro reino, liberada por el Nigromante, un hechicero antiguo de malévola oscuridad."
-      #   pointer: "a1"
-    
+#####################################################################
+      saludo2:
+        text: "Ah, valiente aventurero, veo que has regresado. ¿Cómo va tu progreso en la misión que te encomendé? ¿Has logrado avanzar lo suficiente?"
+        pointer: "c1,c2"
+        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,!Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
+      d1:
+        text: "Entiendo, valiente guerrero. A veces, las misiones más importantes pueden llevar más tiempo y esfuerzo del esperado. Pero recuerda, la determinación y la perseverancia son las llaves del éxito."
+      d2:
+        text: "No te preocupes, avísame cuando estés listo para escuchar la historia."
+        pointer: "c3,c4"
+#####################################################################
+      saludo3:
+        text: "¡Héroe de Valor, has vuelto triunfante! Tus hazañas en la torre del nigromante han llegado a mis oídos. Cuéntame, ¿has logrado derrotarlo y romper el hechizo que amenazaba nuestro reino?"
+        pointer: "e1"
+        conditions: "Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante,Misiones_Principiante-Mision_79.mazmorraCompletadaNigromante"
+      f1:
+        text: "¡Magnífico! Tus acciones han asegurado la paz y la protección de nuestros súbditos. El nigromante era una amenaza temible que ahora ha sido erradicada gracias a ti."
+        pointer: "e2"
+      f2:
+        text: "Eres un verdadero héroe, capaz de enfrentar los peligros más oscuros y superar desafíos que pocos podrían soportar. El reino te debe una deuda de gratitud eterna."
+        events: "Misiones_Principiante-Mision_79.completarMision79"
+#####################################################################
     player_options:
       a1:
-        text: "¡Mi Rey, me siento honrado y agradecido por confiar en mí una vez más! Cada misión que he emprendido en nombre de nuestro reino ha sido un privilegio y un desafío que he abrazado con todo mi ser."
-        pointer: "a1"
+        text: "¡Mi Rey, me siento honrado y agradecido por confiar en mí una vez más!"
+        pointer: "b1"
       a2:
         text: "Deberieron ser tiempos terribles..."
         pointer: "b2"
       a3:
         text: "¿Qué sucedió al final?"
         pointer: "b3"
-      entendido:
-        text: "¿Podría repetirme la historia, majestad?"
-        pointer: "b1_1"
       a4:
-        text: "¡Es fascinante escuchar la historia de cómo los sabios y poderosos magos del reino lograron confinar al nigromante en esa torre maldita! Me hace reflexionar sobre la importancia de mantener el equilibrio entre el bien y el mal en nuestro reino."
+        text: "Eso me hace reflexionar sobre la importancia de mantener el equilibrio entre el bien y el mal en nuestro reino."
         pointer: "b4"
       a5:
         text: "¿El nigromante ha logrado romper el sello que lo mantenía prisionero?"
         pointer: "b5"
       a6:
-        text: "Entendido, mi señor. ¿Podría saber cuáles son estos conjuros y dónde puedo encontrarlos?"
+        text: "¿Qué se necesita para entrar en la torre?"
         pointer: "b6"
+      a7:
+        text: "Entendido, mi señor. ¿Podría saber cuáles son estos conjuros y dónde puedo encontrarlos?"
+        pointer: "b7"
+        conditions: "!Misiones_Principiante-Mision_79.misionInfoRecibidaNigromante"
+#####################################################################
+      c1:
+        text: "Mi Rey, lamento informarle que aún no he completado por completo la misión. Aunque he enfrentado algunos desafíos, todavía me queda camino por recorrer."
+        pointer: "d1"
+      c2:
+        text: "¿Su majestad, podría recordarme la mision?"
+        pointer: "d2"
+      c3:
+        text: "Estoy listo, Su majestad."
+        pointer: "b1_1"
+      c4:
+        text: "Aún no me siento listo..."
+        pointer: "d1"
+#####################################################################
+      e1:
+        text: "Sí, mi Rey. Con valor y determinación, he enfrentado al nigromante y he deshecho su maligno hechizo. El reino está a salvo una vez más."
+        pointer: "f1"
+      e2:
+        text: "Fue una batalla ardua, mi Rey. Los sellos que obtuve de los altares rúnicos me permitieron abrir el camino hacia la torre del nigromante y enfrentar a sus fuerzas."
+        pointer: "f2"
+#####################################################################

@@ -1,34 +1,44 @@
 conditions:
   estarCercaDeUnJefe: "mythicmobdistance Lich_King 50"
 
-  tenerSello1: "item sello1"
-  tenerSello2: "item sello2"
-  tenerSello3: "item sello3"
-  tenerSello4: "item sello4"
+  tenerSello1: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:981% yes"
+  tenerSello2: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:983% yes"
+  tenerSello3: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:985% yes"
+  tenerSello4: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:987% yes"
+
+  tenerSello1_or: "or tenerSello1,conjuroDesactivado"
+  tenerSello2_or: "or tenerSello2,conjuroDesactivado"
+  tenerSello3_or: "or tenerSello3,conjuroDesactivado"
+  tenerSello4_or: "or tenerSello4,conjuroDesactivado"
+
+  guardianDerrotado1: "tag marcaGuardianDerrotado1"
+  guardianDerrotado2: "tag marcaGuardianDerrotado2"
+  guardianDerrotado3: "tag marcaGuardianDerrotado3"
+  guardianDerrotado4: "tag marcaGuardianDerrotado4"
+
+  conjuroDesactivado: "tag marcaConjuroDesactivado"
+
+  cantidadGuardianesDerrotados: "point guardianesDerrotados 4"
 
 events:
-  iniciarParte3: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4"
+  iniciarParte3: "run ^objective start objVisitarObelisco1 ^objective start objVisitarObelisco2 ^objective start objVisitarObelisco3 ^objective start objVisitarObelisco4 ^objective start objDerrotarJefeObelisco1 ^objective start objDerrotarJefeObelisco2 ^objective start objDerrotarJefeObelisco3 ^objective start objDerrotarJefeObelisco4 ^objective start objDerrotarJefesObeliscos"
 
   invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target marked:JefeObelisco1"
   invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target marked:JefeObelisco2"
   invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target marked:JefeObelisco3"
   invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target marked:JefeObelisco4"
 
-  # invocarJefeObelisco1: "mspawnmob 861.5;70;532.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco1"
-  # invocarJefeObelisco2: "mspawnmob 874.5;236;242.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco2"
-  # invocarJefeObelisco3: "mspawnmob 1427.5;243;233.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco3"
-  # invocarJefeObelisco4: "mspawnmob 1314.5;219;722.5;Zona1 Lich_King:1 1 target private marked:JefeObelisco4"
-  # superarObelisco1: "run ^objective delete objDerrotarJefeObelisco1 ^"
+  superarObelisco1: "run ^tag add marcaGuardianDerrotado2 ^command calebcompass toggle %player% altar2 disable ^objective delete objVisitarObelisco1 ^point guardianesDerrotados 1 action:add ^give sello1 notify"
+  superarObelisco2: "run ^tag add marcaGuardianDerrotado4 ^command calebcompass toggle %player% altar4 disable ^objective delete objVisitarObelisco2 ^point guardianesDerrotados 1 action:add ^give sello2 notify"
+  superarObelisco3: "run ^tag add marcaGuardianDerrotado1 ^command calebcompass toggle %player% altar1 disable ^objective delete objVisitarObelisco3 ^point guardianesDerrotados 1 action:add ^give sello3 notify"
+  superarObelisco4: "run ^tag add marcaGuardianDerrotado3 ^command calebcompass toggle %player% altar3 disable ^objective delete objVisitarObelisco4 ^point guardianesDerrotados 1 action:add ^give sello4 notify"
 
-  superarObelisco1: "objective delete objDerrotarJefeObelisco1"
-  superarObelisco2: "objective delete objDerrotarJefeObelisco2"
-  superarObelisco3: "objective delete objDerrotarJefeObelisco3"
-  superarObelisco4: "objective delete objDerrotarJefeObelisco4"
-  
   sonidoAbrirMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.open"
   sonidoCerrarMenu: "notify io:sound soundcategory:blocks sound:block.ender_chest.close"
+
+  agregarMarcaConjuroDesactivado: "tag add marcaConjuroDesactivado"
   sonidoRomperConjuro: "notify io:sound soundcategory:ambient sound:entity.ender_dragon.death"
-  eliminarSellos: "run ^take sello1 invOrder:Inventory ^take sello2 invOrder:Inventory ^take sello3 invOrder:Inventory ^take sello4 invOrder:Inventory"
+  eliminarSellos: "run ^clearcompass ^command minecraft:clear %player% ink_sac{CustomModelData:981} 1 ^command minecraft:clear %player% ink_sac{CustomModelData:983} ^command minecraft:clear %player% ink_sac{CustomModelData:985} ^command minecraft:clear %player% ink_sac{CustomModelData:987}"
 
   darPermisoEntradaCripta: "command lp user %player% permission set group.torre_nigromante"
 
@@ -44,14 +54,20 @@ objectives:
   objDerrotarJefeObelisco3: "mmobkill Lich_King amount:1 events:superarObelisco3 marked:JefeObelisco3"
   objDerrotarJefeObelisco4: "mmobkill Lich_King amount:1 events:superarObelisco4 marked:JefeObelisco4"
 
+  objDerrotarJefesObeliscos: "delay 5 ticks interval:5 events:Misiones_Principiante-Mision_79.notificacionNuevoMensajeAyuda condition:cantidadGuardianesDerrotados"
+
 #####################################################################      
 
 items:
-  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
-  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
-  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
-  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&2Quest_Item"
-  iconoBotonRomperConjuro: "PAPER custom-model-data:1807"
+  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&eObjeto_de_misión"
+  sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&eObjeto_de_misión"
+  sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&eObjeto_de_misión"
+  sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:&r_;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;&r_;&eObjeto_de_misión"
+  sello1PorEncontrar: "INK_SAC custom-model-data:982 name:&aSello_natural lore:&r_;&e¡Aún_no_has_encontrado_este_sello!"
+  sello2PorEncontrar: "INK_SAC custom-model-data:984 name:&6Sello_ígneo lore:&r_;&e¡Aún_no_has_encontrado_este_sello!"
+  sello3PorEncontrar: "INK_SAC custom-model-data:986 name:&bSello_de_las_aguas lore:&r_;&e¡Aún_no_has_encontrado_este_sello!"
+  sello4PorEncontrar: "INK_SAC custom-model-data:988 name:&7Sello_de_los_vientos lore:&r_;&e¡Aún_no_has_encontrado_este_sello!"
+  iconoBotonRomperConjuro: "INK_SAC custom-model-data:4036"
 
 #####################################################################      
 
@@ -65,45 +81,42 @@ menus:
       4: "botonSelloPorEncontrar1,botonSelloEncontrado1"
       11: "botonSelloPorEncontrar2,botonSelloEncontrado2"
       15: "botonSelloPorEncontrar3,botonSelloEncontrado3"
-      17: "botonRomperConjuro"
+      17: "botonRomperConjuro,botonConjuroDesactivado"
       22: "botonSelloPorEncontrar4,botonSelloEncontrado4"
     items:
       botonSelloPorEncontrar1:
-        item: "sello1"
-        condition: "!tenerSello1"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
+        item: "sello1PorEncontrar"
+        condition: "!tenerSello1_or"
       botonSelloPorEncontrar2:
-        item: "sello2"
-        condition: "!tenerSello2"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
+        item: "sello2PorEncontrar"
+        condition: "!tenerSello2_or"
       botonSelloPorEncontrar3:
-        item: "sello3"
-        condition: "!tenerSello3"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
+        item: "sello3PorEncontrar"
+        condition: "!tenerSello3_or"
       botonSelloPorEncontrar4:
-        item: "sello4"
-        condition: "!tenerSello4"
-        text:
-        - "&e¡Aún no has encontrado este sello!"
+        item: "sello4PorEncontrar"
+        condition: "!tenerSello4_or"
       botonSelloEncontrado1:
         item: "sello1"
-        condition: "tenerSello1"
+        condition: "tenerSello1_or"
       botonSelloEncontrado2:
         item: "sello2"
-        condition: "tenerSello2"
+        condition: "tenerSello2_or"
       botonSelloEncontrado3:
         item: "sello3"
-        condition: "tenerSello3"
+        condition: "tenerSello3_or"
       botonSelloEncontrado4:
         item: "sello4"
-        condition: "tenerSello4"
+        condition: "tenerSello4_or"
       botonRomperConjuro:
         item: "iconoBotonRomperConjuro"
         text:
         - "&ePresiona este botón para romper el conjuro"
         - "&eque mantiene prisionero al Nigromante."
-        condition: "tenerSello1,tenerSello2,tenerSello3,tenerSello4"
-        click: "sonidoRomperConjuro,eliminarSellos,darPermisoEntradaCripta,Misiones_Principiante-Mision_79.completarParte3"
+        condition: "tenerSello1,tenerSello2,tenerSello3,tenerSello4,!conjuroDesactivado"
+        click: "agregarMarcaConjuroDesactivado,sonidoRomperConjuro,eliminarSellos,darPermisoEntradaCripta,Misiones_Principiante-Mision_79.completarParte3"
+      botonConjuroDesactivado:
+        item: "iconoBotonRomperConjuro"
+        text:
+        - "&eYa has deshecho este conjuro."
+        condition: "!tenerSello1,!tenerSello2,!tenerSello3,!tenerSello4,conjuroDesactivado"
