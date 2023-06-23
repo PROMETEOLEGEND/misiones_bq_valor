@@ -6,7 +6,7 @@ conversations:
       saludo:
         text: "¡Ah %player%! Te has destacado en cada una de las misiones que te he encomendado. Tu valor y dedicación han honrado a nuestro reino."
         pointer: "a1"
-        conditions: "!Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin,!Misiones_Principiante-Mision_80.mazmorraCompletadaPaladin"
+        conditions: "!Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin"
       b1:
         text: "Tus hazañas no han pasado desapercibidas, querido defensor. El reino entero habla de tus logros y te agradece profundamente por tu valentía. Has demostrado ser un verdadero héroe."
         pointer: "a2"
@@ -24,7 +24,7 @@ conversations:
       saludo2:
         text: "Ah, valiente aventurero, veo que has regresado. ¿Cómo va tu progreso en la misión que te encomendé? ¿Has hablado con el paladin?"
         pointer: "c1,c2"
-        conditions: "Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin,!Misiones_Principiante-Mision_80.mazmorraCompletadaPaladin"
+        conditions: "Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin"
       d1:
         text: "Entiendo, valiente guerrero. No demores tu partida, grandes aventuras te depara Crafburgo."
       d2:

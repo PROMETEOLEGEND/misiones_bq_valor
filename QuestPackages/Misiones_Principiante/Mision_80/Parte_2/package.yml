@@ -6,21 +6,25 @@ conversations:
       saludo:
         text: "Saludos, valiente aventurero. Soy el paladín designado para proteger este puente y garantizar la seguridad de nuestra ciudad. ¿Quién eres y cuál es tu propósito aquí?"
         pointer: "a1"
-        conditions: "!Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin_2"
+        conditions: "Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin,!Misiones_Principiante-Mision_80.misionEnCursoPaladin"
       b1_1:
         text: "%player%, el Rey me ha informado de tu llegada. Si te ha confiado esta tarea, significa que eres digno de confianza."
         pointer: "a2"
       b2:
-        text: "Para ir Crafburgo debes continuar por el camino que hay antes de entrar en el puente, tienes mi permiso. Que la luz te guíe, %player%. Rezo para que tu espada sea afilada y tu escudo sea fuerte."
-        events: "Misiones_Principiante-Mision_80.completarParte2"        
-      
+        text: "Para ir a Crafburgo debes continuar por el camino que hay antes de entrar en el puente, tienes mi permiso. Que la luz te guíe, %player%. Rezo para que tu espada sea afilada y tu escudo sea fuerte."
+        events: "Misiones_Principiante-Mision_80.completarParte2"
+     
+#####################################################################
+
       saludo2:
         text: "Saludos ¡%player%!. ¿Has logrado llegar a Crafburgo?"
         pointer: "no1,preguntainfo"
-        conditions: "Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin_2"
+        conditions: "Misiones_Principiante-Mision_80.misionInfoRecibidaPaladin,Misiones_Principiante-Mision_80.misionEnCursoPaladin"
       b9:
         text: "No te demores mucho %player% grandes aventuras te esperan en Crafburgo."
-      
+
+#####################################################################
+
     player_options:
       a1:
         text: "Saludos, noble paladin. Soy %player%, he sido enviado por el Rey para obtener acceso a la ciudad de Crafburgo."
