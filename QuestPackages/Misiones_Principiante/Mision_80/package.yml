@@ -10,7 +10,7 @@ events:
   iniciarMision80: "tag add marcaMisionActiva80"
   
   mensajeAyudaMision80: "folder mensajeAyudaMision80_1,mensajeAyudaMision80_2,mensajeAyudaMision80_3"
-  mensajeAyudaMision80_1: "notify \n&6&lMisión 80:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &b/spawn&r.\n&r conditions:!misionInfoRecibidaPaladin,misionEnCursoPaladin"
+  mensajeAyudaMision80_1: "notify \n&6&lMisión 80:\n&r El &6Rey de Valor &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &b/spawn&r.\n&r conditions:!misionInfoRecibidaPaladin,!misionEnCursoPaladin"
   mensajeAyudaMision80_2: "folder agregarObjetivosBrujula conditions:misionInfoRecibidaPaladin,!misionEnCursoPaladin"
   mensajeAyudaMision80_3: "folder agregarObjetivosBrujula conditions:misionInfoRecibidaPaladin,misionEnCursoPaladin"
 
