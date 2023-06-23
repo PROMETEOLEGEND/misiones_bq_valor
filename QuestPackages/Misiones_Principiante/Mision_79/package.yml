@@ -23,7 +23,7 @@ events:
   mensajeAyudaMision79_4: "notify \n&6&lMisión 79:\n&r El cristal de la mazmorra del &aNigromante &rse encuentra saliendo de la ciudad de Valor y siguiendo el camino hasta el rio grande, al pasar por la cripta de este veras el cristal de la mazmorra&r.\n&r conditions:misionAceptadaNigromante,!mazmorraCompletadaNigromante"
   mensajeAyudaMision79_5: "notify \n&6&lMisión 79:\n&r El &6Rey de Valor &rte está esperando en su palacio, el cual está ubicado en el &a/spawn&r.\n&r conditions:misionAceptadaNigromante,mazmorraCompletadaNigromante"
   
-  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^compasstrack 861.5;70;532.5;Zona1 ^compasstrack 874.5;236;242.5;Zona1 ^compasstrack 1427.5;243;233.5;Zona1 ^compasstrack 1314.5;219;722.5;Zona1 ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
+  agregarObjetivosBrujula: "run ^command calebcompass show %player% ^command calebcompass toggle %player% altar1 enable ^command calebcompass toggle %player% altar2 enable ^command calebcompass toggle %player% altar3 enable ^command calebcompass toggle %player% altar4 enable ^notify \n&6&lMisión 51:\n&r Para llegar a tu objetivo ve al &b/spawn &ry sigue la dirección que te indica la brújula (&f ▽ &r).\n&r"
 
   mostrarMensajeAyudaMision79_2: "folder mensajeAyudaMision79_2 delay:2"
 
