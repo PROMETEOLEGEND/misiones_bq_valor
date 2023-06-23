@@ -136,4 +136,4 @@ events:
   recompensaExpClase: "mmoclassexperience 850"
   notificacionRecompensaExpClase: "notify &aHas conseguido 850 exp de clase."
   darRecompensaMisionMascota: "command lp user %player% permission set mcpets.basilisk_snowstorm"
-  darRecompensaMisionMascotaMensaje: "notify &aHas conseguido una nueva montura: &6Basilisco de la Ventisca&e. Usa &f/mascotas &epara ver tu nueva montura."
+  darRecompensaMisionMascotaMensaje: "notify &aHas conseguido una nueva montura: &6Basilisco de la Ventisca&a.&e Usa &f/mascotas &epara ver tu nueva montura."
