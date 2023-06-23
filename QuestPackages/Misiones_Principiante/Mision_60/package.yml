@@ -118,7 +118,7 @@ events:
   
   aceptarMisionReyGamba: "folder agregarMarcaMisionAceptadaReyGamba,permisoMazmorraReyGamba,iniciarObjetivoCompletarMazmorraReyGamba,notificacionNuevoMensajeAyuda delay:1"
   agregarMarcaMisionAceptadaReyGamba: "tag add marcaMisionAceptadaReyGamba"
-  permisoMazmorraReyGamba: "command lp user %player% permission set mazmorra.ReyGamba"
+  permisoMazmorraReyGamba: "command lp user %player% permission set mazmorra.gamba"
   iniciarObjetivoCompletarMazmorraReyGamba: "objective start completarMazmorraReyGamba"
   notificacionNuevoMensajeAyuda: "notify &7----------------------------------------\n&6&lMisiones:\n&e¡Tienes un nuevo mensaje de ayuda disponible en el menú de &r/misiones!\n&7---------------------------------------- delay:2"
   
