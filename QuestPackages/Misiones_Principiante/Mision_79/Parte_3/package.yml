@@ -6,6 +6,11 @@ conditions:
   tenerSello3: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:985% yes"
   tenerSello4: "variable %ph.checkitem_mat:INK_SAC,custommodeldata:987% yes"
 
+  tenerSello1_or: "or tenerSello1,conjuroDesactivado"
+  tenerSello2_or: "or tenerSello2,conjuroDesactivado"
+  tenerSello3_or: "or tenerSello3,conjuroDesactivado"
+  tenerSello4_or: "or tenerSello4,conjuroDesactivado"
+
   conjuroDesactivado: "tag marcaConjuroDesactivado"
 
 events:
@@ -78,28 +83,28 @@ menus:
     items:
       botonSelloPorEncontrar1:
         item: "sello1PorEncontrar"
-        condition: "!tenerSello1"
+        condition: "!tenerSello1_or"
       botonSelloPorEncontrar2:
         item: "sello2PorEncontrar"
-        condition: "!tenerSello2"
+        condition: "!tenerSello2_or"
       botonSelloPorEncontrar3:
         item: "sello3PorEncontrar"
-        condition: "!tenerSello3"
+        condition: "!tenerSello3_or"
       botonSelloPorEncontrar4:
         item: "sello4PorEncontrar"
-        condition: "!tenerSello4"
+        condition: "!tenerSello4_or"
       botonSelloEncontrado1:
         item: "sello1"
-        condition: "tenerSello1"
+        condition: "tenerSello1_or"
       botonSelloEncontrado2:
         item: "sello2"
-        condition: "tenerSello2"
+        condition: "tenerSello2_or"
       botonSelloEncontrado3:
         item: "sello3"
-        condition: "tenerSello3"
+        condition: "tenerSello3_or"
       botonSelloEncontrado4:
         item: "sello4"
-        condition: "tenerSello4"
+        condition: "tenerSello4_or"
       botonRomperConjuro:
         item: "iconoBotonRomperConjuro"
         text:
