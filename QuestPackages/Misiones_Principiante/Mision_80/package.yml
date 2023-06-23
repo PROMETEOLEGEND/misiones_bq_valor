@@ -1,3 +1,8 @@
+conversations:
+  
+
+####################################################################################################
+
 conditions:
   misionActiva80: "tag marcaMisionActiva80"
   misionCompletada80: "tag marcaMisionCompletada80"
