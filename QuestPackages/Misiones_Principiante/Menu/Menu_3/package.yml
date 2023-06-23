@@ -29,7 +29,7 @@ menus:
       33: "botonMisionDisponible76,botonMisionActiva76,botonMisionCompletada76,botonMisionBloqueada76"
       34: "botonMisionDisponible77,botonMisionActiva77,botonMisionCompletada77,botonMisionBloqueada77"
       37: "botonMisionDisponible78,botonMisionActiva78,botonMisionCompletada78,botonMisionBloqueada78"
-      38: "botonMisionDisponible79,botonMisionActiva79,botonMisionActiva79_2,botonMisionActiva79_3,botonMisionActiva79_4,botonMisionActiva79_5,botonMisionCompletada79,botonMisionBloqueada79"
+      38: "botonMisionDisponible79,botonMisionActiva79_5,botonMisionActiva79_4,botonMisionActiva79_3,botonMisionActiva79_2,botonMisionActiva79,botonMisionCompletada79,botonMisionBloqueada79"
       # 39: "botonMisionDisponible80,botonMisionActiva80,botonMisionCompletada80,botonMisionBloqueada80"
     items:
       botonPaginaAnterior:
