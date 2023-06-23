@@ -3,4 +3,4 @@ events:
   
   menuPaladin: "command dm open accesos_regiones %player% conditions:!Misiones_Principiante-Mision_80.misionActiva80"
   
-  empezarConversacionPaladin: "conversation Misiones_Principiante-Mision_80-Parte_2.PaladinValor conditions:Misiones_Principiante-Mision_80.misionActiva80"
+  empezarConversacionPaladin: "conversation Misiones_Principiante-Mision_80-Parte_2.PaladinPuente conditions:Misiones_Principiante-Mision_80.misionActiva80"
