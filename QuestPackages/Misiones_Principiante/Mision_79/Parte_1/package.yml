@@ -18,7 +18,7 @@ conversations:
         text: "El nigromante, respaldado por su ejército de muertos vivientes, parecía invencible. Sin embargo, los valientes guerreros del reino se unieron en un último esfuerzo desesperado para enfrentar al nigromante. Durante días y noches, se libró una lucha en la que ambos bandos sufrieron grandes pérdidas."
         pointer: "a3"      
       b3:
-        text: "Finalmente, los sabios y poderosos magos del reino lograron conjurar un hechizo de encierro. Con su último aliento de magia, confinaron al nigromante en una torre maldita, sellando sus poderes oscuros y asegurando su cautiverio."
+        text: "Finalmente, los sabios magos del reino lograron conjurar un hechizo de encierro. Con su último aliento de magia, confinaron al nigromante en una torre maldita, sellando sus poderes oscuros y asegurando su cautiverio."
         # pointer: "a4,entendido"
         pointer: "a4"
       b4:
