@@ -56,7 +56,7 @@ conditions:
 #####################################################################        
  
 events:
-  mensajeAyudaMisionPaladin: "notify \n&6&lMisión 1:\n &rEl &ePaladin &rse encuentra en el Salón del Trono del Castillo de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
+  mensajeAyudaMisionPaladin: "notify \n&6&lMisión 1:\n &rEl &ePaladin &rse encuentra en el Salón del Trono del Palacio de Valor, el cual está ubicado en el &a/spawn&r.\n&r"
   
   completarMision1: "folder agregarMarcaMisionCompletada1,notificacionMisionCompletada1,darKitInicial,enfriamientoKitInicial,recompensaExpClase,notificacionRecompensaExpClase,checkPointMuerte delay:1"
   agregarMarcaMisionCompletada1: "tag add marcaMisionCompletada1"
