@@ -22,4 +22,4 @@ events:
 ####################################################################################################
 
 objectives:
-  objColocarGema: "mmoitemapplygem ESPADA_GEMA ESPADA_BASICA GEMA_CRITICO_1 events:completarMision26"
+  objColocarGema: "mmoitemapplygem SWORD ESPADA_BASICA GEMA_CRITICO_1 events:completarMision26"
