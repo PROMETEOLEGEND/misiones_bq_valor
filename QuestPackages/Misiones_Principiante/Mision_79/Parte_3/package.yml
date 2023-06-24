@@ -59,7 +59,7 @@ objectives:
 #####################################################################      
 
 items:
-  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:&b&r;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;;&eObjeto_de_misión"
+  sello1: "INK_SAC custom-model-data:981 name:&aSello_natural lore:;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;;&eObjeto_de_misión"
   sello2: "INK_SAC custom-model-data:983 name:&6Sello_ígneo lore:;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;;&eObjeto_de_misión"
   sello3: "INK_SAC custom-model-data:985 name:&bSello_de_las_aguas lore:;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;;&eObjeto_de_misión"
   sello4: "INK_SAC custom-model-data:987 name:&7Sello_de_los_vientos lore:;&7Uno_de_los_cuatro_sellos_que_conforman;&7el_Conjuro_de_los_Vínculos_Antiguos;&7que_mantiene_prisionero_al_Nigromante.;;&eObjeto_de_misión"
