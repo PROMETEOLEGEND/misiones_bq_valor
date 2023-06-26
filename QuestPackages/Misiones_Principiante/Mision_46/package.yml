@@ -9,7 +9,7 @@ events:
   agregarMarcaMisionActiva46: "tag add marcaMisionActiva46"
   iniciarObjetivoMision46: "objective start objColocarGema"
   
-  mensajeAyudaMision46: "notify \n&6&lMisión 46:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadísticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una Gema de Crítico de nivel I a tu Espada Inicial.\n \n&7Nota: La espada inicial puedes conseguirla en el Kit inicial que te da el Paladin.\n&r"
+  mensajeAyudaMision46: "notify \n&6&lMisión 46:\n&rPuedes mejorar tus armas y armaduras colocandoles &bGemas. &rLas gemas son objetos que te aportan mejoras de estadísticas, se pueden comprar en la tienda de gemas o conseguirlas en las mazmorras. Para completar la misión coloca una &bGema de Mana de nivel II &ra tu &bEspada de Amatista&r.\n \n&7Nota: Puedes fabricar la espada con 4 esencias de amatista y una Espada de netherita.\n&r"
   
   completarMision46: "folder eliminarMarcaMisionActiva46,agregarMarcaMisionCompletada46,notificacionMisionCompletada46,recompensaMision46,recompensaExpClase,notificacionRecompensaExpClase delay:1"
   eliminarMarcaMisionActiva46: "tag delete marcaMisionActiva46"
