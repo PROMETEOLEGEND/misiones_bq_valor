@@ -1,6 +1,6 @@
 events:
   eventoGranjero: "folder menuTiendaBulbos,empezarConversacionGranjeroBulbos"
   
-  menuTiendaBulbos: "command dm open tienda_mascotas_bulbo %player% conditions:!Misiones_Principiante-Mision_39.misionActiva39"
+  menuTiendaBulbos: "command dm open tienda_mascotas_bulbos %player% conditions:!Misiones_Principiante-Mision_39.misionActiva39"
   
   empezarConversacionGranjeroBulbos: "conversation Misiones_Principiante-Mision_39.GranjeroBulbosValor conditions:Misiones_Principiante-Mision_39.misionActiva39"
